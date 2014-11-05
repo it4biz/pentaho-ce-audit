@@ -1,0 +1,169 @@
+<Schema name="Pentaho CE Audit">
+
+  <Cube name="Pentaho CE Audit English" visible="true" cache="true" enabled="true">
+    <Table name="PENTAHO_CE_AUDIT">
+    </Table>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Year" caption="Year">
+      <Hierarchy name="Year" visible="true" hasAll="true" allMemberName="All" primaryKey="AUDIT_TIME" caption="Year">
+        <Level name="Year" visible="true" column="AUDIT_TIME" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+          <KeyExpression>
+            <SQL dialect="generic">
+              <![CDATA[extract(year from AUDIT_TIME)]]>
+            </SQL>
+          </KeyExpression>
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Month" caption="Month">
+      <Hierarchy name="Month" visible="true" hasAll="true" allMemberName="All" primaryKey="AUDIT_TIME" caption="Month">
+        <Level name="Month" visible="true" column="AUDIT_TIME" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Month">
+          <KeyExpression>
+            <SQL dialect="generic">
+              <![CDATA[extract(month from AUDIT_TIME)]]>
+            </SQL>
+          </KeyExpression>
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Day" caption="Day">
+      <Hierarchy name="Day" visible="true" hasAll="true" allMemberName="All" primaryKey="AUDIT_TIME" caption="Day">
+        <Level name="Day" visible="true" column="AUDIT_TIME" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+          <KeyExpression>
+            <SQL dialect="generic">
+              <![CDATA[extract(day from AUDIT_TIME)]]>
+            </SQL>
+          </KeyExpression>
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Hour" caption="Hour">
+      <Hierarchy name="Hour" visible="true" hasAll="true" allMemberName="All" primaryKey="AUDIT_TIME" caption="Hour">
+        <Level name="Hour" visible="true" column="AUDIT_TIME" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+          <KeyExpression>
+            <SQL dialect="generic">
+              <![CDATA[extract(hour from AUDIT_TIME)]]>
+            </SQL>
+          </KeyExpression>
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="User" caption="User">
+      <Hierarchy name="User" visible="true" hasAll="true" allMemberName="All" caption="User">
+        <Level name="User" visible="true" column="ACTOR" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="User">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Job">
+      <Hierarchy name="Job" visible="true" hasAll="true" allMemberName="All">
+        <Level name="Message Type" visible="true" column="MESSAGE_TYPE" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Job ID" visible="true" column="JOB_ID" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Message Name" visible="true" column="MESSAGE_NAME" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Message Text Value" visible="true" column="MESSAGE_TEXT_VALUE" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="FILENAME">
+      <Hierarchy name="FILENAME" visible="true" hasAll="true" allMemberName="All">
+        <Level name="FILENAME" visible="true" column="FILENAME" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="FULLPATH" caption="FULLPATH">
+      <Hierarchy name="FULLPATH" visible="true" hasAll="true" allMemberName="All" caption="FULLPATH">
+        <Level name="FULLPATH" visible="true" column="FULLPATH" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="FULLPATH">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Total Access" column="JOB_ID" datatype="String" formatString="#,###" aggregator="count" visible="true">
+    </Measure>
+    <Measure name="DURATION" column="DURATION" datatype="Integer" aggregator="avg" caption="Avg DURATION" visible="true">
+    </Measure>
+  </Cube>
+  
+  
+    <Cube name="Pentaho CE Audit Portuguese-BR" visible="true" cache="true" enabled="true">
+    <Table name="PENTAHO_CE_AUDIT">
+    </Table>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Ano" caption="Ano">
+      <Hierarchy name="Ano" visible="true" hasAll="true" allMemberName="Todos" primaryKey="AUDIT_TIME" caption="Ano">
+        <Level name="Ano" visible="true" column="AUDIT_TIME" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+          <KeyExpression>
+            <SQL dialect="generic">
+              <![CDATA[extract(year from AUDIT_TIME)]]>
+            </SQL>
+          </KeyExpression>
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Mes" caption="Mes">
+      <Hierarchy name="Mes" visible="true" hasAll="true" allMemberName="Todos" primaryKey="AUDIT_TIME" caption="Mes">
+        <Level name="Mes" visible="true" column="AUDIT_TIME" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Mes">
+          <KeyExpression>
+            <SQL dialect="generic">
+              <![CDATA[extract(month from AUDIT_TIME)]]>
+            </SQL>
+          </KeyExpression>
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Dia" caption="Dia">
+      <Hierarchy name="Dia" visible="true" hasAll="true" allMemberName="Todos" primaryKey="AUDIT_TIME" caption="Dia">
+        <Level name="Dia" visible="true" column="AUDIT_TIME" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+          <KeyExpression>
+            <SQL dialect="generic">
+              <![CDATA[extract(day from AUDIT_TIME)]]>
+            </SQL>
+          </KeyExpression>
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Hora" caption="Hora">
+      <Hierarchy name="Hora" visible="true" hasAll="true" allMemberName="Todos" primaryKey="AUDIT_TIME" caption="Hora">
+        <Level name="Hora" visible="true" column="AUDIT_TIME" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+          <KeyExpression>
+            <SQL dialect="generic">
+              <![CDATA[extract(hour from AUDIT_TIME)]]>
+            </SQL>
+          </KeyExpression>
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Usuario" caption="Usuario">
+      <Hierarchy name="Usuario" visible="true" hasAll="true" allMemberName="Todos" caption="Usuario">
+        <Level name="Usuario" visible="true" column="ACTOR" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Usuario">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Job">
+      <Hierarchy name="Job" visible="true" hasAll="true" allMemberName="Todos">
+        <Level name="Tipo" visible="true" column="MESSAGE_TYPE" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Job" visible="true" column="JOB_ID" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Message Name" visible="true" column="MESSAGE_NAME" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Message Value" visible="true" column="MESSAGE_TEXT_VALUE" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>	
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Arquivo">
+      <Hierarchy name="Arquivo" visible="true" hasAll="true" allMemberName="Todos">
+        <Level name="Arquivo" visible="true" column="FILENAME" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Diretorio" caption="Diretorio">
+      <Hierarchy name="Diretorio" visible="true" hasAll="true" allMemberName="Todos" caption="Diretorio">
+        <Level name="Diretorio" visible="true" column="FULLPATH" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Diretorio">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Quantidade de Acessos" column="JOB_ID" datatype="String" formatString="#,###" aggregator="count" visible="true">
+    </Measure>
+    <Measure name="Duracao" column="DURATION" datatype="Integer" aggregator="avg" caption="Media de Duracao" visible="true">
+    </Measure>
+  </Cube>
+</Schema>

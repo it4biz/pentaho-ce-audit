@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin title="pentaho-ce-audit" loader="DEFAULT">
+<overlays>
+		<overlay id="startup.pentaho-ce-audit" resourcebundle="content/pentaho-ce-audit/resources/lang/messages">
+			<menubar id="toolsmenu">
+	        	<menuitem id="pentaho-ce-audit" label="Pentaho CE Audit" command="mantleXulHandler.openUrl('${Launcher.pentaho-ce-audit}','Pentaho CE Audit','plugin/pentaho-ce-audit/api/default')"/>
+	      	</menubar>
+	    </overlay>
+	</overlays>
+	<lifecycle-listener class="pt.webdetails.cpk.CpkLifecycleListener"/>
+	<static-paths>
+		<static-path url="/pentaho-ce-audit/static" localFolder="static"/>
+		<static-path url="/pentaho-ce-audit/resources" localFolder="resources"/>
+	</static-paths>
+	<content-types>
+		<content-type>
+			<title>pentaho-ce-audit</title>
+			<description></description>
+			<company name="" url="" logo="@PLUGIN_COMPANY_LOGO@"></company>
+		</content-type>
+	</content-types>
+	<content-generator
+		id="pentaho-ce-audit"
+		title="pentaho-ce-audit"
+		type="pentaho-ce-audit"
+		class="pt.webdetails.cpk.CpkContentGenerator"/>
+	<!-- Menu entry -->
+	<menu-items>
+		<!--<menu-item id="pentahoCEAuditPlugin_main" anchor="tools-submenu" label="PentahoCEAuditPlugin" command="content/pentahoCEAuditPlugin/" type="MENU_ITEM" how="LAST_CHILD"/>-->
+	</menu-items>
+</plugin>
