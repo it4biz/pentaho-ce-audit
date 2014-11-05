@@ -191,7 +191,7 @@
      },
      {
       "name": "html",
-      "value": "<div class=\"well wizard-example\">\n    <h2>\n        <i class=\"icon-magic\"></i> \n        &nbsp; Welcome to Pentaho CE Audit plugin by IT4biz.\n    </h2>\n  <div id=\"MyWizard\" class=\"wizard\">\n    <ul class=\"steps\">\n      <li data-target=\"#step1\" class=\"active\"><span class=\"badge badge-info\">1</span>Step 1<span class=\"chevron\"></span></li>\n      <li data-target=\"#step2\"><span class=\"badge\">2</span>Step 2<span class=\"chevron\"></span></li>\n      <li data-target=\"#step3\"><span class=\"badge\">3</span>Step 3<span class=\"chevron\"></span></li>\n    </ul>\n    <div class=\"actions\">\n      <button class=\"btn btn-mini btn-prev\"> <i class=\"icon-arrow-left\"></i>Prev</button>\n      <button class=\"btn btn-mini btn-next\" data-last=\"Finish\">Next<i class=\"icon-arrow-right\"></i></button>\n    </div>\n  </div>\n  <div class=\"step-content\">\n    <div class=\"step-pane active\" id=\"step1\">\n        <h2>Step 1 - Start the installation</h2>\n        <hr>\n        <h3>Please, click at install button for start the installation.</h3>\n        <br>\n        <div id=\"stepOne-button-start\"></div>\n        <br>\n        <div id=\"stepOne-message\"></div>\n        </div>\n    <div class=\"step-pane\" id=\"step2\">\n        <h2>Step 2 - Publish the schema</h2>\n        <hr>\n        <h3>Now you should access <i>File->Manage Data Sources</i>, and select the <i>Import Analysis</i> option.</h3>\n        <img class=\"img-thumbnail\" style=\"border:1px;\" src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/importAnalysisSchema.png\">\n        \n        <hr>\n        <h3>Select the schema pentahoCEAudit.mondrian.xml and add the parameters of connection.</h3>\n        <img class=\"img-thumbnail\" style=\"border:1px;\" src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/insertDataSource.png\">\n        \n        <hr>\n        <h3>Please, Click 'Next' to continue</h3>\n    </div>\n    <div class=\"step-pane\" id=\"step3\">\n        <h2>Step 3 - Okay, installation finished</h2>\n        <h3>Now you should restart the biserver.</h3>            \n        </div>\n    </div>\n  <br>\n  <!-- <input type=\"button\" class=\"btn\" id=\"btnWizardPrev\" value=\"Back\">\n  <input type=\"button\" class=\"btn btn-primary\" id=\"btnWizardNext\" value=\"Next\"> -->\n\n</div> ",
+      "value": "<div class=\"well wizard\">\n    <h2>\n        <i class=\"icon-magic\"></i> \n        &nbsp; Welcome to Pentaho CE Audit plugin.\n    </h2>\n    <hr>\n  <div id=\"MyWizard\" class=\"wizard\">\n    <ul class=\"steps\">\n      <li data-target=\"#step1\" class=\"active\"><span class=\"badge badge-info\">1</span>Step 1<span class=\"chevron\"></span></li>\n      <li data-target=\"#step2\"><span class=\"badge\">2</span>Step 2<span class=\"chevron\"></span></li>\n      <li data-target=\"#step3\"><span class=\"badge\">3</span>Step 3<span class=\"chevron\"></span></li>\n    </ul>\n    <div class=\"actions\">\n      <button class=\"btn btn-mini btn-prev\"> <i class=\"icon-arrow-left\"></i>Prev</button>\n      <button class=\"btn btn-mini btn-next\" data-last=\"Finish\">Next<i class=\"icon-arrow-right\"></i></button>\n    </div>\n  </div>\n  <div class=\"step-content\">\n    <div class=\"step-pane active\" id=\"step1\">\n        <h2>Step 1 - Begin the installation</h2>\n        <blockquote>\n            <p>Please, click the install button to begin the installation.</p>\n        </blockquote>\n        <div id=\"stepOne-button-start\"></div>\n        <br>\n        <div id=\"stepOne-message\"></div>\n        </div>\n    <div class=\"step-pane\" id=\"step2\">\n        <h2>Step 2 - Publish the schema</h2>\n        \n        <blockquote>\n            <p>2.1) Now access <i>File->Manage Data Sources</i>, and select the <i>'Import Analysis'</i> option.</p>\n        </blockquote>\n        <p><img class=\"img-thumbnail\" style=\"border:1px;\" src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/importAnalysisSchema.png\"></p>\n        \n        <blockquote>\n            <p>2.2) Select the schema pentahoCEAudit.mondrian.xml and add the parameters of connection.</p>\n            <footer>The path is <i>pentaho-solutions/system/petaho-ce-audit/schemas/</i></footer>\n        </blockquote>\n        <p><img class=\"img-thumbnail\" src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/insertDataSource.png\"></p>\n  \n        <blockquote>\n            <p>Please click 'Next' to continue.</p>\n        </blockquote>\n    </div>\n    <div class=\"step-pane\" id=\"step3\">\n        <h2>Step 3 - Restart biserver.</h2>\n        <blockquote>\n            <p>Congratulations, the installation has been completed.</p>\n            <p>Now restart the biserver.</p>      \n        </blockquote>\n        </div>\n    </div>\n  <br>\n  <!--\n    <input type=\"button\" class=\"btn\" id=\"btnWizardPrev\" value=\"Back\">\n    <input type=\"button\" class=\"btn btn-primary\" id=\"btnWizardNext\" value=\"Next\"> \n    -->\n    <hr>\n    <div id=\"footer\">\n      <div class=\"container\">\n        <p class=\"text-muted credit\">\n            Developed by \n            <a href=\"http://it4biz.com.br\" target=\"no_blank\" title=\"IT4biz IT Solutions\">\n                <img \n                    class=\"img-thumbnail\" style=\"border:1px;\" \n                    src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/logo.png\"\n                >\n            </a> \n        </p>                  \n      </div>\n    </div>\n</div> ",
       "type": "Html"
      },
      {
@@ -242,7 +242,7 @@
      },
      {
       "name": "javaScript",
-      "value": "$(document).ready(function() {        \n    $('#MyWizard').on('change', function(e, data) {\n      console.log('change');\n      if(data.step===3 && data.direction==='next') {\n        // return e.preventDefault();\n      }\n    });\n    $('#MyWizard').on('changed', function(e, data) {\n      console.log('changed');\n    });\n    $('#MyWizard').on('finished', function(e, data) {\n      console.log('finished');\n    });\n    $('#btnWizardPrev').on('click', function() {\n      $('#MyWizard').wizard('previous');\n    });\n    $('#btnWizardNext').on('click', function() {\n      $('#MyWizard').wizard('next','foo');\n    });\n    $('#btnWizardStep').on('click', function() {\n      var item = $('#MyWizard').wizard('selectedItem');\n      console.log(item.step);\n    });\n    $('#MyWizard').on('stepclick', function(e, data) {\n      console.log('step' + data.step + ' clicked');\n      if(data.step===1) {\n        // return e.preventDefault();\n      }\n    });\n    \n    // optionally navigate back to 2nd step\n    $('#btnStep2').on('click', function(e, data) {\n      $('[data-target=#step2]').trigger(\"click\");\n    });\n}); ",
+      "value": "$(document).ready(function() {        \n    $('#MyWizard').on('change', function(e, data) {\n      //console.log('change');\n      if(data.step===3 && data.direction==='next') {\n        // return e.preventDefault();\n      }\n    });\n    $('#MyWizard').on('changed', function(e, data) {\n      //console.log('changed');\n    });\n    $('#MyWizard').on('finished', function(e, data) {\n      //console.log('finished');\n    });\n    $('#btnWizardPrev').on('click', function() {\n      $('#MyWizard').wizard('previous');\n    });\n    $('#btnWizardNext').on('click', function() {\n      $('#MyWizard').wizard('next','foo');\n    });\n    $('#btnWizardStep').on('click', function() {\n      var item = $('#MyWizard').wizard('selectedItem');\n      //console.log(item.step);\n    });\n    $('#MyWizard').on('stepclick', function(e, data) {\n      //console.log('step' + data.step + ' clicked');\n      if(data.step===1) {\n        // return e.preventDefault();\n      }\n    });\n    \n    // optionally navigate back to 2nd step\n    $('#btnStep2').on('click', function(e, data) {\n      $('[data-target=#step2]').trigger(\"click\");\n    });\n}); ",
       "type": "JavaScript"
      }
     ]
@@ -274,12 +274,12 @@
      },
      {
       "name": "label",
-      "value": "Start Installation",
+      "value": "Begin Installation",
       "type": "String"
      },
      {
       "name": "listeners",
-      "value": "[]",
+      "value": "['${p:installationStart}']",
       "type": "Listeners"
      },
      {
@@ -289,7 +289,7 @@
      },
      {
       "name": "expression",
-      "value": "function(){\n    //this.setLabel('Yes, a clickable button'); \n    //alert('Button was clicked');\n    Dashboards.fireChange(\"installationStart\",\"\");\n} ",
+      "value": "function(){\n    //this.setLabel('Now restart the bi-server'); \n    //alert('Button was clicked');\n    Dashboards.fireChange(\"installationStart\",\"\");\n} ",
       "type": "JavaScript"
      },
      {
@@ -344,7 +344,7 @@
      },
      {
       "name": "tooltip",
-      "value": "Start installation ",
+      "value": "",
       "type": "Html"
      }
     ]
@@ -412,7 +412,7 @@
      },
      {
       "name": "postFetch",
-      "value": "function postFecth( result){\n    \n    if(result.result===true){\n        $('#stepOne-message').html('<div class=\"alert alert-success\" role=\"alert\">'+\n            '<b>Installation successfully!</b> Please, Click \\'Next\\' to continue. </div>');\n        //console.log(result);\n    }else{\n        alert('erro');\n    }\n} ",
+      "value": "function postFecth( result){\n    \n    if(result.result===true){\n        $('#stepOne-message').html('<div class=\"alert alert-success\" role=\"alert\">'+\n            '<b>Installation completed successfully!</b> Please click \\'Next\\' to continue. </div>');\n    }else{\n        alert('erro');\n    }\n} ",
       "type": "JavaScript"
      },
      {
