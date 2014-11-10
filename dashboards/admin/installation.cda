@@ -4,11 +4,36 @@
       <Connection id="dummy" type="sql.jndi">
          <Jndi></Jndi>
       </Connection>
+      <Connection id="dsBoolean" type="scripting.scripting">
+         <Initscript></Initscript>
+         <Language>beanshell</Language>
+      </Connection>
    </DataSources>
    <DataAccess access="public" cache="true" cacheDuration="3600" connection="dummy" id="dummy"
                type="sql">
       <Columns/>
       <Parameters/>
       <Query></Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600" connection="dsBoolean"
+               id="dsBoolean"
+               type="scriptable">
+      <Columns/>
+      <Parameters/>
+      <Query>import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;
+
+String[] columnNames = new String[2];
+columnNames[0] = "id";
+columnNames[1] = "label";
+
+Class[] columnTypes = new Class[2];
+columnTypes[0] = String.class;
+columnTypes[1] = String.class;
+
+TypedTableModel model = new TypedTableModel(columnNames, columnTypes);
+model.addRow(new Object[]{ new String("true"), new String("True")});
+model.addRow(new Object[]{ new String("false"), new String("False")});
+
+return model;</Query>
    </DataAccess>
 </CDADescriptor>

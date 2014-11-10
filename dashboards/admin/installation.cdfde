@@ -3,8 +3,8 @@
   "title": "installation",
   "rows": [
    {
-    "id": "6751deb5-e8ce-6307-24ec-0be2c5f7f3c4",
-    "type": "LayoutResourceFile",
+    "id": "ebcf45e9-87ea-1ca1-1200-4e53c03f1601",
+    "type": "LayoutResourceCode",
     "typeDesc": "Resource",
     "parent": "UnIqEiD",
     "properties": [
@@ -12,131 +12,16 @@
       "name": "name",
       "value": "",
       "type": "Id"
-     },
-     {
-      "name": "resourceFile",
-      "value": "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js",
-      "type": "ResourceFile"
-     },
-     {
-      "name": "resourceType",
-      "value": "Javascript",
-      "type": "Label"
-     }
-    ]
-   },
-   {
-    "id": "c6ff711e-6d7f-9459-6859-8cc45a7cddb1",
-    "type": "LayoutResourceFile",
-    "typeDesc": "Resource",
-    "parent": "UnIqEiD",
-    "properties": [
-     {
-      "name": "name",
-      "value": "",
-      "type": "Id"
-     },
-     {
-      "name": "resourceFile",
-      "value": "//fuelcdn.com/fuelux/2.3.1/loader.min.js",
-      "type": "ResourceFile"
-     },
-     {
-      "name": "resourceType",
-      "value": "Javascript",
-      "type": "Label"
-     }
-    ]
-   },
-   {
-    "id": "18a0a977-e762-6e2a-5c69-a0174c090f2f",
-    "type": "LayoutResourceFile",
-    "typeDesc": "Resource",
-    "parent": "UnIqEiD",
-    "properties": [
-     {
-      "name": "name",
-      "value": "",
-      "type": "Id"
-     },
-     {
-      "name": "resourceFile",
-      "value": "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js",
-      "type": "ResourceFile"
-     },
-     {
-      "name": "resourceType",
-      "value": "Javascript",
-      "type": "Label"
-     }
-    ]
-   },
-   {
-    "id": "7ee693ef-9141-39a8-bb4c-e4f815c68a3d",
-    "type": "LayoutResourceFile",
-    "typeDesc": "Resource",
-    "parent": "UnIqEiD",
-    "properties": [
-     {
-      "name": "name",
-      "value": "",
-      "type": "Id"
-     },
-     {
-      "name": "resourceFile",
-      "value": "//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css",
-      "type": "ResourceFile"
      },
      {
       "name": "resourceType",
       "value": "Css",
       "type": "Label"
-     }
-    ]
-   },
-   {
-    "id": "c0607ce0-b46f-6fc8-1576-d3404888e11d",
-    "type": "LayoutResourceFile",
-    "typeDesc": "Resource",
-    "parent": "UnIqEiD",
-    "properties": [
-     {
-      "name": "name",
-      "value": "",
-      "type": "Id"
      },
      {
-      "name": "resourceFile",
-      "value": "//fuelcdn.com/fuelux/2.3.1/css/fuelux.css",
-      "type": "ResourceFile"
-     },
-     {
-      "name": "resourceType",
-      "value": "Css",
-      "type": "Label"
-     }
-    ]
-   },
-   {
-    "id": "aeefccb4-dfe2-46a6-cbcf-334e02897087",
-    "type": "LayoutResourceFile",
-    "typeDesc": "Resource",
-    "parent": "UnIqEiD",
-    "properties": [
-     {
-      "name": "name",
-      "value": "",
-      "type": "Id"
-     },
-     {
-      "name": "resourceFile",
-      "value": "//fuelcdn.com/fuelux/2.3/css/fuelux-responsive.css",
-      "type": "ResourceFile"
-     },
-     {
-      "name": "resourceType",
-      "value": "Css",
-      "type": "Label"
+      "name": "resourceCode",
+      "value": ".toggleGroup{\ndisplay:inline; \n} ",
+      "type": "Resource"
      }
     ]
    },
@@ -191,7 +76,7 @@
      },
      {
       "name": "html",
-      "value": "<div class=\"well wizard\">\n    <h2>\n        <i class=\"icon-magic\"></i> \n        &nbsp; Welcome to Pentaho CE Audit plugin.\n    </h2>\n    <hr>\n  <div id=\"MyWizard\" class=\"wizard\">\n    <ul class=\"steps\">\n      <li data-target=\"#step1\" class=\"active\"><span class=\"badge badge-info\">1</span>Step 1<span class=\"chevron\"></span></li>\n      <li data-target=\"#step2\"><span class=\"badge\">2</span>Step 2<span class=\"chevron\"></span></li>\n      <li data-target=\"#step3\"><span class=\"badge\">3</span>Step 3<span class=\"chevron\"></span></li>\n    </ul>\n    <div class=\"actions\">\n      <button class=\"btn btn-mini btn-prev\"> <i class=\"icon-arrow-left\"></i>Prev</button>\n      <button class=\"btn btn-mini btn-next\" data-last=\"Finish\">Next<i class=\"icon-arrow-right\"></i></button>\n    </div>\n  </div>\n  <div class=\"step-content\">\n    <div class=\"step-pane active\" id=\"step1\">\n        <h2>Step 1 - Begin the installation</h2>\n        <blockquote>\n            <p>Please, click the install button to begin the installation.</p>\n        </blockquote>\n        <div id=\"stepOne-button-start\"></div>\n        <br>\n        <div id=\"stepOne-message\"></div>\n        </div>\n    <div class=\"step-pane\" id=\"step2\">\n        <h2>Step 2 - Publish the schema</h2>\n        \n        <blockquote>\n            <p>2.1) Now access <i>File->Manage Data Sources</i>, and select the <i>'Import Analysis'</i> option.</p>\n        </blockquote>\n        <p><img class=\"img-thumbnail\" style=\"border:1px;\" src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/importAnalysisSchema.png\"></p>\n        \n        <blockquote>\n            <p>2.2) Select the schema pentahoCEAudit.mondrian.xml and add the parameters of connection.</p>\n            <footer>The path is <i>pentaho-solutions/system/petaho-ce-audit/schemas/</i></footer>\n        </blockquote>\n        <p><img class=\"img-thumbnail\" src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/insertDataSource.png\"></p>\n  \n        <blockquote>\n            <p>Please click 'Next' to continue.</p>\n        </blockquote>\n    </div>\n    <div class=\"step-pane\" id=\"step3\">\n        <h2>Step 3 - Restart biserver.</h2>\n        <blockquote>\n            <p>Congratulations, the installation has been completed.</p>\n            <p>Now restart the biserver.</p>      \n        </blockquote>\n        </div>\n    </div>\n  <br>\n  <!--\n    <input type=\"button\" class=\"btn\" id=\"btnWizardPrev\" value=\"Back\">\n    <input type=\"button\" class=\"btn btn-primary\" id=\"btnWizardNext\" value=\"Next\"> \n    -->\n    <hr>\n    <div id=\"footer\">\n      <div class=\"container\">\n        <p class=\"text-muted credit\">\n            Developed by \n            <a href=\"http://it4biz.com.br\" target=\"no_blank\" title=\"IT4biz IT Solutions\">\n                <img \n                    class=\"img-thumbnail\" style=\"border:1px;\" \n                    src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/logo.png\"\n                >\n            </a> \n        </p>                  \n      </div>\n    </div>\n</div> ",
+      "value": "<div class=\"well wizard\">\n    <h2>\n        <i class=\"icon-magic\"></i> \n        &nbsp; Welcome to Pentaho CE Audit plugin.\n    </h2>\n    <hr>\n    \n    <form id=\"form\" class=\"form-horizontal\" role=\"form\" action=\"#\">\n        <div class=\"form-group\">\n            <label for=\"myCatalog-component\" class=\"control-label\">Catalog Name</label>\n            <div id=\"catalogName-component\"></div>\n        </div>\n        <div class=\"form-group\">\n            <label for=\"overwrite-component\" class=\"control-label\">Overwrite</label> \n        \t<div id=\"overwrite-component\"></div>\n        </div>\n        <div class=\"form-group\">\n            <label for=\"xmlaEnabledFlag-component\" class=\"control-label\">XMLA Enabled Flag</label> \n            <div id=\"xmlaEnabledFlag-component\"></div>\n        </div>\n\t\t\n        <div class=\"form-group\">\n            <label for=\"parameters-component\" class=\"control-label\">Data Source</label> \n            <div id=\"parameters-component\"></div>\n        </div>    \t\n\t\t<button type=\"submit\">Submit</button>\n\t</form>\n    <!--\n    <button id=\"btn-send\">Submit</button>\n    \n  <div id=\"MyWizard\" class=\"wizard\">\n    <ul class=\"steps\">\n      <li data-target=\"#step1\" class=\"active\"><span class=\"badge badge-info\">1</span>Step 1<span class=\"chevron\"></span></li>\n      <li data-target=\"#step2\"><span class=\"badge\">2</span>Step 2<span class=\"chevron\"></span></li>\n      <li data-target=\"#step3\"><span class=\"badge\">3</span>Step 3<span class=\"chevron\"></span></li>\n    </ul>\n    <div class=\"actions\">\n      <button class=\"btn btn-mini btn-prev\"> <i class=\"icon-arrow-left\"></i>Prev</button>\n      <button class=\"btn btn-mini btn-next\" data-last=\"Finish\">Next<i class=\"icon-arrow-right\"></i></button>\n    </div>\n  </div>\n  <div class=\"step-content\">\n    <div class=\"step-pane active\" id=\"step1\">\n        <h2>Step 1 - Begin the installation</h2>\n        <blockquote>\n            <p>Please, click the install button to begin the installation.</p>\n        </blockquote>\n        <div id=\"stepOne-button-start\"></div>\n        <br>\n        <div id=\"stepOne-message\"></div>\n        </div>\n    <div class=\"step-pane\" id=\"step2\">\n        <h2>Step 2 - Publish the schema</h2>\n        \n        <blockquote>\n            <p>2.1) Now access <i>File->Manage Data Sources</i>, and select the <i>'Import Analysis'</i> option.</p>\n        </blockquote>\n        <p><img class=\"img-thumbnail\" style=\"border:1px;\" src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/importAnalysisSchema.png\"></p>\n        \n        <blockquote>\n            <p>2.2) Select the schema pentahoCEAudit.mondrian.xml and add the parameters of connection.</p>\n            <footer>The path is <i>pentaho-solutions/system/petaho-ce-audit/schemas/</i></footer>\n        </blockquote>\n        <p><img class=\"img-thumbnail\" src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/insertDataSource.png\"></p>\n  \n        <blockquote>\n            <p>Please click 'Next' to continue.</p>\n        </blockquote>\n    </div>\n    <div class=\"step-pane\" id=\"step3\">\n        <h2>Step 3 - Restart biserver.</h2>\n        <blockquote>\n            <p>Congratulations, the installation has been completed.</p>\n            <p>Now restart the biserver.</p>      \n        </blockquote>\n        </div>\n    </div>\n  <br>\n  <!--\n    <input type=\"button\" class=\"btn\" id=\"btnWizardPrev\" value=\"Back\">\n    <input type=\"button\" class=\"btn btn-primary\" id=\"btnWizardNext\" value=\"Next\"> \n    -->\n    <hr>\n    <div id=\"footer\">\n      <div class=\"container\">\n        <p class=\"text-muted credit\">\n            Developed by \n            <a href=\"http://it4biz.com.br\" target=\"no_blank\" title=\"IT4biz IT Solutions\">\n                <img \n                    class=\"img-thumbnail\" style=\"border:1px;\" \n                    src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/logo.png\"\n                >\n            </a> \n        </p>                  \n      </div>\n    </div>\n</div> ",
       "type": "Html"
      },
      {
@@ -237,12 +122,12 @@
     "properties": [
      {
       "name": "name",
-      "value": "",
+      "value": "teste",
       "type": "Id"
      },
      {
       "name": "javaScript",
-      "value": "$(document).ready(function() {        \n    $('#MyWizard').on('change', function(e, data) {\n      //console.log('change');\n      if(data.step===3 && data.direction==='next') {\n        // return e.preventDefault();\n      }\n    });\n    $('#MyWizard').on('changed', function(e, data) {\n      //console.log('changed');\n    });\n    $('#MyWizard').on('finished', function(e, data) {\n      //console.log('finished');\n    });\n    $('#btnWizardPrev').on('click', function() {\n      $('#MyWizard').wizard('previous');\n    });\n    $('#btnWizardNext').on('click', function() {\n      $('#MyWizard').wizard('next','foo');\n    });\n    $('#btnWizardStep').on('click', function() {\n      var item = $('#MyWizard').wizard('selectedItem');\n      //console.log(item.step);\n    });\n    $('#MyWizard').on('stepclick', function(e, data) {\n      //console.log('step' + data.step + ' clicked');\n      if(data.step===1) {\n        // return e.preventDefault();\n      }\n    });\n    \n    // optionally navigate back to 2nd step\n    $('#btnStep2').on('click', function(e, data) {\n      $('[data-target=#step2]').trigger(\"click\");\n    });\n}); ",
+      "value": "$(document).ready(function() {\n    console.log(\"ready\");\n    /*\n  $('#btn-send').click(function() {\n    console.log(\"botão cliacado\");\n    var str = $('#form').serialize();\n    var formData = new FormData(str);\n    //$('#paramsSent').html(str);\n    \n    $.post('/pentaho/plugin/data-access/api/mondrian/postAnalysis',\n          formData,\n          function(data){\n              console.log(data);\n          });\n });\n */\n \n $( '#form' )\n  .submit( function( e ) {\n    $.ajax( {\n      url: '/pentaho/plugin/data-access/api/mondrian/postAnalysis',\n      type: 'POST',\n      data: new FormData( this ),\n      processData: false,\n      contentType: false\n    } );\n    e.preventDefault();\n  } );\n});\n ",
       "type": "JavaScript"
      }
     ]
@@ -473,6 +358,509 @@
       "type": "Boolean"
      }
     ]
+   },
+   {
+    "id": "89ff9d22-445b-33d7-a66f-93edcbcef065",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "parameters",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "d8ee1311-ccf6-2dc9-f857-0f1231f5ce93",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "xmlaEnabledFlag",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "f4db28f7-318e-63d6-42ab-69ff74e41886",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "overwrite",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "d062914d-51ea-1a13-2995-0ae9b79b3300",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "catalogName",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "SELECTORS",
+    "name": "Selects",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Selects",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "b382974d-fbbc-a8c7-80ef-5a13ad4fec66",
+    "type": "Componentscheck",
+    "typeDesc": "Check Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "overwriteComponent",
+      "type": "Id"
+     },
+     {
+      "name": "separator",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:overwrite}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "valueAsId",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "dataSource",
+      "value": "dsBoolean",
+      "type": "Datasource"
+     },
+     {
+      "name": "valuesArray",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "overwrite-component",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "86afdd92-25d8-e244-b60c-2014409f446a",
+    "type": "Componentscheck",
+    "typeDesc": "Check Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "xmlaEnabledFlagComponent",
+      "type": "Id"
+     },
+     {
+      "name": "separator",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:xmlaEnabledFlag}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "valueAsId",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "dataSource",
+      "value": "dsBoolean",
+      "type": "Datasource"
+     },
+     {
+      "name": "valuesArray",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "xmlaEnabledFlag-component",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "39af92fe-c6d2-3e85-b4c4-33fd21eb3772",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "catalogNameComponent",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:catalogName}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "40",
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "catalogName-component",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "14199bab-1d24-7946-cd0d-b7677459c778",
+    "type": "ComponentsSelect",
+    "typeDesc": "Select Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "parametersComponent",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:parameters}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "valueAsId",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "externalPlugin",
+      "value": "",
+      "type": "externalPluginCustom"
+     },
+     {
+      "name": "dataSource",
+      "value": "dsDataSources",
+      "type": "Datasource"
+     },
+     {
+      "name": "valuesArray",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "parameters-component",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     },
+     {
+      "name": "extraOptions",
+      "value": "[]",
+      "type": "OptionArray"
+     }
+    ]
    }
   ]
  },
@@ -597,6 +985,117 @@
     "meta": "CPK",
     "meta_pluginId": "pentaho-ce-audit",
     "meta_endpoint": "stepOne"
+   },
+   {
+    "id": "60f6cc46-96c4-9629-4dc7-4cfff8665482",
+    "type": "Componentspentahoceaudit_getDataSources_CPKENDPOINT",
+    "typeDesc": "getDataSources Endpoint",
+    "parent": "PENTAHO-CE-AUDIT_CPKENDPOINTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dsDataSources",
+      "type": "Id"
+     },
+     {
+      "name": "stepName",
+      "value": "OUTPUT",
+      "type": "String"
+     },
+     {
+      "name": "kettleOutput",
+      "value": "Inferred",
+      "type": "kettleOutputCustom"
+     }
+    ],
+    "meta": "CPK",
+    "meta_pluginId": "pentaho-ce-audit",
+    "meta_endpoint": "getDataSources"
+   },
+   {
+    "id": "SCRIPTING",
+    "name": "SCRIPTING Queries",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "SCRIPTING Queries",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "fd535966-5679-f4c6-d7b4-2bed18c9a34c",
+    "type": "Componentsscriptable_scripting",
+    "typeDesc": "scriptable over scripting",
+    "parent": "SCRIPTING",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dsBoolean",
+      "type": "Id"
+     },
+     {
+      "name": "language",
+      "value": "beanshell",
+      "type": "String"
+     },
+     {
+      "name": "initscript",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "query",
+      "value": "import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;\n\nString[] columnNames = new String[2];\ncolumnNames[0] = \"id\";\ncolumnNames[1] = \"label\";\n\nClass[] columnTypes = new Class[2];\ncolumnTypes[0] = String.class;\ncolumnTypes[1] = String.class;\n\nTypedTableModel model = new TypedTableModel(columnNames, columnTypes);\nmodel.addRow(new Object[]{ new String(\"true\"), new String(\"True\")});\nmodel.addRow(new Object[]{ new String(\"false\"), new String(\"False\")});\n\nreturn model;",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     }
+    ],
+    "meta": "CDA",
+    "meta_conntype": "scripting.scripting",
+    "meta_datype": "scriptable"
    }
   ]
  },
