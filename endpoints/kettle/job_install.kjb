@@ -100,8 +100,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>77</xloc>
-      <yloc>60</yloc>
+      <xloc>23</xloc>
+      <yloc>57</yloc>
       </entry>
     <entry>
       <name>DUMMY</name>
@@ -219,7 +219,7 @@
       <yloc>190</yloc>
       </entry>
     <entry>
-      <name>View pentaho_ce_audit exists&#x3f;</name>
+      <name>Table pentaho_ce_audit exists&#x3f;</name>
       <description/>
       <type>TABLE_EXISTS</type>
       <tablename>pentaho_ce_audit</tablename>
@@ -232,12 +232,12 @@
       <yloc>59</yloc>
       </entry>
     <entry>
-      <name>Execute createViewPentahoCEAudit</name>
+      <name>Execute createPentahoCEAuditTable</name>
       <description/>
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;install&#x2f;createViewPentahoCEAudit.ktr</filename>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;install&#x2f;createPentahoCEAuditTable.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -283,8 +283,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>165</xloc>
-      <yloc>56</yloc>
+      <xloc>96</xloc>
+      <yloc>60</yloc>
       </entry>
   </entries>
   <hops>
@@ -335,7 +335,7 @@
     </hop>
     <hop>
       <from>Table pro_audit exists&#x3f;</from>
-      <to>View pentaho_ce_audit exists&#x3f;</to>
+      <to>Table pentaho_ce_audit exists&#x3f;</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -344,7 +344,7 @@
     </hop>
     <hop>
       <from>Execute createProAudirTable</from>
-      <to>View pentaho_ce_audit exists&#x3f;</to>
+      <to>Table pentaho_ce_audit exists&#x3f;</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -352,7 +352,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>View pentaho_ce_audit exists&#x3f;</from>
+      <from>Table pentaho_ce_audit exists&#x3f;</from>
       <to>DUMMY</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -361,8 +361,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>View pentaho_ce_audit exists&#x3f;</from>
-      <to>Execute createViewPentahoCEAudit</to>
+      <from>Table pentaho_ce_audit exists&#x3f;</from>
+      <to>Execute createPentahoCEAuditTable</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -370,7 +370,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Execute createViewPentahoCEAudit</from>
+      <from>Execute createPentahoCEAuditTable</from>
       <to>DUMMY</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
