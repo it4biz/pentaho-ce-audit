@@ -16,6 +16,7 @@ It is an open source project that helps Pentaho BI Admin users to visualize stat
 
 ### Installation
 * For Pentaho BA Users, please use Pentaho Marketplace
+* For manual installation watch this video: https://www.youtube.com/watch?v=W7tHv1C9cy0
 
 ### Support
 * If you need support please feel free to create a issue here https://github.com/it4biz/pentaho-ce-audit/issues we will do our best to help you.
