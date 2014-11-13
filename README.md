@@ -11,8 +11,8 @@ It is an open source project that helps Pentaho BI Admin users to visualize stat
 * And a lot of others infos about the use of the BI Portal.
 
 ### Learn more
-* Feel free to use for Production Environment if it works correctly for you.
-* This plug-in will apply automatically a Environment configuration, if you want to know more about it please visit the link http://infocenter.pentaho.com/help48/index.jsp?topic=%2Fadmin_guide%2Ftask_switching_to_file_based_logging.html
+* Feel free to use it for Production Environment if it works correctly for you.
+* This plug-in will apply automatically an Environment configuration, if you want to know more about it please visit the link http://infocenter.pentaho.com/help48/index.jsp?topic=%2Fadmin_guide%2Ftask_switching_to_file_based_logging.html
 
 ### Installation
 * For Pentaho BA Users, please use Pentaho Marketplace
