@@ -7,7 +7,8 @@ What is Pentaho CE Audit Plugin?
 It is an open source project that helps Pentaho BI Admin users to visualize statistics like: 
 * Who is logging in the BI Portal (Pentaho BI Server)? 
 * When are the users using the BI Portal?
-* What is the file with more access and a lot of others infos about the use of the BI Portal.
+* What is the content with more access?
+* And a lot of others infos about the use of the BI Portal.
 
 ### Read More
 
