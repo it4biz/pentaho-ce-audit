@@ -10,14 +10,15 @@ It is an open source project that helps Pentaho BI Admin users to visualize stat
 * What is the content with more access?
 * And a lot of others infos about the use of the BI Portal.
 
-### Read More
-
-To learn more visit our page http://it4biz.github.com/pentaho-ce-audit
-
+### Learn more
+* Feel free to use for Production Environment if it works correctly for you.
+* This plug-in will apply automatically a Environment configuration, if you want to know more about please visit the link http://infocenter.pentaho.com/help48/index.jsp?topic=%2Fadmin_guide%2Ftask_switching_to_file_based_logging.html
 
 ### Installation
-
 * For Pentaho BA Users, please use Pentaho Marketplace
+
+### Installation
+* If you need support please feel free to create a issue here https://github.com/it4biz/pentaho-ce-audit/issues we will do our best to help you.
 
 ### Licenses
 
@@ -28,8 +29,3 @@ Pentaho CE Audit Plugin is a free and open source software. It is available unde
 1.0 Alpha version (Not ready for Production Environment, just for internal tests):
 * Automatic configuration of the server for PostgreSQL and HSQLDB database;
 * Mondrian OLAP Cube to visualize the stats about the use of the BI Portal;
-
-
-P.S:
-* Feel free to use for Production Environment if it works correctly for you.
-* This plug-in will apply automatically a Environment configuration, if you want to know more about please visit the link http://infocenter.pentaho.com/help48/index.jsp?topic=%2Fadmin_guide%2Ftask_switching_to_file_based_logging.html
