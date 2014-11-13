@@ -1,26 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>job_install</name>
+  <name>job_atualiza_cache</name>
     <description/>
     <extended_description/>
     <job_version/>
     <job_status>0</job_status>
   <directory>&#x2f;</directory>
   <created_user>-</created_user>
-  <created_date>2014&#x2f;11&#x2f;04 12&#x3a;05&#x3a;15.765</created_date>
+  <created_date>2013&#x2f;07&#x2f;12 16&#x3a;27&#x3a;43.018</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;11&#x2f;04 12&#x3a;05&#x3a;15.765</modified_date>
+  <modified_date>2013&#x2f;07&#x2f;12 16&#x3a;27&#x3a;43.018</modified_date>
     <parameters>
+        <parameter>
+            <name>PENTAHO_HOST</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>PENTAHO_PASSWORD</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>PENTAHO_PORT</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>PENTAHO_USER</name>
+            <default_value/>
+            <description/>
+        </parameter>
     </parameters>
   <connection>
-    <name>Hibernate</name>
+    <name>hsqldb_habitacao</name>
     <server/>
-    <type>HYPERSONIC</type>
-    <access>JNDI</access>
-    <database>Hibernate</database>
+    <type>GENERIC</type>
+    <access>Native</access>
+    <database/>
     <port>1521</port>
-    <username/>
-    <password>Encrypted </password>
+    <username>&#x24;&#x7b;USER_HSQLDB&#x7d;</username>
+    <password>&#x24;&#x7b;PASSWD_HSQLDB&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>CUSTOM_DRIVER_CLASS</code><attribute>&#x24;&#x7b;DRIVE_CLASS_HSQLDB&#x7d;</attribute></attribute>
+      <attribute><code>CUSTOM_URL</code><attribute>&#x24;&#x7b;URL_HSQLDB&#x7d;</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1521</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>postgres_habitacao</name>
+    <server>&#x24;&#x7b;DW_POSTGRES_HOST&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;DW_POSTGRES_DATABASE&#x7d;</database>
+    <port>&#x24;&#x7b;DW_POSTGRES_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;DW_POSTGRES_USERNAME&#x7d;</username>
+    <password>&#x24;&#x7b;DW_POSTGRES_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -28,7 +74,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1521</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;DW_POSTGRES_PORT&#x7d;</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
@@ -59,31 +105,6 @@
    <shared_objects_file/>
   <entries>
     <entry>
-      <name>Copy File pentahoObjects.spring.xml to old_pentahoObjects.spring.xml</name>
-      <description/>
-      <type>COPY_FILES</type>
-      <copy_empty_folders>Y</copy_empty_folders>
-      <arg_from_previous>N</arg_from_previous>
-      <overwrite_files>N</overwrite_files>
-      <include_subfolders>N</include_subfolders>
-      <remove_source_files>N</remove_source_files>
-      <add_result_filesname>N</add_result_filesname>
-      <destination_is_a_file>Y</destination_is_a_file>
-      <create_destination_folder>N</create_destination_folder>
-      <fields>
-        <field>
-          <source_filefolder>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;..&#x2f;..&#x2f;..&#x2f;pentahoObjects.spring.xml</source_filefolder>
-          <destination_filefolder>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;..&#x2f;..&#x2f;..&#x2f;old_pentahoObjects.spring.xml</destination_filefolder>
-          <wildcard/>
-        </field>
-      </fields>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>379</xloc>
-      <yloc>188</yloc>
-      </entry>
-    <entry>
       <name>START</name>
       <description/>
       <type>SPECIAL</type>
@@ -100,36 +121,16 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>23</xloc>
-      <yloc>57</yloc>
+      <xloc>130</xloc>
+      <yloc>162</yloc>
       </entry>
     <entry>
-      <name>DUMMY</name>
-      <description/>
-      <type>SPECIAL</type>
-      <start>N</start>
-      <dummy>Y</dummy>
-      <repeat>N</repeat>
-      <schedulerType>0</schedulerType>
-      <intervalSeconds>0</intervalSeconds>
-      <intervalMinutes>60</intervalMinutes>
-      <hour>12</hour>
-      <minutes>0</minutes>
-      <weekDay>1</weekDay>
-      <DayOfMonth>1</DayOfMonth>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>1267</xloc>
-      <yloc>56</yloc>
-      </entry>
-    <entry>
-      <name>Execute replace bean</name>
+      <name>tranf_atz_mondrian</name>
       <description/>
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;install&#x2f;replaceBean.ktr</filename>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;update-cache-pentaho-update-cache-pentaho-5&#x2f;transf_atz_mondrian.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -150,162 +151,52 @@
       <create_parent_folder>N</create_parent_folder>
       <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <parallel>N</parallel>
+            <parameter>            <name>PENTAHO_HOST</name>
+            <stream_name/>
+            <value>&#x24;&#x7b;PENTAHO_HOST&#x7d;</value>
+            </parameter>            <parameter>            <name>PENTAHO_PORT</name>
+            <stream_name/>
+            <value>&#x24;&#x7b;PENTAHO_PORT&#x7d;</value>
+            </parameter>            <parameter>            <name>PENTAHO_USER</name>
+            <stream_name/>
+            <value>&#x24;&#x7b;PENTAHO_USER&#x7d;</value>
+            </parameter>            <parameter>            <name>PENTAHO_PASSWORD</name>
+            <stream_name/>
+            <value>&#x24;&#x7b;PENTAHO_PASSWORD&#x7d;</value>
+            </parameter>      </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>535</xloc>
-      <yloc>60</yloc>
+      <xloc>293</xloc>
+      <yloc>162</yloc>
       </entry>
     <entry>
-      <name>Checks if file old_pentahoObjects.spring.xml already exist</name>
-      <description/>
-      <type>FILES_EXIST</type>
-      <filename/>
-      <fields>
-        <field>
-          <name>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;..&#x2f;..&#x2f;..&#x2f;old_pentahoObjects.spring.xml</name>
-        </field>
-      </fields>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>284</xloc>
-      <yloc>60</yloc>
-      </entry>
-    <entry>
-      <name>Table pro_audit exists&#x3f;</name>
-      <description/>
-      <type>TABLE_EXISTS</type>
-      <tablename>pro_audit</tablename>
-      <schemaname>public</schemaname>
-      <connection>Hibernate</connection>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>666</xloc>
-      <yloc>59</yloc>
-      </entry>
-    <entry>
-      <name>Execute createProAudirTable</name>
-      <description/>
-      <type>TRANS</type>
-      <specification_method>filename</specification_method>
-      <trans_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;install&#x2f;createProAuditTable.ktr</filename>
-      <transname/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <clear_rows>N</clear_rows>
-      <clear_files>N</clear_files>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Basic</loglevel>
-      <cluster>N</cluster>
-      <slave_server_name/>
-      <set_append_logfile>N</set_append_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <create_parent_folder>N</create_parent_folder>
-      <logging_remote_work>N</logging_remote_work>
-      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>789</xloc>
-      <yloc>190</yloc>
-      </entry>
-    <entry>
-      <name>Table pentaho_ce_audit exists&#x3f;</name>
-      <description/>
-      <type>TABLE_EXISTS</type>
-      <tablename>pentaho_ce_audit</tablename>
-      <schemaname>public</schemaname>
-      <connection>Hibernate</connection>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>899</xloc>
-      <yloc>59</yloc>
-      </entry>
-    <entry>
-      <name>Execute createPentahoCEAuditTable</name>
-      <description/>
-      <type>TRANS</type>
-      <specification_method>filename</specification_method>
-      <trans_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;install&#x2f;createPentahoCEAuditTable.ktr</filename>
-      <transname/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <clear_rows>N</clear_rows>
-      <clear_files>N</clear_files>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Basic</loglevel>
-      <cluster>N</cluster>
-      <slave_server_name/>
-      <set_append_logfile>N</set_append_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <create_parent_folder>N</create_parent_folder>
-      <logging_remote_work>N</logging_remote_work>
-      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>1001</xloc>
-      <yloc>186</yloc>
-      </entry>
-    <entry>
-      <name>OUTPUT</name>
+      <name>Success</name>
       <description/>
       <type>SUCCESS</type>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1391</xloc>
-      <yloc>55</yloc>
+      <xloc>756</xloc>
+      <yloc>162</yloc>
       </entry>
     <entry>
-      <name>Wait for</name>
+      <name>Abort job</name>
       <description/>
-      <type>DELAY</type>
-      <maximumTimeout>1</maximumTimeout>
-      <scaletime>0</scaletime>
+      <type>ABORT</type>
+      <message/>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>96</xloc>
-      <yloc>60</yloc>
+      <xloc>448</xloc>
+      <yloc>292</yloc>
       </entry>
     <entry>
-      <name>Table pentaho_ce_audit_metadata</name>
-      <description/>
-      <type>TABLE_EXISTS</type>
-      <tablename>pentaho_ce_audit_metadata</tablename>
-      <schemaname>public</schemaname>
-      <connection>Hibernate</connection>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>1096</xloc>
-      <yloc>58</yloc>
-      </entry>
-    <entry>
-      <name>Execute createPentahoCEAuditTable 2</name>
+      <name>transf_atz_saiku</name>
       <description/>
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;install&#x2f;createPentahoCEAuditMetadataTable.ktr</filename>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;update-cache-pentaho-update-cache-pentaho-5&#x2f;transf_atz_saiku.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -326,98 +217,74 @@
       <create_parent_folder>N</create_parent_folder>
       <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <parallel>N</parallel>
+            <parameter>            <name>PENTAHO_HOST</name>
+            <stream_name/>
+            <value>&#x24;&#x7b;PENTAHO_HOST&#x7d;</value>
+            </parameter>            <parameter>            <name>PENTAHO_PORT</name>
+            <stream_name/>
+            <value>&#x24;&#x7b;PENTAHO_PORT&#x7d;</value>
+            </parameter>            <parameter>            <name>PENTAHO_USER</name>
+            <stream_name/>
+            <value>&#x24;&#x7b;PENTAHO_USER&#x7d;</value>
+            </parameter>            <parameter>            <name>PENTAHO_PASSWORD</name>
+            <stream_name/>
+            <value>&#x24;&#x7b;PENTAHO_PASSWORD&#x7d;</value>
+            </parameter>      </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1228</xloc>
-      <yloc>187</yloc>
+      <xloc>448</xloc>
+      <yloc>162</yloc>
+      </entry>
+    <entry>
+      <name>transf_atz_cda</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;update-cache-pentaho-update-cache-pentaho-5&#x2f;transf_atz_cda.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+            <parameter>            <name>PENTAHO_HOST</name>
+            <stream_name/>
+            <value>&#x24;&#x7b;PENTAHO_HOST&#x7d;</value>
+            </parameter>            <parameter>            <name>PENTAHO_PORT</name>
+            <stream_name/>
+            <value>&#x24;&#x7b;PENTAHO_PORT&#x7d;</value>
+            </parameter>            <parameter>            <name>PENTAHO_USER</name>
+            <stream_name/>
+            <value>&#x24;&#x7b;PENTAHO_USER&#x7d;</value>
+            </parameter>            <parameter>            <name>PENTAHO_PASSWORD</name>
+            <stream_name/>
+            <value>&#x24;&#x7b;PENTAHO_PASSWORD&#x7d;</value>
+            </parameter>      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>604</xloc>
+      <yloc>162</yloc>
       </entry>
   </entries>
   <hops>
     <hop>
-      <from>Checks if file old_pentahoObjects.spring.xml already exist</from>
-      <to>Execute replace bean</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Checks if file old_pentahoObjects.spring.xml already exist</from>
-      <to>Copy File pentahoObjects.spring.xml to old_pentahoObjects.spring.xml</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Copy File pentahoObjects.spring.xml to old_pentahoObjects.spring.xml</from>
-      <to>Execute replace bean</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Execute replace bean</from>
-      <to>Table pro_audit exists&#x3f;</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Table pro_audit exists&#x3f;</from>
-      <to>Execute createProAudirTable</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Table pro_audit exists&#x3f;</from>
-      <to>Table pentaho_ce_audit exists&#x3f;</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Execute createProAudirTable</from>
-      <to>Table pentaho_ce_audit exists&#x3f;</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Table pentaho_ce_audit exists&#x3f;</from>
-      <to>Execute createPentahoCEAuditTable</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>DUMMY</from>
-      <to>OUTPUT</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
       <from>START</from>
-      <to>Wait for</to>
+      <to>tranf_atz_mondrian</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -425,35 +292,8 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>Wait for</from>
-      <to>Checks if file old_pentahoObjects.spring.xml already exist</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Table pentaho_ce_audit exists&#x3f;</from>
-      <to>Table pentaho_ce_audit_metadata</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Execute createPentahoCEAuditTable</from>
-      <to>Table pentaho_ce_audit_metadata</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Table pentaho_ce_audit_metadata</from>
-      <to>Execute createPentahoCEAuditTable 2</to>
+      <from>tranf_atz_mondrian</from>
+      <to>Abort job</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -461,25 +301,73 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Table pentaho_ce_audit_metadata</from>
-      <to>DUMMY</to>
+      <from>tranf_atz_mondrian</from>
+      <to>transf_atz_saiku</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>transf_atz_saiku</from>
+      <to>Abort job</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Execute createPentahoCEAuditTable 2</from>
-      <to>DUMMY</to>
+      <from>transf_atz_saiku</from>
+      <to>transf_atz_cda</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>transf_atz_cda</from>
+      <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>transf_atz_cda</from>
+      <to>Abort job</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
       <unconditional>N</unconditional>
     </hop>
   </hops>
   <notepads>
+    <notepad>
+      <note>Autor&#x3a; Daniel Albuquerque Rabelo&#xd;&#xa;Email&#x3a; contato&#x40;danielrabelo.com&#xd;&#xa;&#xd;&#xa;Edited by&#x3a; fernando.maia&#x40;it4biz.com.br</note>
+      <xloc>8</xloc>
+      <yloc>6</yloc>
+      <width>243</width>
+      <heigth>71</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
 
 </job>

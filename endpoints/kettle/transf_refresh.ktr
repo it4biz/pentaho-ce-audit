@@ -11,22 +11,22 @@
     <parameters>
         <parameter>
             <name>PENTAHO_HOST</name>
-            <default_value>localhost</default_value>
+            <default_value/>
             <description/>
         </parameter>
         <parameter>
             <name>PENTAHO_PASSWORD</name>
-            <default_value>password</default_value>
+            <default_value/>
             <description/>
         </parameter>
         <parameter>
             <name>PENTAHO_PORT</name>
-            <default_value>8080</default_value>
+            <default_value/>
             <description/>
         </parameter>
         <parameter>
             <name>PENTAHO_USER</name>
-            <default_value>admin</default_value>
+            <default_value/>
             <description/>
         </parameter>
     </parameters>
@@ -134,6 +134,27 @@
       <bordercolorblue>100</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
+    <notepad>
+      <note>&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#xd;&#xa;Transformation for table pentaho_ce_audit&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;</note>
+      <xloc>1096</xloc>
+      <yloc>83</yloc>
+      <width>1867</width>
+      <heigth>717</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>Y</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>221</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>198</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <connection>
     <name>Hibernate</name>
@@ -175,7 +196,6 @@
   <hop> <from>resultFiles is null&#x3f;</from><to>Switch &#x2f; Case resulFiles</to><enabled>Y</enabled> </hop>
   <hop> <from>Switch &#x2f; Case resulFiles</from><to>Switch to Select Values Join</to><enabled>Y</enabled> </hop>
   <hop> <from>Switch &#x2f; Case resulFiles</from><to>Json Input Files</to><enabled>Y</enabled> </hop>
-  <hop> <from>OUTPUT END</from><to>Table output</to><enabled>Y</enabled> </hop>
   <hop> <from>Block this step until steps finish</from><to>Add constants</to><enabled>Y</enabled> </hop>
   <hop> <from>Switch to Select Values Join</from><to>Join Rows</to><enabled>Y</enabled> </hop>
   <hop> <from>Switch &#x2f; Case FILE</from><to>Records without file</to><enabled>Y</enabled> </hop>
@@ -203,6 +223,8 @@
   <hop> <from>input instances OKAY 2</from><to>BRIDGE</to><enabled>Y</enabled> </hop>
   <hop> <from>BRIDGE</from><to>Block this step until steps finish</to><enabled>Y</enabled> </hop>
   <hop> <from>BRIDGE</from><to>Truncate pentaho_ce_audit table</to><enabled>Y</enabled> </hop>
+  <hop> <from>OUTPUT END</from><to>Not specified default values</to><enabled>Y</enabled> </hop>
+  <hop> <from>Not specified default values</from><to>Table output PENTAHO_CE_AUDIT</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Add constants</name>
@@ -286,6 +308,128 @@
     </step>
 
   <step>
+    <name>Add constants 2</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>SESSION_END</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>session_end</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>226</xloc>
+      <yloc>175</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Add constants 2 2</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>INSTANCE_END</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>instance_end</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>243</xloc>
+      <yloc>470</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>BRIDGE</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>JOB_ID</name>
+        <rename>PLUGIN</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>OBJ_ID</name>
+        <rename>FILE</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>OBJ_ID</name>
+        <rename>DIRECTORY</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ACTOR</name>
+        <rename>USER</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>MESSAGE_TYPE</name>
+        <rename>TYPE</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>MESSAGE_TEXT_VALUE</name>
+        <rename>MSG_VALUE</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>MESSAGE_NAME</name>
+        <rename>MSG_NAME</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>AUDIT_TIME</name>
+        <rename>DATA</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>DURATION</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>951</xloc>
+      <yloc>351</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
     <name>Block this step until steps finish</name>
     <type>BlockUntilStepsFinish</type>
     <description/>
@@ -306,6 +450,34 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>1284</xloc>
       <yloc>183</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Clear records </name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+   <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>OBJ_ID</name>
+        <value/>
+        <mask/>
+        <set_empty_string>Y</set_empty_string>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>502</xloc>
+      <yloc>178</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -399,6 +571,198 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>1842</xloc>
       <yloc>271</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>DBLK instance_end</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Hibernate</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>pro_audit</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>MESSAGE_NAME</name>
+        <field>MESSAGE_NAME</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>INSTANCE_END</name>
+        <field>MESSAGE_TYPE</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>JOB_ID</name>
+        <rename>JOB_ID</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>OBJ_ID</name>
+        <rename>OBJ_ID</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>OBJ_TYPE</name>
+        <rename>OBJ_TYPE</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>ACTOR</name>
+        <rename>ACTOR</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>MESSAGE_TYPE</name>
+        <rename>MESSAGE_TYPE</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>MESSAGE_TEXT_VALUE</name>
+        <rename>MESSAGE_TEXT_VALUE</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>MESSAGE_NUM_VALUE</name>
+        <rename>MESSAGE_NUM_VALUE</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>AUDIT_TIME</name>
+        <rename>AUDIT_TIME</rename>
+        <default/>
+        <type>Timestamp</type>
+      </value>
+      <value>
+        <name>DURATION</name>
+        <rename>DURATION</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>346</xloc>
+      <yloc>469</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>DBLK session_end</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Hibernate</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>pro_audit</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>INST_ID</name>
+        <field>INST_ID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>SESSION_END</name>
+        <field>MESSAGE_TYPE</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>JOB_ID</name>
+        <rename>JOB_ID</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>OBJ_ID</name>
+        <rename>OBJ_ID</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>OBJ_TYPE</name>
+        <rename>OBJ_TYPE</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>ACTOR</name>
+        <rename>ACTOR</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>MESSAGE_NAME</name>
+        <rename>MESSAGE_NAME</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>MESSAGE_TEXT_VALUE</name>
+        <rename>MESSAGE_TEXT_VALUE</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>MESSAGE_TYPE</name>
+        <rename>MESSAGE_TYPE</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>AUDIT_TIME</name>
+        <rename>AUDIT_TIME</rename>
+        <default/>
+        <type>Timestamp</type>
+      </value>
+      <value>
+        <name>DURATION</name>
+        <rename>DURATION</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>327</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -502,6 +866,35 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>1284</xloc>
       <yloc>667</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Clear records </send_true_to>
+<send_false_to>Rows discarted</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>OBJ_TYPE</leftvalue>
+ <function>IS NOT NULL</function>
+ <rightvalue/>
+ <value><name>constant</name><type>String</type><text>null</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>411</xloc>
+      <yloc>179</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -764,7 +1157,7 @@
     <name>Json Input User Roles</name>
     <type>JsonInput</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
          <partitioning>
@@ -818,6 +1211,40 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>1284</xloc>
       <yloc>540</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Not specified default values</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <replaceAllByValue/>
+      <replaceAllMask/>
+      <selectFields>N</selectFields>
+      <selectValuesType>Y</selectValuesType>
+      <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      <valuetype>
+        <name>String</name>
+        <value>Not specified</value>
+        <mask/>
+        <set_type_empty_string>N</set_type_empty_string>
+        </valuetype>
+      </valuetypes>
+    <fields>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2668</xloc>
+      <yloc>649</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -921,6 +1348,44 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>2041</xloc>
       <yloc>133</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Rows discarted</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>469</xloc>
+      <yloc>259</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Rows discarted 2</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>543</xloc>
+      <yloc>606</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1070,6 +1535,76 @@
     </step>
 
   <step>
+    <name>Switch &#x2f; Case JOB_ID</name>
+    <type>SwitchCase</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<fieldname>JOB_ID</fieldname>
+<use_contains>N</use_contains>
+<case_value_type>String</case_value_type>
+<case_value_format/>
+<case_value_decimal/>
+<case_value_group/>
+<default_target_step>Rows discarted 2</default_target_step>
+<cases><case><value>cda</value>
+<target_step>input instances OKAY 2</target_step>
+</case><case><value>pentaho-cdf-dd</value>
+<target_step>input instances OKAY 2</target_step>
+</case><case><value>pentaho-cdf</value>
+<target_step>input instances OKAY 2</target_step>
+</case><case><value>org.pentaho.platform.web.http.api.resources.XactionUtil</value>
+<target_step>input instances OKAY 2</target_step>
+</case><case><value>org.pentaho.reporting.platform.plugin.ExecuteReportContentHandler</value>
+<target_step>input instances OKAY 2</target_step>
+</case></cases>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>590</xloc>
+      <yloc>470</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Switch &#x2f; Case OBJ_TYPE</name>
+    <type>SwitchCase</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<fieldname>OBJ_TYPE</fieldname>
+<use_contains>N</use_contains>
+<case_value_type>String</case_value_type>
+<case_value_format/>
+<case_value_decimal/>
+<case_value_group/>
+<default_target_step>Rows discarted 2</default_target_step>
+<cases><case><value>org.pentaho.platform.engine.services.solution.SolutionEngine</value>
+<target_step>Switch &#x2f; Case JOB_ID</target_step>
+</case><case><value>pt.webdetails.cdf.dd.api.RenderApi</value>
+<target_step>Switch &#x2f; Case JOB_ID</target_step>
+</case><case><value>org.pentaho.reporting.platform.plugin.ReportContentGenerator</value>
+<target_step>Switch &#x2f; Case JOB_ID</target_step>
+</case><case><value>org.pentaho.cdf.CdfContentGenerator</value>
+<target_step>Switch &#x2f; Case JOB_ID</target_step>
+</case></cases>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>468</xloc>
+      <yloc>470</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
     <name>Switch &#x2f; Case resulFiles</name>
     <type>SwitchCase</type>
     <description/>
@@ -1182,7 +1717,59 @@
     </step>
 
   <step>
-    <name>Table output</name>
+    <name>TIN pro_audit Table 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Hibernate</connection>
+    <sql>SELECT INST_ID FROM pro_audit&#xd;&#xa;WHERE &#xd;&#xa;	MESSAGE_TYPE &#x3d; &#x27;session_start&#x27;&#xd;&#xa;	AND OBJ_TYPE&#x3d;&#x27;org.pentaho.platform.web.http.session.PentahoHttpSession&#x27;&#xd;&#xa;GROUP BY INST_ID</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>105</xloc>
+      <yloc>175</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>TIN pro_audit Table 2 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Hibernate</connection>
+    <sql>SELECT INST_ID, MESSAGE_NAME&#xd;&#xa;FROM pro_audit&#xd;&#xa;WHERE MESSAGE_TYPE &#x3d; &#x27;instance_start&#x27;&#xd;&#xa;GROUP BY INST_ID, MESSAGE_NAME</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>124</xloc>
+      <yloc>471</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Table output PENTAHO_CE_AUDIT</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1277,8 +1864,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>2668</xloc>
-      <yloc>658</yloc>
+      <xloc>2855</xloc>
+      <yloc>649</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1546,426 +2133,6 @@
     </step>
 
   <step>
-    <name>resultFiles is null&#x3f;</name>
-    <type>IfNull</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <replaceAllByValue/>
-      <replaceAllMask/>
-      <selectFields>Y</selectFields>
-      <selectValuesType>N</selectValuesType>
-      <setEmptyStringAll>N</setEmptyStringAll>
-    <valuetypes>
-      </valuetypes>
-    <fields>
-      <field>
-        <name>resultFiles</name>
-        <value>Not specified</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-        </field>
-      </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>2269</xloc>
-      <yloc>273</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>TIN pro_audit Table 2</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>Hibernate</connection>
-    <sql>SELECT INST_ID FROM pro_audit&#xd;&#xa;WHERE &#xd;&#xa;	MESSAGE_TYPE &#x3d; &#x27;session_start&#x27;&#xd;&#xa;	AND OBJ_TYPE&#x3d;&#x27;org.pentaho.platform.web.http.session.PentahoHttpSession&#x27;&#xd;&#xa;GROUP BY INST_ID</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>105</xloc>
-      <yloc>175</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>DBLK session_end</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>Hibernate</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>pro_audit</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>INST_ID</name>
-        <field>INST_ID</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>SESSION_END</name>
-        <field>MESSAGE_TYPE</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>JOB_ID</name>
-        <rename>JOB_ID</rename>
-        <default/>
-        <type>String</type>
-      </value>
-      <value>
-        <name>OBJ_ID</name>
-        <rename>OBJ_ID</rename>
-        <default/>
-        <type>String</type>
-      </value>
-      <value>
-        <name>OBJ_TYPE</name>
-        <rename>OBJ_TYPE</rename>
-        <default/>
-        <type>String</type>
-      </value>
-      <value>
-        <name>ACTOR</name>
-        <rename>ACTOR</rename>
-        <default/>
-        <type>String</type>
-      </value>
-      <value>
-        <name>MESSAGE_NAME</name>
-        <rename>MESSAGE_NAME</rename>
-        <default/>
-        <type>String</type>
-      </value>
-      <value>
-        <name>MESSAGE_TEXT_VALUE</name>
-        <rename>MESSAGE_TEXT_VALUE</rename>
-        <default/>
-        <type>String</type>
-      </value>
-      <value>
-        <name>MESSAGE_TYPE</name>
-        <rename>MESSAGE_TYPE</rename>
-        <default/>
-        <type>String</type>
-      </value>
-      <value>
-        <name>AUDIT_TIME</name>
-        <rename>AUDIT_TIME</rename>
-        <default/>
-        <type>Timestamp</type>
-      </value>
-      <value>
-        <name>DURATION</name>
-        <rename>DURATION</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-    </lookup>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>327</xloc>
-      <yloc>176</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Add constants 2</name>
-    <type>Constant</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <name>SESSION_END</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>session_end</nullif>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>226</xloc>
-      <yloc>175</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Filter rows</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<send_true_to>Clear records </send_true_to>
-<send_false_to>Rows discarted</send_false_to>
-    <compare>
-<condition>
- <negated>N</negated>
- <leftvalue>OBJ_TYPE</leftvalue>
- <function>IS NOT NULL</function>
- <rightvalue/>
- <value><name>constant</name><type>String</type><text>null</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
-    </compare>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>411</xloc>
-      <yloc>179</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>TIN pro_audit Table 2 2</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>Hibernate</connection>
-    <sql>SELECT INST_ID, MESSAGE_NAME&#xd;&#xa;FROM pro_audit&#xd;&#xa;WHERE MESSAGE_TYPE &#x3d; &#x27;instance_start&#x27;&#xd;&#xa;GROUP BY INST_ID, MESSAGE_NAME</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>124</xloc>
-      <yloc>471</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>DBLK instance_end</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>Hibernate</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>pro_audit</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>MESSAGE_NAME</name>
-        <field>MESSAGE_NAME</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>INSTANCE_END</name>
-        <field>MESSAGE_TYPE</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>JOB_ID</name>
-        <rename>JOB_ID</rename>
-        <default/>
-        <type>String</type>
-      </value>
-      <value>
-        <name>OBJ_ID</name>
-        <rename>OBJ_ID</rename>
-        <default/>
-        <type>String</type>
-      </value>
-      <value>
-        <name>OBJ_TYPE</name>
-        <rename>OBJ_TYPE</rename>
-        <default/>
-        <type>String</type>
-      </value>
-      <value>
-        <name>ACTOR</name>
-        <rename>ACTOR</rename>
-        <default/>
-        <type>String</type>
-      </value>
-      <value>
-        <name>MESSAGE_TYPE</name>
-        <rename>MESSAGE_TYPE</rename>
-        <default/>
-        <type>String</type>
-      </value>
-      <value>
-        <name>MESSAGE_TEXT_VALUE</name>
-        <rename>MESSAGE_TEXT_VALUE</rename>
-        <default/>
-        <type>String</type>
-      </value>
-      <value>
-        <name>MESSAGE_NUM_VALUE</name>
-        <rename>MESSAGE_NUM_VALUE</rename>
-        <default/>
-        <type>String</type>
-      </value>
-      <value>
-        <name>AUDIT_TIME</name>
-        <rename>AUDIT_TIME</rename>
-        <default/>
-        <type>Timestamp</type>
-      </value>
-      <value>
-        <name>DURATION</name>
-        <rename>DURATION</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-    </lookup>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>346</xloc>
-      <yloc>469</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Add constants 2 2</name>
-    <type>Constant</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <name>INSTANCE_END</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>instance_end</nullif>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>243</xloc>
-      <yloc>470</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Clear records </name>
-    <type>SetValueConstant</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-   <usevar>N</usevar>
-    <fields>
-      <field>
-        <name>OBJ_ID</name>
-        <value/>
-        <mask/>
-        <set_empty_string>Y</set_empty_string>
-        </field>
-      </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>502</xloc>
-      <yloc>178</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Rows discarted</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>469</xloc>
-      <yloc>259</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
     <name>input Login OKAY</name>
     <type>SelectValues</type>
     <description/>
@@ -2021,42 +2188,6 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>593</xloc>
       <yloc>178</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Switch &#x2f; Case JOB_ID</name>
-    <type>SwitchCase</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<fieldname>JOB_ID</fieldname>
-<use_contains>N</use_contains>
-<case_value_type>String</case_value_type>
-<case_value_format/>
-<case_value_decimal/>
-<case_value_group/>
-<default_target_step>Rows discarted 2</default_target_step>
-<cases><case><value>cda</value>
-<target_step>input instances OKAY 2</target_step>
-</case><case><value>pentaho-cdf-dd</value>
-<target_step>input instances OKAY 2</target_step>
-</case><case><value>pentaho-cdf</value>
-<target_step>input instances OKAY 2</target_step>
-</case><case><value>org.pentaho.platform.web.http.api.resources.XactionUtil</value>
-<target_step>input instances OKAY 2</target_step>
-</case><case><value>org.pentaho.reporting.platform.plugin.ExecuteReportContentHandler</value>
-<target_step>input instances OKAY 2</target_step>
-</case></cases>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>590</xloc>
-      <yloc>470</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -2122,8 +2253,8 @@
     </step>
 
   <step>
-    <name>Rows discarted 2</name>
-    <type>Dummy</type>
+    <name>resultFiles is null&#x3f;</name>
+    <type>IfNull</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -2132,105 +2263,42 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
+      <replaceAllByValue/>
+      <replaceAllMask/>
+      <selectFields>Y</selectFields>
+      <selectValuesType>N</selectValuesType>
+      <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>resultFiles</name>
+        <value>Not specified</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>543</xloc>
-      <yloc>606</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Switch &#x2f; Case OBJ_TYPE</name>
-    <type>SwitchCase</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<fieldname>OBJ_TYPE</fieldname>
-<use_contains>N</use_contains>
-<case_value_type>String</case_value_type>
-<case_value_format/>
-<case_value_decimal/>
-<case_value_group/>
-<default_target_step>Rows discarted 2</default_target_step>
-<cases><case><value>org.pentaho.platform.engine.services.solution.SolutionEngine</value>
-<target_step>Switch &#x2f; Case JOB_ID</target_step>
-</case><case><value>pt.webdetails.cdf.dd.api.RenderApi</value>
-<target_step>Switch &#x2f; Case JOB_ID</target_step>
-</case><case><value>org.pentaho.reporting.platform.plugin.ReportContentGenerator</value>
-<target_step>Switch &#x2f; Case JOB_ID</target_step>
-</case><case><value>org.pentaho.cdf.CdfContentGenerator</value>
-<target_step>Switch &#x2f; Case JOB_ID</target_step>
-</case></cases>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>468</xloc>
-      <yloc>470</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>BRIDGE</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>      <field>        <name>JOB_ID</name>
-        <rename>PLUGIN</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>OBJ_ID</name>
-        <rename>FILE</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>OBJ_ID</name>
-        <rename>DIRECTORY</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>ACTOR</name>
-        <rename>USER</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>MESSAGE_TYPE</name>
-        <rename>TYPE</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>MESSAGE_TEXT_VALUE</name>
-        <rename>MSG_VALUE</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>MESSAGE_NAME</name>
-        <rename>MSG_NAME</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>AUDIT_TIME</name>
-        <rename>DATA</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>DURATION</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>        <select_unspecified>N</select_unspecified>
-    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>951</xloc>
-      <yloc>351</yloc>
+      <xloc>2269</xloc>
+      <yloc>273</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step_error_handling>
+      <error>
+        <source_step>Json Input User Roles</source_step>
+        <target_step/>
+        <is_enabled>Y</is_enabled>
+        <nr_valuename/>
+        <descriptions_valuename/>
+        <fields_valuename/>
+        <codes_valuename/>
+        <max_errors/>
+        <max_pct_errors/>
+        <min_pct_rows/>
+      </error>
   </step_error_handling>
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>

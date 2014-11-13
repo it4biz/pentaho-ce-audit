@@ -1,6 +1,6 @@
 <Schema name="Pentaho CE Audit">
   <Cube name="Pentaho CE Audit" visible="true" cache="true" enabled="true">
-    <Table name="PENTAHO_CE_AUDIT" schema="PUBLIC">
+    <Table name="PENTAHO_CE_AUDIT">
     </Table>
     <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Period">
       <Hierarchy name="Period" visible="true" hasAll="true" allMemberName="All">
@@ -48,7 +48,7 @@
         </Level>
       </Hierarchy>
     </Dimension>
-    <Dimension type="StandardDimension" visible="true" name="Role">
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Role">
       <Hierarchy name="Role" visible="true" hasAll="true" allMemberName="All">
         <Level name="Role" visible="true" column="ROLE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>

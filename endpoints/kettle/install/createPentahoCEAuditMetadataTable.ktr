@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>createPentahoCEAuditTable</name>
+    <name>createPentahoCEAuditMetadataTable</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -139,7 +139,7 @@
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
-    <sql>CREATE TABLE &#x22;PENTAHO_CE_AUDIT&#x22;&#xd;&#xa;&#x28;&#xd;&#xa;  &#x22;DATA&#x22;  TIMESTAMP&#xd;&#xa;, &#x22;PLUGIN&#x22; VARCHAR&#x28;256&#x29;&#xd;&#xa;, &#x22;USER&#x22; VARCHAR&#x28;256&#x29;&#xd;&#xa;, &#x22;ROLE&#x22; VARCHAR&#x28;256&#x29;&#xd;&#xa;, &#x22;DIRECTORY&#x22; VARCHAR&#x28;256&#x29;&#xd;&#xa;, &#x22;FILE&#x22; VARCHAR&#x28;256&#x29;&#xd;&#xa;, &#x22;TYPE&#x22; VARCHAR&#x28;256&#x29;&#xd;&#xa;, &#x22;YEAR&#x22; INTEGER&#xd;&#xa;, &#x22;MONTH&#x22; INTEGER&#xd;&#xa;, &#x22;MONTH_DESC&#x22; VARCHAR&#x28;20&#x29;&#xd;&#xa;, &#x22;DAY&#x22; INTEGER&#xd;&#xa;, &#x22;DAY_WEEK&#x22; INTEGER&#xd;&#xa;, &#x22;DAY_WEEK_DESC&#x22; VARCHAR&#x28;20&#x29;&#xd;&#xa;, &#x22;HOUR&#x22; INTEGER&#xd;&#xa;, &#x22;MINUTE&#x22; INTEGER&#xd;&#xa;, &#x22;DURATION&#x22; BIGINT&#xd;&#xa;&#x29;</sql>
+    <sql>CREATE TABLE &#x22;PENTAHO_CE_AUDIT_METADATA&#x22;&#xd;&#xa;&#x28;&#xd;&#xa;  &#x22;LAST_UPDATE&#x22;  TIMESTAMP&#xd;&#xa;, &#x22;NUMBER_ROWS&#x22; INTEGER&#xd;&#xa;, &#x22;USER&#x22; VARCHAR&#x28;256&#x29;&#xd;&#xa;&#x29;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
