@@ -36,7 +36,7 @@
     </Dimension>
     <Dimension type="StandardDimension" visible="true" highCardinality="false" name="File">
       <Hierarchy name="File" visible="true" hasAll="true" allMemberName="All">
-        <Level name="Directory Path" visible="true" column="DIRECTORY" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        <Level name="Directory Path" visible="false" column="DIRECTORY" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
         <Level name="File" visible="true" column="FILE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
