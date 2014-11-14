@@ -120,8 +120,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1267</xloc>
-      <yloc>56</yloc>
+      <xloc>1596</xloc>
+      <yloc>58</yloc>
       </entry>
     <entry>
       <name>Execute replace bean</name>
@@ -176,8 +176,8 @@
       <name>Table pro_audit exists&#x3f;</name>
       <description/>
       <type>TABLE_EXISTS</type>
-      <tablename>pro_audit</tablename>
-      <schemaname>public</schemaname>
+      <tablename>PRO_AUDIT</tablename>
+      <schemaname/>
       <connection>Hibernate</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
@@ -222,8 +222,8 @@
       <name>Table pentaho_ce_audit exists&#x3f;</name>
       <description/>
       <type>TABLE_EXISTS</type>
-      <tablename>pentaho_ce_audit</tablename>
-      <schemaname>public</schemaname>
+      <tablename>&#x22;PENTAHO_CE_AUDIT&#x22;</tablename>
+      <schemaname/>
       <connection>Hibernate</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
@@ -261,8 +261,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1001</xloc>
-      <yloc>186</yloc>
+      <xloc>1107</xloc>
+      <yloc>198</yloc>
       </entry>
     <entry>
       <name>OUTPUT</name>
@@ -271,8 +271,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1391</xloc>
-      <yloc>55</yloc>
+      <xloc>1720</xloc>
+      <yloc>57</yloc>
       </entry>
     <entry>
       <name>Wait for</name>
@@ -290,17 +290,17 @@
       <name>Table pentaho_ce_audit_metadata</name>
       <description/>
       <type>TABLE_EXISTS</type>
-      <tablename>pentaho_ce_audit_metadata</tablename>
-      <schemaname>public</schemaname>
+      <tablename>&#x22;PENTAHO_CE_AUDIT_METADATA&#x22;</tablename>
+      <schemaname/>
       <connection>Hibernate</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1096</xloc>
+      <xloc>1277</xloc>
       <yloc>58</yloc>
       </entry>
     <entry>
-      <name>Execute createPentahoCEAuditTable 2</name>
+      <name>Execute createPentahoCEAuditMetadataTable</name>
       <description/>
       <type>TRANS</type>
       <specification_method>filename</specification_method>
@@ -329,8 +329,40 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1228</xloc>
-      <yloc>187</yloc>
+      <xloc>1430</xloc>
+      <yloc>189</yloc>
+      </entry>
+    <entry>
+      <name>Drop table pentaho_ce_audit</name>
+      <description/>
+      <type>SQL</type>
+      <sql>DROP TABLE &#x22;PENTAHO_CE_AUDIT&#x22;&#x3b;</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>Hibernate</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1100</xloc>
+      <yloc>59</yloc>
+      </entry>
+    <entry>
+      <name>Drop table metadata</name>
+      <description/>
+      <type>SQL</type>
+      <sql>DROP TABLE &#x22;PENTAHO_CE_AUDIT_METADATA&#x22;&#x3b;</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>Hibernate</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1431</xloc>
+      <yloc>59</yloc>
       </entry>
   </entries>
   <hops>
@@ -434,15 +466,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Table pentaho_ce_audit exists&#x3f;</from>
-      <to>Table pentaho_ce_audit_metadata</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>Execute createPentahoCEAuditTable</from>
       <to>Table pentaho_ce_audit_metadata</to>
       <from_nr>0</from_nr>
@@ -453,7 +476,7 @@
     </hop>
     <hop>
       <from>Table pentaho_ce_audit_metadata</from>
-      <to>Execute createPentahoCEAuditTable 2</to>
+      <to>Execute createPentahoCEAuditMetadataTable</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -461,7 +484,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Table pentaho_ce_audit_metadata</from>
+      <from>Execute createPentahoCEAuditMetadataTable</from>
       <to>DUMMY</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -470,8 +493,35 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Execute createPentahoCEAuditTable 2</from>
-      <to>DUMMY</to>
+      <from>Table pentaho_ce_audit exists&#x3f;</from>
+      <to>Drop table pentaho_ce_audit</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Drop table pentaho_ce_audit</from>
+      <to>Execute createPentahoCEAuditTable</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table pentaho_ce_audit_metadata</from>
+      <to>Drop table metadata</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Drop table metadata</from>
+      <to>Execute createPentahoCEAuditMetadataTable</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>

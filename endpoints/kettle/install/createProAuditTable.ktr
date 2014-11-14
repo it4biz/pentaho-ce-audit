@@ -97,12 +97,19 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Execute SQL script</from><to>Table pro_audit created</to><enabled>Y</enabled> </hop>
-  <hop> <from>Execute SQL script</from><to>Abort -  Error create pro_audit table </to><enabled>Y</enabled> </hop>
+  <hop> <from>Get database type</from><to>Switch &#x2f; Case</to><enabled>Y</enabled> </hop>
+  <hop> <from>Switch &#x2f; Case</from><to>SQL for HSQL Database Engine</to><enabled>Y</enabled> </hop>
+  <hop> <from>Switch &#x2f; Case</from><to>SQL for PostgreSQL</to><enabled>Y</enabled> </hop>
+  <hop> <from>Switch &#x2f; Case</from><to>Abort</to><enabled>Y</enabled> </hop>
+  <hop> <from>Execute SQL script </from><to>Abort -  Error create pro_audit table </to><enabled>Y</enabled> </hop>
+  <hop> <from>Execute SQL script </from><to>Table pro_audit created</to><enabled>Y</enabled> </hop>
+  <hop> <from>trigger</from><to>Get database type</to><enabled>Y</enabled> </hop>
+  <hop> <from>SQL for HSQL Database Engine</from><to>Execute SQL script </to><enabled>Y</enabled> </hop>
+  <hop> <from>SQL for PostgreSQL</from><to>Execute SQL script </to><enabled>Y</enabled> </hop>
   </order>
   <step>
-    <name>Execute SQL script</name>
-    <type>ExecSQL</type>
+    <name>Abort</name>
+    <type>Abort</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -111,23 +118,13 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>Hibernate</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>N</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>CREATE TABLE pro_audit&#xd;&#xa;&#x28;&#xd;&#xa;	job_id varchar&#x28;120&#x29;,&#xd;&#xa;	inst_id varchar&#x28;60&#x29;,&#xd;&#xa;	obj_id varchar&#x28;120&#x29;,&#xd;&#xa;	obj_type varchar&#x28;120&#x29;,&#xd;&#xa;	actor varchar&#x28;60&#x29;,&#xd;&#xa;	message_type varchar&#x28;60&#x29;,&#xd;&#xa;	message_name varchar&#x28;60&#x29;,&#xd;&#xa;	message_text_value varchar&#x28;60&#x29;,&#xd;&#xa;	message_num_value varchar&#x28;60&#x29;,&#xd;&#xa;	audit_time timestamp,&#xd;&#xa;	duration real&#xd;&#xa;&#x29;&#x3b;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
+      <row_threshold>0</row_threshold>
+      <message>Couldn&#x27;t get the database type</message>
+      <always_log_rows>Y</always_log_rows>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>243</xloc>
-      <yloc>131</yloc>
+      <xloc>513</xloc>
+      <yloc>424</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -148,8 +145,244 @@
       <always_log_rows>Y</always_log_rows>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>383</xloc>
-      <yloc>218</yloc>
+      <xloc>723</xloc>
+      <yloc>584</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Execute SQL script </name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Hibernate</connection>
+    <execute_each_row>Y</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>&#x3f;</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+       <argument><name>sql</name></argument>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>718</xloc>
+      <yloc>446</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get database type</name>
+    <type>UserDefinedJavaClass</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+
+    <definitions>
+        <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+
+        <class_name>Processor</class_name>
+
+        <class_source><![CDATA[import java.sql.*;
+import org.pentaho.di.core.database.*;
+
+private DatabaseMeta databaseMeta;
+private Database database;
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException
+{
+	Object[] r = getRow();
+	if (r == null) {
+		setOutputDone();
+		return false;
+	}
+
+    if (first)
+    {
+        first = false;
+    }
+
+    try {
+      r = createOutputRow(r, data.outputRowMeta.size());	
+	  int index = getInputRowMeta().size();
+      r[index++] = database.getDatabaseMetaData().getDatabaseProductName();
+	  
+      putRow(data.outputRowMeta, r);
+
+   } catch(Exception e) {
+     throw new KettleException(e);
+   } 
+   
+   return true;
+}
+
+public boolean init(StepMetaInterface stepMetaInterface, StepDataInterface stepDataInterface)
+{
+    if (!parent.initImpl(stepMetaInterface, stepDataInterface)) {
+      return false;
+    }
+    String dbName = getParameter("DBNAME");
+    databaseMeta = getTransMeta().findDatabase(dbName);
+    if (databaseMeta==null) {
+         logError("A connection with name "+dbName+" could not be found!");
+         setErrors(1);
+         return false;
+    }
+
+    database = new Database(getTrans(), databaseMeta);
+
+    try  {
+      database.connect();
+    } catch(Exception e) {
+      logError("Connecting to database "+dbName+" failed.", e);
+      setErrors(1);
+      return false;
+    }
+
+    return true;
+}
+
+public void dispose(StepMetaInterface smi, StepDataInterface sdi)
+{
+    if (database!=null) {
+      database.disconnect();
+    }
+
+    parent.disposeImpl(smi, sdi);
+}
+
+
+]]></class_source>
+        </definition>
+    </definitions>
+    <fields>
+        <field>
+        <field_name>database_type</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>255</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+    </fields><clear_result_fields>N</clear_result_fields>
+<info_steps></info_steps><target_steps></target_steps><usage_parameters><usage_parameter><parameter_tag>DBNAME</parameter_tag>
+<parameter_value>Hibernate</parameter_value>
+<parameter_description>The name of the database</parameter_description>
+</usage_parameter></usage_parameters>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>208</xloc>
+      <yloc>428</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>SQL for HSQL Database Engine</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;var sql &#x3d; &#x27;CREATE TABLE pro_audit&#x28; &#x27;&#x2b;&#xd;&#xa;	&#x27;job_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;inst_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;obj_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;obj_type varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;actor varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_type varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_name varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_text_value varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_num_value varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;audit_time timestamp, &#x27;&#x2b;&#xd;&#xa;	&#x27;duration real&#x29;&#x27;&#x3b;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>sql</name>
+        <rename>sql</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>516</xloc>
+      <yloc>335</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>SQL for PostgreSQL</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;var sql &#x3d; &#x27;CREATE TABLE pro_audit&#x28; &#x27;&#x2b;&#xd;&#xa;	&#x27;job_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;inst_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;obj_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;obj_type varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;actor varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_type varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_name varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_text_value varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_num_value varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;audit_time timestamp, &#x27;&#x2b;&#xd;&#xa;	&#x27;duration real&#x29;&#x27;&#x3b;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>sql</name>
+        <rename>sql</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>512</xloc>
+      <yloc>500</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Switch &#x2f; Case</name>
+    <type>SwitchCase</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<fieldname>database_type</fieldname>
+<use_contains>N</use_contains>
+<case_value_type>String</case_value_type>
+<case_value_format/>
+<case_value_decimal/>
+<case_value_group/>
+<default_target_step>Abort</default_target_step>
+<cases><case><value>PostgreSQL</value>
+<target_step>SQL for PostgreSQL</target_step>
+</case><case><value>HSQL Database Engine</value>
+<target_step>SQL for HSQL Database Engine</target_step>
+</case></cases>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>329</xloc>
+      <yloc>427</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -167,15 +400,41 @@
            </partitioning>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>385</xloc>
-      <yloc>105</yloc>
+      <xloc>885</xloc>
+      <yloc>446</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>trigger</name>
+    <type>RowGenerator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+    </fields>
+    <limit>1</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms>5000</interval_in_ms>
+    <row_time_field>now</row_time_field>
+    <last_time_field>FiveSecondsAgo</last_time_field>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>105</xloc>
+      <yloc>429</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step_error_handling>
       <error>
-        <source_step>Execute SQL script</source_step>
+        <source_step>Execute SQL script </source_step>
         <target_step>Abort -  Error create pro_audit table </target_step>
         <is_enabled>Y</is_enabled>
         <nr_valuename/>

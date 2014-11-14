@@ -9,26 +9,6 @@
     <trans_status>0</trans_status>
     <directory>&#x2f;</directory>
     <parameters>
-        <parameter>
-            <name>PENTAHO_HOST</name>
-            <default_value>localhost</default_value>
-            <description/>
-        </parameter>
-        <parameter>
-            <name>PENTAHO_PASSWORD</name>
-            <default_value>password</default_value>
-            <description/>
-        </parameter>
-        <parameter>
-            <name>PENTAHO_PORT</name>
-            <default_value>8080</default_value>
-            <description/>
-        </parameter>
-        <parameter>
-            <name>PENTAHO_USER</name>
-            <default_value>admin</default_value>
-            <description/>
-        </parameter>
     </parameters>
     <log>
 <trans-log-table><connection/>
@@ -118,12 +98,7 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>TINP Get Metadata</from><to>Get System Info</to><enabled>Y</enabled> </hop>
-  <hop> <from>Get System Info</from><to>Get variables access 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>Get variables access 2</from><to>Select values 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>Select values 2</from><to>Truncate pentaho_ce_audit_metadata</to><enabled>Y</enabled> </hop>
-  <hop> <from>Select values 2</from><to>Wait pentaho_ce_audit_metadata finish</to><enabled>Y</enabled> </hop>
-  <hop> <from>Wait pentaho_ce_audit_metadata finish</from><to>OUTPUT</to><enabled>Y</enabled> </hop>
+  <hop> <from>TINP Get Metadata</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>TINP Get Metadata</name>
@@ -137,7 +112,7 @@
            <schema_name/>
            </partitioning>
     <connection>Hibernate</connection>
-    <sql>SELECT &#xd;&#xa;	&#x22;DATA&#x22;&#xd;&#xa;	, &#x28;select count&#x28;&#x2a;&#x29;  FROM PENTAHO_CE_AUDIT&#x29; as NUMBER_ROWS&#xd;&#xa;FROM PENTAHO_CE_AUDIT&#xd;&#xa;ORDER BY &#x22;DATA&#x22; DESC&#xd;&#xa;LIMIT 1</sql>
+    <sql>SELECT &#xd;&#xa;	&#x22;LAST_UPDATE&#x22;,&#xd;&#xa;  	&#x22;NUMBER_ROWS&#x22;,&#xd;&#xa;  	&#x22;USER&#x22; &#xd;&#xa;FROM &#x22;PENTAHO_CE_AUDIT_METADATA&#x22;&#xd;&#xa;&#xd;&#xa;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -152,8 +127,8 @@
     </step>
 
   <step>
-    <name>OUTPUT</name>
-    <type>TableOutput</type>
+    <name>Dummy &#x28;do nothing&#x29;</name>
+    <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -162,199 +137,10 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>Hibernate</connection>
-    <schema/>
-    <table>PENTAHO_CE_AUDIT_METADATA</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>Y</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-        <field>
-          <column_name>NUMBER_ROWS</column_name>
-          <stream_name>NUMBER_ROWS</stream_name>
-        </field>
-        <field>
-          <column_name>LAST_UPDATE</column_name>
-          <stream_name>LAST_UPDATE</stream_name>
-        </field>
-    </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>155</xloc>
-      <yloc>649</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Get System Info</name>
-    <type>SystemInfo</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <name>LAST_UPDATE</name>
-        <type>system date &#x28;variable&#x29;</type>
-        </field>
-      </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>152</xloc>
-      <yloc>266</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Get variables access 2</name>
-    <type>GetVariable</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <name>PENTAHO_USER</name>
-        <variable>&#x24;&#x7b;PENTAHO_USER&#x7d;</variable>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>151</xloc>
-      <yloc>358</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Select values 2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>      <field>        <name>NUMBER_ROWS</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>LAST_UPDATE</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>PENTAHO_USER</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>        <select_unspecified>N</select_unspecified>
-      <meta>        <name>NUMBER_ROWS</name>
-        <rename>NUMBER_ROWS</rename>
-        <type>Integer</type>
-        <length>9</length>
-        <precision>0</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>151</xloc>
-      <yloc>468</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Truncate pentaho_ce_audit_metadata</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>Hibernate</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>N</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>DELETE FROM PENTAHO_CE_AUDIT_METADATA</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>293</xloc>
-      <yloc>467</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Wait pentaho_ce_audit_metadata finish</name>
-    <type>BlockUntilStepsFinish</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <steps>
-      <step>
-        <name>Truncate pentaho_ce_audit_metadata</name>
-        <CopyNr>0</CopyNr>
-        </step>
-      </steps>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>152</xloc>
-      <yloc>567</yloc>
+      <xloc>305</xloc>
+      <yloc>188</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

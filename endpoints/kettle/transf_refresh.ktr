@@ -11,22 +11,22 @@
     <parameters>
         <parameter>
             <name>PENTAHO_HOST</name>
-            <default_value/>
+            <default_value>127.0.0.1</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>PENTAHO_PASSWORD</name>
-            <default_value/>
+            <default_value>password</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>PENTAHO_PORT</name>
-            <default_value/>
+            <default_value>8080</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>PENTAHO_USER</name>
-            <default_value/>
+            <default_value>admin</default_value>
             <description/>
         </parameter>
     </parameters>
@@ -320,7 +320,7 @@
            </partitioning>
     <fields>
       <field>
-        <name>SESSION_END</name>
+        <name>session_end</name>
         <type>String</type>
         <format/>
         <currency/>
@@ -353,7 +353,7 @@
            </partitioning>
     <fields>
       <field>
-        <name>INSTANCE_END</name>
+        <name>instance_end</name>
         <type>String</type>
         <format/>
         <currency/>
@@ -384,39 +384,31 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <fields>      <field>        <name>JOB_ID</name>
-        <rename>PLUGIN</rename>
+    <fields>      <field>        <name>job_id</name>
+        <rename>plugin</rename>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>OBJ_ID</name>
-        <rename>FILE</rename>
+      </field>      <field>        <name>obj_id</name>
+        <rename>file</rename>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>OBJ_ID</name>
-        <rename>DIRECTORY</rename>
+      </field>      <field>        <name>obj_id</name>
+        <rename>directory</rename>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>ACTOR</name>
-        <rename>USER</rename>
+      </field>      <field>        <name>actor</name>
+        <rename>user</rename>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>MESSAGE_TYPE</name>
-        <rename>TYPE</rename>
+      </field>      <field>        <name>message_type</name>
+        <rename>type</rename>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>MESSAGE_TEXT_VALUE</name>
-        <rename>MSG_VALUE</rename>
+      </field>      <field>        <name>audit_time</name>
+        <rename>data</rename>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>MESSAGE_NAME</name>
-        <rename>MSG_NAME</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>AUDIT_TIME</name>
-        <rename>DATA</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>DURATION</name>
+      </field>      <field>        <name>duration</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
@@ -468,7 +460,7 @@
    <usevar>N</usevar>
     <fields>
       <field>
-        <name>OBJ_ID</name>
+        <name>obj_id</name>
         <value/>
         <mask/>
         <set_empty_string>Y</set_empty_string>
@@ -597,68 +589,68 @@
       <fail_on_multiple>N</fail_on_multiple>
       <eat_row_on_failure>N</eat_row_on_failure>
       <key>
-        <name>MESSAGE_NAME</name>
+        <name>message_name</name>
         <field>MESSAGE_NAME</field>
         <condition>&#x3d;</condition>
         <name2/>
       </key>
       <key>
-        <name>INSTANCE_END</name>
+        <name>instance_end</name>
         <field>MESSAGE_TYPE</field>
         <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
         <name>JOB_ID</name>
-        <rename>JOB_ID</rename>
+        <rename>job_id</rename>
         <default/>
         <type>String</type>
       </value>
       <value>
         <name>OBJ_ID</name>
-        <rename>OBJ_ID</rename>
+        <rename>obj_id</rename>
         <default/>
         <type>String</type>
       </value>
       <value>
         <name>OBJ_TYPE</name>
-        <rename>OBJ_TYPE</rename>
+        <rename>obj_type</rename>
         <default/>
         <type>String</type>
       </value>
       <value>
         <name>ACTOR</name>
-        <rename>ACTOR</rename>
+        <rename>actor</rename>
         <default/>
         <type>String</type>
       </value>
       <value>
         <name>MESSAGE_TYPE</name>
-        <rename>MESSAGE_TYPE</rename>
+        <rename>message_type</rename>
         <default/>
         <type>String</type>
       </value>
       <value>
         <name>MESSAGE_TEXT_VALUE</name>
-        <rename>MESSAGE_TEXT_VALUE</rename>
+        <rename>message_text_value</rename>
         <default/>
         <type>String</type>
       </value>
       <value>
         <name>MESSAGE_NUM_VALUE</name>
-        <rename>MESSAGE_NUM_VALUE</rename>
+        <rename>message_num_value</rename>
         <default/>
         <type>String</type>
       </value>
       <value>
         <name>AUDIT_TIME</name>
-        <rename>AUDIT_TIME</rename>
+        <rename>audit_time</rename>
         <default/>
         <type>Timestamp</type>
       </value>
       <value>
         <name>DURATION</name>
-        <rename>DURATION</rename>
+        <rename>duration</rename>
         <default/>
         <type>BigNumber</type>
       </value>
@@ -693,68 +685,68 @@
       <fail_on_multiple>N</fail_on_multiple>
       <eat_row_on_failure>N</eat_row_on_failure>
       <key>
-        <name>INST_ID</name>
+        <name>inst_id</name>
         <field>INST_ID</field>
         <condition>&#x3d;</condition>
         <name2/>
       </key>
       <key>
-        <name>SESSION_END</name>
+        <name>session_end</name>
         <field>MESSAGE_TYPE</field>
         <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
         <name>JOB_ID</name>
-        <rename>JOB_ID</rename>
+        <rename>job_id</rename>
         <default/>
         <type>String</type>
       </value>
       <value>
         <name>OBJ_ID</name>
-        <rename>OBJ_ID</rename>
+        <rename>obj_id</rename>
         <default/>
         <type>String</type>
       </value>
       <value>
         <name>OBJ_TYPE</name>
-        <rename>OBJ_TYPE</rename>
+        <rename>obj_type</rename>
         <default/>
         <type>String</type>
       </value>
       <value>
         <name>ACTOR</name>
-        <rename>ACTOR</rename>
+        <rename>actor</rename>
         <default/>
         <type>String</type>
       </value>
       <value>
         <name>MESSAGE_NAME</name>
-        <rename>MESSAGE_NAME</rename>
+        <rename>message_name</rename>
         <default/>
         <type>String</type>
       </value>
       <value>
         <name>MESSAGE_TEXT_VALUE</name>
-        <rename>MESSAGE_TEXT_VALUE</rename>
+        <rename>message_text_value</rename>
         <default/>
         <type>String</type>
       </value>
       <value>
         <name>MESSAGE_TYPE</name>
-        <rename>MESSAGE_TYPE</rename>
+        <rename>message_type</rename>
         <default/>
         <type>String</type>
       </value>
       <value>
         <name>AUDIT_TIME</name>
-        <rename>AUDIT_TIME</rename>
+        <rename>audit_time</rename>
         <default/>
         <type>Timestamp</type>
       </value>
       <value>
         <name>DURATION</name>
-        <rename>DURATION</rename>
+        <rename>duration</rename>
         <default/>
         <type>BigNumber</type>
       </value>
@@ -886,7 +878,7 @@
     <compare>
 <condition>
  <negated>N</negated>
- <leftvalue>OBJ_TYPE</leftvalue>
+ <leftvalue>obj_type</leftvalue>
  <function>IS NOT NULL</function>
  <rightvalue/>
  <value><name>constant</name><type>String</type><text>null</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
@@ -1013,7 +1005,7 @@
     <closeIdleConnectionsTime>-1</closeIdleConnectionsTime>
     <lookup>
       <arg>
-        <name>USER</name>
+        <name>user</name>
         <parameter>userName</parameter>
       </arg>
       <header>
@@ -1058,7 +1050,7 @@
       </valuetypes>
     <fields>
       <field>
-        <name>FILE</name>
+        <name>file</name>
         <value>Not specified</value>
         <mask/>
         <set_empty_string>N</set_empty_string>
@@ -1279,28 +1271,28 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <fields>      <field>        <name>DATA</name>
-        <rename>data</rename>
+    <fields>      <field>        <name>data</name>
+        <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>PLUGIN</name>
-        <rename>plugin</rename>
+      </field>      <field>        <name>plugin</name>
+        <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>USER</name>
-        <rename>user</rename>
+      </field>      <field>        <name>user</name>
+        <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>DIRECTORY</name>
-        <rename>directory</rename>
+      </field>      <field>        <name>directory</name>
+        <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>DURATION</name>
-        <rename>duration</rename>
+      </field>      <field>        <name>duration</name>
+        <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>TYPE</name>
-        <rename>type</rename>
+      </field>      <field>        <name>type</name>
+        <rename/>
         <length>-2</length>
         <precision>-2</precision>
       </field>      <field>        <name>role</name>
@@ -1339,8 +1331,8 @@
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>FILE</name>
-        <rename>file</rename>
+      </field>      <field>        <name>file</name>
+        <rename/>
         <length>-2</length>
         <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>
@@ -1403,7 +1395,7 @@
            </partitioning>
     <fields>
       <field>
-        <in_stream_name>FILE</in_stream_name>
+        <in_stream_name>file</in_stream_name>
         <out_stream_name>file_repos_path</out_stream_name>
         <use_regex>no</use_regex>
         <replace_string>&#x2f;</replace_string>
@@ -1433,28 +1425,28 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <fields>      <field>        <name>DATA</name>
-        <rename>data</rename>
+    <fields>      <field>        <name>data</name>
+        <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>PLUGIN</name>
-        <rename>plugin</rename>
+      </field>      <field>        <name>plugin</name>
+        <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>USER</name>
-        <rename>user</rename>
+      </field>      <field>        <name>user</name>
+        <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>DIRECTORY</name>
-        <rename>directory</rename>
+      </field>      <field>        <name>directory</name>
+        <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>DURATION</name>
-        <rename>duration</rename>
+      </field>      <field>        <name>duration</name>
+        <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>TYPE</name>
-        <rename>type</rename>
+      </field>      <field>        <name>type</name>
+        <rename/>
         <length>-2</length>
         <precision>-2</precision>
       </field>      <field>        <name>role</name>
@@ -1494,11 +1486,26 @@
         <length>-2</length>
         <precision>-2</precision>
       </field>      <field>        <name>file_title</name>
-        <rename>file</rename>
+        <rename/>
         <length>-2</length>
         <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>
-    </fields>     <cluster_schema/>
+      <meta>        <name>file_title</name>
+        <rename>file</rename>
+        <type>String</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>2384</xloc>
       <yloc>546</yloc>
@@ -1517,7 +1524,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-<fieldname>FILE</fieldname>
+<fieldname>file</fieldname>
 <use_contains>N</use_contains>
 <case_value_type>String</case_value_type>
 <case_value_format/>
@@ -1545,7 +1552,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-<fieldname>JOB_ID</fieldname>
+<fieldname>job_id</fieldname>
 <use_contains>N</use_contains>
 <case_value_type>String</case_value_type>
 <case_value_format/>
@@ -1581,7 +1588,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-<fieldname>OBJ_TYPE</fieldname>
+<fieldname>obj_type</fieldname>
 <use_contains>N</use_contains>
 <case_value_type>String</case_value_type>
 <case_value_format/>
@@ -1643,27 +1650,27 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <fields>      <field>        <name>DATA</name>
+    <fields>      <field>        <name>data</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>PLUGIN</name>
+      </field>      <field>        <name>plugin</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>USER</name>
+      </field>      <field>        <name>user</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>DIRECTORY</name>
+      </field>      <field>        <name>directory</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>DURATION</name>
+      </field>      <field>        <name>duration</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>TYPE</name>
+      </field>      <field>        <name>type</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
@@ -1703,8 +1710,8 @@
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>FILE</name>
-        <rename>file</rename>
+      </field>      <field>        <name>file</name>
+        <rename/>
         <length>-2</length>
         <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>
@@ -1728,7 +1735,7 @@
            <schema_name/>
            </partitioning>
     <connection>Hibernate</connection>
-    <sql>SELECT INST_ID FROM pro_audit&#xd;&#xa;WHERE &#xd;&#xa;	MESSAGE_TYPE &#x3d; &#x27;session_start&#x27;&#xd;&#xa;	AND OBJ_TYPE&#x3d;&#x27;org.pentaho.platform.web.http.session.PentahoHttpSession&#x27;&#xd;&#xa;GROUP BY INST_ID</sql>
+    <sql>SELECT INST_ID as &#x22;inst_id&#x22; FROM pro_audit&#xd;&#xa;WHERE &#xd;&#xa;	MESSAGE_TYPE &#x3d; &#x27;session_start&#x27;&#xd;&#xa;	AND OBJ_TYPE&#x3d;&#x27;org.pentaho.platform.web.http.session.PentahoHttpSession&#x27;&#xd;&#xa;GROUP BY INST_ID</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1754,7 +1761,7 @@
            <schema_name/>
            </partitioning>
     <connection>Hibernate</connection>
-    <sql>SELECT INST_ID, MESSAGE_NAME&#xd;&#xa;FROM pro_audit&#xd;&#xa;WHERE MESSAGE_TYPE &#x3d; &#x27;instance_start&#x27;&#xd;&#xa;GROUP BY INST_ID, MESSAGE_NAME</sql>
+    <sql>SELECT INST_ID as &#x22;inst_id&#x22;, MESSAGE_NAME as &#x22;message_name&#x22; &#xd;&#xa;FROM pro_audit&#xd;&#xa;WHERE MESSAGE_TYPE &#x3d; &#x27;instance_start&#x27;&#xd;&#xa;GROUP BY INST_ID, MESSAGE_NAME</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1781,7 +1788,7 @@
            </partitioning>
     <connection>Hibernate</connection>
     <schema/>
-    <table>PENTAHO_CE_AUDIT</table>
+    <table>&#x22;PENTAHO_CE_AUDIT&#x22;</table>
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
@@ -1798,67 +1805,67 @@
     <return_field/>
     <fields>
         <field>
-          <column_name>data</column_name>
+          <column_name>&#x22;DATA&#x22;</column_name>
           <stream_name>data</stream_name>
         </field>
         <field>
-          <column_name>plugin</column_name>
+          <column_name>&#x22;PLUGIN&#x22;</column_name>
           <stream_name>plugin</stream_name>
         </field>
         <field>
-          <column_name>user</column_name>
+          <column_name>&#x22;USER&#x22;</column_name>
           <stream_name>user</stream_name>
         </field>
         <field>
-          <column_name>directory</column_name>
+          <column_name>&#x22;DIRECTORY&#x22;</column_name>
           <stream_name>directory</stream_name>
         </field>
         <field>
-          <column_name>duration</column_name>
+          <column_name>&#x22;DURATION&#x22;</column_name>
           <stream_name>duration</stream_name>
         </field>
         <field>
-          <column_name>type</column_name>
+          <column_name>&#x22;TYPE&#x22;</column_name>
           <stream_name>type</stream_name>
         </field>
         <field>
-          <column_name>role</column_name>
+          <column_name>&#x22;ROLE&#x22;</column_name>
           <stream_name>role</stream_name>
         </field>
         <field>
-          <column_name>year</column_name>
+          <column_name>&#x22;YEAR&#x22;</column_name>
           <stream_name>year</stream_name>
         </field>
         <field>
-          <column_name>month</column_name>
+          <column_name>&#x22;MONTH&#x22;</column_name>
           <stream_name>month</stream_name>
         </field>
         <field>
-          <column_name>day</column_name>
+          <column_name>&#x22;DAY&#x22;</column_name>
           <stream_name>day</stream_name>
         </field>
         <field>
-          <column_name>day_week</column_name>
+          <column_name>&#x22;DAY_WEEK&#x22;</column_name>
           <stream_name>day_week</stream_name>
         </field>
         <field>
-          <column_name>hour</column_name>
+          <column_name>&#x22;HOUR&#x22;</column_name>
           <stream_name>hour</stream_name>
         </field>
         <field>
-          <column_name>minute</column_name>
+          <column_name>&#x22;MINUTE&#x22;</column_name>
           <stream_name>minute</stream_name>
         </field>
         <field>
-          <column_name>month_desc</column_name>
+          <column_name>&#x22;MONTH_DESC&#x22;</column_name>
           <stream_name>month_desc</stream_name>
         </field>
         <field>
-          <column_name>day_week_desc</column_name>
+          <column_name>&#x22;DAY_WEEK_DESC&#x22;</column_name>
           <stream_name>day_week_desc</stream_name>
         </field>
         <field>
-          <column_name>file</column_name>
+          <column_name>&#x22;FILE&#x22;</column_name>
           <stream_name>file</stream_name>
         </field>
     </fields>
@@ -1886,7 +1893,7 @@
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
-    <sql>DELETE FROM PENTAHO_CE_AUDIT</sql>
+    <sql>DELETE FROM &#x22;PENTAHO_CE_AUDIT&#x22;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -2063,7 +2070,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <field_to_use>PLUGIN</field_to_use>
+    <field_to_use>plugin</field_to_use>
     <target_field/>
     <non_match_default/>
     <fields>
@@ -2107,7 +2114,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <field_to_use>TYPE</field_to_use>
+    <field_to_use>type</field_to_use>
     <target_field/>
     <non_match_default/>
     <fields>
@@ -2143,43 +2150,35 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <fields>      <field>        <name>INST_ID</name>
+    <fields>      <field>        <name>inst_id</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>JOB_ID</name>
+      </field>      <field>        <name>job_id</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>OBJ_ID</name>
+      </field>      <field>        <name>obj_id</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>OBJ_TYPE</name>
+      </field>      <field>        <name>obj_type</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>ACTOR</name>
+      </field>      <field>        <name>actor</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>MESSAGE_TYPE</name>
+      </field>      <field>        <name>message_type</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>MESSAGE_TEXT_VALUE</name>
+      </field>      <field>        <name>audit_time</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>MESSAGE_NAME</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>AUDIT_TIME</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>DURATION</name>
+      </field>      <field>        <name>duration</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
@@ -2203,43 +2202,35 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <fields>      <field>        <name>INST_ID</name>
+    <fields>      <field>        <name>inst_id</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>JOB_ID</name>
+      </field>      <field>        <name>job_id</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>OBJ_ID</name>
+      </field>      <field>        <name>obj_id</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>OBJ_TYPE</name>
+      </field>      <field>        <name>obj_type</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>ACTOR</name>
+      </field>      <field>        <name>actor</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>MESSAGE_TYPE</name>
+      </field>      <field>        <name>message_type</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>MESSAGE_TEXT_VALUE</name>
+      </field>      <field>        <name>audit_time</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>MESSAGE_NAME</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>AUDIT_TIME</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>DURATION</name>
+      </field>      <field>        <name>duration</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>

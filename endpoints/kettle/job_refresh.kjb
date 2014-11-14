@@ -13,22 +13,22 @@
     <parameters>
         <parameter>
             <name>PENTAHO_HOST</name>
-            <default_value>localhost</default_value>
+            <default_value/>
             <description/>
         </parameter>
         <parameter>
             <name>PENTAHO_PASSWORD</name>
-            <default_value>password</default_value>
+            <default_value/>
             <description/>
         </parameter>
         <parameter>
             <name>PENTAHO_PORT</name>
-            <default_value>8080</default_value>
+            <default_value/>
             <description/>
         </parameter>
         <parameter>
             <name>PENTAHO_USER</name>
-            <default_value>admin</default_value>
+            <default_value/>
             <description/>
         </parameter>
     </parameters>
@@ -283,27 +283,6 @@
     </hop>
   </hops>
   <notepads>
-    <notepad>
-      <note>Autor&#x3a; Daniel Albuquerque Rabelo&#xd;&#xa;Email&#x3a; contato&#x40;danielrabelo.com&#xd;&#xa;&#xd;&#xa;Edited by&#x3a; fernando.maia&#x40;it4biz.com.br</note>
-      <xloc>8</xloc>
-      <yloc>6</yloc>
-      <width>243</width>
-      <heigth>71</heigth>
-      <fontname>Arial</fontname>
-      <fontsize>10</fontsize>
-      <fontbold>N</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>205</backgroundcolorgreen>
-      <backgroundcolorblue>112</backgroundcolorblue>
-      <bordercolorred>100</bordercolorred>
-      <bordercolorgreen>100</bordercolorgreen>
-      <bordercolorblue>100</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
   </notepads>
 
 </job>
