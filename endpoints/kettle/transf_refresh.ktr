@@ -11,22 +11,22 @@
     <parameters>
         <parameter>
             <name>PENTAHO_HOST</name>
-            <default_value>127.0.0.1</default_value>
+            <default_value/>
             <description/>
         </parameter>
         <parameter>
             <name>PENTAHO_PASSWORD</name>
-            <default_value>password</default_value>
+            <default_value/>
             <description/>
         </parameter>
         <parameter>
             <name>PENTAHO_PORT</name>
-            <default_value>8080</default_value>
+            <default_value/>
             <description/>
         </parameter>
         <parameter>
             <name>PENTAHO_USER</name>
-            <default_value>admin</default_value>
+            <default_value/>
             <description/>
         </parameter>
     </parameters>

@@ -123,7 +123,7 @@
   <hop> <from>Get variables access 2</from><to>Select values 2</to><enabled>Y</enabled> </hop>
   <hop> <from>Select values 2</from><to>Truncate pentaho_ce_audit_metadata</to><enabled>Y</enabled> </hop>
   <hop> <from>Select values 2</from><to>Wait pentaho_ce_audit_metadata finish</to><enabled>Y</enabled> </hop>
-  <hop> <from>Wait pentaho_ce_audit_metadata finish</from><to>OUTPUT</to><enabled>Y</enabled> </hop>
+  <hop> <from>Wait pentaho_ce_audit_metadata finish</from><to>TOU - Metadata</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Get System Info</name>
@@ -184,7 +184,7 @@
     </step>
 
   <step>
-    <name>OUTPUT</name>
+    <name>TOU - Metadata</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>

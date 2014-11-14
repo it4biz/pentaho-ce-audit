@@ -1,0 +1,943 @@
+{
+ "layout": {
+  "title": "installation",
+  "rows": [
+   {
+    "id": "ebcf45e9-87ea-1ca1-1200-4e53c03f1601",
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "style",
+      "type": "Id"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     },
+     {
+      "name": "resourceCode",
+      "value": "",
+      "type": "Resource"
+     }
+    ]
+   },
+   {
+    "id": "c2717adc-c013-dbdb-f183-1fee50f64281",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "body",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "fuelux",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "ecd3186c-6002-117c-d9c8-d7c8c8d1b9c2",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "c2717adc-c013-dbdb-f183-1fee50f64281",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"well wizard col-sm-12\">\n    <div class=\"row\">\n        <div id=\"msg-user-div\"></div>\n    </div>\n    <div class=\"row\">\n        <h2>\n            &nbsp; Welcome to Pentaho CE Audit plugin\n        </h2>\n    </div>\n\n    <div class=\"row\">\n        <form id=\"form\" action=\"#\">\n        \t<input type=\"hidden\" name=\"catalogName\" value=\"Pentaho CE Audit\">\n    \t\t<input type=\"hidden\" name=\"overwrite\" value=\"true\">\n    \t\t<input type=\"hidden\" name=\"xmlaEnabledFlag\" value=\"true\">\n    \t\t<input type=\"hidden\"\" name=\"parameters\" value=\"DataSource=Hibernate\">\n    \t\t<textarea style=\"display:none\" name=\"uploadAnalysis\">\n    <Schema name=\"Pentaho CE Audit\"><Cube name=\"Pentaho CE Audit\" visible=\"true\" cache=\"true\" enabled=\"true\"><Table name=\"PENTAHO_CE_AUDIT\"></Table><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Period\"><Hierarchy name=\"Period\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Year\" visible=\"true\" column=\"YEAR\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level><Level name=\"Month\" visible=\"true\" column=\"MONTH_DESC\" ordinalColumn=\"MONTH\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level><Level name=\"Day of Week\" visible=\"true\" column=\"DAY_WEEK_DESC\" ordinalColumn=\"DAY_WEEK\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level><Level name=\"Day\" visible=\"true\" column=\"DAY\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Time\"><Hierarchy name=\"Time\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Hour\" visible=\"true\" column=\"HOUR\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level><Level name=\"Minute\" visible=\"true\" column=\"MINUTE\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"User\"><Hierarchy name=\"User\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"User\" visible=\"true\" column=\"USER\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Plugin\"><Hierarchy name=\"Plugin\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Plugin\" visible=\"true\" column=\"PLUGIN\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"File\"><Hierarchy name=\"File\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Directory Path\" visible=\"true\" column=\"DIRECTORY\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level><Level name=\"File\" visible=\"true\" column=\"FILE\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Type\"><Hierarchy name=\"Type\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Type\" visible=\"true\" column=\"TYPE\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" name=\"Role\"><Hierarchy name=\"Role\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Role\" visible=\"true\" column=\"ROLE\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Measure name=\"Quantity\" column=\"DATA\" datatype=\"String\" formatString=\"#,###\" aggregator=\"distinct count\" visible=\"true\"></Measure><Measure name=\"Duration\" column=\"DURATION\" datatype=\"Numeric\" formatString=\"#,###\" aggregator=\"sum\" visible=\"true\"></Measure><Measure name=\"Duration Average\" column=\"DURATION\" datatype=\"Numeric\" formatString=\"#,###\" aggregator=\"avg\" visible=\"true\"></Measure></Cube></Schema>\n            </textarea>\n            <div class=\"btn-install-div\">\n                <button id=\"btn-install\" class=\"btn btn-lg btn-primary\" type=\"submit\">Install plugin</button>           \n            </div>    \n    \t</form>\n    </div>\n    <br>\n    <div class=\"row\">\n            <div id=\"table-component-div\"></div>    \n    </div>\n    <br>\n    <div class=\"row\">\n        <div id=\"btn-refresh-div\" class=\"refreshButton col-sm-3 pull-right\">\n             <input type=\"password\" class=\"form-control\" id=\"password-refresh\" placeholder=\"password\">\n             <br>\n             <button id=\"btn-refresh\" class=\"pull-right btn btn-primary\" type=\"submit\">\n                <span class=\"glyphicon glyphicon-refresh\"></span>\n                refresh data             \n             </button>\n        </div>\n    </div>\n    <hr>\n    <div class=\"row\">\n        <p class=\"alert alert-danger\">This plug-in will apply automatically an Environment configuration, if you want to know more\n        about it please visit the link \n            <a target=\"no_blank\" href=\"http://infocenter.pentaho.com/help48/index.jsp?topic=%2Fadmin_guide%2Ftask_switching_to_file_based_logging.html\">\n                <span class=\"glyphicon glyphicon-new-window\" aria-hidden=\"true\"></span>\n            </a>            \n        </p>\n    </div>\n    <div id=\"footer\" class=\"col-sm-12\">\n        <hr>\n      <div class=\"container\">\n        <p class=\"text-muted credit\">\n            Developed by \n            <a href=\"http://it4biz.com.br\" target=\"no_blank\" title=\"IT4biz IT Solutions\">\n                <img                    \n                    src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/logo.png\"\n                >\n            </a> \n        </p>                  \n      </div>\n    </div>\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   }
+  ]
+ },
+ "components": {
+  "rows": [
+   {
+    "id": "SCRIPT",
+    "name": "Scripts",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Scripts",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "547b27b7-e4e5-48d7-7a49-a8f8f010952c",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "value": "installFunction",
+      "type": "Id"
+     },
+     {
+      "name": "javaScript",
+      "value": "$(document).ready(function() {     \n    $( '#form' ).click( function( e ) {   \n         e.preventDefault();\n        $.ajax( {\n            url: '/pentaho/plugin/data-access/api/mondrian/postAnalysis',\n            type: 'POST',\n            async: false,\n            data: new FormData(  this ),\n            processData: false,\n            contentType: false\n            ,success: function( publish ) {            \n                //console.log(publish );\n                //schema publish okay\n                if(publish==3){\n                   Dashboards.fireChange('installPlugin',''); \n                }else if(publish==2){\n                    html_msg='<div class=\"alert alert-danger\" role=\"alert\">Error publish the schema</div>';\n                    $('#msg-user-div').html(html_msg);\n                }else{\n                    html_msg='<div class=\"alert alert-danger\" role=\"alert\">Error undefined</div>';\n                    $('#msg-user-div').html(html_msg);                    \n                }\n            }\n        });       \n    });   \n    \n});\n ",
+      "type": "JavaScript"
+     }
+    ]
+   },
+   {
+    "id": "b76871bf-4582-83f9-23ba-4446527cb805",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "value": "refreshFunction",
+      "type": "Id"
+     },
+     {
+      "name": "javaScript",
+      "value": "$(document).ready(function() { \n    $( '#btn-refresh' ).click( function( e ) {\n        PENTAHO_HOST = window.location.hostname;\n        PENTAHO_PORT = window.location.port;\n        PENTAHO_USER = Dashboards.context.user;\n        Dashboards.fireChange('PENTAHO_PASSWORD',$('#password-refresh').val());    \n    });\n});\n ",
+      "type": "JavaScript"
+     }
+    ]
+   },
+   {
+    "id": "04aa27bc-3389-90fd-293b-24c873476928",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "value": "tableMessage",
+      "type": "Id"
+     },
+     {
+      "name": "javaScript",
+      "value": "var oLanguage = {\r\n'sZeroRecords' : '<h3>No data</h3>\\n'+ \r\n    '<div class=\"alert alert-warning\">'+\r\n    'If you not installed the plugin yet, please click the \"install plugin\" button.<br>'+\r\n    'If you already installed the plugin, please click the \"refresh data\" button.</div>'}; ",
+      "type": "JavaScript"
+     }
+    ]
+   },
+   {
+    "id": "OTHERCOMPONENTS",
+    "name": "Others",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Others",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "b2fd27ce-68f6-0a4f-ee33-6932fc5c4030",
+    "type": "ComponentsTable",
+    "typeDesc": "table Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "tableComponent",
+      "type": "Id"
+     },
+     {
+      "name": "expandContainerObject",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "listeners",
+      "value": "['${p:updateTableRefresh}']",
+      "type": "Listeners"
+     },
+     {
+      "name": "oLanguage",
+      "value": "oLanguage ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "language",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "colHeaders",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "expandParameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "colSortable",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "colFormats",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "colWidths",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "colTypes",
+      "value": "[]",
+      "type": "colTypesCustom"
+     },
+     {
+      "name": "paginate",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "lengthChange",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "filter",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "info",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "sort",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "expandOnClick",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "displayLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "colSearchable",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "drawCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "dataSource",
+      "value": "dsMetadata",
+      "type": "Datasource"
+     },
+     {
+      "name": "sDom",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "sortBy",
+      "value": "[]",
+      "type": "SortByArray"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "tableStyle",
+      "value": "bootstrap",
+      "type": "TableStyle"
+     },
+     {
+      "name": "paginationType",
+      "value": "simple_numbers",
+      "type": "PaginationType"
+     },
+     {
+      "name": "htmlObject",
+      "value": "table-component-div",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "paginateServerside",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "function f(){ \r\n    // reseta parametros das colunas\r\n    this.chartDefinition.colHeaders = []; \r\n    this.chartDefinition.colTypes   = []; \r\n    this.chartDefinition.colFormats = []; \r\n       \r\n    \r\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function f(){ \r\n    //console.log(this);   \r\n    if(this.rawData.queryInfo.totalRows>0);\r\n      this.chartDefinition.colWidths = [\"50%\", \"25%\", \"25%\"];\r\n\r\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     },
+     {
+      "name": "extraOptions",
+      "value": "[]",
+      "type": "OptionArray"
+     },
+     {
+      "name": "clickAction",
+      "value": "",
+      "type": "JavaScript"
+     }
+    ]
+   },
+   {
+    "id": "e8944ad0-49a9-dce5-4a4e-07250cbd409b",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "queryInstallComponent",
+      "type": "Id"
+     },
+     {
+      "name": "listeners",
+      "value": "['${p:installPlugin}']",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "resultvar",
+      "value": "${p:installPlugin}",
+      "type": "Result"
+     },
+     {
+      "name": "dataSource",
+      "value": "dsInstall",
+      "type": "Datasource"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function post(a){\n     var html_msg;\n    if(installPlugin.result==true){\n        html_msg='<div class=\"alert alert-success\" role=\"alert\">'+\n        'Installation has been completed, <b>now restart the biserver</b></div>';\n    }else{\n        html_msg='<div class=\"alert alert-danger\" role=\"alert\">Installation error(s): '\n            +refreshResult.nrErrors+'</div>';\n    }\n    $('#msg-user-div').html(html_msg);    \n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "7e81bca7-ef8c-cca5-904f-cffe697a0738",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "queryRefreshComponent",
+      "type": "Id"
+     },
+     {
+      "name": "listeners",
+      "value": "['${p:PENTAHO_PASSWORD}']",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"PENTAHO_HOST\",\"PENTAHO_HOST\"],[\"PENTAHO_PORT\",\"PENTAHO_PORT\"],[\"PENTAHO_USER\",\"PENTAHO_USER\"],[\"PENTAHO_PASSWORD\",\"PENTAHO_PASSWORD\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "resultvar",
+      "value": "${p:refreshResult}",
+      "type": "Result"
+     },
+     {
+      "name": "dataSource",
+      "value": "dsRefresh",
+      "type": "Datasource"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function post(a){\n    var html_msg;\n    if(refreshResult.result==true)\n        html_msg='<div class=\"alert alert-success\" role=\"alert\">Refresh has been completed</div>';\n    else\n        html_msg='<div class=\"alert alert-danger\" role=\"alert\">Refresh error(s): '\n            +refreshResult.nrErrors+'</div>';\n    $('#msg-user-div').html(html_msg);\n    Dashboards.fireChange('updateTableRefresh','');\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "GENERIC",
+    "name": "Generic",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Generic",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "1547e1a9-65f7-6282-7db0-8b27add2415e",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "installPlugin",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "c9814f08-6237-8de0-fd42-6b90f82da20a",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "updateTableRefresh",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "9c05c625-8285-8ea4-ac88-3f4d87484bee",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "refreshResult",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "ab4a9420-2fe2-fbef-cbe8-e1261240e907",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "PENTAHO_HOST",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "b98ed668-4924-ee6c-5f50-8fca9c1d5a14",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "PENTAHO_PORT",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "ec4f995f-b7e2-8565-c18a-c07b4191449c",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "PENTAHO_USER",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "215d9266-cbf3-d4e4-1f41-19fd0c94d753",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "PENTAHO_PASSWORD",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   }
+  ]
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "SQL",
+    "name": "SQL Queries",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "SQL Queries",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "0a56c773-c21a-33cb-c9aa-716d1c31731a",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dummy",
+      "type": "Id"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "jndi",
+      "value": "",
+      "type": "Jndi"
+     },
+     {
+      "name": "query",
+      "value": "",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "PENTAHO-CE-AUDIT_CPKENDPOINTS",
+    "name": "PENTAHO-CE-AUDIT Endpoints",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "PENTAHO-CE-AUDIT Endpoints",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "16b76c8d-42c2-37c6-1ea3-e05036da7d25",
+    "type": "Componentspentahoceaudit_job_install_CPKENDPOINT",
+    "typeDesc": "job_install Endpoint",
+    "parent": "PENTAHO-CE-AUDIT_CPKENDPOINTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dsInstall",
+      "type": "Id"
+     },
+     {
+      "name": "stepName",
+      "value": "OUTPUT",
+      "type": "String"
+     },
+     {
+      "name": "kettleOutput",
+      "value": "Inferred",
+      "type": "kettleOutputCustom"
+     }
+    ],
+    "meta": "CPK",
+    "meta_pluginId": "pentaho-ce-audit",
+    "meta_endpoint": "job_install"
+   },
+   {
+    "id": "70909e57-3f59-dbdf-3a28-5e7694ed4323",
+    "type": "Componentspentahoceaudit_get_metadata_CPKENDPOINT",
+    "typeDesc": "get_metadata Endpoint",
+    "parent": "PENTAHO-CE-AUDIT_CPKENDPOINTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dsMetadata",
+      "type": "Id"
+     },
+     {
+      "name": "stepName",
+      "value": "OUTPUT",
+      "type": "String"
+     },
+     {
+      "name": "kettleOutput",
+      "value": "Inferred",
+      "type": "kettleOutputCustom"
+     }
+    ],
+    "meta": "CPK",
+    "meta_pluginId": "pentaho-ce-audit",
+    "meta_endpoint": "get_metadata"
+   },
+   {
+    "id": "7c81385e-9055-52ec-07aa-2489d90c9bbb",
+    "type": "Componentspentahoceaudit_job_refresh_CPKENDPOINT",
+    "typeDesc": "job_refresh Endpoint",
+    "parent": "PENTAHO-CE-AUDIT_CPKENDPOINTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dsRefresh",
+      "type": "Id"
+     },
+     {
+      "name": "stepName",
+      "value": "OUTPUT",
+      "type": "String"
+     },
+     {
+      "name": "kettleOutput",
+      "value": "Inferred",
+      "type": "kettleOutputCustom"
+     }
+    ],
+    "meta": "CPK",
+    "meta_pluginId": "pentaho-ce-audit",
+    "meta_endpoint": "job_refresh"
+   }
+  ]
+ },
+ "filename": "/system/pentaho-ce-audit/dashboards/admin/home.cdfde"
+}
