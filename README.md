@@ -25,6 +25,12 @@ It is an open source project that helps Pentaho BI Admin users to visualize stat
 
 Pentaho CE Audit Plugin is a free and open source software. It is available under the terms of the Apache License Version 2. A copy is attached for your convenience.
 
+###Credits and Contributions
+
+This projects is maintained by IT4biz IT Solutions from Brazil with help the Pentaho community around the world, like:
+
+* Brandon Jackson [(@usbrandon)](https://twitter.com/usbrandon)
+
 ###Changelog
 
 1.0 Alpha version (Not ready for Production Environment, just for internal tests):
