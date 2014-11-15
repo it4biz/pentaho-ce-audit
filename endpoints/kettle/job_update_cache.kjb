@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>job_atualiza_cache</name>
+  <name>job_update_cache</name>
     <description/>
     <extended_description/>
     <job_version/>
@@ -13,22 +13,12 @@
     <parameters>
         <parameter>
             <name>PENTAHO_HOST</name>
-            <default_value/>
-            <description/>
-        </parameter>
-        <parameter>
-            <name>PENTAHO_PASSWORD</name>
-            <default_value/>
+            <default_value>localhost</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>PENTAHO_PORT</name>
-            <default_value/>
-            <description/>
-        </parameter>
-        <parameter>
-            <name>PENTAHO_USER</name>
-            <default_value/>
+            <default_value>80</default_value>
             <description/>
         </parameter>
     </parameters>
@@ -157,12 +147,6 @@
             </parameter>            <parameter>            <name>PENTAHO_PORT</name>
             <stream_name/>
             <value>&#x24;&#x7b;PENTAHO_PORT&#x7d;</value>
-            </parameter>            <parameter>            <name>PENTAHO_USER</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;PENTAHO_USER&#x7d;</value>
-            </parameter>            <parameter>            <name>PENTAHO_PASSWORD</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;PENTAHO_PASSWORD&#x7d;</value>
             </parameter>      </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -223,12 +207,6 @@
             </parameter>            <parameter>            <name>PENTAHO_PORT</name>
             <stream_name/>
             <value>&#x24;&#x7b;PENTAHO_PORT&#x7d;</value>
-            </parameter>            <parameter>            <name>PENTAHO_USER</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;PENTAHO_USER&#x7d;</value>
-            </parameter>            <parameter>            <name>PENTAHO_PASSWORD</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;PENTAHO_PASSWORD&#x7d;</value>
             </parameter>      </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -268,12 +246,6 @@
             </parameter>            <parameter>            <name>PENTAHO_PORT</name>
             <stream_name/>
             <value>&#x24;&#x7b;PENTAHO_PORT&#x7d;</value>
-            </parameter>            <parameter>            <name>PENTAHO_USER</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;PENTAHO_USER&#x7d;</value>
-            </parameter>            <parameter>            <name>PENTAHO_PASSWORD</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;PENTAHO_PASSWORD&#x7d;</value>
             </parameter>      </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>

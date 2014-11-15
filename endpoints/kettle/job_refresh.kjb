@@ -17,11 +17,6 @@
             <description/>
         </parameter>
         <parameter>
-            <name>PENTAHO_PASSWORD</name>
-            <default_value>password</default_value>
-            <description/>
-        </parameter>
-        <parameter>
             <name>PENTAHO_PORT</name>
             <default_value>80</default_value>
             <description/>
@@ -162,12 +157,6 @@
             </parameter>            <parameter>            <name>PENTAHO_PORT</name>
             <stream_name/>
             <value>&#x24;&#x7b;PENTAHO_PORT&#x7d;</value>
-            </parameter>            <parameter>            <name>PENTAHO_USER</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;PENTAHO_USER&#x7d;</value>
-            </parameter>            <parameter>            <name>PENTAHO_PASSWORD</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;PENTAHO_PASSWORD&#x7d;</value>
             </parameter>            <parameter>            <name>PENTAHO_ROLES</name>
             <stream_name/>
             <value>&#x24;&#x7b;PENTAHO_ROLES&#x7d;</value>
@@ -184,8 +173,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>791</xloc>
-      <yloc>160</yloc>
+      <xloc>554</xloc>
+      <yloc>164</yloc>
       </entry>
     <entry>
       <name>Abort job</name>
@@ -197,50 +186,6 @@
       <nr>0</nr>
       <xloc>431</xloc>
       <yloc>291</yloc>
-      </entry>
-    <entry>
-      <name>job_update_cache</name>
-      <description/>
-      <type>JOB</type>
-      <specification_method>filename</specification_method>
-      <job_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;job_update_cache.kjb</filename>
-      <jobname/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Nothing</loglevel>
-      <slave_server_name/>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <expand_remote_job>N</expand_remote_job>
-      <create_parent_folder>N</create_parent_folder>
-      <pass_export>N</pass_export>
-      <force_separate_logging>N</force_separate_logging>
-      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-            <parameter>            <name>PENTAHO_HOST</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;PENTAHO_HOST&#x7d;</value>
-            </parameter>            <parameter>            <name>PENTAHO_PORT</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;PENTAHO_PORT&#x7d;</value>
-            </parameter>            <parameter>            <name>PENTAHO_USER</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;PENTAHO_USER&#x7d;</value>
-            </parameter>            <parameter>            <name>PENTAHO_PASSWORD</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;PENTAHO_PASSWORD&#x7d;</value>
-            </parameter>      </parameters>      <set_append_logfile>N</set_append_logfile>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>617</xloc>
-      <yloc>162</yloc>
       </entry>
     <entry>
       <name>set_metadata</name>
@@ -269,18 +214,9 @@
       <create_parent_folder>N</create_parent_folder>
       <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-            <parameter>            <name>PENTAHO_HOST</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;PENTAHO_HOST&#x7d;</value>
-            </parameter>            <parameter>            <name>PENTAHO_PORT</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;PENTAHO_PORT&#x7d;</value>
-            </parameter>            <parameter>            <name>PENTAHO_USER</name>
+            <parameter>            <name>PENTAHO_USER</name>
             <stream_name/>
             <value>&#x24;&#x7b;PENTAHO_USER&#x7d;</value>
-            </parameter>            <parameter>            <name>PENTAHO_PASSWORD</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;PENTAHO_PASSWORD&#x7d;</value>
             </parameter>      </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -308,24 +244,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>job_update_cache</from>
-      <to>Abort job</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>job_update_cache</from>
-      <to>Success</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>transf_refresh</from>
       <to>set_metadata</to>
       <from_nr>0</from_nr>
@@ -336,20 +254,20 @@
     </hop>
     <hop>
       <from>set_metadata</from>
-      <to>job_update_cache</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>set_metadata</from>
       <to>Abort job</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>set_metadata</from>
+      <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
   </hops>

@@ -76,7 +76,7 @@
      },
      {
       "name": "html",
-      "value": "<div class=\"well wizard col-sm-12\">\n    <div class=\"row\">\n        <div id=\"msg-user-div\"></div>\n    </div>\n    <div class=\"row\">\n        <h2>\n            &nbsp; Welcome to Pentaho CE Audit plugin\n        </h2>\n    </div>\n\n    <div class=\"row\">\n        <form id=\"form\" action=\"#\">\n        \t<input type=\"hidden\" name=\"catalogName\" value=\"Pentaho CE Audit\">\n    \t\t<input type=\"hidden\" name=\"overwrite\" value=\"true\">\n    \t\t<input type=\"hidden\" name=\"xmlaEnabledFlag\" value=\"true\">\n    \t\t<input type=\"hidden\"\" name=\"parameters\" value=\"DataSource=Hibernate\">\n    \t\t<textarea style=\"display:none\" name=\"uploadAnalysis\">\n    <Schema name=\"Pentaho CE Audit\"><Cube name=\"Pentaho CE Audit\" visible=\"true\" cache=\"true\" enabled=\"true\"><Table name=\"PENTAHO_CE_AUDIT\"></Table><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Period\"><Hierarchy name=\"Period\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Year\" visible=\"true\" column=\"YEAR\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level><Level name=\"Month\" visible=\"true\" column=\"MONTH_DESC\" ordinalColumn=\"MONTH\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level><Level name=\"Day of Week\" visible=\"true\" column=\"DAY_WEEK_DESC\" ordinalColumn=\"DAY_WEEK\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level><Level name=\"Day\" visible=\"true\" column=\"DAY\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Time\"><Hierarchy name=\"Time\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Hour\" visible=\"true\" column=\"HOUR\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level><Level name=\"Minute\" visible=\"true\" column=\"MINUTE\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"User\"><Hierarchy name=\"User\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"User\" visible=\"true\" column=\"USER\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Plugin\"><Hierarchy name=\"Plugin\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Plugin\" visible=\"true\" column=\"PLUGIN\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"File\"><Hierarchy name=\"File\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Directory Path\" visible=\"false\" column=\"DIRECTORY\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level><Level name=\"File\" visible=\"true\" column=\"FILE\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Type\"><Hierarchy name=\"Type\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Type\" visible=\"true\" column=\"TYPE\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Role\"><Hierarchy name=\"Role\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Role\" visible=\"true\" column=\"ROLE\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Measure name=\"Quantity\" column=\"DATA\" datatype=\"String\" formatString=\"#,###\" aggregator=\"distinct count\" visible=\"true\"></Measure><Measure name=\"Duration\" column=\"DURATION\" datatype=\"Numeric\" formatString=\"#,###\" aggregator=\"sum\" visible=\"true\"></Measure><Measure name=\"Duration Average\" column=\"DURATION\" datatype=\"Numeric\" formatString=\"#,###\" aggregator=\"avg\" visible=\"true\"></Measure></Cube></Schema>\n        </textarea>\n            <div class=\"btn-install-div\">\n                <button id=\"btn-install\" class=\"btn btn-lg btn-primary\" type=\"submit\">Install plugin</button>           \n            </div>    \n    \t</form>\n    </div>\n    <br>\n    <div class=\"row\">\n            <div id=\"table-component-div\"></div>    \n    </div>\n    <br>\n    <div class=\"row\">\n        <div id=\"btn-refresh-div\" class=\"refreshButton col-sm-3 pull-right\">\n             <input type=\"password\" class=\"form-control\" id=\"password-refresh\" placeholder=\"password\">\n             <br>\n             <button id=\"btn-refresh\" class=\"pull-right btn btn-primary\" type=\"submit\">\n                <span class=\"glyphicon glyphicon-refresh\"></span>\n                refresh data             \n             </button>\n        </div>\n    </div>\n    <hr>\n    <div class=\"row\">\n        <p class=\"alert alert-danger\">This plug-in will apply automatically an Environment configuration, if you want to know more\n        about it please visit the link \n            <a target=\"no_blank\" href=\"http://infocenter.pentaho.com/help48/index.jsp?topic=%2Fadmin_guide%2Ftask_switching_to_file_based_logging.html\">\n                <span class=\"glyphicon glyphicon-new-window\" aria-hidden=\"true\"></span>\n            </a>            \n        </p>\n    </div>\n    <div id=\"footer\" class=\"col-sm-12\">\n        <hr>\n      <div class=\"container\">\n        <p class=\"text-muted credit\">\n            Developed by \n            <a href=\"http://it4biz.com.br\" target=\"no_blank\" title=\"IT4biz IT Solutions\">\n                <img                    \n                    src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/logo.png\"\n                >\n            </a> \n        </p>                  \n      </div>\n    </div>\n</div> ",
+      "value": "<div class=\"well wizard col-sm-12\">\n    <div class=\"row\">\n        <div id=\"msg-user-div\"></div>\n    </div>\n    <div class=\"row\">\n        <h2>\n            &nbsp; Welcome to Pentaho CE Audit plugin\n        </h2>\n    </div>\n\n    <div class=\"row\">\n        <form id=\"form\" action=\"#\">\n        \t<input type=\"hidden\" name=\"catalogName\" value=\"Pentaho CE Audit\">\n    \t\t<input type=\"hidden\" name=\"overwrite\" value=\"true\">\n    \t\t<input type=\"hidden\" name=\"xmlaEnabledFlag\" value=\"true\">\n    \t\t<input type=\"hidden\"\" name=\"parameters\" value=\"DataSource=Hibernate\">\n    \t\t<textarea style=\"display:none\" name=\"uploadAnalysis\">\n    <Schema name=\"Pentaho CE Audit\"><Cube name=\"Pentaho CE Audit\" visible=\"true\" cache=\"true\" enabled=\"true\"><Table name=\"PENTAHO_CE_AUDIT\"></Table><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Period\"><Hierarchy name=\"Period\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Year\" visible=\"true\" column=\"YEAR\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level><Level name=\"Month\" visible=\"true\" column=\"MONTH_DESC\" ordinalColumn=\"MONTH\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level><Level name=\"Day of Week\" visible=\"true\" column=\"DAY_WEEK_DESC\" ordinalColumn=\"DAY_WEEK\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level><Level name=\"Day\" visible=\"true\" column=\"DAY\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Time\"><Hierarchy name=\"Time\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Hour\" visible=\"true\" column=\"HOUR\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level><Level name=\"Minute\" visible=\"true\" column=\"MINUTE\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"User\"><Hierarchy name=\"User\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"User\" visible=\"true\" column=\"USER\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Plugin\"><Hierarchy name=\"Plugin\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Plugin\" visible=\"true\" column=\"PLUGIN\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"File\"><Hierarchy name=\"File\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Directory Path\" visible=\"false\" column=\"DIRECTORY\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level><Level name=\"File\" visible=\"true\" column=\"FILE\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Type\"><Hierarchy name=\"Type\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Type\" visible=\"true\" column=\"TYPE\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Role\"><Hierarchy name=\"Role\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"><Level name=\"Role\" visible=\"true\" column=\"ROLE\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"></Level></Hierarchy></Dimension><Measure name=\"Quantity\" column=\"DATA\" datatype=\"String\" formatString=\"#,###\" aggregator=\"distinct count\" visible=\"true\"></Measure><Measure name=\"Duration\" column=\"DURATION\" datatype=\"Numeric\" formatString=\"#,###\" aggregator=\"sum\" visible=\"true\"></Measure><Measure name=\"Duration Average\" column=\"DURATION\" datatype=\"Numeric\" formatString=\"#,###\" aggregator=\"avg\" visible=\"true\"></Measure></Cube></Schema>\n        </textarea>\n            <div class=\"btn-install-div\">\n                <button id=\"btn-install\" class=\"btn btn-lg btn-primary\" type=\"submit\">Install plugin</button>           \n            </div>    \n    \t</form>\n    </div>\n    <br>\n    <div class=\"row\">\n            <div id=\"table-component-div\"></div>    \n    </div>\n    <br>\n    <div class=\"row\">\n        <div id=\"btn-refresh-div\" class=\"refreshButton col-sm-3 pull-right\">\n             <!--<input type=\"password\" class=\"form-control\" id=\"password-refresh\" placeholder=\"password\">-->\n             <br>\n             <button id=\"btn-refresh\" class=\"pull-right btn btn-primary\" type=\"submit\">\n                <span class=\"glyphicon glyphicon-refresh\"></span>\n                refresh data             \n             </button>\n        </div>\n    </div>\n    <hr>\n    <div class=\"row\">\n        <p class=\"alert alert-danger\">This plug-in will apply automatically an Environment configuration, if you want to know more\n        about it please visit the link \n            <a target=\"no_blank\" href=\"http://infocenter.pentaho.com/help48/index.jsp?topic=%2Fadmin_guide%2Ftask_switching_to_file_based_logging.html\">\n                <span class=\"glyphicon glyphicon-new-window\" aria-hidden=\"true\"></span>\n            </a>            \n        </p>\n    </div>\n    <div id=\"footer\" class=\"col-sm-12\">\n        <hr>\n      <div class=\"container\">\n        <p class=\"text-muted credit\">\n            Developed by \n            <a href=\"http://it4biz.com.br\" target=\"no_blank\" title=\"IT4biz IT Solutions\">\n                <img                    \n                    src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/logo.png\"\n                >\n            </a> \n        </p>                  \n      </div>\n    </div>\n</div> ",
       "type": "Html"
      },
      {
@@ -145,7 +145,7 @@
      },
      {
       "name": "javaScript",
-      "value": "$(document).ready(function() { \n    $( '#btn-refresh' ).click( function( e ) {\n        PENTAHO_HOST = window.location.hostname;\n        PENTAHO_PORT = window.location.port;\n        PENTAHO_USER = Dashboards.context.user;\n        PENTAHO_ROLES = Dashboards.context.roles;\n        Dashboards.fireChange('PENTAHO_PASSWORD',$('#password-refresh').val());    \n    });\n});\n ",
+      "value": "$(document).ready(function() { \n    $( '#btn-refresh' ).click( function( e ) {\n        PENTAHO_HOST = window.location.hostname;\n        PENTAHO_PORT = window.location.port;\n        PENTAHO_ROLES = Dashboards.context.roles;\n        Dashboards.fireChange('PENTAHO_USER', Dashboards.context.user);    \n    });\n});\n ",
       "type": "JavaScript"
      }
     ]
@@ -214,11 +214,6 @@
       "type": "JavaScript"
      },
      {
-      "name": "parameters",
-      "value": "[]",
-      "type": "ValuesArray"
-     },
-     {
       "name": "expandParameters",
       "value": "[]",
       "type": "ValuesArray"
@@ -242,6 +237,11 @@
       "name": "colHeaders",
       "value": "[]",
       "type": "Array"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
      },
      {
       "name": "colTypes",
@@ -299,14 +299,14 @@
       "type": "Datasource"
      },
      {
-      "name": "sortBy",
-      "value": "[]",
-      "type": "SortByArray"
-     },
-     {
       "name": "sDom",
       "value": "",
       "type": "JavaScript"
+     },
+     {
+      "name": "sortBy",
+      "value": "[]",
+      "type": "SortByArray"
      },
      {
       "name": "refreshPeriod",
@@ -469,7 +469,7 @@
     ]
    },
    {
-    "id": "7e81bca7-ef8c-cca5-904f-cffe697a0738",
+    "id": "50c00e77-929b-8dc3-f4c3-fa6945075e79",
     "type": "ComponentsQuery",
     "typeDesc": "Query Component",
     "parent": "OTHERCOMPONENTS",
@@ -481,12 +481,12 @@
      },
      {
       "name": "listeners",
-      "value": "['${p:PENTAHO_PASSWORD}']",
+      "value": "['${p:PENTAHO_USER}']",
       "type": "Listeners"
      },
      {
       "name": "parameters",
-      "value": "[[\"PENTAHO_HOST\",\"PENTAHO_HOST\"],[\"PENTAHO_PORT\",\"PENTAHO_PORT\"],[\"PENTAHO_USER\",\"PENTAHO_USER\"],[\"PENTAHO_PASSWORD\",\"PENTAHO_PASSWORD\"],[\"PENTAHO_ROLES\",\"PENTAHO_ROLES\"]]",
+      "value": "[[\"PENTAHO_HOST\",\"PENTAHO_HOST\"],[\"PENTAHO_PORT\",\"PENTAHO_PORT\"],[\"PENTAHO_USER\",\"PENTAHO_USER\"],[\"PENTAHO_ROLES\",\"PENTAHO_ROLES\"]]",
       "type": "ValuesArray"
      },
      {
@@ -497,6 +497,89 @@
      {
       "name": "dataSource",
       "value": "dsRefresh",
+      "type": "Datasource"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function post(a){\n    var html_msg;\n    if(refreshResult.result==true)\n        html_msg='<div class=\"alert alert-success\" role=\"alert\">Refresh has been completed</div>';\n    else\n        html_msg='<div class=\"alert alert-danger\" role=\"alert\">Refresh error(s): '\n            +refreshResult.nrErrors+'</div>';\n    $('#msg-user-div').html(html_msg);\n    Dashboards.fireChange('updateTableRefresh','');\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "7e81bca7-ef8c-cca5-904f-cffe697a0738",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "queryUpdateCacheComponent",
+      "type": "Id"
+     },
+     {
+      "name": "listeners",
+      "value": "['${p:PENTAHO_USER}']",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"PENTAHO_HOST\",\"PENTAHO_HOST\"],[\"PENTAHO_PORT\",\"PENTAHO_PORT\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "resultvar",
+      "value": "${p:refreshResult}",
+      "type": "Result"
+     },
+     {
+      "name": "dataSource",
+      "value": "dsUpdateCache",
       "type": "Datasource"
      },
      {
@@ -760,34 +843,6 @@
       "type": "Boolean"
      }
     ]
-   },
-   {
-    "id": "215d9266-cbf3-d4e4-1f41-19fd0c94d753",
-    "type": "ComponentsParameter",
-    "typeDesc": "Simple parameter",
-    "parent": "GENERIC",
-    "properties": [
-     {
-      "name": "name",
-      "value": "PENTAHO_PASSWORD",
-      "type": "Id"
-     },
-     {
-      "name": "propertyValue",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "parameterViewRole",
-      "value": "unused",
-      "type": "parameterViewRoleCustom"
-     },
-     {
-      "name": "bookmarkable",
-      "value": "false",
-      "type": "Boolean"
-     }
-    ]
    }
   ]
  },
@@ -964,6 +1019,32 @@
     "meta": "CPK",
     "meta_pluginId": "pentaho-ce-audit",
     "meta_endpoint": "job_refresh"
+   },
+   {
+    "id": "6d09116c-ac53-554e-249a-ac23f8775615",
+    "type": "Componentspentahoceaudit_job_update_cache_CPKENDPOINT",
+    "typeDesc": "job_update_cache Endpoint",
+    "parent": "PENTAHO-CE-AUDIT_CPKENDPOINTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dsUpdateCache",
+      "type": "Id"
+     },
+     {
+      "name": "stepName",
+      "value": "OUTPUT",
+      "type": "String"
+     },
+     {
+      "name": "kettleOutput",
+      "value": "Inferred",
+      "type": "kettleOutputCustom"
+     }
+    ],
+    "meta": "CPK",
+    "meta_pluginId": "pentaho-ce-audit",
+    "meta_endpoint": "job_update_cache"
    }
   ]
  },
