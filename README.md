@@ -29,7 +29,7 @@ Pentaho CE Audit Plugin is a free and open source software. It is available unde
 
 This projects is maintained by IT4biz IT Solutions from Brazil with help the Pentaho community around the world, like:
 
-* Brandon Jackson (@usbrandon)
+* Brandon Jackson [(@usbrandon)](https://twitter.com/usbrandon)
 
 ###Changelog
 
