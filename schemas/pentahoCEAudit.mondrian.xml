@@ -16,9 +16,17 @@
     </Dimension>
     <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Time">
       <Hierarchy name="Time" visible="true" hasAll="true" allMemberName="All">
-        <Level name="Hour" visible="true" column="HOUR" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        <Level name="AM or PM" visible="true" column="AM_PM" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
-        <Level name="Minute" visible="true" column="MINUTE" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        <Level name="Hour" visible="true" column="HOURS24" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Hour 12" visible="true" column="HOURS12" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Minutes" visible="true" column="MINUTES" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Seconds" visible="true" column="SECONDS" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Time" visible="true" column="TIME" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
       </Hierarchy>
     </Dimension>
