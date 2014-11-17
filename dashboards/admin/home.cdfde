@@ -214,11 +214,6 @@
       "type": "JavaScript"
      },
      {
-      "name": "colSortable",
-      "value": "[]",
-      "type": "Array"
-     },
-     {
       "name": "colFormats",
       "value": "[]",
       "type": "Array"
@@ -242,6 +237,11 @@
       "name": "expandParameters",
       "value": "[]",
       "type": "ValuesArray"
+     },
+     {
+      "name": "colSortable",
+      "value": "[]",
+      "type": "Array"
      },
      {
       "name": "colTypes",
@@ -299,14 +299,14 @@
       "type": "Datasource"
      },
      {
-      "name": "sortBy",
-      "value": "[]",
-      "type": "SortByArray"
-     },
-     {
       "name": "sDom",
       "value": "",
       "type": "JavaScript"
+     },
+     {
+      "name": "sortBy",
+      "value": "[]",
+      "type": "SortByArray"
      },
      {
       "name": "refreshPeriod",
@@ -355,7 +355,7 @@
      },
      {
       "name": "postExecution",
-      "value": "function f(){ \r\n    //console.log(this);   \r\n    if(this.rawData.queryInfo.totalRows>0);\r\n      this.chartDefinition.colWidths = [\"50%\", \"25%\", \"25%\"];\r\n\r\n} ",
+      "value": "",
       "type": "JavaScript"
      },
      {
