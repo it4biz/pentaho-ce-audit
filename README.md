@@ -17,6 +17,9 @@ It is an open source project that helps Pentaho BI Admin users to visualize stat
 ### Installation
 * Please use Pentaho Marketplace.
 
+### Pentaho CE Audit Endpoint Refresh
+* http://your_server:yourPort/pentaho/plugin/pentaho-ce-audit/api/job_refresh
+
 ### Support
 * If you need support please feel free to create a issue here https://github.com/it4biz/pentaho-ce-audit/issues we will do our best to help you.
 
