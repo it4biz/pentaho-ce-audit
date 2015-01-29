@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="mdxQueryTop10UsersByExecution" type="mondrian.jndi">
+         <Catalog>mondrian:/Pentaho+CE+Audit</Catalog>
+         <Jndi>Hibernate</Jndi>
+      </Connection>
+      <Connection id="mdxQueryTop10UsersByLogin" type="mondrian.jndi">
+         <Catalog>mondrian:/Pentaho+CE+Audit</Catalog>
+         <Jndi>Hibernate</Jndi>
+      </Connection>
+      <Connection id="mdxQueryAccessByHour" type="mondrian.jndi">
+         <Catalog>mondrian:/Pentaho+CE+Audit</Catalog>
+         <Jndi>Hibernate</Jndi>
+      </Connection>
+      <Connection id="filterYearQuery" type="mondrian.jndi">
+         <Catalog>mondrian:/Pentaho+CE+Audit</Catalog>
+         <Jndi>Hibernate</Jndi>
+      </Connection>
+      <Connection id="mdxQueryFiles" type="mondrian.jndi">
+         <Catalog>mondrian:/Pentaho+CE+Audit</Catalog>
+         <Jndi>Hibernate</Jndi>
+      </Connection>
+      <Connection id="mdxQueryExecutionByHours" type="mondrian.jndi">
+         <Catalog>mondrian:/Pentaho+CE+Audit</Catalog>
+         <Jndi>Hibernate</Jndi>
+      </Connection>
+      <Connection id="mdxQueryExecByDayOfWeek" type="mondrian.jndi">
+         <Catalog>mondrian:/Pentaho+CE+Audit</Catalog>
+         <Jndi>Hibernate</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" cache="false" cacheDuration="3600"
+               connection="mdxQueryTop10UsersByExecution"
+               id="mdxQueryTop10UsersByExecution"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Columns/>
+      <Parameters/>
+      <Query>WITH
+SET [~FILTER] AS
+    {[Type].[execution]}
+SET [~ROWS] AS
+    TopCount({[User].[User].Members}, 10, [Measures].[Quantity])
+SELECT
+NON EMPTY {[Measures].[Quantity]} ON COLUMNS,
+NON EMPTY [~ROWS] ON ROWS
+FROM [Pentaho CE Audit]
+WHERE [~FILTER]</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="false" cacheDuration="3600"
+               connection="mdxQueryTop10UsersByLogin"
+               id="mdxQueryTop10UsersByLogin"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Columns/>
+      <Parameters/>
+      <Query>WITH
+SET [~FILTER] AS
+    {[Type].[login]}
+SET [~ROWS] AS
+    TopCount({[User].[User].Members}, 10, [Measures].[Quantity])
+SELECT
+NON EMPTY {[Measures].[Quantity]} ON COLUMNS,
+NON EMPTY [~ROWS] ON ROWS
+FROM [Pentaho CE Audit]
+WHERE [~FILTER]</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="false" cacheDuration="3600"
+               connection="mdxQueryAccessByHour"
+               id="mdxQueryAccessByHour"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Columns/>
+      <Parameters/>
+      <Query>WITH
+SET [~FILTER] AS
+    {[Type].[login]}
+SET [~ROWS] AS
+    {[Time].[Hour].Members}
+SELECT
+NON EMPTY {[Measures].[Quantity]} ON COLUMNS,
+NON EMPTY [~ROWS] ON ROWS
+FROM [Pentaho CE Audit]
+WHERE [~FILTER]</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="false" cacheDuration="3600" connection="filterYearQuery"
+               id="filterYearQuery"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Columns/>
+      <Output indexes="1,0" mode="include"/>
+      <Parameters/>
+      <Query>with member [Measures].[Name] as '[Period].CurrentMember.UniqueName' select TopCount( filter({Descendants([Period].[All] ,[Period].[Year])}, not isempty(([Period].CurrentMember)) ) , 50) on ROWS, 
+ {[Measures].[Name]} on Columns 
+ from [Pentaho CE Audit]</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="false" cacheDuration="3600" connection="mdxQueryFiles"
+               id="mdxQueryFiles"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Columns/>
+      <Parameters/>
+      <Query>WITH
+SET [~FILTER] AS
+    {[Type].[execution]}
+SET [~ROWS_User.User] AS
+    {[User].[User].Members}
+SET [~ROWS_File.File] AS
+    {[File].[File].Members}
+SET [~ROWS_Plugin.Plugin] AS
+    {[Plugin].[Plugin].Members}
+SELECT
+NON EMPTY {[Measures].[Quantity]} ON COLUMNS,
+NON EMPTY ([~ROWS_User.User]  *  [~ROWS_File.File]  *  [~ROWS_Plugin.Plugin]) ON ROWS
+FROM [Pentaho CE Audit]
+WHERE [~FILTER]</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="false" cacheDuration="3600"
+               connection="mdxQueryExecutionByHours"
+               id="mdxQueryExecutionByHours"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Columns/>
+      <Parameters/>
+      <Query>WITH
+SET [~FILTER] AS
+    {[Type].[execution]}
+SET [~ROWS] AS
+    {[Time].[Hour].Members}
+SELECT
+NON EMPTY {[Measures].[Quantity]} ON COLUMNS,
+NON EMPTY [~ROWS] ON ROWS
+FROM [Pentaho CE Audit]
+WHERE [~FILTER]</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="false" cacheDuration="3600"
+               connection="mdxQueryExecByDayOfWeek"
+               id="mdxQueryExecByDayOfWeek"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Columns/>
+      <Parameters/>
+      <Query>WITH
+SET [~FILTER] AS
+    {[Type].[execution]}
+SET [~ROWS] AS
+    {[Period].[Day of Week].Members}
+SELECT
+NON EMPTY {[Measures].[Quantity]} ON COLUMNS,
+NON EMPTY [~ROWS] ON ROWS
+FROM [Pentaho CE Audit]
+WHERE [~FILTER]</Query>
+   </DataAccess>
+</CDADescriptor>
