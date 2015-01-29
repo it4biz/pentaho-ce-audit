@@ -62,6 +62,12 @@
         </Level>
       </Hierarchy>
     </Dimension>
+    <Dimension type="StandardDimension" visible="false" highCardinality="false" name="Year">
+      <Hierarchy name="Year" visible="true" hasAll="true" allMemberName="All">
+        <Level name="Year" visible="true" column="YEAR" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
     <Measure name="Quantity" column="DATA" datatype="String" formatString="#,###" aggregator="distinct count" visible="true">
     </Measure>
     <Measure name="Duration" column="DURATION" datatype="Numeric" formatString="#,###" aggregator="sum" visible="true">

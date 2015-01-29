@@ -76,7 +76,7 @@
      },
      {
       "name": "html",
-      "value": "<div class=\"pull-right\">   \n    Last Updated: \n    <span class=\"badge\">\n        <div id=\"lastUpdatedValue\"></div>\n    </span>\n</div>\n    \n<div class=\"pull-right\">\n    <!-- <span class=\"glyphicon glyphicon-refresh\" aria-hidden=\"true\"></span>-->\n    <div id=\"refreshButtonDiv\"></div>\n</div>\n<br>\n\n<hr>\n\n<div class=\"col-md-12\" style=\"height: 30px\">\n\n    <div id=\"filterYear-div-mobile\" class=\"col-md-12 col-sd-6\"> </div> \n    \n    <div id=\"filterYear-div-desktop\" class=\"col-md-12 col-sd-6\"> </div>  \n   \n</div>\n\n<div class=\"col-md-6\">\n   <div class=\"panel panel-default\">\n      <div class=\"panel-heading\">Top Users by # of Execution(s)</div>\n      <div class=\"panel-body\">\n         <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByExecutionExport\"></div>\n         <div id=\"Chart01-div\"> </div> \n      </div>\n</div>\n</div>\n\n\n<div class=\"col-md-6\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\">Top Users by # of Login(s)</div>\n  <div class=\"panel-body\">\n  <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByLoginExport\"></div>\n    <div id=\"Chart02-div\"> </div> \n  </div>\n</div>\n</div>    \n    \n<div class=\"col-md-6\">\n   <div class=\"panel panel-default\">\n      <div class=\"panel-heading\"># of Execution(s) by Day of the Week</div>\n      <div class=\"panel-body\">\n         <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByExecutionExport\"></div>\n         <div id=\"Chart03-div\"> </div> \n      </div>\n</div>\n</div>\n\n\n<div class=\"col-md-6\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\"># of Execution(s) by Hour</div>\n  <div class=\"panel-body\">\n  <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByLoginExport\"></div>\n    <div id=\"Chart04-div\"> </div> \n  </div>\n</div>\n</div>        \n    \n\n<div class=\"col-md-12\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\"># of Execution(s)</div>\n  <div class=\"panel-body\">\n   <div id=\"table-div\"> </div> \n  </div>  \n</div>\n</div> \n\n<div id=\"footer\" class=\"col-sm-12\">\n    <hr>\n    <div class=\"container\">\n        <p class=\"text-muted credit\">\n            Developed by \n            <a href=\"http://it4biz.com.br\" target=\"no_blank\" title=\"IT4biz IT Solutions\">\n                <img                    \n                    src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/logo.png\"\n                >\n            </a> \n        </p>                  \n    </div>\n</div> ",
+      "value": "<div class=\"pull-right\">   \n    <label>Last Updated:</label> \n    <span class=\"badge\">\n        <div id=\"lastUpdatedValue\"></div>\n    </span>\n</div>\n    \n<div class=\"pull-right\" style=\"padding-right:5px;\">\n    <!-- <span class=\"glyphicon glyphicon-refresh\" aria-hidden=\"true\"></span>-->\n    <div id=\"refreshButtonDiv\"></div>\n</div>\n<br>\n\n<hr>\n\n<div class=\"col-md-12\" style=\"height: 30px\">\n\n    <div id=\"filterYear-div-mobile\" class=\"col-md-12 col-sd-6\"> </div> \n    \n    <div id=\"filterYear-div-desktop\" class=\"col-md-12 col-sd-6\"> </div>  \n   \n</div>\n\n<div class=\"col-md-6\">\n   <div class=\"panel panel-default\">\n      <div class=\"panel-heading\">Top Users by # of Execution(s)</div>\n      <div class=\"panel-body\">\n         <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByExecutionExport\"></div>\n         <div id=\"Chart01-div\"> </div> \n      </div>\n</div>\n</div>\n\n\n<div class=\"col-md-6\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\">Top Users by # of Login(s)</div>\n  <div class=\"panel-body\">\n  <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByLoginExport\"></div>\n    <div id=\"Chart02-div\"> </div> \n  </div>\n</div>\n</div>    \n    \n<div class=\"col-md-6\">\n   <div class=\"panel panel-default\">\n      <div class=\"panel-heading\"># of Execution(s) by Day of the Week</div>\n      <div class=\"panel-body\">\n         <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByExecutionExport\"></div>\n         <div id=\"Chart03-div\"> </div> \n      </div>\n</div>\n</div>\n\n\n<div class=\"col-md-6\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\"># of Execution(s) by Hour</div>\n  <div class=\"panel-body\">\n  <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByLoginExport\"></div>\n    <div id=\"Chart04-div\"> </div> \n  </div>\n</div>\n</div>        \n    \n\n<div class=\"col-md-12\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\"># of Execution(s)</div>\n  <div class=\"panel-body\">\n   <div id=\"table-div\"> </div> \n  </div>  \n</div>\n</div> \n\n<div id=\"footer\" class=\"col-sm-12\">\n    <hr>\n    <div class=\"container\">\n        <p class=\"text-muted credit\">\n            Developed by \n            <a href=\"http://it4biz.com.br\" target=\"no_blank\" title=\"IT4biz IT Solutions\">\n                <img                    \n                    src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/logo.png\"\n                >\n            </a> \n        </p>                  \n    </div>\n</div> ",
       "type": "Html"
      },
      {
@@ -203,12 +203,12 @@
      },
      {
       "name": "listeners",
-      "value": "[]",
+      "value": "['${p:filterYearParameter}','${p:lastUpdated}']",
       "type": "Listeners"
      },
      {
       "name": "parameters",
-      "value": "[]",
+      "value": "[[\"filterYearParameter\",\"filterYearParameter\"]]",
       "type": "ValuesArray"
      },
      {
@@ -227,13 +227,13 @@
       "type": "Integer"
      },
      {
-      "name": "width",
-      "value": "",
+      "name": "priority",
+      "value": 5,
       "type": "Integer"
      },
      {
-      "name": "priority",
-      "value": 5,
+      "name": "width",
+      "value": "",
       "type": "Integer"
      },
      {
@@ -277,14 +277,14 @@
       "type": "JavaScript"
      },
      {
-      "name": "extensionPoints",
-      "value": "[]",
-      "type": "EditorValuesArray"
-     },
-     {
       "name": "tooltip",
       "value": "",
       "type": "Html"
+     },
+     {
+      "name": "extensionPoints",
+      "value": "[]",
+      "type": "EditorValuesArray"
      },
      {
       "name": "animate",
@@ -309,36 +309,6 @@
      {
       "name": "barStackedMargin",
       "value": 0,
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSize",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSizeMax",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSizeMin",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSpacing",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSpacingMax",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSpacingMin",
-      "value": "",
       "type": "Float"
      },
      {
@@ -385,11 +355,6 @@
       "name": "baseAxisSizeMax",
       "value": "",
       "type": "String"
-     },
-     {
-      "name": "baseAxisTickFormatter",
-      "value": "",
-      "type": "JavaScript"
      },
      {
       "name": "baseAxisTicks",
@@ -842,21 +807,6 @@
       "type": "Boolean"
      },
      {
-      "name": "ortho2AxisTickUnit",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "ortho2AxisTickUnitMax",
-      "value": "Infinity",
-      "type": "String"
-     },
-     {
-      "name": "ortho2AxisTickUnitMin",
-      "value": "0",
-      "type": "String"
-     },
-     {
       "name": "ortho2AxisTitle",
       "value": "",
       "type": "String"
@@ -985,21 +935,6 @@
       "name": "orthoAxisTicks",
       "value": true,
       "type": "Boolean"
-     },
-     {
-      "name": "orthoAxisTickUnit",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "orthoAxisTickUnitMax",
-      "value": "Infinity",
-      "type": "String"
-     },
-     {
-      "name": "orthoAxisTickUnitMin",
-      "value": "0",
-      "type": "String"
      },
      {
       "name": "orthoAxisTitle",
@@ -1477,12 +1412,12 @@
      },
      {
       "name": "listeners",
-      "value": "[]",
+      "value": "['${p:filterYearParameter}','${p:lastUpdated}']",
       "type": "Listeners"
      },
      {
       "name": "parameters",
-      "value": "[]",
+      "value": "[[\"filterYearParameter\",\"filterYearParameter\"]]",
       "type": "ValuesArray"
      },
      {
@@ -1501,13 +1436,13 @@
       "type": "Integer"
      },
      {
-      "name": "width",
-      "value": "",
+      "name": "priority",
+      "value": 5,
       "type": "Integer"
      },
      {
-      "name": "priority",
-      "value": 5,
+      "name": "width",
+      "value": "",
       "type": "Integer"
      },
      {
@@ -1551,14 +1486,14 @@
       "type": "JavaScript"
      },
      {
-      "name": "extensionPoints",
-      "value": "[]",
-      "type": "EditorValuesArray"
-     },
-     {
       "name": "tooltip",
       "value": "",
       "type": "Html"
+     },
+     {
+      "name": "extensionPoints",
+      "value": "[]",
+      "type": "EditorValuesArray"
      },
      {
       "name": "animate",
@@ -1583,36 +1518,6 @@
      {
       "name": "barStackedMargin",
       "value": 0,
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSize",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSizeMax",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSizeMin",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSpacing",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSpacingMax",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSpacingMin",
-      "value": "",
       "type": "Float"
      },
      {
@@ -1659,11 +1564,6 @@
       "name": "baseAxisSizeMax",
       "value": "",
       "type": "String"
-     },
-     {
-      "name": "baseAxisTickFormatter",
-      "value": "",
-      "type": "JavaScript"
      },
      {
       "name": "baseAxisTicks",
@@ -2116,21 +2016,6 @@
       "type": "Boolean"
      },
      {
-      "name": "ortho2AxisTickUnit",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "ortho2AxisTickUnitMax",
-      "value": "Infinity",
-      "type": "String"
-     },
-     {
-      "name": "ortho2AxisTickUnitMin",
-      "value": "0",
-      "type": "String"
-     },
-     {
       "name": "ortho2AxisTitle",
       "value": "",
       "type": "String"
@@ -2259,21 +2144,6 @@
       "name": "orthoAxisTicks",
       "value": true,
       "type": "Boolean"
-     },
-     {
-      "name": "orthoAxisTickUnit",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "orthoAxisTickUnitMax",
-      "value": "Infinity",
-      "type": "String"
-     },
-     {
-      "name": "orthoAxisTickUnitMin",
-      "value": "0",
-      "type": "String"
      },
      {
       "name": "orthoAxisTitle",
@@ -2751,12 +2621,12 @@
      },
      {
       "name": "listeners",
-      "value": "[]",
+      "value": "['${p:filterYearParameter}','${p:lastUpdated}']",
       "type": "Listeners"
      },
      {
       "name": "parameters",
-      "value": "[]",
+      "value": "[[\"filterYearParameter\",\"filterYearParameter\"]]",
       "type": "ValuesArray"
      },
      {
@@ -2775,13 +2645,13 @@
       "type": "Integer"
      },
      {
-      "name": "height",
-      "value": "300",
+      "name": "priority",
+      "value": 5,
       "type": "Integer"
      },
      {
-      "name": "priority",
-      "value": 5,
+      "name": "height",
+      "value": "300",
       "type": "Integer"
      },
      {
@@ -2825,14 +2695,14 @@
       "type": "JavaScript"
      },
      {
-      "name": "extensionPoints",
-      "value": "[]",
-      "type": "EditorValuesArray"
-     },
-     {
       "name": "tooltip",
       "value": "",
       "type": "Html"
+     },
+     {
+      "name": "extensionPoints",
+      "value": "[[\"line_lineWidth\",\"function(){return 4;}\"]]",
+      "type": "EditorValuesArray"
      },
      {
       "name": "animate",
@@ -2843,36 +2713,6 @@
       "name": "areasVisible",
       "value": "",
       "type": "Boolean"
-     },
-     {
-      "name": "baseAxisBandSize",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSizeMax",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSizeMin",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSpacing",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSpacingMax",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSpacingMin",
-      "value": "",
-      "type": "Float"
      },
      {
       "name": "baseAxisClickAction",
@@ -2975,21 +2815,6 @@
       "type": "Boolean"
      },
      {
-      "name": "baseAxisTickUnit",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "baseAxisTickUnitMax",
-      "value": "Infinity",
-      "type": "String"
-     },
-     {
-      "name": "baseAxisTickUnitMin",
-      "value": "0",
-      "type": "String"
-     },
-     {
       "name": "baseAxisTitle",
       "value": "",
       "type": "String"
@@ -3018,21 +2843,6 @@
       "name": "baseAxisTitleSizeMax",
       "value": "",
       "type": "String"
-     },
-     {
-      "name": "baseAxisTooltipAutoContent",
-      "value": "value",
-      "type": "cccBaseAxisTooltipAutoContentCustom"
-     },
-     {
-      "name": "baseAxisTooltipEnabled",
-      "value": true,
-      "type": "Boolean"
-     },
-     {
-      "name": "baseAxisTooltipFormat",
-      "value": "",
-      "type": "JavaScript"
      },
      {
       "name": "baseAxisVisible",
@@ -3445,21 +3255,6 @@
       "type": "Boolean"
      },
      {
-      "name": "ortho2AxisTickUnit",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "ortho2AxisTickUnitMax",
-      "value": "Infinity",
-      "type": "String"
-     },
-     {
-      "name": "ortho2AxisTickUnitMin",
-      "value": "0",
-      "type": "String"
-     },
-     {
       "name": "ortho2AxisTitle",
       "value": "",
       "type": "String"
@@ -3588,21 +3383,6 @@
       "name": "orthoAxisTicks",
       "value": true,
       "type": "Boolean"
-     },
-     {
-      "name": "orthoAxisTickUnit",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "orthoAxisTickUnitMax",
-      "value": "Infinity",
-      "type": "String"
-     },
-     {
-      "name": "orthoAxisTickUnitMin",
-      "value": "0",
-      "type": "String"
      },
      {
       "name": "orthoAxisTitle",
@@ -4055,12 +3835,12 @@
      },
      {
       "name": "listeners",
-      "value": "[]",
+      "value": "['${p:filterYearParameter}','${p:lastUpdated}']",
       "type": "Listeners"
      },
      {
       "name": "parameters",
-      "value": "[]",
+      "value": "[[\"filterYearParameter\",\"filterYearParameter\"]]",
       "type": "ValuesArray"
      },
      {
@@ -4079,13 +3859,13 @@
       "type": "Integer"
      },
      {
-      "name": "width",
-      "value": "",
+      "name": "priority",
+      "value": 5,
       "type": "Integer"
      },
      {
-      "name": "priority",
-      "value": 5,
+      "name": "width",
+      "value": "",
       "type": "Integer"
      },
      {
@@ -4129,14 +3909,14 @@
       "type": "JavaScript"
      },
      {
-      "name": "extensionPoints",
-      "value": "[]",
-      "type": "EditorValuesArray"
-     },
-     {
       "name": "tooltip",
       "value": "",
       "type": "Html"
+     },
+     {
+      "name": "extensionPoints",
+      "value": "[]",
+      "type": "EditorValuesArray"
      },
      {
       "name": "animate",
@@ -4161,36 +3941,6 @@
      {
       "name": "barStackedMargin",
       "value": 0,
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSize",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSizeMax",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSizeMin",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSpacing",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSpacingMax",
-      "value": "",
-      "type": "Float"
-     },
-     {
-      "name": "baseAxisBandSpacingMin",
-      "value": "",
       "type": "Float"
      },
      {
@@ -4237,11 +3987,6 @@
       "name": "baseAxisSizeMax",
       "value": "",
       "type": "String"
-     },
-     {
-      "name": "baseAxisTickFormatter",
-      "value": "",
-      "type": "JavaScript"
      },
      {
       "name": "baseAxisTicks",
@@ -4694,21 +4439,6 @@
       "type": "Boolean"
      },
      {
-      "name": "ortho2AxisTickUnit",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "ortho2AxisTickUnitMax",
-      "value": "Infinity",
-      "type": "String"
-     },
-     {
-      "name": "ortho2AxisTickUnitMin",
-      "value": "0",
-      "type": "String"
-     },
-     {
       "name": "ortho2AxisTitle",
       "value": "",
       "type": "String"
@@ -4837,21 +4567,6 @@
       "name": "orthoAxisTicks",
       "value": true,
       "type": "Boolean"
-     },
-     {
-      "name": "orthoAxisTickUnit",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "orthoAxisTickUnitMax",
-      "value": "Infinity",
-      "type": "String"
-     },
-     {
-      "name": "orthoAxisTickUnitMin",
-      "value": "0",
-      "type": "String"
      },
      {
       "name": "orthoAxisTitle",
@@ -5338,7 +5053,7 @@
      },
      {
       "name": "propertyValue",
-      "value": "[Period].[All]",
+      "value": "[Year].[All]",
       "type": "String"
      },
      {
@@ -5771,7 +5486,7 @@
      },
      {
       "name": "outputType",
-      "value": "csv",
+      "value": "xls",
       "type": "String"
      },
      {
@@ -5844,7 +5559,7 @@
      },
      {
       "name": "outputType",
-      "value": "csv",
+      "value": "xls",
       "type": "String"
      },
      {
@@ -5892,7 +5607,7 @@
      },
      {
       "name": "listeners",
-      "value": "[]",
+      "value": "['${p:filterYearParameter}','${p:lastUpdated}']",
       "type": "Listeners"
      },
      {
@@ -5906,18 +5621,8 @@
       "type": "JavaScript"
      },
      {
-      "name": "colTypes",
-      "value": "[\"string\",\"string\",\"string\",\"numericBR\"]",
-      "type": "colTypesCustom"
-     },
-     {
-      "name": "colFormats",
-      "value": "[]",
-      "type": "Array"
-     },
-     {
       "name": "colWidths",
-      "value": "[]",
+      "value": "[\"20%\",\"50%\",\"20%\",\"10%\"]",
       "type": "Array"
      },
      {
@@ -5927,12 +5632,22 @@
      },
      {
       "name": "parameters",
-      "value": "[]",
+      "value": "[[\"filterYearParameter\",\"filterYearParameter\"]]",
       "type": "ValuesArray"
      },
      {
       "name": "colHeaders",
       "value": "[\"User\",\"File\",\"Plugin\",\"# of Execution(s)\"]",
+      "type": "Array"
+     },
+     {
+      "name": "colTypes",
+      "value": "[\"string\",\"string\",\"string\",\"numeric\"]",
+      "type": "colTypesCustom"
+     },
+     {
+      "name": "colFormats",
+      "value": "[]",
       "type": "Array"
      },
      {
@@ -6135,7 +5850,7 @@
      },
      {
       "name": "postExecution",
-      "value": "function f() {\n    console.log('lastUpdated:');\n    console.log(lastUpdated[0]);\n    \n    if(lastUpdated[0])\n        $('#lastUpdatedValue').html(lastUpdated[0][0]);\n    else\n        $('#lastUpdatedValue').html('No data found');\n} ",
+      "value": "function f() {\n    \n    if(lastUpdated[0])\n        $('#lastUpdatedValue').html(lastUpdated[0][0]);\n    else\n        $('#lastUpdatedValue').html('No data found');\n} ",
       "type": "JavaScript"
      },
      {
@@ -6183,7 +5898,7 @@
      },
      {
       "name": "successCallback",
-      "value": "function success(){\n    Dashboards.fireChange('lastUpdated', '');\n    Dashboards.decrementRunningCalls();\n} ",
+      "value": "function success(){\n    $.ajax({\n        url: \"/pentaho/api/system/refresh/mondrianSchemaCache\",\n        type: \"GET\",\n        cache: false\n    }).done(function( data ) {\n        Dashboards.fireChange('lastUpdated', '');\n        Dashboards.decrementRunningCalls();\n    }); \n} ",
       "type": "JavaScript"
      },
      {
@@ -6275,7 +5990,7 @@
      },
      {
       "name": "javaScript",
-      "value": "function publishSchema(){\n    var fd = new FormData();    \n    fd.append( 'catalogName', \"Pentaho CE Audit\" ); \n    fd.append( 'overwrite', \"true\" );\n    fd.append( 'xmlaEnabledFlag', \"true\" );\n    fd.append( 'parameters', \"DataSource=Hibernate\" );\n    fd.append('uploadAnalysis','<Schema name=\"Pentaho CE Audit\"> <Cube name=\"Pentaho CE Audit\" visible=\"true\" cache=\"true\" enabled=\"true\"> <Table name=\"PENTAHO_CE_AUDIT\"> </Table> <Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Period\"> <Hierarchy name=\"Period\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"> <Level name=\"Year\" visible=\"true\" column=\"YEAR\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"Month\" visible=\"true\" column=\"MONTH_DESC\" ordinalColumn=\"MONTH\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"Day of Week\" visible=\"true\" column=\"DAY_WEEK_DESC\" ordinalColumn=\"DAY_WEEK\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"Day\" visible=\"true\" column=\"DAY\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> </Hierarchy> </Dimension> <Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Time\"> <Hierarchy name=\"Time\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"> <Level name=\"AM or PM\" visible=\"true\" column=\"AM_PM\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"Hour\" visible=\"true\" column=\"HOURS24\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"Hour 12\" visible=\"true\" column=\"HOURS12\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"Minutes\" visible=\"true\" column=\"MINUTES\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"Seconds\" visible=\"true\" column=\"SECONDS\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"Time\" visible=\"true\" column=\"TIME\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> </Hierarchy> </Dimension> <Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"User\"> <Hierarchy name=\"User\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"> <Level name=\"User\" visible=\"true\" column=\"USER\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> </Hierarchy> </Dimension> <Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Plugin\"> <Hierarchy name=\"Plugin\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"> <Level name=\"Plugin\" visible=\"true\" column=\"PLUGIN\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> </Hierarchy> </Dimension> <Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"File\"> <Hierarchy name=\"File\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"> <Level name=\"Directory Path\" visible=\"false\" column=\"DIRECTORY\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"File\" visible=\"true\" column=\"FILE\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> </Hierarchy> </Dimension> <Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Type\"> <Hierarchy name=\"Type\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"> <Level name=\"Type\" visible=\"true\" column=\"TYPE\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> </Hierarchy> </Dimension> <Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Role\"> <Hierarchy name=\"Role\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"> <Level name=\"Role\" visible=\"true\" column=\"ROLE\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> </Hierarchy> </Dimension> <Measure name=\"Quantity\" column=\"DATA\" datatype=\"String\" formatString=\"#,###\" aggregator=\"distinct count\" visible=\"true\"> </Measure> <Measure name=\"Duration\" column=\"DURATION\" datatype=\"Numeric\" formatString=\"#,###\" aggregator=\"sum\" visible=\"true\"> </Measure> <Measure name=\"Duration Average\" column=\"DURATION\" datatype=\"Numeric\" formatString=\"#,###\" aggregator=\"avg\" visible=\"true\"> </Measure> </Cube> </Schema>');\n    \n    $.ajax( {\n        url: '/pentaho/plugin/data-access/api/mondrian/postAnalysis',\n        type: 'POST',\n        async: false,\n        data: fd,\n        processData: false,\n        contentType: false\n        ,success: function( publish ) {\n            if(publish==3){\n                var html_msg='<div class=\"alert alert-success\" role=\"alert\">'+\n                '<b>Installation has been successful!</b> please restart your biserver.'+\n                '</div>'+\n                '<hr>'+\n                '<div class=\"row\">'+\n                    '<p class=\"alert alert-danger\">'+\n                        'This plug-in applied automatically an Environment configuration, if you want to know more about it please visit the link'+\n                        '<a target=\"no_blank\" href=\"http://infocenter.pentaho.com/help48/index.jsp?topic=%2Fadmin_guide%2Ftask_switching_to_file_based_logging.html\">'+\n                            '<span class=\"glyphicon glyphicon-new-window\" aria-hidden=\"true\"></span>'+\n                        '</a>'+\n                    '</p>'+\n                '</div>';\n                    \n                $(\"#modal-body\").html(html_msg);     \n            }else if(publish==2){\n                html_msg='<div class=\"alert alert-danger\" role=\"alert\">Error publish the schema</div>';\n                $(\"#modal-body\").html(html_msg);\n            }else{\n                html_msg='<div class=\"alert alert-danger\" role=\"alert\">Error undefined</div>';\n                $(\"#modal-body\").html(html_msg);                   \n            }\n        }\n    });   \n} ",
+      "value": "function publishSchema(){\n    var fd = new FormData();    \n    fd.append( 'catalogName', \"Pentaho CE Audit\" ); \n    fd.append( 'overwrite', \"true\" );\n    fd.append( 'xmlaEnabledFlag', \"true\" );\n    fd.append( 'parameters', \"DataSource=Hibernate\" );\n    fd.append('uploadAnalysis','<Schema name=\"Pentaho CE Audit\"> <Cube name=\"Pentaho CE Audit\" visible=\"true\" cache=\"true\" enabled=\"true\"> <Table name=\"PENTAHO_CE_AUDIT\"> </Table> <Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Period\"> <Hierarchy name=\"Period\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"> <Level name=\"Year\" visible=\"true\" column=\"YEAR\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"Month\" visible=\"true\" column=\"MONTH_DESC\" ordinalColumn=\"MONTH\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"Day of Week\" visible=\"true\" column=\"DAY_WEEK_DESC\" ordinalColumn=\"DAY_WEEK\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"Day\" visible=\"true\" column=\"DAY\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> </Hierarchy> </Dimension> <Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Time\"> <Hierarchy name=\"Time\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"> <Level name=\"AM or PM\" visible=\"true\" column=\"AM_PM\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"Hour\" visible=\"true\" column=\"HOURS24\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"Hour 12\" visible=\"true\" column=\"HOURS12\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"Minutes\" visible=\"true\" column=\"MINUTES\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"Seconds\" visible=\"true\" column=\"SECONDS\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"Time\" visible=\"true\" column=\"TIME\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> </Hierarchy> </Dimension> <Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"User\"> <Hierarchy name=\"User\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"> <Level name=\"User\" visible=\"true\" column=\"USER\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> </Hierarchy> </Dimension> <Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Plugin\"> <Hierarchy name=\"Plugin\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"> <Level name=\"Plugin\" visible=\"true\" column=\"PLUGIN\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> </Hierarchy> </Dimension> <Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"File\"> <Hierarchy name=\"File\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"> <Level name=\"Directory Path\" visible=\"false\" column=\"DIRECTORY\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> <Level name=\"File\" visible=\"true\" column=\"FILE\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> </Hierarchy> </Dimension> <Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Type\"> <Hierarchy name=\"Type\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"> <Level name=\"Type\" visible=\"true\" column=\"TYPE\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> </Hierarchy> </Dimension> <Dimension type=\"StandardDimension\" visible=\"true\" highCardinality=\"false\" name=\"Role\"> <Hierarchy name=\"Role\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"> <Level name=\"Role\" visible=\"true\" column=\"ROLE\" type=\"String\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> </Hierarchy> </Dimension> <Dimension type=\"StandardDimension\" visible=\"false\" highCardinality=\"false\" name=\"Year\"> <Hierarchy name=\"Year\" visible=\"true\" hasAll=\"true\" allMemberName=\"All\"> <Level name=\"Year\" visible=\"true\" column=\"YEAR\" type=\"Integer\" uniqueMembers=\"false\" levelType=\"Regular\" hideMemberIf=\"Never\"> </Level> </Hierarchy> </Dimension> <Measure name=\"Quantity\" column=\"DATA\" datatype=\"String\" formatString=\"#,###\" aggregator=\"distinct count\" visible=\"true\"> </Measure> <Measure name=\"Duration\" column=\"DURATION\" datatype=\"Numeric\" formatString=\"#,###\" aggregator=\"sum\" visible=\"true\"> </Measure> <Measure name=\"Duration Average\" column=\"DURATION\" datatype=\"Numeric\" formatString=\"#,###\" aggregator=\"avg\" visible=\"true\"> </Measure> </Cube> </Schema>');\n    \n    $.ajax( {\n        url: '/pentaho/plugin/data-access/api/mondrian/postAnalysis',\n        type: 'POST',\n        async: false,\n        data: fd,\n        processData: false,\n        contentType: false\n        ,success: function( publish ) {\n            if(publish==3){\n                var html_msg='<div class=\"alert alert-success\" role=\"alert\">'+\n                '<b>Installation has been successful!</b> please restart your biserver.'+\n                '</div>'+\n                '<hr>'+\n                '<div class=\"row\">'+\n                    '<p class=\"alert alert-danger\">'+\n                        'This plug-in applied automatically an Environment configuration, if you want to know more about it please visit the link'+\n                        '<a target=\"no_blank\" href=\"http://infocenter.pentaho.com/help48/index.jsp?topic=%2Fadmin_guide%2Ftask_switching_to_file_based_logging.html\">'+\n                            '<span class=\"glyphicon glyphicon-new-window\" aria-hidden=\"true\"></span>'+\n                        '</a>'+\n                    '</p>'+\n                '</div>';\n                    \n                $(\"#modal-body\").html(html_msg);     \n            }else if(publish==2){\n                html_msg='<div class=\"alert alert-danger\" role=\"alert\">Error publish the schema</div>';\n                $(\"#modal-body\").html(html_msg);\n            }else{\n                html_msg='<div class=\"alert alert-danger\" role=\"alert\">Error undefined</div>';\n                $(\"#modal-body\").html(html_msg);                   \n            }\n        }\n    });   \n} ",
       "type": "JavaScript"
      }
     ]
@@ -6312,24 +6027,6 @@
      {
       "name": "javaScript",
       "value": "$.ajax({\n    url: \"/pentaho/plugin/pentaho-ce-audit/api/job_verify_installation\",\n    cache: false\n}).done(function( data ) {\n    if(!data.result){\n        $('#myModal').modal('show');\n        $(\"#modal-body\").html(\"Wait installation...\");\n        \n        //call endpoint\n        installPlugin();        \n    }else{        \n        //refresh data\n        /*\n        Dashboards.incrementRunningCalls();   \n        $.ajax({\n            url: \"/pentaho/plugin/pentaho-ce-audit/api/job_refresh\",\n            cache: false\n        }).done(function( data ) {\n            Dashboards.decrementRunningCalls();\n            Dashboards.fireChange(\"refresh\",\"\");\n        });\n        */\n    }\n}); ",
-      "type": "JavaScript"
-     }
-    ]
-   },
-   {
-    "id": "d69cb063-093e-97c9-b944-bb989c406379",
-    "type": "ComponentsFunction",
-    "typeDesc": "JavaScript function",
-    "parent": "SCRIPT",
-    "properties": [
-     {
-      "name": "name",
-      "value": "numericBR",
-      "type": "Id"
-     },
-     {
-      "name": "javaScript",
-      "value": "/** start addIn numericBR **/ \r\rvar numericBR = {\rname: \"numericBR\",\rlabel: \"Numeric BR\",\rdefaults: {\rdecimal: true,\rtextFormat: function(v, st, opt) { var nStr= v.toFixed(2)+'';\rx = nStr.split('.');\rx1 = x[0];\rx2 = x.length > 1 ? ',' + x[1] : ''; var rgx = /(\\d+)(\\d{3})/;\rwhile (rgx.test(x1)) {\rx1 = x1.replace(rgx, '$1' + '.' + '$2'); }\rreturn x1 + (opt.decimal ? x2 : ''); }\r},\rinit: function(){\r$.fn.dataTableExt.oSort[this.name+'-asc'] = $.fn.dataTableExt.oSort['numeric-asc'];\r$.fn.dataTableExt.oSort[this.name+'-desc'] = $.fn.dataTableExt.oSort['numeric-desc']; },\rimplementation: function(tgt, st, opt){\rvar text = opt.textFormat.call(this, st.value, st, opt); $(tgt).empty().append(\"<span style='text-align:right;'>\"+text+\"</span>\");\r}\r};\rDashboards.registerAddIn(\"Table\", \"colType\", new AddIn(numericBR)); \r\r/** end addIn numericBR **/ ",
       "type": "JavaScript"
      }
     ]
@@ -6380,12 +6077,12 @@
      },
      {
       "name": "query",
-      "value": "WITH\nSET [~FILTER] AS\n    {[Type].[execution]}\nSET [~ROWS] AS\n    TopCount({[User].[User].Members}, 10, [Measures].[Quantity])\nSELECT\nNON EMPTY {[Measures].[Quantity]} ON COLUMNS,\nNON EMPTY [~ROWS] ON ROWS\nFROM [Pentaho CE Audit]\nWHERE [~FILTER]",
+      "value": "WITH\nSET [~ROWS] AS\n    TopCount({[User].[User].Members}, 10, [Measures].[Quantity])\nSELECT\nNON EMPTY {[Measures].[Quantity]} ON COLUMNS,\nNON EMPTY [~ROWS] ON ROWS\nFROM [Pentaho CE Audit]\nWHERE CrossJoin({${filterYearParameter}}, {[Type].[execution]})",
       "type": "SqlQuery"
      },
      {
       "name": "parameters",
-      "value": "[]",
+      "value": "[[\"filterYearParameter\",\"\",\"String\",\"\"]]",
       "type": "CdaParameters"
      },
      {
@@ -6456,12 +6153,12 @@
      },
      {
       "name": "query",
-      "value": "WITH\nSET [~FILTER] AS\n    {[Type].[login]}\nSET [~ROWS] AS\n    TopCount({[User].[User].Members}, 10, [Measures].[Quantity])\nSELECT\nNON EMPTY {[Measures].[Quantity]} ON COLUMNS,\nNON EMPTY [~ROWS] ON ROWS\nFROM [Pentaho CE Audit]\nWHERE [~FILTER]",
+      "value": "WITH\nSET [~ROWS] AS\n    TopCount({[User].[User].Members}, 10, [Measures].[Quantity])\nSELECT\nNON EMPTY {[Measures].[Quantity]} ON COLUMNS,\nNON EMPTY [~ROWS] ON ROWS\nFROM [Pentaho CE Audit]\nWHERE CrossJoin({${filterYearParameter}}, {[Type].[login]})",
       "type": "SqlQuery"
      },
      {
       "name": "parameters",
-      "value": "[]",
+      "value": "[[\"filterYearParameter\",\"\",\"String\",\"\"]]",
       "type": "CdaParameters"
      },
      {
@@ -6608,7 +6305,7 @@
      },
      {
       "name": "query",
-      "value": "with member [Measures].[Name] as '[Period].CurrentMember.UniqueName' select TopCount( filter({Descendants([Period].[All] ,[Period].[Year])}, not isempty(([Period].CurrentMember)) ) , 50) on ROWS, \n {[Measures].[Name]} on Columns \n from [Pentaho CE Audit]",
+      "value": "with member [Measures].[Name] as '[Year].CurrentMember.UniqueName' \nselect TopCount( filter({Descendants([Year].members)}, not isempty(([Year].CurrentMember)) ) , 50) on ROWS, \n {[Measures].[Name]} on Columns \n from [Pentaho CE Audit]",
       "type": "SqlQuery"
      },
      {
@@ -6684,12 +6381,12 @@
      },
      {
       "name": "query",
-      "value": "WITH\nSET [~FILTER] AS\n    {[Type].[execution]}\nSET [~ROWS_User.User] AS\n    {[User].[User].Members}\nSET [~ROWS_File.File] AS\n    {[File].[File].Members}\nSET [~ROWS_Plugin.Plugin] AS\n    {[Plugin].[Plugin].Members}\nSELECT\nNON EMPTY {[Measures].[Quantity]} ON COLUMNS,\nNON EMPTY ([~ROWS_User.User]  *  [~ROWS_File.File]  *  [~ROWS_Plugin.Plugin]) ON ROWS\nFROM [Pentaho CE Audit]\nWHERE [~FILTER]",
+      "value": "WITH\nSET [~ROWS_User.User] AS\n    {[User].[User].Members}\nSET [~ROWS_File.File] AS\n    {[File].[File].Members}\nSET [~ROWS_Plugin.Plugin] AS\n    {[Plugin].[Plugin].Members}\nSELECT\nNON EMPTY {[Measures].[Quantity]} ON COLUMNS,\nNON EMPTY ([~ROWS_User.User]  *  [~ROWS_File.File]  *  [~ROWS_Plugin.Plugin]) ON ROWS\nFROM [Pentaho CE Audit]\nWHERE CrossJoin({${filterYearParameter}}, {[Type].[execution]})",
       "type": "SqlQuery"
      },
      {
       "name": "parameters",
-      "value": "[]",
+      "value": "[[\"filterYearParameter\",\"\",\"String\",\"\"]]",
       "type": "CdaParameters"
      },
      {
@@ -6760,12 +6457,12 @@
      },
      {
       "name": "query",
-      "value": "WITH\nSET [~FILTER] AS\n    {[Type].[execution]}\nSET [~ROWS] AS\n    {[Time].[Hour].Members}\nSELECT\nNON EMPTY {[Measures].[Quantity]} ON COLUMNS,\nNON EMPTY [~ROWS] ON ROWS\nFROM [Pentaho CE Audit]\nWHERE [~FILTER]",
+      "value": "WITH\nSET [~ROWS] AS\n    {[Time].[Hour].Members}\nSELECT\nNON EMPTY {[Measures].[Quantity]} ON COLUMNS,\nNON EMPTY [~ROWS] ON ROWS\nFROM [Pentaho CE Audit]\nWHERE CrossJoin({${filterYearParameter}}, {[Type].[execution]})",
       "type": "SqlQuery"
      },
      {
       "name": "parameters",
-      "value": "[]",
+      "value": "[[\"filterYearParameter\",\"\",\"String\",\"\"]]",
       "type": "CdaParameters"
      },
      {
@@ -6836,12 +6533,12 @@
      },
      {
       "name": "query",
-      "value": "WITH\nSET [~FILTER] AS\n    {[Type].[execution]}\nSET [~ROWS] AS\n    {[Period].[Day of Week].Members}\nSELECT\nNON EMPTY {[Measures].[Quantity]} ON COLUMNS,\nNON EMPTY [~ROWS] ON ROWS\nFROM [Pentaho CE Audit]\nWHERE [~FILTER]",
+      "value": "WITH\nSET [~ROWS] AS\n    {[Period].[Day of Week].Members}\nSELECT\nNON EMPTY {[Measures].[Quantity]} ON COLUMNS,\nNON EMPTY [~ROWS] ON ROWS\nFROM [Pentaho CE Audit]\nWHERE CrossJoin({${filterYearParameter}}, {[Type].[execution]})",
       "type": "SqlQuery"
      },
      {
       "name": "parameters",
-      "value": "[]",
+      "value": "[[\"filterYearParameter\",\"\",\"String\",\"\"]]",
       "type": "CdaParameters"
      },
      {
