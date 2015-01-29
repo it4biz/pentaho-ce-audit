@@ -217,7 +217,12 @@
       "type": "Datasource"
      },
      {
-      "name": "refreshPeriod",
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "width",
       "value": "",
       "type": "Integer"
      },
@@ -227,12 +232,7 @@
       "type": "Integer"
      },
      {
-      "name": "priority",
-      "value": 5,
-      "type": "Integer"
-     },
-     {
-      "name": "width",
+      "name": "refreshPeriod",
       "value": "",
       "type": "Integer"
      },
@@ -257,12 +257,12 @@
       "type": "JavaScript"
      },
      {
-      "name": "postExecution",
+      "name": "postFetch",
       "value": "",
       "type": "JavaScript"
      },
      {
-      "name": "postFetch",
+      "name": "postExecution",
       "value": "",
       "type": "JavaScript"
      },
@@ -1426,7 +1426,12 @@
       "type": "Datasource"
      },
      {
-      "name": "refreshPeriod",
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "width",
       "value": "",
       "type": "Integer"
      },
@@ -1436,12 +1441,7 @@
       "type": "Integer"
      },
      {
-      "name": "priority",
-      "value": 5,
-      "type": "Integer"
-     },
-     {
-      "name": "width",
+      "name": "refreshPeriod",
       "value": "",
       "type": "Integer"
      },
@@ -1466,12 +1466,12 @@
       "type": "JavaScript"
      },
      {
-      "name": "postExecution",
+      "name": "postFetch",
       "value": "",
       "type": "JavaScript"
      },
      {
-      "name": "postFetch",
+      "name": "postExecution",
       "value": "",
       "type": "JavaScript"
      },
@@ -2635,8 +2635,13 @@
       "type": "Datasource"
      },
      {
-      "name": "refreshPeriod",
-      "value": "",
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "height",
+      "value": "300",
       "type": "Integer"
      },
      {
@@ -2645,13 +2650,8 @@
       "type": "Integer"
      },
      {
-      "name": "priority",
-      "value": 5,
-      "type": "Integer"
-     },
-     {
-      "name": "height",
-      "value": "300",
+      "name": "refreshPeriod",
+      "value": "",
       "type": "Integer"
      },
      {
@@ -2675,12 +2675,12 @@
       "type": "JavaScript"
      },
      {
-      "name": "postExecution",
+      "name": "postFetch",
       "value": "",
       "type": "JavaScript"
      },
      {
-      "name": "postFetch",
+      "name": "postExecution",
       "value": "",
       "type": "JavaScript"
      },
@@ -3849,7 +3849,12 @@
       "type": "Datasource"
      },
      {
-      "name": "refreshPeriod",
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "width",
       "value": "",
       "type": "Integer"
      },
@@ -3859,12 +3864,7 @@
       "type": "Integer"
      },
      {
-      "name": "priority",
-      "value": 5,
-      "type": "Integer"
-     },
-     {
-      "name": "width",
+      "name": "refreshPeriod",
       "value": "",
       "type": "Integer"
      },
@@ -3889,12 +3889,12 @@
       "type": "JavaScript"
      },
      {
-      "name": "postExecution",
+      "name": "postFetch",
       "value": "",
       "type": "JavaScript"
      },
      {
-      "name": "postFetch",
+      "name": "postExecution",
       "value": "",
       "type": "JavaScript"
      },
@@ -5241,7 +5241,7 @@
      },
      {
       "name": "listeners",
-      "value": "[]",
+      "value": "['${p:lastUpdated}']",
       "type": "Listeners"
      },
      {
@@ -5344,7 +5344,7 @@
      },
      {
       "name": "listeners",
-      "value": "[]",
+      "value": "['${p:lastUpdated}']",
       "type": "Listeners"
      },
      {
@@ -5621,11 +5621,6 @@
       "type": "JavaScript"
      },
      {
-      "name": "colWidths",
-      "value": "[\"20%\",\"50%\",\"20%\",\"10%\"]",
-      "type": "Array"
-     },
-     {
       "name": "colSortable",
       "value": "[]",
       "type": "Array"
@@ -5648,6 +5643,11 @@
      {
       "name": "colFormats",
       "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "colWidths",
+      "value": "[\"20%\",\"50%\",\"20%\",\"10%\"]",
       "type": "Array"
      },
      {
@@ -5706,14 +5706,14 @@
       "type": "Datasource"
      },
      {
-      "name": "sortBy",
-      "value": "[]",
-      "type": "SortByArray"
-     },
-     {
       "name": "sDom",
       "value": "",
       "type": "JavaScript"
+     },
+     {
+      "name": "sortBy",
+      "value": "[]",
+      "type": "SortByArray"
      },
      {
       "name": "priority",
