@@ -286,7 +286,12 @@
       "type": "Datasource"
      },
      {
-      "name": "refreshPeriod",
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "width",
       "value": "",
       "type": "Integer"
      },
@@ -296,12 +301,7 @@
       "type": "Integer"
      },
      {
-      "name": "priority",
-      "value": 5,
-      "type": "Integer"
-     },
-     {
-      "name": "width",
+      "name": "refreshPeriod",
       "value": "",
       "type": "Integer"
      },
@@ -326,12 +326,12 @@
       "type": "JavaScript"
      },
      {
-      "name": "postExecution",
+      "name": "postFetch",
       "value": "",
       "type": "JavaScript"
      },
      {
-      "name": "postFetch",
+      "name": "postExecution",
       "value": "",
       "type": "JavaScript"
      },
@@ -1495,7 +1495,12 @@
       "type": "Datasource"
      },
      {
-      "name": "refreshPeriod",
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "width",
       "value": "",
       "type": "Integer"
      },
@@ -1505,12 +1510,7 @@
       "type": "Integer"
      },
      {
-      "name": "priority",
-      "value": 5,
-      "type": "Integer"
-     },
-     {
-      "name": "width",
+      "name": "refreshPeriod",
       "value": "",
       "type": "Integer"
      },
@@ -1535,12 +1535,12 @@
       "type": "JavaScript"
      },
      {
-      "name": "postExecution",
+      "name": "postFetch",
       "value": "",
       "type": "JavaScript"
      },
      {
-      "name": "postFetch",
+      "name": "postExecution",
       "value": "",
       "type": "JavaScript"
      },
@@ -2704,8 +2704,13 @@
       "type": "Datasource"
      },
      {
-      "name": "refreshPeriod",
-      "value": "",
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "height",
+      "value": "300",
       "type": "Integer"
      },
      {
@@ -2714,13 +2719,8 @@
       "type": "Integer"
      },
      {
-      "name": "priority",
-      "value": 5,
-      "type": "Integer"
-     },
-     {
-      "name": "height",
-      "value": "300",
+      "name": "refreshPeriod",
+      "value": "",
       "type": "Integer"
      },
      {
@@ -2744,12 +2744,12 @@
       "type": "JavaScript"
      },
      {
-      "name": "postExecution",
+      "name": "postFetch",
       "value": "",
       "type": "JavaScript"
      },
      {
-      "name": "postFetch",
+      "name": "postExecution",
       "value": "",
       "type": "JavaScript"
      },
@@ -3918,7 +3918,12 @@
       "type": "Datasource"
      },
      {
-      "name": "refreshPeriod",
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "width",
       "value": "",
       "type": "Integer"
      },
@@ -3928,12 +3933,7 @@
       "type": "Integer"
      },
      {
-      "name": "priority",
-      "value": 5,
-      "type": "Integer"
-     },
-     {
-      "name": "width",
+      "name": "refreshPeriod",
       "value": "",
       "type": "Integer"
      },
@@ -3958,12 +3958,12 @@
       "type": "JavaScript"
      },
      {
-      "name": "postExecution",
+      "name": "postFetch",
       "value": "",
       "type": "JavaScript"
      },
      {
-      "name": "postFetch",
+      "name": "postExecution",
       "value": "",
       "type": "JavaScript"
      },
@@ -5718,11 +5718,6 @@
       "type": "JavaScript"
      },
      {
-      "name": "colTypes",
-      "value": "[\"string\",\"string\",\"string\",\"numeric\"]",
-      "type": "colTypesCustom"
-     },
-     {
       "name": "colFormats",
       "value": "[]",
       "type": "Array"
@@ -5746,6 +5741,11 @@
       "name": "colHeaders",
       "value": "[\"User\",\"File\",\"Plugin\",\"# of Execution(s)\"]",
       "type": "Array"
+     },
+     {
+      "name": "colTypes",
+      "value": "[\"string\",\"string\",\"string\",\"numeric\"]",
+      "type": "colTypesCustom"
      },
      {
       "name": "expandParameters",
@@ -5803,14 +5803,14 @@
       "type": "Datasource"
      },
      {
-      "name": "sortBy",
-      "value": "[]",
-      "type": "SortByArray"
-     },
-     {
       "name": "sDom",
       "value": "",
       "type": "JavaScript"
+     },
+     {
+      "name": "sortBy",
+      "value": "[]",
+      "type": "SortByArray"
      },
      {
       "name": "priority",
@@ -6141,7 +6141,7 @@
      },
      {
       "name": "javaScript",
-      "value": "$.ajax({\n    url: \"/pentaho/plugin/pentaho-ce-audit/api/job_verify_installation\",\n    cache: false\n}).done(function( data ) {\n    if(!data.result){\n        $('#myModal').modal('show');\n        \n        var msgHtml='<iframe src=\"https://docs.google.com/forms/d/1BpVdBj_5GnsyNsSIORu0cWV0IwM-qilDmX5PQEFUecY/viewform?embedded=true\" width=\"760\" height=\"500\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading...</iframe>';\n        \n    }else{        \n        \n        Dashboards.incrementRunningCalls();   \n        $.ajax({\n            url: \"/pentaho/plugin/pentaho-ce-audit/api/get_metadata\",\n            cache: false\n        }).done(function( data ) {\n            Dashboards.decrementRunningCalls();\n            if(data.queryInfo.totalRows>0)\n               Dashboards.update(\n                   [render_BarChartTop10UsersByExecution\n                   ,render_BarChartTop10UsersByLogin\n                   ,render_LineChartExecutionByHours\n                   ,render_BarChartExecutionsByDayOfWeek\n                   ,render_Table\n                   ,render_filterYearSelectorMobile\n                   ,render_filterYearSelectorDesktop\n                   ,render_BarChartTop10UsersByExecutionExport\n                   ,render_BarChartTop10UsersByLoginExport]);\n        });\n        \n    }\n}); \n ",
+      "value": "$.ajax({\n    url: \"/pentaho/plugin/pentaho-ce-audit/api/job_verify_installation\",\n    cache: false\n}).done(function( data ) {\n    if(!data.result){\n        $('#myModal').modal('show');\n    }else{        \n        \n        Dashboards.incrementRunningCalls();   \n        $.ajax({\n            url: \"/pentaho/plugin/pentaho-ce-audit/api/get_metadata\",\n            cache: false\n        }).done(function( data ) {\n            Dashboards.decrementRunningCalls();\n            if(data.queryInfo.totalRows>0)\n               Dashboards.update(\n                   [render_BarChartTop10UsersByExecution\n                   ,render_BarChartTop10UsersByLogin\n                   ,render_LineChartExecutionByHours\n                   ,render_BarChartExecutionsByDayOfWeek\n                   ,render_Table\n                   ,render_filterYearSelectorMobile\n                   ,render_filterYearSelectorDesktop\n                   ,render_BarChartTop10UsersByExecutionExport\n                   ,render_BarChartTop10UsersByLoginExport]);\n        });\n        \n    }\n}); \n ",
       "type": "JavaScript"
      }
     ]
