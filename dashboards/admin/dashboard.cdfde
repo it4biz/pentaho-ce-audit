@@ -3,6 +3,75 @@
   "title": "Two x One Template",
   "rows": [
    {
+    "id": "c5f0d715-8925-75fd-061a-a6c07073af11",
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "cssPaddingRightSelectForm",
+      "type": "Id"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     },
+     {
+      "name": "resourceCode",
+      "value": ".has-error .form-control {\n  padding-right: 16px;\n}\n\n.has-warning .form-control {\n  padding-right: 16px;\n}\n\n.has-success .form-control {\n  padding-right: 16px;\n} ",
+      "type": "Resource"
+     }
+    ]
+   },
+   {
+    "id": "7a5ba60f-36cc-8599-1d40-fa8072a7081f",
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "TwitterCode",
+      "type": "Id"
+     },
+     {
+      "name": "resourceType",
+      "value": "Javascript",
+      "type": "Label"
+     },
+     {
+      "name": "resourceCode",
+      "value": "//hashtag buttom\nwindow.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src=\"https://platform.twitter.com/widgets.js\";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,\"script\",\"twitter-wjs\")); \n\n////follow buttom\nwindow.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src=\"https://platform.twitter.com/widgets.js\";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,\"script\",\"twitter-wjs\")); ",
+      "type": "Resource"
+     }
+    ]
+   },
+   {
+    "id": "7d418342-2cee-2cc7-34ee-1caa112cbdaa",
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "FacebookCode",
+      "type": "Id"
+     },
+     {
+      "name": "resourceType",
+      "value": "Javascript",
+      "type": "Label"
+     },
+     {
+      "name": "resourceCode",
+      "value": "(function(d, s, id) {\n  var js, fjs = d.getElementsByTagName(s)[0];\n  if (d.getElementById(id)) return;\n  js = d.createElement(s); js.id = id;\n  js.src = \"//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.0\";\n  fjs.parentNode.insertBefore(js, fjs);\n}(document, 'script', 'facebook-jssdk')); ",
+      "type": "Resource"
+     }
+    ]
+   },
+   {
     "id": "4ab17cf8-41bd-67e8-2b2c-6e71aa306efd",
     "type": "LayoutResourceCode",
     "typeDesc": "Resource",
@@ -76,7 +145,7 @@
      },
      {
       "name": "html",
-      "value": "<div class=\"pull-right\">   \n    <label>Last Updated:</label> \n    <span class=\"badge\">\n        <div id=\"lastUpdatedValue\"></div>\n    </span>\n</div>\n    \n<div class=\"pull-right\" style=\"padding-right:5px;\">\n    <!-- <span class=\"glyphicon glyphicon-refresh\" aria-hidden=\"true\"></span>-->\n    <div id=\"refreshButtonDiv\"></div>\n</div>\n<br>\n\n<hr>\n\n<div class=\"col-md-12\" style=\"height: 30px\">\n\n    <div id=\"filterYear-div-mobile\" class=\"col-md-12 col-sd-6\"> </div> \n    \n    <div id=\"filterYear-div-desktop\" class=\"col-md-12 col-sd-6\"> </div>  \n   \n</div>\n\n<div class=\"col-md-6\">\n   <div class=\"panel panel-default\">\n      <div class=\"panel-heading\">Top Users by # of Execution(s)</div>\n      <div class=\"panel-body\">\n         <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByExecutionExport\"></div>\n         <div id=\"Chart01-div\"> </div> \n      </div>\n</div>\n</div>\n\n\n<div class=\"col-md-6\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\">Top Users by # of Login(s)</div>\n  <div class=\"panel-body\">\n  <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByLoginExport\"></div>\n    <div id=\"Chart02-div\"> </div> \n  </div>\n</div>\n</div>    \n    \n<div class=\"col-md-6\">\n   <div class=\"panel panel-default\">\n      <div class=\"panel-heading\"># of Execution(s) by Day of the Week</div>\n      <div class=\"panel-body\">\n         <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByExecutionExport\"></div>\n         <div id=\"Chart03-div\"> </div> \n      </div>\n</div>\n</div>\n\n\n<div class=\"col-md-6\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\"># of Execution(s) by Hour</div>\n  <div class=\"panel-body\">\n  <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByLoginExport\"></div>\n    <div id=\"Chart04-div\"> </div> \n  </div>\n</div>\n</div>        \n    \n\n<div class=\"col-md-12\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\"># of Execution(s)</div>\n  <div class=\"panel-body\">\n   <div id=\"table-div\"> </div> \n  </div>  \n</div>\n</div> \n\n<div id=\"footer\" class=\"col-sm-12\">\n    <hr>\n    <div class=\"container\">\n        <p class=\"text-muted credit\">\n            Powered by \n            <a href=\"http://it4biz.com.br\" target=\"no_blank\" title=\"IT4biz IT Solutions\">\n                <img                    \n                    src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/logo.png\"\n                >\n            </a> \n        </p>                  \n    </div>\n</div> ",
+      "value": "<div class=\"pull-right\">   \n    <label>Last Updated:</label> \n    <span class=\"badge\">\n        <div id=\"lastUpdatedValue\"></div>\n    </span>\n</div>\n    \n<div class=\"pull-right\" style=\"padding-right:5px;\">\n    <!-- <span class=\"glyphicon glyphicon-refresh\" aria-hidden=\"true\"></span>-->\n    <div id=\"refreshButtonDiv\"></div>\n</div>\n<br>\n\n<hr>\n\n<div class=\"col-md-12\" style=\"height: 30px\">\n\n    <div id=\"filterYear-div-mobile\" class=\"col-md-12 col-sd-6\"> </div> \n    \n    <div id=\"filterYear-div-desktop\" class=\"col-md-12 col-sd-6\"> </div>  \n   \n</div>\n\n<div class=\"col-md-6\">\n   <div class=\"panel panel-default\">\n      <div class=\"panel-heading\">Top Users by # of Execution(s)</div>\n      <div class=\"panel-body\">\n         <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByExecutionExport\"></div>\n         <div id=\"Chart01-div\"> </div> \n      </div>\n</div>\n</div>\n\n\n<div class=\"col-md-6\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\">Top Users by # of Login(s)</div>\n  <div class=\"panel-body\">\n  <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByLoginExport\"></div>\n    <div id=\"Chart02-div\"> </div> \n  </div>\n</div>\n</div>    \n    \n<div class=\"col-md-6\">\n   <div class=\"panel panel-default\">\n      <div class=\"panel-heading\"># of Execution(s) by Day of the Week</div>\n      <div class=\"panel-body\">\n         <div class=\"pull-right\" id=\"ExportButtonExecutionsByDayOfWeekExport\"></div>\n         <div id=\"Chart03-div\"> </div> \n      </div>\n</div>\n</div>\n\n\n<div class=\"col-md-6\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\"># of Execution(s) by Hour</div>\n  <div class=\"panel-body\">\n  <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByLoginExport\"></div>\n    <div id=\"Chart04-div\"> </div> \n  </div>\n</div>\u0001\n</div>        \n    \n\n<div class=\"col-md-12\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\"># of Execution(s)</div>\n  <div class=\"panel-body\">\n   <div id=\"table-div\"> </div> \n  </div>  \n</div>\n</div> \n\n<div id=\"footer\" class=\"col-sm-12\">\n    <hr>\n    <div class=\"container\">\n        <p class=\"text-muted credit\">\n            <div class=\"pull-right\">\n                Powered by\n                <a  href=\"http://it4biz.com.br\" target=\"no_blank\" title=\"IT4biz IT Solutions\">\n                    <img                    \n                        src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/logo.png\"\n                    >\n                </a> \n            </div>\n            <div>\n            <label>Please help us do more, with just a “Like” on our Facebook page</label><br> \n            <div\n                class=\"fb-like\" \n                data-href=\"https://www.facebook.com/it4biz\" \n                data-layout=\"button\" \n                data-action=\"like\" \n                data-show-faces=\"true\" \n                data-share=\"true\">                \n            </div><br>\n            <label>or a “follow us” on twitter</label><br>\n            <a \n                class=\"twitter-hashtag-button\"\n                href=\"https://twitter.com/intent/tweet?button_hashtag=PentahoCEAudit&text=I have installed Pentaho CE Audit from @it4bizbrazil. You should try it on @pentaho Marketplace.\"\n                data-related=\"twitter\">\n                Tweet #PentahoCEAudit\n            </a>\n            <a \n                class=\"twitter-follow-button\"\n                href=\"https://twitter.com/it4bizbrazil\"\n                data-show-count=\"false\"\n                data-lang=\"en\">\n                Follow @it4bizbrazil\n            </a>\n        </div>\n        </p>\n        \n    </div>        \n</div> ",
       "type": "Html"
      },
      {
@@ -147,7 +216,7 @@
      },
      {
       "name": "html",
-      "value": "<!-- Modal -->\n<div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n        <h4 class=\"modal-title\" id=\"myModalLabel\">Pentaho CE Audit - Installation</h4>\n      </div>\n      <div class=\"modal-body\" id=\"modal-body\">        \n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        <!-- <button type=\"button\" class=\"btn btn-primary\">Save changes</button> -->\n      </div>\n    </div>\n  </div>\n</div> ",
+      "value": "<!-- Modal -->\n<div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-lg\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n        <h4 class=\"modal-title\" id=\"myModalLabel\">Pentaho CE Audit - Installation</h4>\n      </div>\n      <div class=\"modal-body\" id=\"modal-body\">\n      <p>Please fill out the form below to complete the installation.</p>\n<!-- Form Google-->      \n\n<form action=\"https://docs.google.com/a/it4biz.com.br/forms/d/1VRhTeaezy4QU-WYHJv-b3vpVJzFkn133vLPLrCCOwik/formResponse\" method=\"POST\" id=\"ss-form\" target=\"hidden_iframe\">\n    <div class=\"form-group has-warning has-feedback\">\n\t    \t<label for=\"entry_513906374\">Name</label>\n\t    \t<input type=\"text\" class=\"form-control\" id=\"entry_513906374\" placeholder=\"Enter name\" name=\"entry_513906374\">\n            <span class=\"glyphicon glyphicon-warning-sign form-control-feedback\" aria-hidden=\"true\"></span>            \n  \t</div>\n \t<div class=\"form-group has-warning has-feedback\">\n\t    \t<label for=\"entry_860105332\">Last name</label>\n\t    \t<input type=\"text\" class=\"form-control\" id=\"entry_860105332\" placeholder=\"Enter last name\" name=\"entry_860105332\">\n  \t        <span class=\"glyphicon glyphicon-warning-sign form-control-feedback\" aria-hidden=\"true\"></span>   \n  \t</div>\n\t<div class=\"form-group has-warning has-feedback\">\n    \t\t<label for=\"entry_1166092966\">Email address</label>\n    \t\t<input type=\"email\" class=\"form-control\" placeholder=\"Enter email\" name=\"entry.1166092966\" id=\"entry_1166092966\">\n  \t        <span class=\"glyphicon glyphicon-warning-sign form-control-feedback\" aria-hidden=\"true\"></span>\n  \t</div>\n\t<div class=\"form-group has-warning has-feedback\">\n    \t\t<label for=\"entry_1065748829\">Company</label>\n    \t\t<input type=\"text\" class=\"form-control\" placeholder=\"Enter company\" name=\"entry.1065748829\" id=\"entry_1065748829\">\n            <span class=\"glyphicon glyphicon-warning-sign form-control-feedback\" aria-hidden=\"true\"></span>\n  \t</div>\n\t<div class=\"form-group has-warning has-feedback\">\n\t\t<label for=\"entry_238908962\">Country</label>\n\t\t<select name=\"entry.238908962\" id=\"entry_238908962\" class=\"form-control\">\n                  <option value=\"Select a country\">Select a country</option>\n                  <option value=\"Afghanistan\">Afghanistan</option>\n                  <option value=\"Albania\">Albania</option>\n                  <option value=\"Algeria\">Algeria</option>\n                  <option value=\"Andorra\">Andorra</option>\n                  <option value=\"Angola\">Angola</option>\n                  <option value=\"Antigua and Barbuda\">Antigua and Barbuda</option>\n                  <option value=\"Argentina\">Argentina</option>\n                  <option value=\"Armenia\">Armenia</option>\n                  <option value=\"Aruba\">Aruba</option>\n                  <option value=\"Australia\">Australia</option>\n                  <option value=\"Austria\">Austria</option>\n                  <option value=\"Azerbaijan\">Azerbaijan</option>\n                  <option value=\"Bahamas, The\">Bahamas, The</option>\n                  <option value=\"Bahrain\">Bahrain</option>\n                  <option value=\"Bangladesh\">Bangladesh</option>\n                  <option value=\"Barbados\">Barbados</option>\n                  <option value=\"Belarus\">Belarus</option>\n                  <option value=\"Belgium\">Belgium</option>\n                  <option value=\"Belize\">Belize</option>\n                  <option value=\"Benin\">Benin</option>\n                  <option value=\"Bhutan\">Bhutan</option>\n                  <option value=\"Bolivia\">Bolivia</option>\n                  <option value=\"Bosnia and Herzegovina\">Bosnia and Herzegovina</option>\n                  <option value=\"Botswana\">Botswana</option>\n                  <option value=\"Brazil\">Brazil</option>\n                  <option value=\"Brunei\">Brunei</option>\n                  <option value=\"Bulgaria\">Bulgaria</option>\n                  <option value=\"Burkina Faso\">Burkina Faso</option>\n                  <option value=\"Burma\">Burma</option>\n                  <option value=\"Burundi\">Burundi</option>\n                  <option value=\"Cambodia\">Cambodia</option>\n                  <option value=\"Cameroon\">Cameroon</option>\n                  <option value=\"Canada\">Canada</option>\n                  <option value=\"Cape Verde\">Cape Verde</option>\n                  <option value=\"Central African Republic\">Central African Republic</option>\n                  <option value=\"Chad\">Chad</option>\n                  <option value=\"Chile\">Chile</option>\n                  <option value=\"China\">China</option>\n                  <option value=\"Colombia\">Colombia</option>\n                  <option value=\"Comoros\">Comoros</option>\n                  <option value=\"Congo, Democratic Republic of the\">Congo, Democratic Republic of the</option>\n                  <option value=\"Congo, Republic of the\">Congo, Republic of the</option>\n                  <option value=\"Costa Rica\">Costa Rica</option>\n                  <option value=\"Cote d&#39;Ivoire\">Cote d&#39;Ivoire</option>\n                  <option value=\"Croatia\">Croatia</option>\n                  <option value=\"Cuba\">Cuba</option>\n                  <option value=\"Curacao\">Curacao</option>\n                  <option value=\"Cyprus\">Cyprus</option>\n                  <option value=\"Czech Republic\">Czech Republic</option>\n                  <option value=\"Denmark\">Denmark</option>\n                  <option value=\"Djibouti\">Djibouti</option>\n                  <option value=\"Dominica\">Dominica</option>\n                  <option value=\"Dominican Republic\">Dominican Republic</option>\n                  <option value=\"East Timor\">East Timor</option>\n                  <option value=\"Ecuador\">Ecuador</option>\n                  <option value=\"Egypt\">Egypt</option>\n                  <option value=\"El Salvador\">El Salvador</option>\n                  <option value=\"Equatorial Guinea\">Equatorial Guinea</option>\n                  <option value=\"Eritrea\">Eritrea</option>\n                  <option value=\"Estonia\">Estonia</option>\n                  <option value=\"Ethiopia\">Ethiopia</option>\n                  <option value=\"Fiji\">Fiji</option>\n                  <option value=\"Finland\">Finland</option>\n                  <option value=\"France\">France</option>\n                  <option value=\"Gabon\">Gabon</option>\n                  <option value=\"Gambia\">Gambia</option>\n                  <option value=\"Georgia\">Georgia</option>\n                  <option value=\"Germany\">Germany</option>\n                  <option value=\"Ghana\">Ghana</option>\n                  <option value=\"Greece\">Greece</option>\n                  <option value=\"Grenada\">Grenada</option>\n                  <option value=\"Guatemala\">Guatemala</option>\n                  <option value=\"Guinea\">Guinea</option>\n                  <option value=\"Guinea-Bissau\">Guinea-Bissau</option>\n                  <option value=\"Guyana\">Guyana</option>\n                  <option value=\"Haiti\">Haiti</option>\n                  <option value=\"Holy See\">Holy See</option>\n                  <option value=\"Honduras\">Honduras</option>\n                  <option value=\"Hong Kong\">Hong Kong</option>\n                  <option value=\"Hungary\">Hungary</option>\n                  <option value=\"Iceland\">Iceland</option>\n                  <option value=\"India\">India</option>\n                  <option value=\"Indonesia\">Indonesia</option>\n                  <option value=\"Iran\">Iran</option>\n                  <option value=\"Iraq\">Iraq</option>\n                  <option value=\"Ireland\">Ireland</option>\n                  <option value=\"Israel\">Israel</option>\n                  <option value=\"Italy\">Italy</option>\n                  <option value=\"Jamaica\">Jamaica</option>\n                  <option value=\"Japan\">Japan</option>\n                  <option value=\"Jordan\">Jordan</option>\n                  <option value=\"Kazakhstan\">Kazakhstan</option>\n                  <option value=\"Kenya\">Kenya</option>\n                  <option value=\"Kiribati\">Kiribati</option>\n                  <option value=\"Korea, North\">Korea, North</option>\n                  <option value=\"Korea, South\">Korea, South</option>\n                  <option value=\"Kosovo\">Kosovo</option>\n                  <option value=\"Kuwait\">Kuwait</option>\n                  <option value=\"Kyrgyzstan\">Kyrgyzstan</option>\n                  <option value=\"Laos\">Laos</option>\n                  <option value=\"Latvia\">Latvia</option>\n                  <option value=\"Lebanon\">Lebanon</option>\n                  <option value=\"Lesotho\">Lesotho</option>\n                  <option value=\"Liberia\">Liberia</option>\n                  <option value=\"Libya\">Libya</option>\n                  <option value=\"Liechtenstein\">Liechtenstein</option>\n                  <option value=\"Lithuania\">Lithuania</option>\n                  <option value=\"Luxembourg\">Luxembourg</option>\n                  <option value=\"Macau\">Macau</option>\n                  <option value=\"Macedonia\">Macedonia</option>\n                  <option value=\"Madagascar\">Madagascar</option>\n                  <option value=\"Malawi\">Malawi</option>\n                  <option value=\"Malaysia\">Malaysia</option>\n                  <option value=\"Maldives\">Maldives</option>\n                  <option value=\"Mali\">Mali</option>\n                  <option value=\"Malta\">Malta</option>\n                  <option value=\"Marshall Islands\">Marshall Islands</option>\n                  <option value=\"Mauritania\">Mauritania</option>\n                  <option value=\"Mauritius\">Mauritius</option>\n                  <option value=\"Mexico\">Mexico</option>\n                  <option value=\"Micronesia\">Micronesia</option>\n                  <option value=\"Moldova\">Moldova</option>\n                  <option value=\"Monaco\">Monaco</option>\n                  <option value=\"Mongolia\">Mongolia</option>\n                  <option value=\"Montenegro\">Montenegro</option>\n                  <option value=\"Morocco\">Morocco</option>\n                  <option value=\"Mozambique\">Mozambique</option>\n                  <option value=\"Namibia\">Namibia</option>\n                  <option value=\"Nauru\">Nauru</option>\n                  <option value=\"Nepal\">Nepal</option>\n                  <option value=\"Netherlands\">Netherlands</option>\n                  <option value=\"Netherlands Antilles\">Netherlands Antilles</option>\n                  <option value=\"New Zealand\">New Zealand</option>\n                  <option value=\"Nicaragua\">Nicaragua</option>\n                  <option value=\"Niger\">Niger</option>\n                  <option value=\"Nigeria\">Nigeria</option>\n                  <option value=\"North Korea\">North Korea</option>\n                  <option value=\"Norway\">Norway</option>\n                  <option value=\"Oman\">Oman</option>\n                  <option value=\"Pakistan\">Pakistan</option>\n                  <option value=\"Palau\">Palau</option>\n                  <option value=\"Palestinian Territories\">Palestinian Territories</option>\n                  <option value=\"Panama\">Panama</option>\n                  <option value=\"Papua New Guinea\">Papua New Guinea</option>\n                  <option value=\"Paraguay\">Paraguay</option>\n                  <option value=\"Peru\">Peru</option>\n                  <option value=\"Philippines\">Philippines</option>\n                  <option value=\"Poland\">Poland</option>\n                  <option value=\"Portugal\">Portugal</option>\n                  <option value=\"Qatar\">Qatar</option>\n                  <option value=\"Romania\">Romania</option>\n                  <option value=\"Russia\">Russia</option>\n                  <option value=\"Rwanda\">Rwanda</option>\n                  <option value=\"Saint Kitts and Nevis\">Saint Kitts and Nevis</option>\n                  <option value=\"Saint Lucia\">Saint Lucia</option>\n                  <option value=\"Saint Vincent and the Grenadines\">Saint Vincent and the Grenadines</option>\n                  <option value=\"Samoa\">Samoa</option>\n                  <option value=\"San Marino\">San Marino</option>\n                  <option value=\"Sao Tome and Principe\">Sao Tome and Principe</option>\n                  <option value=\"Saudi Arabia\">Saudi Arabia</option>\n                  <option value=\"Senegal\">Senegal</option>\n                  <option value=\"Serbia\">Serbia</option>\n                  <option value=\"Seychelles\">Seychelles</option>\n                  <option value=\"Sierra Leone\">Sierra Leone</option>\n                  <option value=\"Singapore\">Singapore</option>\n                  <option value=\"Sint Maarten\">Sint Maarten</option>\n                  <option value=\"Slovakia\">Slovakia</option>\n                  <option value=\"Slovenia\">Slovenia</option>\n                  <option value=\"Solomon Islands\">Solomon Islands</option>\n                  <option value=\"Somalia\">Somalia</option>\n                  <option value=\"South Africa\">South Africa</option>\n                  <option value=\"South Korea\">South Korea</option>\n                  <option value=\"South Sudan\">South Sudan</option>\n                  <option value=\"Spain\">Spain</option>\n                  <option value=\"Sri Lanka\">Sri Lanka</option>\n                  <option value=\"Sudan\">Sudan</option>\n                  <option value=\"Suriname\">Suriname</option>\n                  <option value=\"Swaziland\">Swaziland</option>\n                  <option value=\"Sweden\">Sweden</option>\n                  <option value=\"Switzerland\">Switzerland</option>\n                  <option value=\"Syria\">Syria</option>\n                  <option value=\"Taiwan\">Taiwan</option>\n                  <option value=\"Tajikistan\">Tajikistan</option>\n                  <option value=\"Tanzania\">Tanzania</option>\n                  <option value=\"Thailand\">Thailand</option>\n                  <option value=\"Timor-Leste\">Timor-Leste</option>\n                  <option value=\"Togo\">Togo</option>\n                  <option value=\"Tonga\">Tonga</option>\n                  <option value=\"Trinidad and Tobago\">Trinidad and Tobago</option>\n                  <option value=\"Tunisia\">Tunisia</option>\n                  <option value=\"Turkey\">Turkey</option>\n                  <option value=\"Turkmenistan\">Turkmenistan</option>\n                  <option value=\"Tuvalu\">Tuvalu</option>\n                  <option value=\"Uganda\">Uganda</option>\n                  <option value=\"Ukraine\">Ukraine</option>\n                  <option value=\"United Arab Emirates\">United Arab Emirates</option>\n                  <option value=\"United Kingdom\">United Kingdom</option>\n                  <option value=\"Uruguay\">Uruguay</option>\n                  <option value=\"Uzbekistan\">Uzbekistan</option>\n                  <option value=\"Vanuatu\">Vanuatu</option>\n                  <option value=\"Venezuela\">Venezuela</option>\n                  <option value=\"Vietnam\">Vietnam</option>\n                  <option value=\"Yemen\">Yemen</option>\n                  <option value=\"Zambia\">Zambia</option>\n                  <option value=\"Zimbabwe\">Zimbabwe</option>\n               </select>\n               <span class=\"glyphicon glyphicon-warning-sign form-control-feedback\" aria-hidden=\"true\"></span>\n\t</div>\n\t<div class=\"form-group has-warning has-feedback\">\n    \t<label for=\"entry_1511054935\">Zip code</label>\n    \t<input type=\"number\" class=\"form-control\" placeholder=\"Enter zip code\" name=\"entry.1511054935\" id=\"entry_1511054935\">\n  \t    <span class=\"glyphicon glyphicon-warning-sign form-control-feedback\" aria-hidden=\"true\"></span>\n        <span id=\"helpBlock\" class=\"help-block\">Only numbers.</span>          \n  \t</div>\n\t<input type=\"submit\" class=\"btn btn-default btn-primary\" disabled=\"disabled\" name=\"submit\" value=\"Submit\" id=\"ss-submit\"   onclick=\"sentForm();\"> \n</form>\n\n<iframe name=\"hidden_iframe\" id=\"hidden_iframe\" style=\"display:none;\"></iframe>\n\n<!-- end form google --> \n        <hr>\n        <div class=\"row\">\n            <p class=\"alert alert-danger\">\n        \t\tThis plug-in will apply automatically an Environment configuration, if you want to know more about it please visit the link\n        \t\t<a target=\"no_blank\" href=\"http://infocenter.pentaho.com/help48/index.jsp?topic=%2Fadmin_guide%2Ftask_switching_to_file_based_logging.html\">\n        \t\t\t<span class=\"glyphicon glyphicon-new-window\" aria-hidden=\"true\"></span>\n        \t\t</a>\n        \t</p>\n        </div>\n      </div>\n      \n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        <!-- <button type=\"button\" class=\"btn btn-primary\">Save changes</button> -->\n      </div>\n    </div>\n  </div>\n</div> ",
       "type": "Html"
      },
      {
@@ -203,7 +272,7 @@
      },
      {
       "name": "listeners",
-      "value": "['${p:filterYearParameter}','${p:lastUpdated}']",
+      "value": "['${p:filterYearParameter}','${p:refresh}','${p:lastUpdated}']",
       "type": "Listeners"
      },
      {
@@ -217,12 +286,7 @@
       "type": "Datasource"
      },
      {
-      "name": "priority",
-      "value": 5,
-      "type": "Integer"
-     },
-     {
-      "name": "width",
+      "name": "refreshPeriod",
       "value": "",
       "type": "Integer"
      },
@@ -232,7 +296,12 @@
       "type": "Integer"
      },
      {
-      "name": "refreshPeriod",
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "width",
       "value": "",
       "type": "Integer"
      },
@@ -248,7 +317,7 @@
      },
      {
       "name": "executeAtStart",
-      "value": "true",
+      "value": "false",
       "type": "Boolean"
      },
      {
@@ -257,12 +326,12 @@
       "type": "JavaScript"
      },
      {
-      "name": "postFetch",
+      "name": "postExecution",
       "value": "",
       "type": "JavaScript"
      },
      {
-      "name": "postExecution",
+      "name": "postFetch",
       "value": "",
       "type": "JavaScript"
      },
@@ -1412,7 +1481,7 @@
      },
      {
       "name": "listeners",
-      "value": "['${p:filterYearParameter}','${p:lastUpdated}']",
+      "value": "['${p:filterYearParameter}','${p:refresh}','${p:lastUpdated}']",
       "type": "Listeners"
      },
      {
@@ -1426,12 +1495,7 @@
       "type": "Datasource"
      },
      {
-      "name": "priority",
-      "value": 5,
-      "type": "Integer"
-     },
-     {
-      "name": "width",
+      "name": "refreshPeriod",
       "value": "",
       "type": "Integer"
      },
@@ -1441,7 +1505,12 @@
       "type": "Integer"
      },
      {
-      "name": "refreshPeriod",
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "width",
       "value": "",
       "type": "Integer"
      },
@@ -1457,7 +1526,7 @@
      },
      {
       "name": "executeAtStart",
-      "value": "true",
+      "value": "false",
       "type": "Boolean"
      },
      {
@@ -1466,12 +1535,12 @@
       "type": "JavaScript"
      },
      {
-      "name": "postFetch",
+      "name": "postExecution",
       "value": "",
       "type": "JavaScript"
      },
      {
-      "name": "postExecution",
+      "name": "postFetch",
       "value": "",
       "type": "JavaScript"
      },
@@ -2621,7 +2690,7 @@
      },
      {
       "name": "listeners",
-      "value": "['${p:filterYearParameter}','${p:lastUpdated}']",
+      "value": "['${p:filterYearParameter}','${p:refresh}','${p:lastUpdated}']",
       "type": "Listeners"
      },
      {
@@ -2635,13 +2704,8 @@
       "type": "Datasource"
      },
      {
-      "name": "priority",
-      "value": 5,
-      "type": "Integer"
-     },
-     {
-      "name": "height",
-      "value": "300",
+      "name": "refreshPeriod",
+      "value": "",
       "type": "Integer"
      },
      {
@@ -2650,8 +2714,13 @@
       "type": "Integer"
      },
      {
-      "name": "refreshPeriod",
-      "value": "",
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "height",
+      "value": "300",
       "type": "Integer"
      },
      {
@@ -2666,7 +2735,7 @@
      },
      {
       "name": "executeAtStart",
-      "value": "true",
+      "value": "false",
       "type": "Boolean"
      },
      {
@@ -2675,12 +2744,12 @@
       "type": "JavaScript"
      },
      {
-      "name": "postFetch",
+      "name": "postExecution",
       "value": "",
       "type": "JavaScript"
      },
      {
-      "name": "postExecution",
+      "name": "postFetch",
       "value": "",
       "type": "JavaScript"
      },
@@ -3835,7 +3904,7 @@
      },
      {
       "name": "listeners",
-      "value": "['${p:filterYearParameter}','${p:lastUpdated}']",
+      "value": "['${p:filterYearParameter}','${p:refresh}','${p:lastUpdated}']",
       "type": "Listeners"
      },
      {
@@ -3849,12 +3918,7 @@
       "type": "Datasource"
      },
      {
-      "name": "priority",
-      "value": 5,
-      "type": "Integer"
-     },
-     {
-      "name": "width",
+      "name": "refreshPeriod",
       "value": "",
       "type": "Integer"
      },
@@ -3864,7 +3928,12 @@
       "type": "Integer"
      },
      {
-      "name": "refreshPeriod",
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "width",
       "value": "",
       "type": "Integer"
      },
@@ -3880,7 +3949,7 @@
      },
      {
       "name": "executeAtStart",
-      "value": "true",
+      "value": "false",
       "type": "Boolean"
      },
      {
@@ -3889,12 +3958,12 @@
       "type": "JavaScript"
      },
      {
-      "name": "postFetch",
+      "name": "postExecution",
       "value": "",
       "type": "JavaScript"
      },
      {
-      "name": "postExecution",
+      "name": "postFetch",
       "value": "",
       "type": "JavaScript"
      },
@@ -5070,6 +5139,34 @@
     "dimension": "[Period].[All]"
    },
    {
+    "id": "285fcc68-56a9-ee07-39d0-da2e7d8ca2e1",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "refresh",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
     "id": "2439b3e9-6f3b-1162-b43c-723ef8b93516",
     "type": "ComponentsParameter",
     "typeDesc": "Simple parameter",
@@ -5241,7 +5338,7 @@
      },
      {
       "name": "listeners",
-      "value": "['${p:lastUpdated}']",
+      "value": "['${p:refresh}','${p:lastUpdated}']",
       "type": "Listeners"
      },
      {
@@ -5286,7 +5383,7 @@
      },
      {
       "name": "executeAtStart",
-      "value": "true",
+      "value": "false",
       "type": "Boolean"
      },
      {
@@ -5344,7 +5441,7 @@
      },
      {
       "name": "listeners",
-      "value": "['${p:lastUpdated}']",
+      "value": "['${p:refresh}','${p:lastUpdated}']",
       "type": "Listeners"
      },
      {
@@ -5389,7 +5486,7 @@
      },
      {
       "name": "executeAtStart",
-      "value": "true",
+      "value": "false",
       "type": "Boolean"
      },
      {
@@ -5461,7 +5558,7 @@
      },
      {
       "name": "listeners",
-      "value": "[]",
+      "value": "['${p:refresh}','${p:lastUpdated}']",
       "type": "Listeners"
      },
      {
@@ -5496,7 +5593,7 @@
      },
      {
       "name": "executeAtStart",
-      "value": "true",
+      "value": "false",
       "type": "Boolean"
      },
      {
@@ -5517,7 +5614,7 @@
     ]
    },
    {
-    "id": "72c6df18-1139-07d3-a03a-2615b93539f4",
+    "id": "00d03265-1b7f-b22c-be56-2a43cd75581d",
     "type": "ComponentsexportButton",
     "typeDesc": "Export Button Component",
     "parent": "OTHERCOMPONENTS",
@@ -5534,7 +5631,7 @@
      },
      {
       "name": "listeners",
-      "value": "[]",
+      "value": "['${p:refresh}','${p:lastUpdated}']",
       "type": "Listeners"
      },
      {
@@ -5569,7 +5666,7 @@
      },
      {
       "name": "executeAtStart",
-      "value": "true",
+      "value": "false",
       "type": "Boolean"
      },
      {
@@ -5607,7 +5704,7 @@
      },
      {
       "name": "listeners",
-      "value": "['${p:filterYearParameter}','${p:lastUpdated}']",
+      "value": "['${p:filterYearParameter}','${p:refresh}','${p:lastUpdated}']",
       "type": "Listeners"
      },
      {
@@ -5619,21 +5716,6 @@
       "name": "language",
       "value": "",
       "type": "JavaScript"
-     },
-     {
-      "name": "colSortable",
-      "value": "[]",
-      "type": "Array"
-     },
-     {
-      "name": "parameters",
-      "value": "[[\"filterYearParameter\",\"filterYearParameter\"]]",
-      "type": "ValuesArray"
-     },
-     {
-      "name": "colHeaders",
-      "value": "[\"User\",\"File\",\"Plugin\",\"# of Execution(s)\"]",
-      "type": "Array"
      },
      {
       "name": "colTypes",
@@ -5648,6 +5730,21 @@
      {
       "name": "colWidths",
       "value": "[\"20%\",\"50%\",\"20%\",\"10%\"]",
+      "type": "Array"
+     },
+     {
+      "name": "colSortable",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"filterYearParameter\",\"filterYearParameter\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "colHeaders",
+      "value": "[\"User\",\"File\",\"Plugin\",\"# of Execution(s)\"]",
       "type": "Array"
      },
      {
@@ -5706,14 +5803,14 @@
       "type": "Datasource"
      },
      {
-      "name": "sDom",
-      "value": "",
-      "type": "JavaScript"
-     },
-     {
       "name": "sortBy",
       "value": "[]",
       "type": "SortByArray"
+     },
+     {
+      "name": "sDom",
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "priority",
@@ -5747,7 +5844,7 @@
      },
      {
       "name": "executeAtStart",
-      "value": "true",
+      "value": "false",
       "type": "Boolean"
      },
      {
@@ -5978,6 +6075,24 @@
     ]
    },
    {
+    "id": "2b8acc97-725a-8325-13e7-c01876a4a5b3",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "value": "leadForm",
+      "type": "Id"
+     },
+     {
+      "name": "javaScript",
+      "value": "var validationFields={\n    \"entry_513906374\":false,\n    \"entry_860105332\":false,\n    \"entry_1166092966\":false,\n    \"entry_1065748829\": false,\n    \"entry_238908962\":false,\n    \"entry_1511054935\":false};\n    \n$( \"#ss-form input[type='text']\" ).change(function() {\n    var value=$( this ).val();\n    var id=$( this ).attr('id');\n    var input=$(this);\n    if(value){\n        addSuccessStatus(input);\n        validationFields[id]=true;\n    }else{\n        addErrorStatus(input);\n        validationFields[id]=false;\n    }\n    testForm();\n});\n\n$( \"#ss-form input[type='email']\" ).change(function() {\n    var value=$( this ).val();\n    var id=$( this ).attr('id');\n    var input=$(this);\n    var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$/;\n    var is_email=re.test(value);\n    if(is_email){\n        addSuccessStatus(input);\n        validationFields[id]=true;\n    }else{\n        addErrorStatus(input);\n        validationFields[id]=false;\n    }\n    testForm();\n});\n\n$( \"#ss-form input[type='number']\" ).change(function() {\n    var value=$( this ).val();\n    var id=$( this ).attr('id');\n    var input=$(this);\n    var searchReg = /^[Z0-9-]+$/;\n    var is_number=searchReg.test(value);\n    if(is_number){\n        addSuccessStatus(input);\n        validationFields[id]=true;\n    }else{\n        addErrorStatus(input);\n        validationFields[id]=false;\n    }\n    testForm();\n});\n\n$( \"select\" ).change(function () {\n    var value=$( \"select option:selected\").val();\n    var id=$( this ).attr('id');\n    var select=$(this);\n    if(value!='Select a country'){\n        addSuccessStatus(select);\n        validationFields[id]=true;\n    }else{\n        addErrorStatus(select);\n        validationFields[id]=false;\n    }\n    testForm();\n});\n  \nfunction isValidForm(){\n    if( validationFields[\"entry_513906374\"]==true &&\n        validationFields[\"entry_860105332\"]==true &&\n        validationFields[\"entry_1166092966\"]==true &&\n        validationFields[\"entry_1065748829\"]==true &&\n        validationFields[\"entry_238908962\"]==true &&\n        validationFields[\"entry_1511054935\"]==true)\n        return true;\n    else\n        return false;\n}\nfunction testForm(){\n    if(isValidForm())\n        $('#ss-submit').removeAttr('disabled');\n    else\n        $('#ss-submit').attr('disabled', 'disabled');\n}\n\nfunction sentForm(){\n    installPlugin();\n}\n\nfunction addSuccessStatus(element){\n    parent = element.parent();\n    parent.removeClass (function (index, css) {\n        return (css.match (/(^|\\s)has-\\S+/g) || []).join(' ');\n    });    \n    parent.addClass(\"has-success has-feedback\");\n    \n    span = element.next(); \n    span.removeClass (function (index, css) {\n        return (css.match (/(^|\\s)glyphicon-\\S+/g) || []).join(' ');\n    });\n    span.addClass(\"glyphicon glyphicon-ok\");\n}\n\nfunction addWarningStatus(element){\n    parent = element.parent();\n    parent.removeClass (function (index, css) {\n        return (css.match (/(^|\\s)has-\\S+/g) || []).join(' ');\n    });    \n    parent.addClass(\"has-warning has-feedback\");\n    \n    span = element.next(); \n    span.removeClass (function (index, css) {\n        return (css.match (/(^|\\s)glyphicon-\\S+/g) || []).join(' ');\n    });\n    span.addClass(\"glyphicon glyphicon-warning-sign\");\n}\n\nfunction addErrorStatus(element){\n    parent = element.parent();\n    parent.removeClass (function (index, css) {\n        return (css.match (/(^|\\s)has-\\S+/g) || []).join(' ');\n    });    \n    parent.addClass(\"has-error has-feedback\");\n    \n    span = element.next(); \n    span.removeClass (function (index, css) {\n        return (css.match (/(^|\\s)glyphicon-\\S+/g) || []).join(' ');\n    });\n    span.addClass(\"glyphicon glyphicon-remove\");\n} ",
+      "type": "JavaScript"
+     }
+    ]
+   },
+   {
     "id": "f059dafe-af41-abb0-0e8d-ce4c42da041f",
     "type": "ComponentsFunction",
     "typeDesc": "JavaScript function",
@@ -6026,7 +6141,7 @@
      },
      {
       "name": "javaScript",
-      "value": "$.ajax({\n    url: \"/pentaho/plugin/pentaho-ce-audit/api/job_verify_installation\",\n    cache: false\n}).done(function( data ) {\n    if(!data.result){\n        $('#myModal').modal('show');\n        $(\"#modal-body\").html(\"Wait installation...\");\n        \n        //call endpoint\n        installPlugin();        \n    }else{        \n        //refresh data\n        /*\n        Dashboards.incrementRunningCalls();   \n        $.ajax({\n            url: \"/pentaho/plugin/pentaho-ce-audit/api/job_refresh\",\n            cache: false\n        }).done(function( data ) {\n            Dashboards.decrementRunningCalls();\n            Dashboards.fireChange(\"refresh\",\"\");\n        });\n        */\n    }\n}); ",
+      "value": "$.ajax({\n    url: \"/pentaho/plugin/pentaho-ce-audit/api/job_verify_installation\",\n    cache: false\n}).done(function( data ) {\n    if(!data.result){\n        $('#myModal').modal('show');\n        \n        var msgHtml='<iframe src=\"https://docs.google.com/forms/d/1BpVdBj_5GnsyNsSIORu0cWV0IwM-qilDmX5PQEFUecY/viewform?embedded=true\" width=\"760\" height=\"500\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading...</iframe>';\n        \n    }else{        \n        \n        Dashboards.incrementRunningCalls();   \n        $.ajax({\n            url: \"/pentaho/plugin/pentaho-ce-audit/api/get_metadata\",\n            cache: false\n        }).done(function( data ) {\n            Dashboards.decrementRunningCalls();\n            if(data.queryInfo.totalRows>0)\n               Dashboards.update(\n                   [render_BarChartTop10UsersByExecution\n                   ,render_BarChartTop10UsersByLogin\n                   ,render_LineChartExecutionByHours\n                   ,render_BarChartExecutionsByDayOfWeek\n                   ,render_Table\n                   ,render_filterYearSelectorMobile\n                   ,render_filterYearSelectorDesktop\n                   ,render_BarChartTop10UsersByExecutionExport\n                   ,render_BarChartTop10UsersByLoginExport]);\n        });\n        \n    }\n}); \n ",
       "type": "JavaScript"
      }
     ]
