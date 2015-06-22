@@ -145,7 +145,7 @@
      },
      {
       "name": "html",
-      "value": "<div class=\"pull-right\">   \n    <label>Last Updated:</label> \n    <span class=\"badge\">\n        <div id=\"lastUpdatedValue\"></div>\n    </span>\n</div>\n    \n<div class=\"pull-right\" style=\"padding-right:5px;\">\n    <!-- <span class=\"glyphicon glyphicon-refresh\" aria-hidden=\"true\"></span>-->\n    <div id=\"refreshButtonDiv\"></div>\n</div>\n<br>\n\n<hr>\n\n<div class=\"col-md-12\" style=\"height: 30px\">\n\n    <div id=\"filterYear-div-mobile\" class=\"col-md-12 col-sd-6\"> </div> \n    \n    <div id=\"filterYear-div-desktop\" class=\"col-md-12 col-sd-6\"> </div>  \n   \n</div>\n\n<div class=\"col-md-6\">\n   <div class=\"panel panel-default\">\n      <div class=\"panel-heading\">Top Users by # of Execution(s)</div>\n      <div class=\"panel-body\">\n         <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByExecutionExport\"></div>\n         <div id=\"Chart01-div\"> </div> \n      </div>\n</div>\n</div>\n\n\n<div class=\"col-md-6\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\">Top Users by # of Login(s)</div>\n  <div class=\"panel-body\">\n  <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByLoginExport\"></div>\n    <div id=\"Chart02-div\"> </div> \n  </div>\n</div>\n</div>    \n    \n<div class=\"col-md-6\">\n   <div class=\"panel panel-default\">\n      <div class=\"panel-heading\"># of Execution(s) by Day of the Week</div>\n      <div class=\"panel-body\">\n         <div class=\"pull-right\" id=\"ExportButtonExecutionsByDayOfWeekExport\"></div>\n         <div id=\"Chart03-div\"> </div> \n      </div>\n</div>\n</div>\n\n\n<div class=\"col-md-6\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\"># of Execution(s) by Hour</div>\n  <div class=\"panel-body\">\n  <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByLoginExport\"></div>\n    <div id=\"Chart04-div\"> </div> \n  </div>\n</div>\u0001\n</div>        \n    \n\n<div class=\"col-md-12\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\"># of Execution(s)</div>\n  <div class=\"panel-body\">\n   <div id=\"table-div\"> </div> \n  </div>  \n</div>\n</div> \n\n<div id=\"footer\" class=\"col-sm-12\">\n    <hr>\n    <div class=\"container\">\n        <p class=\"text-muted credit\">\n            <div class=\"pull-right\">\n                Powered by\n                <a  href=\"http://it4biz.com.br\" target=\"no_blank\" title=\"IT4biz IT Solutions\">\n                    <img                    \n                        src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/logo.png\"\n                    >\n                </a> \n            </div>\n            <div>\n            <label>Please help us do more, with just a “Like” on our Facebook page</label><br> \n            <div\n                class=\"fb-like\" \n                data-href=\"https://www.facebook.com/it4biz\" \n                data-layout=\"button\" \n                data-action=\"like\" \n                data-show-faces=\"true\" \n                data-share=\"true\">                \n            </div><br>\n            <label>or a “follow us” on twitter</label><br>\n            <a \n                class=\"twitter-hashtag-button\"\n                href=\"https://twitter.com/intent/tweet?button_hashtag=PentahoCEAudit&text=I have installed Pentaho CE Audit from @it4bizbrazil. You should try it on @pentaho Marketplace.\"\n                data-related=\"twitter\">\n                Tweet #PentahoCEAudit\n            </a>\n            <a \n                class=\"twitter-follow-button\"\n                href=\"https://twitter.com/it4bizbrazil\"\n                data-show-count=\"false\"\n                data-lang=\"en\">\n                Follow @it4bizbrazil\n            </a>\n        </div>\n        </p>\n        \n    </div>        \n</div> ",
+      "value": "<div class=\"pull-right\">   \n    <label>Last Updated:</label> \n    <span class=\"badge\">\n        <div id=\"lastUpdatedValue\"></div>\n    </span>\n</div>\n    \n<div class=\"pull-right\" style=\"padding-right:5px;\">\n    <!-- <span class=\"glyphicon glyphicon-refresh\" aria-hidden=\"true\"></span>-->\n    <div id=\"refreshButtonDiv\"></div>\n</div>\n<br>\n\n<hr>\n\n<div class=\"col-md-12\" style=\"height: 30px\">\n\n    <div id=\"filterYear-div-mobile\" class=\"col-md-12 col-sd-6\"> </div> \n    \n    <div id=\"filterYear-div-desktop\" class=\"col-md-12 col-sd-6\"> </div>  \n   \n</div>\n\n<div class=\"col-md-6\">\n   <div class=\"panel panel-default\">\n      <div class=\"panel-heading\">Top Users by # of Execution(s)</div>\n      <div class=\"panel-body\">\n         <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByExecutionExport\"></div>\n         <div id=\"Chart01-div\"> </div> \n      </div>\n</div>\n</div>\n\n\n<div class=\"col-md-6\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\">Top Users by # of Login(s)</div>\n  <div class=\"panel-body\">\n  <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByLoginExport\"></div>\n    <div id=\"Chart02-div\"> </div> \n  </div>\n</div>\n</div>    \n    \n<div class=\"col-md-6\">\n   <div class=\"panel panel-default\">\n      <div class=\"panel-heading\"># of Execution(s) by Day of the Week</div>\n      <div class=\"panel-body\">\n         <div class=\"pull-right\" id=\"ExportButtonExecutionsByDayOfWeekExport\"></div>\n         <div id=\"Chart03-div\"> </div> \n      </div>\n</div>\n</div>\n\n\n<div class=\"col-md-6\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\"># of Execution(s) by Hour</div>\n  <div class=\"panel-body\">\n  <div class=\"pull-right\" id=\"ExportButtonBarChartTop10UsersByLoginExport\"></div>\n    <div id=\"Chart04-div\"> </div> \n  </div>\n</div>\u0001\n</div>        \n    \n\n<div class=\"col-md-12\">\n<div class=\"panel panel-default\">\n  <div class=\"panel-heading\"># of Execution(s)</div>\n  <div class=\"panel-body\">\n   <div id=\"table-div\"> </div> \n  </div>  \n</div>\n</div> \n\n<div id=\"footer\" class=\"col-sm-12\">\n    <hr>\n    <div class=\"container\">\n        <p class=\"text-muted credit\">\n            <div class=\"pull-right\">\n                Powered by\n                <a  href=\"http://it4biz.com.br\" target=\"no_blank\" title=\"IT4biz IT Solutions\">\n                    <img                    \n                        src=\"../../../api/repos/pentaho-ce-audit/static/custom/img/logo.png\"\n                    >\n                </a> \n            </div>\n            <div>\n            <label>Please help us do more, with just a \"Like\" on our Facebook page</label><br> \n            <div\n                class=\"fb-like\" \n                data-href=\"https://www.facebook.com/it4biz\" \n                data-layout=\"button\" \n                data-action=\"like\" \n                data-show-faces=\"true\" \n                data-share=\"true\">                \n            </div><br>\n            <label>or follow us on twitter</label><br>\n            <a \n                class=\"twitter-hashtag-button\"\n                href=\"https://twitter.com/intent/tweet?button_hashtag=PentahoCEAudit&text=I have installed Pentaho CE Audit from @it4bizbrazil. You should try it on @pentaho Marketplace.\"\n                data-related=\"twitter\">\n                Tweet #PentahoCEAudit\n            </a>\n            <a \n                class=\"twitter-follow-button\"\n                href=\"https://twitter.com/it4bizbrazil\"\n                data-show-count=\"false\"\n                data-lang=\"en\">\n                Follow @it4bizbrazil\n            </a>\n        </div>\n        </p>\n        \n    </div>        \n</div> ",
       "type": "Html"
      },
      {
@@ -291,17 +291,17 @@
       "type": "Integer"
      },
      {
-      "name": "width",
-      "value": "",
-      "type": "Integer"
-     },
-     {
       "name": "height",
       "value": "300",
       "type": "Integer"
      },
      {
       "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "width",
       "value": "",
       "type": "Integer"
      },
@@ -381,6 +381,36 @@
       "type": "Float"
      },
      {
+      "name": "baseAxisBandSize",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSizeMax",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSizeMin",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSpacing",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSpacingMax",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSpacingMin",
+      "value": "",
+      "type": "Float"
+     },
+     {
       "name": "baseAxisClickAction",
       "value": "",
       "type": "JavaScript"
@@ -424,6 +454,11 @@
       "name": "baseAxisSizeMax",
       "value": "",
       "type": "String"
+     },
+     {
+      "name": "baseAxisTickFormatter",
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "baseAxisTicks",
@@ -876,6 +911,21 @@
       "type": "Boolean"
      },
      {
+      "name": "ortho2AxisTickUnit",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisTickUnitMax",
+      "value": "Infinity",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisTickUnitMin",
+      "value": "0",
+      "type": "String"
+     },
+     {
       "name": "ortho2AxisTitle",
       "value": "",
       "type": "String"
@@ -1004,6 +1054,21 @@
       "name": "orthoAxisTicks",
       "value": true,
       "type": "Boolean"
+     },
+     {
+      "name": "orthoAxisTickUnit",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisTickUnitMax",
+      "value": "Infinity",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisTickUnitMin",
+      "value": "0",
+      "type": "String"
      },
      {
       "name": "orthoAxisTitle",
@@ -1500,17 +1565,17 @@
       "type": "Integer"
      },
      {
-      "name": "width",
-      "value": "",
-      "type": "Integer"
-     },
-     {
       "name": "height",
       "value": "300",
       "type": "Integer"
      },
      {
       "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "width",
       "value": "",
       "type": "Integer"
      },
@@ -1590,6 +1655,36 @@
       "type": "Float"
      },
      {
+      "name": "baseAxisBandSize",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSizeMax",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSizeMin",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSpacing",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSpacingMax",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSpacingMin",
+      "value": "",
+      "type": "Float"
+     },
+     {
       "name": "baseAxisClickAction",
       "value": "",
       "type": "JavaScript"
@@ -1633,6 +1728,11 @@
       "name": "baseAxisSizeMax",
       "value": "",
       "type": "String"
+     },
+     {
+      "name": "baseAxisTickFormatter",
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "baseAxisTicks",
@@ -2085,6 +2185,21 @@
       "type": "Boolean"
      },
      {
+      "name": "ortho2AxisTickUnit",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisTickUnitMax",
+      "value": "Infinity",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisTickUnitMin",
+      "value": "0",
+      "type": "String"
+     },
+     {
       "name": "ortho2AxisTitle",
       "value": "",
       "type": "String"
@@ -2213,6 +2328,21 @@
       "name": "orthoAxisTicks",
       "value": true,
       "type": "Boolean"
+     },
+     {
+      "name": "orthoAxisTickUnit",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisTickUnitMax",
+      "value": "Infinity",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisTickUnitMin",
+      "value": "0",
+      "type": "String"
      },
      {
       "name": "orthoAxisTitle",
@@ -2709,11 +2839,6 @@
       "type": "Integer"
      },
      {
-      "name": "height",
-      "value": "300",
-      "type": "Integer"
-     },
-     {
       "name": "width",
       "value": "",
       "type": "Integer"
@@ -2721,6 +2846,11 @@
      {
       "name": "refreshPeriod",
       "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "height",
+      "value": "300",
       "type": "Integer"
      },
      {
@@ -2782,6 +2912,36 @@
       "name": "areasVisible",
       "value": "",
       "type": "Boolean"
+     },
+     {
+      "name": "baseAxisBandSize",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSizeMax",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSizeMin",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSpacing",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSpacingMax",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSpacingMin",
+      "value": "",
+      "type": "Float"
      },
      {
       "name": "baseAxisClickAction",
@@ -2884,6 +3044,21 @@
       "type": "Boolean"
      },
      {
+      "name": "baseAxisTickUnit",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "baseAxisTickUnitMax",
+      "value": "Infinity",
+      "type": "String"
+     },
+     {
+      "name": "baseAxisTickUnitMin",
+      "value": "0",
+      "type": "String"
+     },
+     {
       "name": "baseAxisTitle",
       "value": "",
       "type": "String"
@@ -2912,6 +3087,21 @@
       "name": "baseAxisTitleSizeMax",
       "value": "",
       "type": "String"
+     },
+     {
+      "name": "baseAxisTooltipAutoContent",
+      "value": "value",
+      "type": "cccBaseAxisTooltipAutoContentCustom"
+     },
+     {
+      "name": "baseAxisTooltipEnabled",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "baseAxisTooltipFormat",
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "baseAxisVisible",
@@ -3324,6 +3514,21 @@
       "type": "Boolean"
      },
      {
+      "name": "ortho2AxisTickUnit",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisTickUnitMax",
+      "value": "Infinity",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisTickUnitMin",
+      "value": "0",
+      "type": "String"
+     },
+     {
       "name": "ortho2AxisTitle",
       "value": "",
       "type": "String"
@@ -3452,6 +3657,21 @@
       "name": "orthoAxisTicks",
       "value": true,
       "type": "Boolean"
+     },
+     {
+      "name": "orthoAxisTickUnit",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisTickUnitMax",
+      "value": "Infinity",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisTickUnitMin",
+      "value": "0",
+      "type": "String"
      },
      {
       "name": "orthoAxisTitle",
@@ -3923,17 +4143,17 @@
       "type": "Integer"
      },
      {
-      "name": "width",
-      "value": "",
-      "type": "Integer"
-     },
-     {
       "name": "height",
       "value": "300",
       "type": "Integer"
      },
      {
       "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "width",
       "value": "",
       "type": "Integer"
      },
@@ -4013,6 +4233,36 @@
       "type": "Float"
      },
      {
+      "name": "baseAxisBandSize",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSizeMax",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSizeMin",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSpacing",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSpacingMax",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSpacingMin",
+      "value": "",
+      "type": "Float"
+     },
+     {
       "name": "baseAxisClickAction",
       "value": "",
       "type": "JavaScript"
@@ -4056,6 +4306,11 @@
       "name": "baseAxisSizeMax",
       "value": "",
       "type": "String"
+     },
+     {
+      "name": "baseAxisTickFormatter",
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "baseAxisTicks",
@@ -4508,6 +4763,21 @@
       "type": "Boolean"
      },
      {
+      "name": "ortho2AxisTickUnit",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisTickUnitMax",
+      "value": "Infinity",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisTickUnitMin",
+      "value": "0",
+      "type": "String"
+     },
+     {
       "name": "ortho2AxisTitle",
       "value": "",
       "type": "String"
@@ -4636,6 +4906,21 @@
       "name": "orthoAxisTicks",
       "value": true,
       "type": "Boolean"
+     },
+     {
+      "name": "orthoAxisTickUnit",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisTickUnitMax",
+      "value": "Infinity",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisTickUnitMin",
+      "value": "0",
+      "type": "String"
      },
      {
       "name": "orthoAxisTitle",
@@ -5718,11 +6003,6 @@
       "type": "JavaScript"
      },
      {
-      "name": "colFormats",
-      "value": "[]",
-      "type": "Array"
-     },
-     {
       "name": "colWidths",
       "value": "[\"20%\",\"50%\",\"20%\",\"10%\"]",
       "type": "Array"
@@ -5746,6 +6026,11 @@
       "name": "colTypes",
       "value": "[\"string\",\"string\",\"string\",\"numeric\"]",
       "type": "colTypesCustom"
+     },
+     {
+      "name": "colFormats",
+      "value": "[]",
+      "type": "Array"
      },
      {
       "name": "expandParameters",
@@ -5803,14 +6088,14 @@
       "type": "Datasource"
      },
      {
-      "name": "sDom",
-      "value": "",
-      "type": "JavaScript"
-     },
-     {
       "name": "sortBy",
       "value": "[]",
       "type": "SortByArray"
+     },
+     {
+      "name": "sDom",
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "priority",
