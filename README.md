@@ -13,6 +13,13 @@ It is an open source project that helps Pentaho BI Admin users to visualize stat
 ### Installation
 * Please use Pentaho Marketplace.
 
+### Manual Installation
+* Download the plugin from github
+* Unzip the file pentaho-ce-audit-master.zip
+* Rename the folder from pentaho-ce-audit-master to pentaho-ce-audit
+* Copy the folder pentaho-ce-audit to pentaho-solutions/system 
+* Restart the BI Server.
+
 ### Pentaho CE Audit Endpoint Refresh
 * http://your_server:yourPort/pentaho/plugin/pentaho-ce-audit/api/job_refresh
 
@@ -20,13 +27,10 @@ It is an open source project that helps Pentaho BI Admin users to visualize stat
 * If you need support please feel free to create a issue here https://github.com/it4biz/pentaho-ce-audit/issues we will do our best to help you.
 
 ### Licenses
-
 Pentaho CE Audit Plugin is a free and open source software. It is available under the terms of the Apache License Version 2. A copy is attached for your convenience.
 
 ###Credits and Contributions
-
 This projects is maintained by IT4biz Global Team from Brazil and Spain with help the Pentaho community around the world, like:
-
 * Brandon Jackson [(@usbrandon)](https://twitter.com/usbrandon)
 
 ###Changelog
@@ -39,3 +43,6 @@ This projects is maintained by IT4biz Global Team from Brazil and Spain with hel
 1.0 Alpha version (Not ready for Production Environment, just for internal tests):
 * Automatic configuration of the server for PostgreSQL and HSQLDB database;
 * Mondrian OLAP Cube to visualize the stats about the use of the BI Portal;
+
+### Unix (Linux and Mac OS)
+We at IT4biz Global uses only Unix (Linux or Mac OS) servers, so we do not test this plugin in Windows Servers. 
