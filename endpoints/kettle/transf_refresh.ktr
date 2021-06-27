@@ -925,16 +925,6 @@ Example:
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get database type</from>
-      <to>DB type check</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>lookup with time fields</from>
-      <to>Get database type</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>DB type check</from>
       <to>Table output PENTAHO_CE_AUDIT</to>
       <enabled>Y</enabled>
@@ -942,6 +932,21 @@ Example:
     <hop>
       <from>DB type check</from>
       <to>Table output PENTAHO_CE_AUDIT (MySQL)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get database type</from>
+      <to>Wait for database type to be settled.</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Wait for database type to be settled.</from>
+      <to>DB type check</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup with time fields</from>
+      <to>Wait for database type to be settled.</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1421,8 +1426,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2736</xloc>
-      <yloc>192</yloc>
+      <xloc>2752</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1973,125 +1978,6 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
     <GUI>
       <xloc>1285</xloc>
       <yloc>350</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Get database type</name>
-    <type>UserDefinedJavaClass</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <definitions>
-      <definition>
-        <class_type>TRANSFORM_CLASS</class_type>
-        <class_name>Processor</class_name>
-        <class_source>import java.sql.*;
-import org.pentaho.di.core.database.*;
-
-private DatabaseMeta databaseMeta;
-private Database database;
-
-public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException
-{
-	Object[] r = getRow();
-	if (r == null) {
-		setOutputDone();
-		return false;
-	}
-
-    if (first)
-    {
-        first = false;
-    }
-
-    try {
-      r = createOutputRow(r, data.outputRowMeta.size());	
-	  int index = getInputRowMeta().size();
-      r[index++] = database.getDatabaseMetaData().getDatabaseProductName();
-	  
-      putRow(data.outputRowMeta, r);
-
-   } catch(Exception e) {
-     throw new KettleException(e);
-   } 
-   
-   return true;
-}
-
-public boolean init(StepMetaInterface stepMetaInterface, StepDataInterface stepDataInterface)
-{
-    if (!parent.initImpl(stepMetaInterface, stepDataInterface)) {
-      return false;
-    }
-    String dbName = getParameter("DBNAME");
-    databaseMeta = getTransMeta().findDatabase(dbName);
-    if (databaseMeta==null) {
-         logError("A connection with name "+dbName+" could not be found!");
-         setErrors(1);
-         return false;
-    }
-
-    database = new Database(getTrans(), databaseMeta);
-
-    try  {
-      database.connect();
-    } catch(Exception e) {
-      logError("Connecting to database "+dbName+" failed.", e);
-      setErrors(1);
-      return false;
-    }
-
-    return true;
-}
-
-public void dispose(StepMetaInterface smi, StepDataInterface sdi)
-{
-    if (database!=null) {
-      database.disconnect();
-    }
-
-    parent.disposeImpl(smi, sdi);
-}
-
-
-</class_source>
-      </definition>
-    </definitions>
-    <fields>
-      <field>
-        <field_name>database_type</field_name>
-        <field_type>String</field_type>
-        <field_length>255</field_length>
-        <field_precision>-1</field_precision>
-      </field>
-    </fields>
-    <clear_result_fields>N</clear_result_fields>
-    <info_steps/>
-    <target_steps/>
-    <usage_parameters>
-      <usage_parameter>
-        <parameter_tag>DBNAME</parameter_tag>
-        <parameter_value>Hibernate</parameter_value>
-        <parameter_description>The name of the database</parameter_description>
-      </usage_parameter>
-    </usage_parameters>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2608</xloc>
-      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3065,8 +2951,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2864</xloc>
-      <yloc>96</yloc>
+      <xloc>2912</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3189,8 +3075,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2880</xloc>
-      <yloc>256</yloc>
+      <xloc>2912</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3662,6 +3548,156 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
     <GUI>
       <xloc>2468</xloc>
       <yloc>190</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Get database type</name>
+    <type>UserDefinedJavaClass</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <definitions>
+      <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+        <class_name>Processor</class_name>
+        <class_source>import java.sql.*;
+import org.pentaho.di.core.database.*;
+
+private DatabaseMeta databaseMeta;
+private Database database;
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException
+{
+	Object[] r = getRow();
+	if (r == null) {
+		setOutputDone();
+		return false;
+	}
+
+    if (first)
+    {
+        first = false;
+    }
+
+    try {
+      r = createOutputRow(r, data.outputRowMeta.size());	
+	  int index = getInputRowMeta().size();
+      r[index++] = database.getDatabaseMetaData().getDatabaseProductName();
+	  
+      putRow(data.outputRowMeta, r);
+
+   } catch(Exception e) {
+     throw new KettleException(e);
+   } 
+   
+   return true;
+}
+
+public boolean init(StepMetaInterface stepMetaInterface, StepDataInterface stepDataInterface)
+{
+    if (!parent.initImpl(stepMetaInterface, stepDataInterface)) {
+      return false;
+    }
+    String dbName = getParameter("DBNAME");
+    databaseMeta = getTransMeta().findDatabase(dbName);
+    if (databaseMeta==null) {
+         logError("A connection with name "+dbName+" could not be found!");
+         setErrors(1);
+         return false;
+    }
+
+    database = new Database(getTrans(), databaseMeta);
+
+    try  {
+      database.connect();
+    } catch(Exception e) {
+      logError("Connecting to database "+dbName+" failed.", e);
+      setErrors(1);
+      return false;
+    }
+
+    return true;
+}
+
+public void dispose(StepMetaInterface smi, StepDataInterface sdi)
+{
+    if (database!=null) {
+      database.disconnect();
+    }
+
+    parent.disposeImpl(smi, sdi);
+}
+
+
+</class_source>
+      </definition>
+    </definitions>
+    <fields>
+      <field>
+        <field_name>database_type</field_name>
+        <field_type>String</field_type>
+        <field_length>255</field_length>
+        <field_precision>-1</field_precision>
+      </field>
+    </fields>
+    <clear_result_fields>N</clear_result_fields>
+    <info_steps/>
+    <target_steps/>
+    <usage_parameters>
+      <usage_parameter>
+        <parameter_tag>DBNAME</parameter_tag>
+        <parameter_value>Hibernate</parameter_value>
+        <parameter_description>The name of the database</parameter_description>
+      </usage_parameter>
+    </usage_parameters>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2640</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Wait for database type to be settled.</name>
+    <type>BlockUntilStepsFinish</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <steps>
+      <step>
+        <name>Get database type</name>
+        <CopyNr>0</CopyNr>
+      </step>
+    </steps>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2672</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
