@@ -1389,6 +1389,44 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
     </GUI>
   </step>
   <step>
+    <name>DB type check</name>
+    <type>SwitchCase</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fieldname>database_type</fieldname>
+    <use_contains>N</use_contains>
+    <case_value_type>String</case_value_type>
+    <case_value_format/>
+    <case_value_decimal/>
+    <case_value_group/>
+    <default_target_step>Table output PENTAHO_CE_AUDIT</default_target_step>
+    <cases>
+      <case>
+        <value>MySQL</value>
+        <target_step>Table output PENTAHO_CE_AUDIT (MySQL)</target_step>
+      </case>
+    </cases>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2736</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>DBLK instance_end</name>
     <type>DBLookup</type>
     <description/>
@@ -1935,6 +1973,125 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
     <GUI>
       <xloc>1285</xloc>
       <yloc>350</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Get database type</name>
+    <type>UserDefinedJavaClass</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <definitions>
+      <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+        <class_name>Processor</class_name>
+        <class_source>import java.sql.*;
+import org.pentaho.di.core.database.*;
+
+private DatabaseMeta databaseMeta;
+private Database database;
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException
+{
+	Object[] r = getRow();
+	if (r == null) {
+		setOutputDone();
+		return false;
+	}
+
+    if (first)
+    {
+        first = false;
+    }
+
+    try {
+      r = createOutputRow(r, data.outputRowMeta.size());	
+	  int index = getInputRowMeta().size();
+      r[index++] = database.getDatabaseMetaData().getDatabaseProductName();
+	  
+      putRow(data.outputRowMeta, r);
+
+   } catch(Exception e) {
+     throw new KettleException(e);
+   } 
+   
+   return true;
+}
+
+public boolean init(StepMetaInterface stepMetaInterface, StepDataInterface stepDataInterface)
+{
+    if (!parent.initImpl(stepMetaInterface, stepDataInterface)) {
+      return false;
+    }
+    String dbName = getParameter("DBNAME");
+    databaseMeta = getTransMeta().findDatabase(dbName);
+    if (databaseMeta==null) {
+         logError("A connection with name "+dbName+" could not be found!");
+         setErrors(1);
+         return false;
+    }
+
+    database = new Database(getTrans(), databaseMeta);
+
+    try  {
+      database.connect();
+    } catch(Exception e) {
+      logError("Connecting to database "+dbName+" failed.", e);
+      setErrors(1);
+      return false;
+    }
+
+    return true;
+}
+
+public void dispose(StepMetaInterface smi, StepDataInterface sdi)
+{
+    if (database!=null) {
+      database.disconnect();
+    }
+
+    parent.disposeImpl(smi, sdi);
+}
+
+
+</class_source>
+      </definition>
+    </definitions>
+    <fields>
+      <field>
+        <field_name>database_type</field_name>
+        <field_type>String</field_type>
+        <field_length>255</field_length>
+        <field_precision>-1</field_precision>
+      </field>
+    </fields>
+    <clear_result_fields>N</clear_result_fields>
+    <info_steps/>
+    <target_steps/>
+    <usage_parameters>
+      <usage_parameter>
+        <parameter_tag>DBNAME</parameter_tag>
+        <parameter_value>Hibernate</parameter_value>
+        <parameter_description>The name of the database</parameter_description>
+      </usage_parameter>
+    </usage_parameters>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2608</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2914,6 +3071,130 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
     </GUI>
   </step>
   <step>
+    <name>Table output PENTAHO_CE_AUDIT (MySQL)</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Hibernate</connection>
+    <schema/>
+    <table>`PENTAHO_CE_AUDIT`</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>`DATA`</column_name>
+        <stream_name>data</stream_name>
+      </field>
+      <field>
+        <column_name>`PLUGIN`</column_name>
+        <stream_name>plugin</stream_name>
+      </field>
+      <field>
+        <column_name>`USER`</column_name>
+        <stream_name>user</stream_name>
+      </field>
+      <field>
+        <column_name>`DIRECTORY`</column_name>
+        <stream_name>directory</stream_name>
+      </field>
+      <field>
+        <column_name>`DURATION`</column_name>
+        <stream_name>duration</stream_name>
+      </field>
+      <field>
+        <column_name>`TYPE`</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>`ROLE`</column_name>
+        <stream_name>role</stream_name>
+      </field>
+      <field>
+        <column_name>`YEAR`</column_name>
+        <stream_name>year</stream_name>
+      </field>
+      <field>
+        <column_name>`MONTH`</column_name>
+        <stream_name>month</stream_name>
+      </field>
+      <field>
+        <column_name>`DAY`</column_name>
+        <stream_name>day</stream_name>
+      </field>
+      <field>
+        <column_name>`DAY_WEEK`</column_name>
+        <stream_name>day_week</stream_name>
+      </field>
+      <field>
+        <column_name>`AM_PM`</column_name>
+        <stream_name>AM_PM</stream_name>
+      </field>
+      <field>
+        <column_name>`HOURS24`</column_name>
+        <stream_name>HOURS24</stream_name>
+      </field>
+      <field>
+        <column_name>`HOURS12`</column_name>
+        <stream_name>HOURS12</stream_name>
+      </field>
+      <field>
+        <column_name>`MINUTES`</column_name>
+        <stream_name>minutes</stream_name>
+      </field>
+      <field>
+        <column_name>`SECONDS`</column_name>
+        <stream_name>seconds</stream_name>
+      </field>
+      <field>
+        <column_name>`TIME`</column_name>
+        <stream_name>TIME</stream_name>
+      </field>
+      <field>
+        <column_name>`MONTH_DESC`</column_name>
+        <stream_name>month_desc</stream_name>
+      </field>
+      <field>
+        <column_name>`DAY_WEEK_DESC`</column_name>
+        <stream_name>day_week_desc</stream_name>
+      </field>
+      <field>
+        <column_name>`FILE`</column_name>
+        <stream_name>file</stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2880</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Truncate pentaho_ce_audit table</name>
     <type>ExecSQL</type>
     <description/>
@@ -2929,7 +3210,7 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
-    <sql>DELETE FROM "PENTAHO_CE_AUDIT"</sql>
+    <sql>DELETE FROM PENTAHO_CE_AUDIT</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -3381,287 +3662,6 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
     <GUI>
       <xloc>2468</xloc>
       <yloc>190</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>DB type check</name>
-    <type>SwitchCase</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fieldname>database_type</fieldname>
-    <use_contains>N</use_contains>
-    <case_value_type>String</case_value_type>
-    <case_value_format/>
-    <case_value_decimal/>
-    <case_value_group/>
-    <default_target_step>Table output PENTAHO_CE_AUDIT</default_target_step>
-    <cases>
-      <case>
-        <value>MySQL</value>
-        <target_step>Table output PENTAHO_CE_AUDIT (MySQL)</target_step>
-      </case>
-    </cases>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2736</xloc>
-      <yloc>192</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Get database type</name>
-    <type>UserDefinedJavaClass</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <definitions>
-      <definition>
-        <class_type>TRANSFORM_CLASS</class_type>
-        <class_name>Processor</class_name>
-        <class_source>import java.sql.*;
-import org.pentaho.di.core.database.*;
-
-private DatabaseMeta databaseMeta;
-private Database database;
-
-public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException
-{
-	Object[] r = getRow();
-	if (r == null) {
-		setOutputDone();
-		return false;
-	}
-
-    if (first)
-    {
-        first = false;
-    }
-
-    try {
-      r = createOutputRow(r, data.outputRowMeta.size());	
-	  int index = getInputRowMeta().size();
-      r[index++] = database.getDatabaseMetaData().getDatabaseProductName();
-	  
-      putRow(data.outputRowMeta, r);
-
-   } catch(Exception e) {
-     throw new KettleException(e);
-   } 
-   
-   return true;
-}
-
-public boolean init(StepMetaInterface stepMetaInterface, StepDataInterface stepDataInterface)
-{
-    if (!parent.initImpl(stepMetaInterface, stepDataInterface)) {
-      return false;
-    }
-    String dbName = getParameter("DBNAME");
-    databaseMeta = getTransMeta().findDatabase(dbName);
-    if (databaseMeta==null) {
-         logError("A connection with name "+dbName+" could not be found!");
-         setErrors(1);
-         return false;
-    }
-
-    database = new Database(getTrans(), databaseMeta);
-
-    try  {
-      database.connect();
-    } catch(Exception e) {
-      logError("Connecting to database "+dbName+" failed.", e);
-      setErrors(1);
-      return false;
-    }
-
-    return true;
-}
-
-public void dispose(StepMetaInterface smi, StepDataInterface sdi)
-{
-    if (database!=null) {
-      database.disconnect();
-    }
-
-    parent.disposeImpl(smi, sdi);
-}
-
-
-</class_source>
-      </definition>
-    </definitions>
-    <fields>
-      <field>
-        <field_name>database_type</field_name>
-        <field_type>String</field_type>
-        <field_length>255</field_length>
-        <field_precision>-1</field_precision>
-      </field>
-    </fields>
-    <clear_result_fields>N</clear_result_fields>
-    <info_steps/>
-    <target_steps/>
-    <usage_parameters>
-      <usage_parameter>
-        <parameter_tag>DBNAME</parameter_tag>
-        <parameter_value>Hibernate</parameter_value>
-        <parameter_description>The name of the database</parameter_description>
-      </usage_parameter>
-    </usage_parameters>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2608</xloc>
-      <yloc>192</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Table output PENTAHO_CE_AUDIT (MySQL)</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>Hibernate</connection>
-    <schema/>
-    <table>`PENTAHO_CE_AUDIT`</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>Y</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-      <field>
-        <column_name>`DATA`</column_name>
-        <stream_name>data</stream_name>
-      </field>
-      <field>
-        <column_name>`PLUGIN`</column_name>
-        <stream_name>plugin</stream_name>
-      </field>
-      <field>
-        <column_name>`USER`</column_name>
-        <stream_name>user</stream_name>
-      </field>
-      <field>
-        <column_name>`DIRECTORY`</column_name>
-        <stream_name>directory</stream_name>
-      </field>
-      <field>
-        <column_name>`DURATION`</column_name>
-        <stream_name>duration</stream_name>
-      </field>
-      <field>
-        <column_name>`TYPE`</column_name>
-        <stream_name>type</stream_name>
-      </field>
-      <field>
-        <column_name>`ROLE`</column_name>
-        <stream_name>role</stream_name>
-      </field>
-      <field>
-        <column_name>`YEAR`</column_name>
-        <stream_name>year</stream_name>
-      </field>
-      <field>
-        <column_name>`MONTH`</column_name>
-        <stream_name>month</stream_name>
-      </field>
-      <field>
-        <column_name>`DAY`</column_name>
-        <stream_name>day</stream_name>
-      </field>
-      <field>
-        <column_name>`DAY_WEEK`</column_name>
-        <stream_name>day_week</stream_name>
-      </field>
-      <field>
-        <column_name>`AM_PM`</column_name>
-        <stream_name>AM_PM</stream_name>
-      </field>
-      <field>
-        <column_name>`HOURS24`</column_name>
-        <stream_name>HOURS24</stream_name>
-      </field>
-      <field>
-        <column_name>`HOURS12`</column_name>
-        <stream_name>HOURS12</stream_name>
-      </field>
-      <field>
-        <column_name>`MINUTES`</column_name>
-        <stream_name>minutes</stream_name>
-      </field>
-      <field>
-        <column_name>`SECONDS`</column_name>
-        <stream_name>seconds</stream_name>
-      </field>
-      <field>
-        <column_name>`TIME`</column_name>
-        <stream_name>TIME</stream_name>
-      </field>
-      <field>
-        <column_name>`MONTH_DESC`</column_name>
-        <stream_name>month_desc</stream_name>
-      </field>
-      <field>
-        <column_name>`DAY_WEEK_DESC`</column_name>
-        <stream_name>day_week_desc</stream_name>
-      </field>
-      <field>
-        <column_name>`FILE`</column_name>
-        <stream_name>file</stream_name>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2880</xloc>
-      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
