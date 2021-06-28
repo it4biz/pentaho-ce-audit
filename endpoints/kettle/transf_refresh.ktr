@@ -462,7 +462,7 @@
   <notepads>
     <notepad>
       <note>========================================================================================
-Input logins from pro_audit table									
+Input logins from PRO_AUDIT table									
 
 
 
@@ -498,7 +498,7 @@ Input logins from pro_audit table
     </notepad>
     <notepad>
       <note>=======================================================================================
-Capture logins from pro_audit table									
+Capture logins from PRO_AUDIT table									
 
 
 
@@ -745,7 +745,7 @@ Example:
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>TIN pro_audit Table 2</from>
+      <from>TIN PRO_AUDIT Table 2</from>
       <to>Add constants 2</to>
       <enabled>Y</enabled>
     </hop>
@@ -770,7 +770,7 @@ Example:
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>TIN pro_audit Table 2 2</from>
+      <from>TIN PRO_AUDIT Table 2 2</from>
       <to>Add constants 2 2</to>
       <enabled>Y</enabled>
     </hop>
@@ -935,11 +935,6 @@ Example:
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get database type</from>
-      <to>Wait for database type to be settled.</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Wait for database type to be settled.</from>
       <to>DB type check</to>
       <enabled>Y</enabled>
@@ -947,6 +942,11 @@ Example:
     <hop>
       <from>lookup with time fields</from>
       <to>Wait for database type to be settled.</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get database type</from>
+      <to>DB type check</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1448,7 +1448,7 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
     <cache_size>0</cache_size>
     <lookup>
       <schema/>
-      <table>pro_audit</table>
+      <table>PRO_AUDIT</table>
       <orderby/>
       <fail_on_multiple>N</fail_on_multiple>
       <eat_row_on_failure>N</eat_row_on_failure>
@@ -1550,7 +1550,7 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
     <cache_size>0</cache_size>
     <lookup>
       <schema/>
-      <table>pro_audit</table>
+      <table>PRO_AUDIT</table>
       <orderby/>
       <fail_on_multiple>N</fail_on_multiple>
       <eat_row_on_failure>N</eat_row_on_failure>
@@ -2095,8 +2095,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2640</xloc>
-      <yloc>64</yloc>
+      <xloc>2528</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2877,7 +2877,7 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
     </GUI>
   </step>
   <step>
-    <name>TIN pro_audit Table 2</name>
+    <name>TIN PRO_AUDIT Table 2</name>
     <type>TableInput</type>
     <description/>
     <distribute>N</distribute>
@@ -2915,7 +2915,7 @@ GROUP BY INST_ID</sql>
     </GUI>
   </step>
   <step>
-    <name>TIN pro_audit Table 2 2</name>
+    <name>TIN PRO_AUDIT Table 2 2</name>
     <type>TableInput</type>
     <description/>
     <distribute>N</distribute>
