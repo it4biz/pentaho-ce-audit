@@ -788,7 +788,7 @@ var sql = 'CREATE TABLE pro_audit( '+
 	'actor varchar(256), '+
 	'message_type varchar(256), '+
 	'message_name varchar(256), '+
-	'message_text_value varchar(256), '+
+	'message_text_value varchar(1000), '+
 	'message_num_value varchar(256), '+
 	'audit_time timestamp, '+
 	'duration real)';
@@ -847,7 +847,7 @@ var sql =
   '`ACTOR` varchar(225) DEFAULT NULL, '+
   '`MESSAGE_TYPE` varchar(255) DEFAULT NULL, '+
   '`MESSAGE_NAME` varchar(128) DEFAULT NULL, '+
-  '`MESSAGE_TEXT_VALUE` varchar(256) DEFAULT NULL, '+
+  '`MESSAGE_TEXT_VALUE` varchar(1000) DEFAULT NULL, '+
   '`MESSAGE_NUM_VALUE` bigint(20) unsigned DEFAULT NULL, '+
   '`DURATION` decimal(7,2) DEFAULT NULL, '+
   '`AUDIT_TIME` datetime DEFAULT NULL, '+
@@ -909,7 +909,7 @@ var sql = 'CREATE TABLE pro_audit( '+
 	'actor varchar(256), '+
 	'message_type varchar(256), '+
 	'message_name varchar(256), '+
-	'message_text_value varchar(256), '+
+	'message_text_value varchar(1000), '+
 	'message_num_value varchar(256), '+
 	'audit_time timestamp, '+
 	'duration real)';
