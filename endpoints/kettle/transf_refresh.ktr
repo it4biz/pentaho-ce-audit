@@ -477,8 +477,8 @@ Input logins from PRO_AUDIT table
 
 
 ===========================================================================================</note>
-      <xloc>58</xloc>
-      <yloc>92</yloc>
+      <xloc>183</xloc>
+      <yloc>59</yloc>
       <width>739</width>
       <heigth>252</heigth>
       <fontname>Segoe UI</fontname>
@@ -497,7 +497,7 @@ Input logins from PRO_AUDIT table
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>=======================================================================================
+      <note>===========================================================================================
 Capture logins from PRO_AUDIT table									
 
 
@@ -515,11 +515,12 @@ Capture logins from PRO_AUDIT table
 
 
 
-=======================================================================================</note>
-      <xloc>64</xloc>
-      <yloc>368</yloc>
-      <width>707</width>
-      <heigth>297</heigth>
+
+==========================================================================================</note>
+      <xloc>183</xloc>
+      <yloc>347</yloc>
+      <width>739</width>
+      <heigth>312</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -536,7 +537,7 @@ Capture logins from PRO_AUDIT table
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>=================================================================
+      <note>===================================================================
 Transformation for table pentaho_ce_audit
 
 
@@ -583,9 +584,9 @@ Transformation for table pentaho_ce_audit
 
 
 </note>
-      <xloc>1096</xloc>
-      <yloc>84</yloc>
-      <width>531</width>
+      <xloc>1223</xloc>
+      <yloc>43</yloc>
+      <width>547</width>
       <heigth>717</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
@@ -607,7 +608,11 @@ Transformation for table pentaho_ce_audit
 Contribution by Brandon Jackson
 usbrandon@gmail.com
 November 15, 2014
-
+============================================================================================================
+Optimisation by Ibrahim Bolarinwa
+https://github.com/Ibby-B
+June 29, 2021
+============================================================================================================
 This part of ETL add more fields about Time.     
  * TIME VARCHAR(8)   																
  * HOURS24 INT																		
@@ -617,7 +622,7 @@ This part of ETL add more fields about Time.
 Example:
 
 11:59:58	11	11	AM
-12:00:01	12	0		PM
+12:00:01	12	00	PM
 
 
 
@@ -637,10 +642,10 @@ Example:
 
 
 </note>
-      <xloc>1649</xloc>
-      <yloc>262</yloc>
+      <xloc>1799</xloc>
+      <yloc>235</yloc>
       <width>922</width>
-      <heigth>528</heigth>
+      <heigth>593</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -651,6 +656,48 @@ Example:
       <backgroundcolorred>255</backgroundcolorred>
       <backgroundcolorgreen>217</backgroundcolorgreen>
       <backgroundcolorblue>217</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>================================================================================
+Contribution by Ibrahim Bolarinwa
+https://github.com/Ibby-B
+June 29, 2021
+================================================================================
+This part of the ETL controls the construction of the PENTAHO_CE_AUDIT Table output SQL, there is no straight-forward
+ANSI version that would work with all DBs (at least not without changing the name of fields like USER and DATA
+================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+</note>
+      <xloc>2535</xloc>
+      <yloc>-133</yloc>
+      <width>651</width>
+      <heigth>348</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>128</backgroundcolorgreen>
+      <backgroundcolorblue>255</backgroundcolorblue>
       <bordercolorred>100</bordercolorred>
       <bordercolorgreen>100</bordercolorgreen>
       <bordercolorblue>100</bordercolorblue>
@@ -710,48 +757,8 @@ Example:
   </connection>
   <order>
     <hop>
-      <from>Extract Period</from>
-      <to>Value Mapper - Month</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Value Mapper - Month</from>
-      <to>Value Mapper - Day Week</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Value Mapper - Day Week</from>
-      <to>Value Mapper - plugin types</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Value Mapper - plugin types</from>
-      <to>Value Mapper - type</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Value Mapper - type</from>
-      <to>If field value is null</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Block this step until steps finish</from>
-      <to>Add constants</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Add constants</from>
       <to>Get Variables</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>TIN PRO_AUDIT Table 2</from>
-      <to>Add constants 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>DBLK session_end</from>
-      <to>Filter rows</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -760,63 +767,8 @@ Example:
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filter rows</from>
-      <to>Clear records </to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows</from>
-      <to>Rows discarted</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>TIN PRO_AUDIT Table 2 2</from>
-      <to>Add constants 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>DBLK instance_end</from>
-      <to>Switch / Case OBJ_TYPE</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Add constants 2 2</from>
       <to>DBLK instance_end</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Clear records </from>
-      <to>input Login OKAY</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Switch / Case JOB_ID</from>
-      <to>input instances OKAY 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Switch / Case JOB_ID</from>
-      <to>Rows discarted 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Switch / Case OBJ_TYPE</from>
-      <to>Switch / Case JOB_ID</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Switch / Case OBJ_TYPE</from>
-      <to>Rows discarted 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>input Login OKAY</from>
-      <to>BRIDGE</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>input instances OKAY 2</from>
-      <to>BRIDGE</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -830,33 +782,13 @@ Example:
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get Variables</from>
-      <to>User Defined Java Expression 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>User Defined Java Expression 2</from>
-      <to>Split field to rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split field to rows</from>
-      <to>Extract Period</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>If field value is null</from>
-      <to>Select rows for pentaho_ce_audit table</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select rows for pentaho_ce_audit table</from>
-      <to>Not specified default values</to>
+      <from>Block this step until steps finish</from>
+      <to>Add constants</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Caclulate Time</from>
-      <to>Rename and set types</to>
+      <to>Rename|set types|Remove unneded</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -867,6 +799,46 @@ Example:
     <hop>
       <from>Cartesian Product</from>
       <to>Caclulate Time</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Clear records </from>
+      <to>input Login OKAY</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>DB type check</from>
+      <to>Table output PENTAHO_CE_AUDIT</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>DB type check</from>
+      <to>Table output PENTAHO_CE_AUDIT (MySQL)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>DBLK instance_end</from>
+      <to>Switch / Case OBJ_TYPE</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>DBLK session_end</from>
+      <to>Filter rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Extract Period</from>
+      <to>Value Mapper - Month</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>Clear records </to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>Rows discarded</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -885,32 +857,27 @@ Example:
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>Get Variables</from>
+      <to>User Defined Java Expression 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get database type</from>
+      <to>Join rows (cartesian product)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>Hours Sequence</from>
       <to>Calculate hours12</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>If field value is null</from>
+      <to>Select rows for pentaho_ce_audit table</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>Minutes Sequence</from>
-      <to>Cartesian Product</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Order Fields</from>
-      <to>Sort rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Remove Junk</from>
-      <to>Order Fields</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Rename and set types</from>
-      <to>Remove Junk</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Seconds Sequence</from>
       <to>Cartesian Product</to>
       <enabled>Y</enabled>
     </hop>
@@ -920,32 +887,107 @@ Example:
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>Rename|set types|Remove unneded</from>
+      <to>Sort rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Seconds Sequence</from>
+      <to>Cartesian Product</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select rows for pentaho_ce_audit table</from>
+      <to>Not specified default values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>Sort rows</from>
       <to>lookup with time fields</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>DB type check</from>
-      <to>Table output PENTAHO_CE_AUDIT</to>
+      <from>Split field to rows</from>
+      <to>Extract Period</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>DB type check</from>
-      <to>Table output PENTAHO_CE_AUDIT (MySQL)</to>
+      <from>Switch / Case JOB_ID</from>
+      <to>Rows discarded 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Wait for database type to be settled.</from>
-      <to>DB type check</to>
+      <from>Switch / Case JOB_ID</from>
+      <to>input instances OKAY 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Switch / Case OBJ_TYPE</from>
+      <to>Rows discarded 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Switch / Case OBJ_TYPE</from>
+      <to>Switch / Case JOB_ID</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>TIN PRO_AUDIT Table 2</from>
+      <to>Add constants 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>TIN PRO_AUDIT Table 2 2</from>
+      <to>Add constants 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>User Defined Java Expression 2</from>
+      <to>Split field to rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Value Mapper - Day Week</from>
+      <to>Value Mapper - plugin types</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Value Mapper - Month</from>
+      <to>Value Mapper - Day Week</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Value Mapper - plugin types</from>
+      <to>Value Mapper - type</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Value Mapper - type</from>
+      <to>If field value is null</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>input Login OKAY</from>
+      <to>BRIDGE</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>input instances OKAY 2</from>
+      <to>BRIDGE</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>lookup with time fields</from>
-      <to>Wait for database type to be settled.</to>
+      <to>Join rows (cartesian product)</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get database type</from>
+      <from>trigger</from>
+      <to>Get database type</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Join rows (cartesian product)</from>
       <to>DB type check</to>
       <enabled>Y</enabled>
     </hop>
@@ -1032,8 +1074,8 @@ Example:
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1284</xloc>
-      <yloc>259</yloc>
+      <xloc>1367</xloc>
+      <yloc>219</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1071,8 +1113,8 @@ Example:
       </output>
     </remotesteps>
     <GUI>
-      <xloc>226</xloc>
-      <yloc>175</yloc>
+      <xloc>359</xloc>
+      <yloc>139</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1110,8 +1152,8 @@ Example:
       </output>
     </remotesteps>
     <GUI>
-      <xloc>243</xloc>
-      <yloc>470</yloc>
+      <xloc>375</xloc>
+      <yloc>427</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1165,8 +1207,8 @@ Example:
       </output>
     </remotesteps>
     <GUI>
-      <xloc>951</xloc>
-      <yloc>351</yloc>
+      <xloc>1079</xloc>
+      <yloc>315</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1196,8 +1238,8 @@ Example:
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1284</xloc>
-      <yloc>183</yloc>
+      <xloc>1367</xloc>
+      <yloc>155</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1219,21 +1261,15 @@ Example:
         <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
         <jsScript_script>//Script here
-var time = "" 
-         + (hours24.getInteger()&lt;10?"0":"")
-             + hours24.getInteger() + ":"
-             + (minutes.getInteger()&lt;10?"0":"")
-             + minutes.getInteger() + ":"
-             + (seconds.getInteger()&lt;10?"0":"")
-             + seconds.getInteger()
+var time = 
+				num2str(hours24.getInteger(),"00:") 
+             +  num2str(minutes.getInteger(),"00:") 
+             +  num2str(seconds.getInteger(),"00")
 ;
-var time_key = (hours24.getInteger()&lt;10?"0":"")
-             + hours24.getInteger()
-             + (minutes.getInteger()&lt;10?"0":"")
-             + minutes.getInteger()
-             + (seconds.getInteger()&lt;10?"0":"")
-             + seconds.getInteger()
-;</jsScript_script>
+var time_key = 
+				num2str(hours24.getInteger(),"00") 
+             +  num2str(minutes.getInteger(),"00") 
+             +  num2str(seconds.getInteger(),"00")</jsScript_script>
       </jsScript>
     </jsScripts>
     <fields>
@@ -1241,7 +1277,7 @@ var time_key = (hours24.getInteger()&lt;10?"0":"")
         <name>time</name>
         <rename>time</rename>
         <type>String</type>
-        <length>10</length>
+        <length>8</length>
         <precision>-1</precision>
         <replace>N</replace>
       </field>
@@ -1249,7 +1285,7 @@ var time_key = (hours24.getInteger()&lt;10?"0":"")
         <name>time_key</name>
         <rename>time_key</rename>
         <type>Integer</type>
-        <length>-1</length>
+        <length>6</length>
         <precision>-1</precision>
         <replace>N</replace>
       </field>
@@ -1263,8 +1299,8 @@ var time_key = (hours24.getInteger()&lt;10?"0":"")
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2088</xloc>
-      <yloc>616</yloc>
+      <xloc>2215</xloc>
+      <yloc>651</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1317,8 +1353,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1960</xloc>
-      <yloc>520</yloc>
+      <xloc>2103</xloc>
+      <yloc>571</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1336,7 +1372,7 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
     <directory>%%java.io.tmpdir%%</directory>
     <prefix>out</prefix>
     <cache_size>500</cache_size>
-    <main/>
+    <main>Minutes Sequence</main>
     <compare>
       <condition>
         <negated>N</negated>
@@ -1354,8 +1390,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1960</xloc>
-      <yloc>616</yloc>
+      <xloc>2119</xloc>
+      <yloc>651</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1388,8 +1424,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>502</xloc>
-      <yloc>178</yloc>
+      <xloc>631</xloc>
+      <yloc>139</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1426,8 +1462,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2752</xloc>
-      <yloc>224</yloc>
+      <xloc>2903</xloc>
+      <yloc>155</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1528,8 +1564,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>346</xloc>
-      <yloc>469</yloc>
+      <xloc>471</xloc>
+      <yloc>427</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1630,8 +1666,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>327</xloc>
-      <yloc>176</yloc>
+      <xloc>455</xloc>
+      <yloc>139</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1761,8 +1797,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1279</xloc>
-      <yloc>668</yloc>
+      <xloc>1367</xloc>
+      <yloc>635</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1778,7 +1814,7 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       <schema_name/>
     </partitioning>
     <send_true_to>Clear records </send_true_to>
-    <send_false_to>Rows discarted</send_false_to>
+    <send_false_to>Rows discarded</send_false_to>
     <compare>
       <condition>
         <negated>N</negated>
@@ -1805,8 +1841,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>411</xloc>
-      <yloc>179</yloc>
+      <xloc>551</xloc>
+      <yloc>139</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1849,8 +1885,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1736</xloc>
-      <yloc>520</yloc>
+      <xloc>1879</xloc>
+      <yloc>571</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1893,8 +1929,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1736</xloc>
-      <yloc>616</yloc>
+      <xloc>1879</xloc>
+      <yloc>651</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1937,8 +1973,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1736</xloc>
-      <yloc>712</yloc>
+      <xloc>1879</xloc>
+      <yloc>763</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1976,8 +2012,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1285</xloc>
-      <yloc>350</yloc>
+      <xloc>1367</xloc>
+      <yloc>315</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2095,8 +2131,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2528</xloc>
-      <yloc>112</yloc>
+      <xloc>2775</xloc>
+      <yloc>43</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2130,8 +2166,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1864</xloc>
-      <yloc>520</yloc>
+      <xloc>2007</xloc>
+      <yloc>571</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2170,8 +2206,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1516</xloc>
-      <yloc>368</yloc>
+      <xloc>1623</xloc>
+      <yloc>331</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2205,8 +2241,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1864</xloc>
-      <yloc>616</yloc>
+      <xloc>2007</xloc>
+      <yloc>651</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2245,62 +2281,13 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1512</xloc>
-      <yloc>190</yloc>
+      <xloc>1623</xloc>
+      <yloc>155</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Order Fields</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>TIME_SK</name>
-      </field>
-      <field>
-        <name>TIME</name>
-      </field>
-      <field>
-        <name>HOURS24</name>
-      </field>
-      <field>
-        <name>HOURS12</name>
-      </field>
-      <field>
-        <name>AM_PM</name>
-      </field>
-      <field>
-        <name>MINUTES</name>
-      </field>
-      <field>
-        <name>SECONDS</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2376</xloc>
-      <yloc>616</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Remove Junk</name>
+    <name>Rename|set types|Remove unneded</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -2313,42 +2300,14 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
     <fields>
       <select_unspecified>N</select_unspecified>
       <remove>
-        <name>HOURS24_ROW</name>
+        <name>hours24_row</name>
       </remove>
       <remove>
-        <name>MINUTES_ROW</name>
+        <name>minutes_row</name>
       </remove>
       <remove>
-        <name>SECONDS_ROW</name>
+        <name>seconds_row</name>
       </remove>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2280</xloc>
-      <yloc>616</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Rename and set types</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
       <meta>
         <name>time_key</name>
         <rename>TIME_SK</rename>
@@ -2384,23 +2343,6 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
         <storage_type/>
       </meta>
       <meta>
-        <name>seconds_row</name>
-        <rename>SECONDS_ROW</rename>
-        <type>Integer</type>
-        <length>-2</length>
-        <precision>0</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
         <name>seconds</name>
         <rename>SECONDS</rename>
         <type>Integer</type>
@@ -2418,42 +2360,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
         <storage_type/>
       </meta>
       <meta>
-        <name>minutes_row</name>
-        <rename>MINUTES_ROW</rename>
-        <type>Integer</type>
-        <length>-2</length>
-        <precision>0</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
         <name>minutes</name>
         <rename>MINUTES</rename>
-        <type>Integer</type>
-        <length>-2</length>
-        <precision>0</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>hours24_row</name>
-        <rename>HOURS24_ROW</rename>
         <type>Integer</type>
         <length>-2</length>
         <precision>0</precision>
@@ -2529,13 +2437,13 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2184</xloc>
-      <yloc>616</yloc>
+      <xloc>2407</xloc>
+      <yloc>651</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Rows discarted</name>
+    <name>Rows discarded</name>
     <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
@@ -2554,13 +2462,13 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>469</xloc>
-      <yloc>259</yloc>
+      <xloc>647</xloc>
+      <yloc>219</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Rows discarted 2</name>
+    <name>Rows discarded 2</name>
     <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
@@ -2579,8 +2487,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>543</xloc>
-      <yloc>606</yloc>
+      <xloc>663</xloc>
+      <yloc>555</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2614,8 +2522,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1864</xloc>
-      <yloc>712</yloc>
+      <xloc>2007</xloc>
+      <yloc>763</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2693,8 +2601,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1513</xloc>
-      <yloc>271</yloc>
+      <xloc>1623</xloc>
+      <yloc>235</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2723,7 +2631,7 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>2</collator_strength>
-        <presorted>N</presorted>
+        <presorted>Y</presorted>
       </field>
     </fields>
     <attributes/>
@@ -2735,8 +2643,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2468</xloc>
-      <yloc>612</yloc>
+      <xloc>2615</xloc>
+      <yloc>651</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2767,8 +2675,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1280</xloc>
-      <yloc>525</yloc>
+      <xloc>1367</xloc>
+      <yloc>491</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2789,7 +2697,7 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
     <case_value_format/>
     <case_value_decimal/>
     <case_value_group/>
-    <default_target_step>Rows discarted 2</default_target_step>
+    <default_target_step>Rows discarded 2</default_target_step>
     <cases>
       <case>
         <value>cda</value>
@@ -2821,8 +2729,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>590</xloc>
-      <yloc>470</yloc>
+      <xloc>727</xloc>
+      <yloc>427</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2843,7 +2751,7 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
     <case_value_format/>
     <case_value_decimal/>
     <case_value_group/>
-    <default_target_step>Rows discarted 2</default_target_step>
+    <default_target_step>Rows discarded 2</default_target_step>
     <cases>
       <case>
         <value>org.pentaho.platform.engine.services.solution.SolutionEngine</value>
@@ -2871,8 +2779,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>468</xloc>
-      <yloc>470</yloc>
+      <xloc>599</xloc>
+      <yloc>427</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2909,8 +2817,8 @@ GROUP BY INST_ID</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>105</xloc>
-      <yloc>175</yloc>
+      <xloc>231</xloc>
+      <yloc>139</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2946,8 +2854,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>124</xloc>
-      <yloc>471</yloc>
+      <xloc>247</xloc>
+      <yloc>427</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3070,8 +2978,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2912</xloc>
-      <yloc>160</yloc>
+      <xloc>3063</xloc>
+      <yloc>267</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3194,8 +3102,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2912</xloc>
-      <yloc>288</yloc>
+      <xloc>3063</xloc>
+      <yloc>59</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3232,8 +3140,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>950</xloc>
-      <yloc>221</yloc>
+      <xloc>1079</xloc>
+      <yloc>187</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3265,8 +3173,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1284</xloc>
-      <yloc>437</yloc>
+      <xloc>1367</xloc>
+      <yloc>395</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3323,8 +3231,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1517</xloc>
-      <yloc>667</yloc>
+      <xloc>1623</xloc>
+      <yloc>635</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3401,8 +3309,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1386</xloc>
-      <yloc>668</yloc>
+      <xloc>1479</xloc>
+      <yloc>635</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3451,8 +3359,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1517</xloc>
-      <yloc>569</yloc>
+      <xloc>1623</xloc>
+      <yloc>539</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3493,39 +3401,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1515</xloc>
-      <yloc>459</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Wait for database type to be settled.</name>
-    <type>BlockUntilStepsFinish</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <steps>
-      <step>
-        <name>Get database type</name>
-        <CopyNr>0</CopyNr>
-      </step>
-    </steps>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2672</xloc>
-      <yloc>272</yloc>
+      <xloc>1623</xloc>
+      <yloc>427</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3576,8 +3453,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>593</xloc>
-      <yloc>178</yloc>
+      <xloc>727</xloc>
+      <yloc>139</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3628,8 +3505,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>716</xloc>
-      <yloc>469</yloc>
+      <xloc>855</xloc>
+      <yloc>427</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3696,8 +3573,77 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2468</xloc>
-      <yloc>190</yloc>
+      <xloc>2615</xloc>
+      <yloc>155</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>trigger</name>
+    <type>RowGenerator</type>
+    <description>an empty row to trigger the java class</description>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+    </fields>
+    <limit>1</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms>5000</interval_in_ms>
+    <row_time_field>now</row_time_field>
+    <last_time_field>FiveSecondsAgo</last_time_field>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2615</xloc>
+      <yloc>43</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Join rows (cartesian product)</name>
+    <type>JoinRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <cache_size>500</cache_size>
+    <main>lookup with time fields</main>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue/>
+        <function>=</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2775</xloc>
+      <yloc>155</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
