@@ -606,7 +606,7 @@ MySQL Compatibility
     </partitioning>
     <connection>Hibernate</connection>
     <rowlimit>1</rowlimit>
-    <sql>SELECT TIMESTAMP '1970-01-01' AS LAST_UPDATE , 0 AS NUMBER_ROWS, 'Fake_User' AS USERONI
+    <sql>SELECT TIMESTAMP '1970-01-01 00:00:00' AS LAST_UPDATE , 0 AS NUMBER_ROWS, 'Fake_User' AS USERONI
 </sql>
     <outer_join>N</outer_join>
     <replace_vars>N</replace_vars>
