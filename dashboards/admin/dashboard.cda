@@ -30,50 +30,52 @@
          <Jndi>Hibernate</Jndi>
       </Connection>
    </DataSources>
-   <DataAccess access="public" cache="false" cacheDuration="3600"
-               connection="mdxQueryTop10UsersByExecution"
+   <DataAccess access="public" connection="mdxQueryTop10UsersByExecution"
                id="mdxQueryTop10UsersByExecution"
                type="mdx">
+      <Name>mdxQueryTop10UsersByExecution</Name>
       <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="false"/>
       <Columns/>
       <Parameters>
          <Parameter default="" name="filterYearParameter" type="String"/>
       </Parameters>
-      <Query>WITH
+      <Query><![CDATA[WITH
 SET [~ROWS] AS
     TopCount({[User].[User].Members}, 10, [Measures].[Quantity])
 SELECT
 NON EMPTY {[Measures].[Quantity]} ON COLUMNS,
 NON EMPTY [~ROWS] ON ROWS
 FROM [Pentaho CE Audit]
-WHERE CrossJoin({${filterYearParameter}}, {[Type].[execution]})</Query>
+WHERE CrossJoin({${filterYearParameter}}, {[Type].[execution]})]]></Query>
    </DataAccess>
-   <DataAccess access="public" cache="false" cacheDuration="3600"
-               connection="mdxQueryTop10UsersByLogin"
+   <DataAccess access="public" connection="mdxQueryTop10UsersByLogin"
                id="mdxQueryTop10UsersByLogin"
                type="mdx">
+      <Name>mdxQueryTop10UsersByLogin</Name>
       <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="false"/>
       <Columns/>
       <Parameters>
          <Parameter default="" name="filterYearParameter" type="String"/>
       </Parameters>
-      <Query>WITH
+      <Query><![CDATA[WITH
 SET [~ROWS] AS
     TopCount({[User].[User].Members}, 10, [Measures].[Quantity])
 SELECT
 NON EMPTY {[Measures].[Quantity]} ON COLUMNS,
 NON EMPTY [~ROWS] ON ROWS
 FROM [Pentaho CE Audit]
-WHERE CrossJoin({${filterYearParameter}}, {[Type].[login]})</Query>
+WHERE CrossJoin({${filterYearParameter}}, {[Type].[login]})]]></Query>
    </DataAccess>
-   <DataAccess access="public" cache="false" cacheDuration="3600"
-               connection="mdxQueryAccessByHour"
-               id="mdxQueryAccessByHour"
+   <DataAccess access="public" connection="mdxQueryAccessByHour" id="mdxQueryAccessByHour"
                type="mdx">
+      <Name>mdxQueryAccessByHour</Name>
       <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="false"/>
       <Columns/>
       <Parameters/>
-      <Query>WITH
+      <Query><![CDATA[WITH
 SET [~FILTER] AS
     {[Type].[login]}
 SET [~ROWS] AS
@@ -82,29 +84,29 @@ SELECT
 NON EMPTY {[Measures].[Quantity]} ON COLUMNS,
 NON EMPTY [~ROWS] ON ROWS
 FROM [Pentaho CE Audit]
-WHERE [~FILTER]</Query>
+WHERE [~FILTER]]]></Query>
    </DataAccess>
-   <DataAccess access="public" cache="false" cacheDuration="3600" connection="filterYearQuery"
-               id="filterYearQuery"
-               type="mdx">
+   <DataAccess access="public" connection="filterYearQuery" id="filterYearQuery" type="mdx">
+      <Name>filterYearQuery</Name>
       <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="false"/>
       <Columns/>
       <Output indexes="1,0" mode="include"/>
       <Parameters/>
-      <Query>with member [Measures].[Name] as '[Year].CurrentMember.UniqueName' 
+      <Query><![CDATA[with member [Measures].[Name] as '[Year].CurrentMember.UniqueName' 
 select TopCount( filter({Descendants([Year].members)}, not isempty(([Year].CurrentMember)) ) , 50) on ROWS, 
  {[Measures].[Name]} on Columns 
- from [Pentaho CE Audit]</Query>
+ from [Pentaho CE Audit]]]></Query>
    </DataAccess>
-   <DataAccess access="public" cache="false" cacheDuration="3600" connection="mdxQueryFiles"
-               id="mdxQueryFiles"
-               type="mdx">
+   <DataAccess access="public" connection="mdxQueryFiles" id="mdxQueryFiles" type="mdx">
+      <Name>mdxQueryFiles</Name>
       <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="false"/>
       <Columns/>
       <Parameters>
          <Parameter default="" name="filterYearParameter" type="String"/>
       </Parameters>
-      <Query>WITH
+      <Query><![CDATA[WITH
 SET [~ROWS_User.User] AS
     {[User].[User].Members}
 SET [~ROWS_File.File] AS
@@ -115,42 +117,44 @@ SELECT
 NON EMPTY {[Measures].[Quantity]} ON COLUMNS,
 NON EMPTY ([~ROWS_User.User]  *  [~ROWS_File.File]  *  [~ROWS_Plugin.Plugin]) ON ROWS
 FROM [Pentaho CE Audit]
-WHERE CrossJoin({${filterYearParameter}}, {[Type].[execution]})</Query>
+WHERE CrossJoin({${filterYearParameter}}, {[Type].[execution]})]]></Query>
    </DataAccess>
-   <DataAccess access="public" cache="false" cacheDuration="3600"
-               connection="mdxQueryExecutionByHours"
+   <DataAccess access="public" connection="mdxQueryExecutionByHours"
                id="mdxQueryExecutionByHours"
                type="mdx">
+      <Name>mdxQueryExecutionByHours</Name>
       <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="false"/>
       <Columns/>
       <Parameters>
          <Parameter default="" name="filterYearParameter" type="String"/>
       </Parameters>
-      <Query>WITH
+      <Query><![CDATA[WITH
 SET [~ROWS] AS
     {[Time].[Hour].Members}
 SELECT
 NON EMPTY {[Measures].[Quantity]} ON COLUMNS,
 NON EMPTY [~ROWS] ON ROWS
 FROM [Pentaho CE Audit]
-WHERE CrossJoin({${filterYearParameter}}, {[Type].[execution]})</Query>
+WHERE CrossJoin({${filterYearParameter}}, {[Type].[execution]})]]></Query>
    </DataAccess>
-   <DataAccess access="public" cache="false" cacheDuration="3600"
-               connection="mdxQueryExecByDayOfWeek"
+   <DataAccess access="public" connection="mdxQueryExecByDayOfWeek"
                id="mdxQueryExecByDayOfWeek"
                type="mdx">
+      <Name>mdxQueryExecByDayOfWeek</Name>
       <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="false"/>
       <Columns/>
       <Parameters>
          <Parameter default="" name="filterYearParameter" type="String"/>
       </Parameters>
-      <Query>WITH
+      <Query><![CDATA[WITH
 SET [~ROWS] AS
     {[Period].[Day of Week].Members}
 SELECT
 NON EMPTY {[Measures].[Quantity]} ON COLUMNS,
 NON EMPTY [~ROWS] ON ROWS
 FROM [Pentaho CE Audit]
-WHERE CrossJoin({${filterYearParameter}}, {[Type].[execution]})</Query>
+WHERE CrossJoin({${filterYearParameter}}, {[Type].[execution]})]]></Query>
    </DataAccess>
 </CDADescriptor>
