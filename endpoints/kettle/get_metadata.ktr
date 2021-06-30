@@ -435,6 +435,32 @@
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
+    <notepad>
+      <note>===========================================
+Update: 30 June 2021
+Ibrahim Bolarinwa
+https://github.com/Ibby-B
+MySQL Compatibility
+===========================================</note>
+      <xloc>0</xloc>
+      <yloc>0</yloc>
+      <width>355</width>
+      <heigth>106</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <connection>
     <name>Hibernate</name>
@@ -489,26 +515,6 @@
   </connection>
   <order>
     <hop>
-      <from>TINP Get Metadata</from>
-      <to>Select values</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values</from>
-      <to>OUTPUT</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>TINP Get Metadata (MySQL)</from>
-      <to>Select values</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get database type</from>
-      <to>DB type check</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>DB type check</from>
       <to>TINP Get Metadata</to>
       <enabled>Y</enabled>
@@ -518,10 +524,40 @@
       <to>TINP Get Metadata (MySQL)</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Get database type</from>
+      <to>DB type check</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>TINP Get Metadata</from>
+      <to>Dynamic SQL row</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>TINP Get Metadata (MySQL)</from>
+      <to>Dynamic SQL row</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>trigger</from>
+      <to>Get database type</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Dynamic SQL row</from>
+      <to>Select values and set Metadata meta-data</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values and set Metadata meta-data</from>
+      <to>OUTPUT</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <step>
-    <name>OUTPUT</name>
-    <type>Dummy</type>
+    <name>DB type check</name>
+    <type>SwitchCase</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -530,6 +566,19 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <fieldname>database_type</fieldname>
+    <use_contains>N</use_contains>
+    <case_value_type>String</case_value_type>
+    <case_value_format/>
+    <case_value_decimal/>
+    <case_value_group/>
+    <default_target_step>TINP Get Metadata</default_target_step>
+    <cases>
+      <case>
+        <value>MySQL</value>
+        <target_step>TINP Get Metadata (MySQL)</target_step>
+      </case>
+    </cases>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -539,105 +588,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>192</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>LAST_UPDATE</name>
-        <rename>Last update</rename>
-      </field>
-      <field>
-        <name>NUMBER_ROWS</name>
-        <rename>Number rows</rename>
-      </field>
-      <field>
-        <name>USER</name>
-        <rename>User</rename>
-      </field>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>Last update</name>
-        <rename>Last update</rename>
-        <type>String</type>
-        <length>6</length>
-        <precision>-2</precision>
-        <conversion_mask>yyyy-MM-dd HH:mm:ss</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>592</xloc>
-      <yloc>192</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>TINP Get Metadata</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>Hibernate</connection>
-    <sql>SELECT 
-	LAST_UPDATE,
-  	NUMBER_ROWS,
-  	USER 
-FROM PENTAHO_CE_AUDIT_METADATA
-
-</sql>
-    <limit>0</limit>
-    <lookup>Switch / Case</lookup>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cached_row_meta_active>N</cached_row_meta_active>
-    <row-meta/>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>416</xloc>
-      <yloc>128</yloc>
+      <xloc>208</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -755,14 +707,150 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>192</yloc>
+      <xloc>112</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>TINP Get Metadata</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+var sql = 
+	'SELECT ' +
+	'"LAST_UPDATE", ' +
+  	'"NUMBER_ROWS", ' +
+  	'"USER" ' +
+	'FROM "PENTAHO_CE_AUDIT_METADATA"';
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>sql</name>
+        <rename>sql</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
     <name>TINP Get Metadata (MySQL)</name>
-    <type>TableInput</type>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+
+var sql = 
+	'SELECT ' +
+	'`LAST_UPDATE`, ' +
+  	'`NUMBER_ROWS`, ' +
+  	'`USER` ' +
+	'FROM `PENTAHO_CE_AUDIT_METADATA`';</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>sql</name>
+        <rename>sql</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>trigger</name>
+    <type>RowGenerator</type>
+    <description>an empty row to trigger the java class</description>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+    </fields>
+    <limit>1</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms>5000</interval_in_ms>
+    <row_time_field>now</row_time_field>
+    <last_time_field>FiveSecondsAgo</last_time_field>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Dynamic SQL row</name>
+    <type>DynamicSQLRow</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -772,20 +860,13 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       <schema_name/>
     </partitioning>
     <connection>Hibernate</connection>
-    <sql>SELECT 
-	LAST_UPDATE,
-  	NUMBER_ROWS,
-  	USER 
-FROM PENTAHO_CE_AUDIT_METADATA
-
+    <rowlimit>1</rowlimit>
+    <sql>SELECT date '1970-01-01' AS LAST_UPDATE , 0 AS NUMBER_ROWS, 'Fake_User' AS USERONI
 </sql>
-    <limit>0</limit>
-    <lookup>Switch / Case</lookup>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cached_row_meta_active>N</cached_row_meta_active>
-    <row-meta/>
+    <outer_join>N</outer_join>
+    <replace_vars>N</replace_vars>
+    <sql_fieldname>sql</sql_fieldname>
+    <query_only_on_change>N</query_only_on_change>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -795,14 +876,14 @@ FROM PENTAHO_CE_AUDIT_METADATA
       </output>
     </remotesteps>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>256</yloc>
+      <xloc>528</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>DB type check</name>
-    <type>SwitchCase</type>
+    <name>Select values and set Metadata meta-data</name>
+    <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -811,19 +892,38 @@ FROM PENTAHO_CE_AUDIT_METADATA
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <fieldname>database_type</fieldname>
-    <use_contains>N</use_contains>
-    <case_value_type>String</case_value_type>
-    <case_value_format/>
-    <case_value_decimal/>
-    <case_value_group/>
-    <default_target_step>TINP Get Metadata</default_target_step>
-    <cases>
-      <case>
-        <value>MySQL</value>
-        <target_step>TINP Get Metadata (MySQL)</target_step>
-      </case>
-    </cases>
+    <fields>
+      <field>
+        <name>LAST_UPDATE</name>
+        <rename>Last update</rename>
+      </field>
+      <field>
+        <name>NUMBER_ROWS</name>
+        <rename>Number rows</rename>
+      </field>
+      <field>
+        <name>USERONI</name>
+        <rename>User</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>Last update</name>
+        <rename>Last update</rename>
+        <type>Timestamp</type>
+        <length>6</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH:mm:ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+    </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -833,8 +933,33 @@ FROM PENTAHO_CE_AUDIT_METADATA
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>192</yloc>
+      <xloc>704</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>OUTPUT</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>864</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

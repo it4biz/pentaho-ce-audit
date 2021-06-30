@@ -477,8 +477,8 @@ Input logins from PRO_AUDIT table
 
 
 ===========================================================================================</note>
-      <xloc>183</xloc>
-      <yloc>59</yloc>
+      <xloc>208</xloc>
+      <yloc>240</yloc>
       <width>739</width>
       <heigth>252</heigth>
       <fontname>Segoe UI</fontname>
@@ -517,8 +517,8 @@ Capture logins from PRO_AUDIT table
 
 
 ==========================================================================================</note>
-      <xloc>183</xloc>
-      <yloc>347</yloc>
+      <xloc>208</xloc>
+      <yloc>528</yloc>
       <width>739</width>
       <heigth>312</heigth>
       <fontname>Segoe UI</fontname>
@@ -584,8 +584,8 @@ Transformation for table pentaho_ce_audit
 
 
 </note>
-      <xloc>1223</xloc>
-      <yloc>43</yloc>
+      <xloc>1248</xloc>
+      <yloc>224</yloc>
       <width>547</width>
       <heigth>717</heigth>
       <fontname>Segoe UI</fontname>
@@ -642,8 +642,8 @@ Example:
 
 
 </note>
-      <xloc>1799</xloc>
-      <yloc>235</yloc>
+      <xloc>1824</xloc>
+      <yloc>416</yloc>
       <width>922</width>
       <heigth>593</heigth>
       <fontname>Segoe UI</fontname>
@@ -684,8 +684,8 @@ ANSI version that would work with all DBs (at least not without changing the nam
 
 
 </note>
-      <xloc>2535</xloc>
-      <yloc>-133</yloc>
+      <xloc>2576</xloc>
+      <yloc>48</yloc>
       <width>651</width>
       <heigth>348</heigth>
       <fontname>Segoe UI</fontname>
@@ -709,7 +709,7 @@ ANSI version that would work with all DBs (at least not without changing the nam
     <server/>
     <type>HYPERSONIC</type>
     <access>JNDI</access>
-    <database>Hibernate</database>
+    <database>hibernate</database>
     <port>1521</port>
     <username/>
     <password>Encrypted </password>
@@ -1074,8 +1074,8 @@ ANSI version that would work with all DBs (at least not without changing the nam
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1367</xloc>
-      <yloc>219</yloc>
+      <xloc>1392</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1113,8 +1113,8 @@ ANSI version that would work with all DBs (at least not without changing the nam
       </output>
     </remotesteps>
     <GUI>
-      <xloc>359</xloc>
-      <yloc>139</yloc>
+      <xloc>384</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1152,8 +1152,8 @@ ANSI version that would work with all DBs (at least not without changing the nam
       </output>
     </remotesteps>
     <GUI>
-      <xloc>375</xloc>
-      <yloc>427</yloc>
+      <xloc>400</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1207,8 +1207,8 @@ ANSI version that would work with all DBs (at least not without changing the nam
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1079</xloc>
-      <yloc>315</yloc>
+      <xloc>1104</xloc>
+      <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1238,8 +1238,8 @@ ANSI version that would work with all DBs (at least not without changing the nam
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1367</xloc>
-      <yloc>155</yloc>
+      <xloc>1392</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1299,8 +1299,8 @@ var time_key =
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2215</xloc>
-      <yloc>651</yloc>
+      <xloc>2240</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1353,8 +1353,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2103</xloc>
-      <yloc>571</yloc>
+      <xloc>2128</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1390,8 +1390,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2119</xloc>
-      <yloc>651</yloc>
+      <xloc>2144</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1424,8 +1424,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>631</xloc>
-      <yloc>139</yloc>
+      <xloc>656</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1462,8 +1462,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2903</xloc>
-      <yloc>155</yloc>
+      <xloc>2928</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1564,8 +1564,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>471</xloc>
-      <yloc>427</yloc>
+      <xloc>496</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1666,8 +1666,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>455</xloc>
-      <yloc>139</yloc>
+      <xloc>480</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1797,8 +1797,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1367</xloc>
-      <yloc>635</yloc>
+      <xloc>1392</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1841,8 +1841,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>551</xloc>
-      <yloc>139</yloc>
+      <xloc>576</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1885,8 +1885,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1879</xloc>
-      <yloc>571</yloc>
+      <xloc>1904</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1929,8 +1929,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1879</xloc>
-      <yloc>651</yloc>
+      <xloc>1904</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1973,8 +1973,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1879</xloc>
-      <yloc>763</yloc>
+      <xloc>1904</xloc>
+      <yloc>944</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2012,8 +2012,8 @@ var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1367</xloc>
-      <yloc>315</yloc>
+      <xloc>1392</xloc>
+      <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2131,8 +2131,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2775</xloc>
-      <yloc>43</yloc>
+      <xloc>2800</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2166,8 +2166,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2007</xloc>
-      <yloc>571</yloc>
+      <xloc>2032</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2206,8 +2206,45 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1623</xloc>
-      <yloc>331</yloc>
+      <xloc>1648</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Join rows (cartesian product)</name>
+    <type>JoinRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <cache_size>500</cache_size>
+    <main>lookup with time fields</main>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue/>
+        <function>=</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2800</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2241,8 +2278,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2007</xloc>
-      <yloc>651</yloc>
+      <xloc>2032</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2281,8 +2318,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1623</xloc>
-      <yloc>155</yloc>
+      <xloc>1648</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2437,8 +2474,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2407</xloc>
-      <yloc>651</yloc>
+      <xloc>2432</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2462,8 +2499,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>647</xloc>
-      <yloc>219</yloc>
+      <xloc>672</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2487,8 +2524,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>663</xloc>
-      <yloc>555</yloc>
+      <xloc>688</xloc>
+      <yloc>736</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2522,8 +2559,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2007</xloc>
-      <yloc>763</yloc>
+      <xloc>2032</xloc>
+      <yloc>944</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2601,8 +2638,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1623</xloc>
-      <yloc>235</yloc>
+      <xloc>1648</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2643,8 +2680,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2615</xloc>
-      <yloc>651</yloc>
+      <xloc>2640</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2675,8 +2712,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1367</xloc>
-      <yloc>491</yloc>
+      <xloc>1392</xloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2729,8 +2766,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>727</xloc>
-      <yloc>427</yloc>
+      <xloc>752</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2779,8 +2816,8 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>599</xloc>
-      <yloc>427</yloc>
+      <xloc>624</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2817,8 +2854,8 @@ GROUP BY INST_ID</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>231</xloc>
-      <yloc>139</yloc>
+      <xloc>256</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2854,8 +2891,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>247</xloc>
-      <yloc>427</yloc>
+      <xloc>272</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2978,8 +3015,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>3063</xloc>
-      <yloc>267</yloc>
+      <xloc>3088</xloc>
+      <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3102,8 +3139,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>3063</xloc>
-      <yloc>59</yloc>
+      <xloc>3088</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3140,8 +3177,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1079</xloc>
-      <yloc>187</yloc>
+      <xloc>1104</xloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3173,8 +3210,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1367</xloc>
-      <yloc>395</yloc>
+      <xloc>1392</xloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3231,8 +3268,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1623</xloc>
-      <yloc>635</yloc>
+      <xloc>1648</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3309,8 +3346,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1479</xloc>
-      <yloc>635</yloc>
+      <xloc>1504</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3359,8 +3396,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1623</xloc>
-      <yloc>539</yloc>
+      <xloc>1648</xloc>
+      <yloc>720</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3401,8 +3438,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1623</xloc>
-      <yloc>427</yloc>
+      <xloc>1648</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3453,8 +3490,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>727</xloc>
-      <yloc>139</yloc>
+      <xloc>752</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3505,8 +3542,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>855</xloc>
-      <yloc>427</yloc>
+      <xloc>880</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3573,8 +3610,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2615</xloc>
-      <yloc>155</yloc>
+      <xloc>2640</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3605,45 +3642,8 @@ GROUP BY INST_ID, MESSAGE_NAME</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2615</xloc>
-      <yloc>43</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Join rows (cartesian product)</name>
-    <type>JoinRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <cache_size>500</cache_size>
-    <main>lookup with time fields</main>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue/>
-        <function>=</function>
-        <rightvalue/>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2775</xloc>
-      <yloc>155</yloc>
+      <xloc>2640</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

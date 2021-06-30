@@ -484,7 +484,7 @@
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Execute createProAudirTable</name>
+      <name>Execute createProAuditTable</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
@@ -510,7 +510,7 @@
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
       <logging_remote_work>N</logging_remote_work>
-      <run_configuration/>
+      <run_configuration>Pentaho local</run_configuration>
       <suppress_result_data>N</suppress_result_data>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -732,7 +732,7 @@
     </hop>
     <hop>
       <from>Table pro_audit exists?</from>
-      <to>Execute createProAudirTable</to>
+      <to>Execute createProAuditTable</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -749,7 +749,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Execute createProAudirTable</from>
+      <from>Execute createProAuditTable</from>
       <to>Table pentaho_ce_audit exists?</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -858,6 +858,32 @@
     </hop>
   </hops>
   <notepads>
+    <notepad>
+      <note>===========================================
+Update: 30 June 2021
+Ibrahim Bolarinwa
+https://github.com/Ibby-B
+Fixed Pro Audit table existence check
+===========================================</note>
+      <xloc>0</xloc>
+      <yloc>272</yloc>
+      <width>355</width>
+      <heigth>106</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <attributes/>
 </job>

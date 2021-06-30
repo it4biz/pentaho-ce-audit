@@ -435,6 +435,32 @@
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
+    <notepad>
+      <note>===========================================
+Update: 30 June 2021
+Ibrahim Bolarinwa
+https://github.com/Ibby-B
+MySQL Compatibility
+===========================================</note>
+      <xloc>0</xloc>
+      <yloc>0</yloc>
+      <width>355</width>
+      <heigth>106</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <connection>
     <name>Hibernate</name>
@@ -568,8 +594,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>384</yloc>
+      <xloc>512</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -597,8 +623,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>779</xloc>
-      <yloc>308</yloc>
+      <xloc>768</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -783,8 +809,8 @@ var sql = 'CREATE TABLE PENTAHO_CE_AUDIT( '+
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>77</yloc>
+      <xloc>512</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -918,7 +944,7 @@ var sql = 'CREATE TABLE "PENTAHO_CE_AUDIT"( '+
     </remotesteps>
     <GUI>
       <xloc>512</xloc>
-      <yloc>288</yloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1029,8 +1055,8 @@ var sql = 'CREATE TABLE "PENTAHO_CE_AUDIT"( '+
       </output>
     </remotesteps>
     <GUI>
-      <xloc>774</xloc>
-      <yloc>170</yloc>
+      <xloc>768</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

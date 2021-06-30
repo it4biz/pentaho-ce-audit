@@ -386,8 +386,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>201</xloc>
-      <yloc>317</yloc>
+      <xloc>208</xloc>
+      <yloc>320</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -426,8 +426,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>450</xloc>
-      <yloc>305</yloc>
+      <xloc>432</xloc>
+      <yloc>320</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
@@ -497,6 +497,32 @@
     </hop>
   </hops>
   <notepads>
+    <notepad>
+      <note>===========================================
+Update: 30 June 2021
+Ibrahim Bolarinwa
+https://github.com/Ibby-B
+Removed Quotes from table names to make them more universal
+===========================================</note>
+      <xloc>0</xloc>
+      <yloc>0</yloc>
+      <width>355</width>
+      <heigth>106</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <attributes/>
 </job>

@@ -434,6 +434,32 @@
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
+    <notepad>
+      <note>===========================================
+Update: 30 June 2021
+Ibrahim Bolarinwa
+https://github.com/Ibby-B
+MySQL Compatibility
+===========================================</note>
+      <xloc>0</xloc>
+      <yloc>16</yloc>
+      <width>355</width>
+      <heigth>106</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <connection>
     <name>Hibernate</name>
@@ -878,7 +904,7 @@ var sql =
     </remotesteps>
     <GUI>
       <xloc>544</xloc>
-      <yloc>464</yloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

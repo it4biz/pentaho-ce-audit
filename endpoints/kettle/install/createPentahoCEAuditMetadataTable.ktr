@@ -435,6 +435,32 @@
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
+    <notepad>
+      <note>===========================================
+Update: 30 June 2021
+Ibrahim Bolarinwa
+https://github.com/Ibby-B
+MySQL Compatibility
+===========================================</note>
+      <xloc>0</xloc>
+      <yloc>0</yloc>
+      <width>355</width>
+      <heigth>106</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <connection>
     <name>Hibernate</name>
@@ -568,7 +594,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>416</xloc>
+      <xloc>496</xloc>
       <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
@@ -597,8 +623,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>781</xloc>
-      <yloc>326</yloc>
+      <xloc>704</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -772,6 +798,56 @@ var sql = 'CREATE TABLE "PENTAHO_CE_AUDIT_METADATA"( '+
     </GUI>
   </step>
   <step>
+    <name>SQL for MySQL</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+var sql = 'CREATE TABLE `PENTAHO_CE_AUDIT_METADATA` ( '+
+'  `LAST_UPDATE`  TIMESTAMP '+
+', `NUMBER_ROWS` INTEGER '+
+', `USER` varchar(256)) ENGINE=MyISAM DEFAULT CHARSET=utf8';
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>sql</name>
+        <rename>sql</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>SQL for PostgreSQL</name>
     <type>ScriptValueMod</type>
     <description/>
@@ -818,8 +894,8 @@ var sql = 'CREATE TABLE "PENTAHO_CE_AUDIT_METADATA"( '+
       </output>
     </remotesteps>
     <GUI>
-      <xloc>494</xloc>
-      <yloc>260</yloc>
+      <xloc>496</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -889,8 +965,8 @@ var sql = 'CREATE TABLE "PENTAHO_CE_AUDIT_METADATA"( '+
       </output>
     </remotesteps>
     <GUI>
-      <xloc>943</xloc>
-      <yloc>188</yloc>
+      <xloc>896</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -930,8 +1006,8 @@ var sql = 'CREATE TABLE "PENTAHO_CE_AUDIT_METADATA"( '+
       </output>
     </remotesteps>
     <GUI>
-      <xloc>776</xloc>
-      <yloc>188</yloc>
+      <xloc>704</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -964,56 +1040,6 @@ var sql = 'CREATE TABLE "PENTAHO_CE_AUDIT_METADATA"( '+
     <GUI>
       <xloc>87</xloc>
       <yloc>189</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>SQL for MySQL</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>
-      <jsScript>
-        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>//Script here
-
-var sql = 'CREATE TABLE `PENTAHO_CE_AUDIT_METADATA` ( '+
-'  `LAST_UPDATE`  TIMESTAMP '+
-', `NUMBER_ROWS` INTEGER '+
-', `USER` varchar(256)) ENGINE=MyISAM DEFAULT CHARSET=utf8';
-</jsScript_script>
-      </jsScript>
-    </jsScripts>
-    <fields>
-      <field>
-        <name>sql</name>
-        <rename>sql</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>512</xloc>
-      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
