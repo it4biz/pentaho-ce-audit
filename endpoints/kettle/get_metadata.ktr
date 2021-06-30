@@ -546,11 +546,11 @@ MySQL Compatibility
     </hop>
     <hop>
       <from>Dynamic SQL row</from>
-      <to>Select values and set Metadata meta-data</to>
+      <to>Select values</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values and set Metadata meta-data</from>
+      <from>Select values</from>
       <to>OUTPUT</to>
       <enabled>Y</enabled>
     </hop>
@@ -589,6 +589,39 @@ MySQL Compatibility
     </remotesteps>
     <GUI>
       <xloc>208</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Dynamic SQL row</name>
+    <type>DynamicSQLRow</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Hibernate</connection>
+    <rowlimit>1</rowlimit>
+    <sql>SELECT TIMESTAMP '1970-01-01' AS LAST_UPDATE , 0 AS NUMBER_ROWS, 'Fake_User' AS USERONI
+</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>N</replace_vars>
+    <sql_fieldname>sql</sql_fieldname>
+    <query_only_on_change>N</query_only_on_change>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>528</xloc>
       <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
@@ -708,6 +741,71 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
     </remotesteps>
     <GUI>
       <xloc>112</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>OUTPUT</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>864</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>LAST_UPDATE</name>
+        <rename>Last update</rename>
+      </field>
+      <field>
+        <name>NUMBER_ROWS</name>
+        <rename>Number rows</rename>
+      </field>
+      <field>
+        <name>USERONI</name>
+        <rename>User</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
       <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
@@ -844,121 +942,6 @@ var sql =
     </remotesteps>
     <GUI>
       <xloc>64</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Dynamic SQL row</name>
-    <type>DynamicSQLRow</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>Hibernate</connection>
-    <rowlimit>1</rowlimit>
-    <sql>SELECT date '1970-01-01' AS LAST_UPDATE , 0 AS NUMBER_ROWS, 'Fake_User' AS USERONI
-</sql>
-    <outer_join>N</outer_join>
-    <replace_vars>N</replace_vars>
-    <sql_fieldname>sql</sql_fieldname>
-    <query_only_on_change>N</query_only_on_change>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>528</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values and set Metadata meta-data</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>LAST_UPDATE</name>
-        <rename>Last update</rename>
-      </field>
-      <field>
-        <name>NUMBER_ROWS</name>
-        <rename>Number rows</rename>
-      </field>
-      <field>
-        <name>USERONI</name>
-        <rename>User</rename>
-      </field>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>Last update</name>
-        <rename>Last update</rename>
-        <type>Timestamp</type>
-        <length>6</length>
-        <precision>-2</precision>
-        <conversion_mask>yyyy-MM-dd HH:mm:ss</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>704</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>OUTPUT</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>864</xloc>
       <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
