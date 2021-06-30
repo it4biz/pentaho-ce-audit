@@ -709,7 +709,7 @@ ANSI version that would work with all DBs (at least not without changing the nam
     <server/>
     <type>HYPERSONIC</type>
     <access>JNDI</access>
-    <database>hibernate</database>
+    <database>Hibernate</database>
     <port>1521</port>
     <username/>
     <password>Encrypted </password>
