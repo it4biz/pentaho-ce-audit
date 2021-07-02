@@ -11,6 +11,11 @@
 	<static-paths>
 		<static-path url="/pentaho-ce-audit/static" localFolder="static"/>
 		<static-path url="/pentaho-ce-audit/resources" localFolder="resources"/>
+		<!--
+			Updated by https://github.com/Ibby-B 02/July/2021
+			added path as static path to support mondrian schema installation
+			--> 
+		<static-path url="/pentaho-ce-audit/schemas" localFolder="schemas"/>
 	</static-paths>
 	<content-types>
 		<content-type>

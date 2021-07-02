@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <Schema name="Pentaho CE Audit">
   <Cube name="Pentaho CE Audit" visible="true" cache="true" enabled="true">
     <Table name="PENTAHO_CE_AUDIT">
