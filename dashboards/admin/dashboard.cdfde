@@ -67,13 +67,13 @@
           },
           {
             "name" : "silent",
-            "value" : "false",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "false"
           },
           {
             "name" : "clearsBeforePreExecution",
-            "value" : "true",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "true"
           },
           {
             "name" : "colors",
@@ -127,13 +127,13 @@
           },
           {
             "name" : "renderMode",
-            "value" : "total",
-            "type" : "renderModeCustom"
+            "type" : "renderModeCustom",
+            "value" : "total"
           },
           {
             "name" : "dataAdditiveMode",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "animate",
@@ -202,8 +202,8 @@
           },
           {
             "name" : "baseAxisFont",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "baseAxisGrid",
@@ -212,13 +212,13 @@
           },
           {
             "name" : "baseAxisLabelDesiredAngles",
-            "value" : "[]",
-            "type" : "Array"
+            "type" : "Array",
+            "value" : "[]"
           },
           {
             "name" : "baseAxisLabelRotationDirection",
-            "value" : "",
-            "type" : "cccBaseAxisLabelRotationDirectionCustom"
+            "type" : "cccBaseAxisLabelRotationDirectionCustom",
+            "value" : ""
           },
           {
             "name" : "baseAxisLabelSpacingMin",
@@ -292,8 +292,8 @@
           },
           {
             "name" : "baseAxisTitleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "baseAxisTooltipAutoContent",
@@ -333,7 +333,7 @@
           {
             "name" : "clickAction",
             "type" : "JavaScript",
-            "value" : "function click(chart) {\n \n  console.log(chart);\n \n var chartValueQuantity=chart.vars.category.value;\n// Dashboards.fireChange(\u0022pUser\u0022, user)\n \n alert(chartValueQuantity);\n \n //alert(quantity);\n \n //console.log(quantity);\n \n} "
+            "value" : "function click(chart) {\n \n  //console.log(chart);\n \n //var chartValueQuantity=chart.vars.value.value;\n// Dashboards.fireChange(\u0022pUser\u0022, user)\n \n //alert(chartValueQuantity);\n \n //alert(quantity);\n \n //console.log(quantity);\n \n} "
           },
           {
             "name" : "color2AxisColors",
@@ -367,8 +367,8 @@
           },
           {
             "name" : "color2AxisPreserveMap",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "color2AxisTransform",
@@ -382,8 +382,8 @@
           },
           {
             "name" : "colorPreserveMap",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "colorRole",
@@ -522,8 +522,8 @@
           },
           {
             "name" : "legendItemCountMax",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "legendItemPadding",
@@ -547,8 +547,8 @@
           },
           {
             "name" : "legendOverflow",
-            "value" : "",
-            "type" : "cccLegendOverflowCustom"
+            "type" : "cccLegendOverflowCustom",
+            "value" : ""
           },
           {
             "name" : "legendPaddings",
@@ -647,8 +647,8 @@
           },
           {
             "name" : "ortho2AxisDomainAlign",
-            "value" : "center",
-            "type" : "cccOrtho2AxisDomainAlignCustom"
+            "type" : "cccOrtho2AxisDomainAlignCustom",
+            "value" : "center"
           },
           {
             "name" : "ortho2AxisDomainRoundMode",
@@ -662,8 +662,8 @@
           },
           {
             "name" : "ortho2AxisFixedLength",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisFixedMax",
@@ -677,8 +677,8 @@
           },
           {
             "name" : "ortho2AxisFont",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisGrid",
@@ -712,18 +712,18 @@
           },
           {
             "name" : "ortho2AxisPreserveRatio",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisPreserveTickAlignment",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisRatio",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisSize",
@@ -802,8 +802,8 @@
           },
           {
             "name" : "ortho2AxisTitleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisVisible",
@@ -822,8 +822,8 @@
           },
           {
             "name" : "orthoAxisDomainAlign",
-            "value" : "center",
-            "type" : "cccOrthoAxisDomainAlignCustom"
+            "type" : "cccOrthoAxisDomainAlignCustom",
+            "value" : "center"
           },
           {
             "name" : "orthoAxisDomainRoundMode",
@@ -837,8 +837,8 @@
           },
           {
             "name" : "orthoAxisFixedLength",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "orthoAxisFixedMax",
@@ -852,8 +852,8 @@
           },
           {
             "name" : "orthoAxisFont",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "orthoAxisGrid",
@@ -887,18 +887,18 @@
           },
           {
             "name" : "orthoAxisPreserveRatio",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "orthoAxisPreserveTickAlignment",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "orthoAxisRatio",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "orthoAxisSize",
@@ -977,8 +977,8 @@
           },
           {
             "name" : "orthoAxisTitleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "orthoAxisVisible",
@@ -1017,8 +1017,8 @@
           },
           {
             "name" : "plot2AreasFillOpacity",
-            "value" : 0.5,
-            "type" : "Float"
+            "type" : "Float",
+            "value" : 0.5
           },
           {
             "name" : "plot2AreasVisible",
@@ -1102,8 +1102,8 @@
           },
           {
             "name" : "plotSizeMin",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "pointingMode",
@@ -1112,13 +1112,13 @@
           },
           {
             "name" : "preserveLayout",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "readers",
-            "value" : "[]",
-            "type" : "Array"
+            "type" : "Array",
+            "value" : "[]"
           },
           {
             "name" : "renderCallback",
@@ -1127,8 +1127,8 @@
           },
           {
             "name" : "renderedCallback",
-            "value" : "",
-            "type" : "JavaScript"
+            "type" : "JavaScript",
+            "value" : ""
           },
           {
             "name" : "selectable",
@@ -1152,23 +1152,23 @@
           },
           {
             "name" : "slidingWindow",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "slidingWindowDimension",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "slidingWindowLength",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "slidingWindowSelect",
-            "value" : "",
-            "type" : "JavaScript"
+            "type" : "JavaScript",
+            "value" : ""
           },
           {
             "name" : "smallAspectRatio",
@@ -1237,8 +1237,8 @@
           },
           {
             "name" : "smallTitleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "smallWidth",
@@ -1297,8 +1297,8 @@
           },
           {
             "name" : "titleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "tooltipArrowVisible",
@@ -1357,8 +1357,8 @@
           },
           {
             "name" : "trendAreasFillOpacity",
-            "value" : 0.5,
-            "type" : "Float"
+            "type" : "Float",
+            "value" : 0.5
           },
           {
             "name" : "trendAreasVisible",
@@ -1452,8 +1452,8 @@
           },
           {
             "name" : "valuesNormalized",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "valuesOptimizeLegibility",
@@ -1526,13 +1526,13 @@
           },
           {
             "name" : "silent",
-            "value" : "false",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "false"
           },
           {
             "name" : "clearsBeforePreExecution",
-            "value" : "true",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "true"
           },
           {
             "name" : "colors",
@@ -1586,13 +1586,13 @@
           },
           {
             "name" : "renderMode",
-            "value" : "total",
-            "type" : "renderModeCustom"
+            "type" : "renderModeCustom",
+            "value" : "total"
           },
           {
             "name" : "dataAdditiveMode",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "animate",
@@ -1661,8 +1661,8 @@
           },
           {
             "name" : "baseAxisFont",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "baseAxisGrid",
@@ -1671,13 +1671,13 @@
           },
           {
             "name" : "baseAxisLabelDesiredAngles",
-            "value" : "[]",
-            "type" : "Array"
+            "type" : "Array",
+            "value" : "[]"
           },
           {
             "name" : "baseAxisLabelRotationDirection",
-            "value" : "",
-            "type" : "cccBaseAxisLabelRotationDirectionCustom"
+            "type" : "cccBaseAxisLabelRotationDirectionCustom",
+            "value" : ""
           },
           {
             "name" : "baseAxisLabelSpacingMin",
@@ -1751,8 +1751,8 @@
           },
           {
             "name" : "baseAxisTitleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "baseAxisTooltipAutoContent",
@@ -1826,8 +1826,8 @@
           },
           {
             "name" : "color2AxisPreserveMap",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "color2AxisTransform",
@@ -1841,13 +1841,13 @@
           },
           {
             "name" : "colorPreserveMap",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "colorRole",
             "type" : "String",
-            "value" : ""
+            "value" : "category"
           },
           {
             "name" : "colorTransform",
@@ -1981,8 +1981,8 @@
           },
           {
             "name" : "legendItemCountMax",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "legendItemPadding",
@@ -2006,8 +2006,8 @@
           },
           {
             "name" : "legendOverflow",
-            "value" : "",
-            "type" : "cccLegendOverflowCustom"
+            "type" : "cccLegendOverflowCustom",
+            "value" : ""
           },
           {
             "name" : "legendPaddings",
@@ -2106,8 +2106,8 @@
           },
           {
             "name" : "ortho2AxisDomainAlign",
-            "value" : "center",
-            "type" : "cccOrtho2AxisDomainAlignCustom"
+            "type" : "cccOrtho2AxisDomainAlignCustom",
+            "value" : "center"
           },
           {
             "name" : "ortho2AxisDomainRoundMode",
@@ -2121,8 +2121,8 @@
           },
           {
             "name" : "ortho2AxisFixedLength",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisFixedMax",
@@ -2136,8 +2136,8 @@
           },
           {
             "name" : "ortho2AxisFont",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisGrid",
@@ -2171,18 +2171,18 @@
           },
           {
             "name" : "ortho2AxisPreserveRatio",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisPreserveTickAlignment",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisRatio",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisSize",
@@ -2261,8 +2261,8 @@
           },
           {
             "name" : "ortho2AxisTitleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisVisible",
@@ -2281,8 +2281,8 @@
           },
           {
             "name" : "orthoAxisDomainAlign",
-            "value" : "center",
-            "type" : "cccOrthoAxisDomainAlignCustom"
+            "type" : "cccOrthoAxisDomainAlignCustom",
+            "value" : "center"
           },
           {
             "name" : "orthoAxisDomainRoundMode",
@@ -2296,8 +2296,8 @@
           },
           {
             "name" : "orthoAxisFixedLength",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "orthoAxisFixedMax",
@@ -2311,8 +2311,8 @@
           },
           {
             "name" : "orthoAxisFont",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "orthoAxisGrid",
@@ -2346,18 +2346,18 @@
           },
           {
             "name" : "orthoAxisPreserveRatio",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "orthoAxisPreserveTickAlignment",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "orthoAxisRatio",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "orthoAxisSize",
@@ -2436,8 +2436,8 @@
           },
           {
             "name" : "orthoAxisTitleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "orthoAxisVisible",
@@ -2476,8 +2476,8 @@
           },
           {
             "name" : "plot2AreasFillOpacity",
-            "value" : 0.5,
-            "type" : "Float"
+            "type" : "Float",
+            "value" : 0.5
           },
           {
             "name" : "plot2AreasVisible",
@@ -2561,8 +2561,8 @@
           },
           {
             "name" : "plotSizeMin",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "pointingMode",
@@ -2571,13 +2571,13 @@
           },
           {
             "name" : "preserveLayout",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "readers",
-            "value" : "[]",
-            "type" : "Array"
+            "type" : "Array",
+            "value" : "[]"
           },
           {
             "name" : "renderCallback",
@@ -2586,8 +2586,8 @@
           },
           {
             "name" : "renderedCallback",
-            "value" : "",
-            "type" : "JavaScript"
+            "type" : "JavaScript",
+            "value" : ""
           },
           {
             "name" : "selectable",
@@ -2611,23 +2611,23 @@
           },
           {
             "name" : "slidingWindow",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "slidingWindowDimension",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "slidingWindowLength",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "slidingWindowSelect",
-            "value" : "",
-            "type" : "JavaScript"
+            "type" : "JavaScript",
+            "value" : ""
           },
           {
             "name" : "smallAspectRatio",
@@ -2696,8 +2696,8 @@
           },
           {
             "name" : "smallTitleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "smallWidth",
@@ -2756,8 +2756,8 @@
           },
           {
             "name" : "titleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "tooltipArrowVisible",
@@ -2816,8 +2816,8 @@
           },
           {
             "name" : "trendAreasFillOpacity",
-            "value" : 0.5,
-            "type" : "Float"
+            "type" : "Float",
+            "value" : 0.5
           },
           {
             "name" : "trendAreasVisible",
@@ -2911,8 +2911,8 @@
           },
           {
             "name" : "valuesNormalized",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "valuesOptimizeLegibility",
@@ -2985,13 +2985,13 @@
           },
           {
             "name" : "silent",
-            "value" : "false",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "false"
           },
           {
             "name" : "clearsBeforePreExecution",
-            "value" : "true",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "true"
           },
           {
             "name" : "colors",
@@ -3045,13 +3045,13 @@
           },
           {
             "name" : "renderMode",
-            "value" : "total",
-            "type" : "renderModeCustom"
+            "type" : "renderModeCustom",
+            "value" : "total"
           },
           {
             "name" : "dataAdditiveMode",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "animate",
@@ -3060,8 +3060,8 @@
           },
           {
             "name" : "areasFillOpacity",
-            "value" : 0.5,
-            "type" : "Float"
+            "type" : "Float",
+            "value" : 0.5
           },
           {
             "name" : "areasVisible",
@@ -3110,8 +3110,8 @@
           },
           {
             "name" : "baseAxisDomainAlign",
-            "value" : "center",
-            "type" : "cccBaseAxisDomainAlignCustom"
+            "type" : "cccBaseAxisDomainAlignCustom",
+            "value" : "center"
           },
           {
             "name" : "baseAxisDomainRoundMode",
@@ -3130,8 +3130,8 @@
           },
           {
             "name" : "baseAxisFixedLength",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "baseAxisFixedMax",
@@ -3145,8 +3145,8 @@
           },
           {
             "name" : "baseAxisFont",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "baseAxisGrid",
@@ -3155,13 +3155,13 @@
           },
           {
             "name" : "baseAxisLabelDesiredAngles",
-            "value" : "[]",
-            "type" : "Array"
+            "type" : "Array",
+            "value" : "[]"
           },
           {
             "name" : "baseAxisLabelRotationDirection",
-            "value" : "",
-            "type" : "cccBaseAxisLabelRotationDirectionCustom"
+            "type" : "cccBaseAxisLabelRotationDirectionCustom",
+            "value" : ""
           },
           {
             "name" : "baseAxisLabelSpacingMin",
@@ -3195,18 +3195,18 @@
           },
           {
             "name" : "baseAxisPreserveRatio",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "baseAxisPreserveTickAlignment",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "baseAxisRatio",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "baseAxisSize",
@@ -3285,8 +3285,8 @@
           },
           {
             "name" : "baseAxisTitleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "baseAxisTooltipAutoContent",
@@ -3365,8 +3365,8 @@
           },
           {
             "name" : "color2AxisPreserveMap",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "color2AxisTransform",
@@ -3380,8 +3380,8 @@
           },
           {
             "name" : "colorPreserveMap",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "colorRole",
@@ -3525,8 +3525,8 @@
           },
           {
             "name" : "legendItemCountMax",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "legendItemPadding",
@@ -3550,8 +3550,8 @@
           },
           {
             "name" : "legendOverflow",
-            "value" : "",
-            "type" : "cccLegendOverflowCustom"
+            "type" : "cccLegendOverflowCustom",
+            "value" : ""
           },
           {
             "name" : "legendPaddings",
@@ -3650,8 +3650,8 @@
           },
           {
             "name" : "ortho2AxisDomainAlign",
-            "value" : "center",
-            "type" : "cccOrtho2AxisDomainAlignCustom"
+            "type" : "cccOrtho2AxisDomainAlignCustom",
+            "value" : "center"
           },
           {
             "name" : "ortho2AxisDomainRoundMode",
@@ -3665,8 +3665,8 @@
           },
           {
             "name" : "ortho2AxisFixedLength",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisFixedMax",
@@ -3680,8 +3680,8 @@
           },
           {
             "name" : "ortho2AxisFont",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisGrid",
@@ -3715,18 +3715,18 @@
           },
           {
             "name" : "ortho2AxisPreserveRatio",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisPreserveTickAlignment",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisRatio",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisSize",
@@ -3805,8 +3805,8 @@
           },
           {
             "name" : "ortho2AxisTitleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisVisible",
@@ -3825,8 +3825,8 @@
           },
           {
             "name" : "orthoAxisDomainAlign",
-            "value" : "center",
-            "type" : "cccOrthoAxisDomainAlignCustom"
+            "type" : "cccOrthoAxisDomainAlignCustom",
+            "value" : "center"
           },
           {
             "name" : "orthoAxisDomainRoundMode",
@@ -3840,8 +3840,8 @@
           },
           {
             "name" : "orthoAxisFixedLength",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "orthoAxisFixedMax",
@@ -3855,8 +3855,8 @@
           },
           {
             "name" : "orthoAxisFont",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "orthoAxisGrid",
@@ -3890,18 +3890,18 @@
           },
           {
             "name" : "orthoAxisPreserveRatio",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "orthoAxisPreserveTickAlignment",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "orthoAxisRatio",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "orthoAxisSize",
@@ -3980,8 +3980,8 @@
           },
           {
             "name" : "orthoAxisTitleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "orthoAxisVisible",
@@ -4010,8 +4010,8 @@
           },
           {
             "name" : "plot2AreasFillOpacity",
-            "value" : 0.5,
-            "type" : "Float"
+            "type" : "Float",
+            "value" : 0.5
           },
           {
             "name" : "plot2AreasVisible",
@@ -4095,8 +4095,8 @@
           },
           {
             "name" : "plotSizeMin",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "pointingMode",
@@ -4105,13 +4105,13 @@
           },
           {
             "name" : "preserveLayout",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "readers",
-            "value" : "[]",
-            "type" : "Array"
+            "type" : "Array",
+            "value" : "[]"
           },
           {
             "name" : "renderCallback",
@@ -4120,8 +4120,8 @@
           },
           {
             "name" : "renderedCallback",
-            "value" : "",
-            "type" : "JavaScript"
+            "type" : "JavaScript",
+            "value" : ""
           },
           {
             "name" : "selectable",
@@ -4145,23 +4145,23 @@
           },
           {
             "name" : "slidingWindow",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "slidingWindowDimension",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "slidingWindowLength",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "slidingWindowSelect",
-            "value" : "",
-            "type" : "JavaScript"
+            "type" : "JavaScript",
+            "value" : ""
           },
           {
             "name" : "smallAspectRatio",
@@ -4230,8 +4230,8 @@
           },
           {
             "name" : "smallTitleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "smallWidth",
@@ -4285,8 +4285,8 @@
           },
           {
             "name" : "titleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "tooltipArrowVisible",
@@ -4345,8 +4345,8 @@
           },
           {
             "name" : "trendAreasFillOpacity",
-            "value" : 0.5,
-            "type" : "Float"
+            "type" : "Float",
+            "value" : 0.5
           },
           {
             "name" : "trendAreasVisible",
@@ -4499,13 +4499,13 @@
           },
           {
             "name" : "silent",
-            "value" : "false",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "false"
           },
           {
             "name" : "clearsBeforePreExecution",
-            "value" : "true",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "true"
           },
           {
             "name" : "colors",
@@ -4559,13 +4559,13 @@
           },
           {
             "name" : "renderMode",
-            "value" : "total",
-            "type" : "renderModeCustom"
+            "type" : "renderModeCustom",
+            "value" : "total"
           },
           {
             "name" : "dataAdditiveMode",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "animate",
@@ -4634,8 +4634,8 @@
           },
           {
             "name" : "baseAxisFont",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "baseAxisGrid",
@@ -4644,13 +4644,13 @@
           },
           {
             "name" : "baseAxisLabelDesiredAngles",
-            "value" : "[]",
-            "type" : "Array"
+            "type" : "Array",
+            "value" : "[]"
           },
           {
             "name" : "baseAxisLabelRotationDirection",
-            "value" : "",
-            "type" : "cccBaseAxisLabelRotationDirectionCustom"
+            "type" : "cccBaseAxisLabelRotationDirectionCustom",
+            "value" : ""
           },
           {
             "name" : "baseAxisLabelSpacingMin",
@@ -4724,8 +4724,8 @@
           },
           {
             "name" : "baseAxisTitleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "baseAxisTooltipAutoContent",
@@ -4799,8 +4799,8 @@
           },
           {
             "name" : "color2AxisPreserveMap",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "color2AxisTransform",
@@ -4814,8 +4814,8 @@
           },
           {
             "name" : "colorPreserveMap",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "colorRole",
@@ -4954,8 +4954,8 @@
           },
           {
             "name" : "legendItemCountMax",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "legendItemPadding",
@@ -4979,8 +4979,8 @@
           },
           {
             "name" : "legendOverflow",
-            "value" : "",
-            "type" : "cccLegendOverflowCustom"
+            "type" : "cccLegendOverflowCustom",
+            "value" : ""
           },
           {
             "name" : "legendPaddings",
@@ -5079,8 +5079,8 @@
           },
           {
             "name" : "ortho2AxisDomainAlign",
-            "value" : "center",
-            "type" : "cccOrtho2AxisDomainAlignCustom"
+            "type" : "cccOrtho2AxisDomainAlignCustom",
+            "value" : "center"
           },
           {
             "name" : "ortho2AxisDomainRoundMode",
@@ -5094,8 +5094,8 @@
           },
           {
             "name" : "ortho2AxisFixedLength",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisFixedMax",
@@ -5109,8 +5109,8 @@
           },
           {
             "name" : "ortho2AxisFont",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisGrid",
@@ -5144,18 +5144,18 @@
           },
           {
             "name" : "ortho2AxisPreserveRatio",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisPreserveTickAlignment",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisRatio",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisSize",
@@ -5234,8 +5234,8 @@
           },
           {
             "name" : "ortho2AxisTitleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "ortho2AxisVisible",
@@ -5254,8 +5254,8 @@
           },
           {
             "name" : "orthoAxisDomainAlign",
-            "value" : "center",
-            "type" : "cccOrthoAxisDomainAlignCustom"
+            "type" : "cccOrthoAxisDomainAlignCustom",
+            "value" : "center"
           },
           {
             "name" : "orthoAxisDomainRoundMode",
@@ -5269,8 +5269,8 @@
           },
           {
             "name" : "orthoAxisFixedLength",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "orthoAxisFixedMax",
@@ -5284,8 +5284,8 @@
           },
           {
             "name" : "orthoAxisFont",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "orthoAxisGrid",
@@ -5319,18 +5319,18 @@
           },
           {
             "name" : "orthoAxisPreserveRatio",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "orthoAxisPreserveTickAlignment",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "orthoAxisRatio",
-            "value" : "",
-            "type" : "Float"
+            "type" : "Float",
+            "value" : ""
           },
           {
             "name" : "orthoAxisSize",
@@ -5409,8 +5409,8 @@
           },
           {
             "name" : "orthoAxisTitleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "orthoAxisVisible",
@@ -5449,8 +5449,8 @@
           },
           {
             "name" : "plot2AreasFillOpacity",
-            "value" : 0.5,
-            "type" : "Float"
+            "type" : "Float",
+            "value" : 0.5
           },
           {
             "name" : "plot2AreasVisible",
@@ -5534,8 +5534,8 @@
           },
           {
             "name" : "plotSizeMin",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "pointingMode",
@@ -5544,13 +5544,13 @@
           },
           {
             "name" : "preserveLayout",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "readers",
-            "value" : "[]",
-            "type" : "Array"
+            "type" : "Array",
+            "value" : "[]"
           },
           {
             "name" : "renderCallback",
@@ -5559,8 +5559,8 @@
           },
           {
             "name" : "renderedCallback",
-            "value" : "",
-            "type" : "JavaScript"
+            "type" : "JavaScript",
+            "value" : ""
           },
           {
             "name" : "selectable",
@@ -5584,23 +5584,23 @@
           },
           {
             "name" : "slidingWindow",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "slidingWindowDimension",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "slidingWindowLength",
-            "value" : "",
-            "type" : "String"
+            "type" : "String",
+            "value" : ""
           },
           {
             "name" : "slidingWindowSelect",
-            "value" : "",
-            "type" : "JavaScript"
+            "type" : "JavaScript",
+            "value" : ""
           },
           {
             "name" : "smallAspectRatio",
@@ -5669,8 +5669,8 @@
           },
           {
             "name" : "smallTitleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "smallWidth",
@@ -5729,8 +5729,8 @@
           },
           {
             "name" : "titleVisible",
-            "value" : "",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : ""
           },
           {
             "name" : "tooltipArrowVisible",
@@ -5789,8 +5789,8 @@
           },
           {
             "name" : "trendAreasFillOpacity",
-            "value" : 0.5,
-            "type" : "Float"
+            "type" : "Float",
+            "value" : 0.5
           },
           {
             "name" : "trendAreasVisible",
@@ -5884,8 +5884,8 @@
           },
           {
             "name" : "valuesNormalized",
-            "value" : false,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : false
           },
           {
             "name" : "valuesOptimizeLegibility",
@@ -5975,8 +5975,8 @@
           },
           {
             "name" : "public",
-            "value" : "false",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "false"
           }
         ],
         "type" : "ComponentsParameter",
@@ -6008,8 +6008,8 @@
           },
           {
             "name" : "public",
-            "value" : "false",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "false"
           }
         ],
         "type" : "ComponentsParameter",
@@ -6041,8 +6041,8 @@
           },
           {
             "name" : "public",
-            "value" : "false",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "false"
           }
         ],
         "type" : "ComponentsParameter",
@@ -6074,8 +6074,8 @@
           },
           {
             "name" : "public",
-            "value" : "false",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "false"
           }
         ],
         "type" : "ComponentsParameter",
@@ -6107,8 +6107,8 @@
           },
           {
             "name" : "public",
-            "value" : "false",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "false"
           }
         ],
         "type" : "ComponentsParameter",
@@ -6140,8 +6140,8 @@
           },
           {
             "name" : "public",
-            "value" : "false",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "false"
           }
         ],
         "type" : "ComponentsParameter",
@@ -6197,8 +6197,8 @@
           },
           {
             "name" : "useFirstValue",
-            "value" : "true",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "true"
           },
           {
             "name" : "dataSource",
@@ -6305,8 +6305,8 @@
           },
           {
             "name" : "useFirstValue",
-            "value" : "true",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "true"
           },
           {
             "name" : "dataSource",
@@ -6432,8 +6432,8 @@
           },
           {
             "name" : "exportPage",
-            "value" : true,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : true
           },
           {
             "name" : "outputType",
@@ -6510,8 +6510,8 @@
           },
           {
             "name" : "exportPage",
-            "value" : true,
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : true
           },
           {
             "name" : "outputType",
@@ -6683,13 +6683,13 @@
           },
           {
             "name" : "silent",
-            "value" : "false",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "false"
           },
           {
             "name" : "clearsBeforePreExecution",
-            "value" : "true",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "true"
           },
           {
             "name" : "paginationType",
@@ -6718,8 +6718,8 @@
           },
           {
             "name" : "failureCallback",
-            "value" : "",
-            "type" : "JavaScript"
+            "type" : "JavaScript",
+            "value" : ""
           },
           {
             "name" : "preExecution",
@@ -6796,8 +6796,8 @@
           },
           {
             "name" : "asynchronousMode",
-            "value" : "true",
-            "type" : "Boolean"
+            "type" : "Boolean",
+            "value" : "true"
           },
           {
             "name" : "priority",
@@ -6827,12 +6827,12 @@
           {
             "name" : "postExecution",
             "type" : "JavaScript",
-            "value" : "function f() {\n    \n    if(lastUpdated[0])\n        $(\u0027#lastUpdatedValue\u0027).html(lastUpdated[0][0]);\n    else\n        $(\u0027#lastUpdatedValue\u0027).html(\u0027No data found\u0027);\n} "
+            "value" : ""
           },
           {
             "name" : "postFetch",
             "type" : "JavaScript",
-            "value" : " "
+            "value" : " function f(data) {    \r\n    if(data.resultset.length !== 0)\r\n        $(\u0027#lastUpdatedValue\u0027).html(new Date(data.resultset[0][0]));\r\n    else\r\n        $(\u0027#lastUpdatedValue\u0027).html(\u0027No data found\u0027);\r\n} "
           },
           {
             "name" : "preChange",
@@ -6870,7 +6870,7 @@
           {
             "name" : "listeners",
             "type" : "Listeners",
-            "value" : "[\u0027${p:PENTAHO_ROLES}\u0027,\u0027${p:PENTAHO_USER}\u0027,\u0027${p:PENTAHO_PORT}\u0027,\u0027${p:PENTAHO_HOST}\u0027]"
+            "value" : "[\u0022${p:PENTAHO_ROLES}\u0022,\u0022${p:PENTAHO_USER}\u0022,\u0022${p:PENTAHO_PORT}\u0022,\u0022${p:PENTAHO_HOST}\u0022]"
           },
           {
             "name" : "actionParameters",
@@ -6880,7 +6880,7 @@
           {
             "name" : "expression",
             "type" : "JavaScript",
-            "value" : "function action(){\n    PENTAHO_HOST = window.location.hostname;\n    PENTAHO_PORT = window.location.port;\n    PENTAHO_ROLES = Dashboards.context.roles;\n    PENTAHO_USER =  Dashboards.context.user;\n    Dashboards.incrementRunningCalls(); \n} "
+            "value" : "function action(){\n    var dash = this.dashboard;\n    PENTAHO_HOST = window.location.hostname;\n    PENTAHO_PORT = window.location.port;\n    PENTAHO_ROLES = dash.context.roles;\n    PENTAHO_USER =  dash.context.user;\n    dash.incrementRunningCalls(); \n} "
           },
           {
             "name" : "failureCallback",
@@ -6890,12 +6890,12 @@
           {
             "name" : "successCallback",
             "type" : "JavaScript",
-            "value" : "function success(){\n    $.ajax({\n        url: \u0022/pentaho/api/system/refresh/mondrianSchemaCache\u0022,\n        type: \u0022GET\u0022,\n        cache: false\n    }).done(function( data ) {\n        Dashboards.fireChange(\u0027lastUpdated\u0027, \u0027\u0027);\n        Dashboards.decrementRunningCalls();\n    }); \n} "
+            "value" : "function success(){\n    //parameters\n    var me = this;\n    var dash = me.dashboard;\n    $.ajax({\n        url: \u0022/pentaho/api/system/refresh/mondrianSchemaCache\u0022,\n        type: \u0022GET\u0022,\n        cache: false\n    }).done(function(data) {\n        dash.fireChange(\u0027lastUpdated\u0027, data);\n        dash.decrementRunningCalls();\n    }); \n} "
           },
           {
             "name" : "dataSource",
-            "value" : "",
-            "type" : "Datasource"
+            "type" : "Datasource",
+            "value" : "dsRefresh"
           },
           {
             "name" : "priority",
@@ -6930,7 +6930,7 @@
           {
             "name" : "postExecution",
             "type" : "JavaScript",
-            "value" : "function f(){    \n    $(\u0027#\u0027+this.htmlObject+\u0027 button\u0027).addClass(\u0027btn-md\u0027);\n    $(\u0027#\u0027+this.htmlObject+\u0027 button\u0027).html(\u0027\u003Cspan class=\u0022glyphicon glyphicon-refresh\u0022 aria-hidden=\u0022true\u0022\u003E\u003C/span\u003E\u0027);\n} "
+            "value" : "function f(){    \n    $(\u0027#\u0027+this.htmlObject+\u0027 button\u0027).addClass(\u0027btn-md\u0027);\n    $(\u0027#\u0027+this.htmlObject+\u0027 button\u0027).html(\u0027\u003Cspan class=\u0022glyphicon glyphicon-refresh\u0022 aria-hidden=\u0022true\u0022\u003E\u003C/span\u003E\u0027);\n    $(\u0027#\u0027+this.htmlObject+\u0027 button\u0027).css({\n        \u0027background-color\u0027: \u0027white\u0027,\n        \u0027padding\u0027:\u00276px 12px 6px 12px\u0027,\n        \u0027border-width\u0027:\u00271px\u0027,\n        \u0027border-color\u0027:\u0027#ccc\u0027,\n        \u0027border-style\u0027:\u0027solid\u0027\n    });\n} "
           },
           {
             "name" : "tooltip",
@@ -6974,18 +6974,18 @@
         "typeDesc" : "JavaScript function"
       },
       {
-        "id" : "f059dafe-af41-abb0-0e8d-ce4c42da041f",
+        "id" : "36eda744-4c14-8e37-390d-6094b3fc3169",
         "parent" : "SCRIPT",
         "properties" : [
           {
             "name" : "name",
             "type" : "Id",
-            "value" : "publishSchema"
+            "value" : "verifyInstallation"
           },
           {
             "name" : "javaScript",
             "type" : "JavaScript",
-            "value" : "function publishSchema(){\n    var fd = new FormData();    \n    fd.append( \u0027catalogName\u0027, \u0022Pentaho CE Audit\u0022 ); \n    fd.append( \u0027overwrite\u0027, \u0022true\u0022 );\n    fd.append( \u0027xmlaEnabledFlag\u0027, \u0022true\u0022 );\n    fd.append( \u0027parameters\u0027, \u0022DataSource=Hibernate\u0022 );\n    fd.append(\u0027uploadAnalysis\u0027,\u0027\u003CSchema name=\u0022Pentaho CE Audit\u0022\u003E \u003CCube name=\u0022Pentaho CE Audit\u0022 visible=\u0022true\u0022 cache=\u0022true\u0022 enabled=\u0022true\u0022\u003E \u003CTable name=\u0022PENTAHO_CE_AUDIT\u0022\u003E \u003C/Table\u003E \u003CDimension type=\u0022StandardDimension\u0022 visible=\u0022true\u0022 highCardinality=\u0022false\u0022 name=\u0022Period\u0022\u003E \u003CHierarchy name=\u0022Period\u0022 visible=\u0022true\u0022 hasAll=\u0022true\u0022 allMemberName=\u0022All\u0022\u003E \u003CLevel name=\u0022Year\u0022 visible=\u0022true\u0022 column=\u0022YEAR\u0022 type=\u0022Integer\u0022 uniqueMembers=\u0022false\u0022 levelType=\u0022Regular\u0022 hideMemberIf=\u0022Never\u0022\u003E \u003C/Level\u003E \u003CLevel name=\u0022Month\u0022 visible=\u0022true\u0022 column=\u0022MONTH_DESC\u0022 ordinalColumn=\u0022MONTH\u0022 type=\u0022String\u0022 uniqueMembers=\u0022false\u0022 levelType=\u0022Regular\u0022 hideMemberIf=\u0022Never\u0022\u003E \u003C/Level\u003E \u003CLevel name=\u0022Day of Week\u0022 visible=\u0022true\u0022 column=\u0022DAY_WEEK_DESC\u0022 ordinalColumn=\u0022DAY_WEEK\u0022 type=\u0022String\u0022 uniqueMembers=\u0022false\u0022 levelType=\u0022Regular\u0022 hideMemberIf=\u0022Never\u0022\u003E \u003C/Level\u003E \u003CLevel name=\u0022Day\u0022 visible=\u0022true\u0022 column=\u0022DAY\u0022 type=\u0022Integer\u0022 uniqueMembers=\u0022false\u0022 levelType=\u0022Regular\u0022 hideMemberIf=\u0022Never\u0022\u003E \u003C/Level\u003E \u003C/Hierarchy\u003E \u003C/Dimension\u003E \u003CDimension type=\u0022StandardDimension\u0022 visible=\u0022true\u0022 highCardinality=\u0022false\u0022 name=\u0022Time\u0022\u003E \u003CHierarchy name=\u0022Time\u0022 visible=\u0022true\u0022 hasAll=\u0022true\u0022 allMemberName=\u0022All\u0022\u003E \u003CLevel name=\u0022AM or PM\u0022 visible=\u0022true\u0022 column=\u0022AM_PM\u0022 type=\u0022String\u0022 uniqueMembers=\u0022false\u0022 levelType=\u0022Regular\u0022 hideMemberIf=\u0022Never\u0022\u003E \u003C/Level\u003E \u003CLevel name=\u0022Hour\u0022 visible=\u0022true\u0022 column=\u0022HOURS24\u0022 type=\u0022Integer\u0022 uniqueMembers=\u0022false\u0022 levelType=\u0022Regular\u0022 hideMemberIf=\u0022Never\u0022\u003E \u003C/Level\u003E \u003CLevel name=\u0022Hour 12\u0022 visible=\u0022true\u0022 column=\u0022HOURS12\u0022 type=\u0022Integer\u0022 uniqueMembers=\u0022false\u0022 levelType=\u0022Regular\u0022 hideMemberIf=\u0022Never\u0022\u003E \u003C/Level\u003E \u003CLevel name=\u0022Minutes\u0022 visible=\u0022true\u0022 column=\u0022MINUTES\u0022 type=\u0022Integer\u0022 uniqueMembers=\u0022false\u0022 levelType=\u0022Regular\u0022 hideMemberIf=\u0022Never\u0022\u003E \u003C/Level\u003E \u003CLevel name=\u0022Seconds\u0022 visible=\u0022true\u0022 column=\u0022SECONDS\u0022 type=\u0022Integer\u0022 uniqueMembers=\u0022false\u0022 levelType=\u0022Regular\u0022 hideMemberIf=\u0022Never\u0022\u003E \u003C/Level\u003E \u003CLevel name=\u0022Time\u0022 visible=\u0022true\u0022 column=\u0022TIME\u0022 type=\u0022String\u0022 uniqueMembers=\u0022false\u0022 levelType=\u0022Regular\u0022 hideMemberIf=\u0022Never\u0022\u003E \u003C/Level\u003E \u003C/Hierarchy\u003E \u003C/Dimension\u003E \u003CDimension type=\u0022StandardDimension\u0022 visible=\u0022true\u0022 highCardinality=\u0022false\u0022 name=\u0022User\u0022\u003E \u003CHierarchy name=\u0022User\u0022 visible=\u0022true\u0022 hasAll=\u0022true\u0022 allMemberName=\u0022All\u0022\u003E \u003CLevel name=\u0022User\u0022 visible=\u0022true\u0022 column=\u0022USER\u0022 type=\u0022String\u0022 uniqueMembers=\u0022false\u0022 levelType=\u0022Regular\u0022 hideMemberIf=\u0022Never\u0022\u003E \u003C/Level\u003E \u003C/Hierarchy\u003E \u003C/Dimension\u003E \u003CDimension type=\u0022StandardDimension\u0022 visible=\u0022true\u0022 highCardinality=\u0022false\u0022 name=\u0022Plugin\u0022\u003E \u003CHierarchy name=\u0022Plugin\u0022 visible=\u0022true\u0022 hasAll=\u0022true\u0022 allMemberName=\u0022All\u0022\u003E \u003CLevel name=\u0022Plugin\u0022 visible=\u0022true\u0022 column=\u0022PLUGIN\u0022 type=\u0022String\u0022 uniqueMembers=\u0022false\u0022 levelType=\u0022Regular\u0022 hideMemberIf=\u0022Never\u0022\u003E \u003C/Level\u003E \u003C/Hierarchy\u003E \u003C/Dimension\u003E \u003CDimension type=\u0022StandardDimension\u0022 visible=\u0022true\u0022 highCardinality=\u0022false\u0022 name=\u0022File\u0022\u003E \u003CHierarchy name=\u0022File\u0022 visible=\u0022true\u0022 hasAll=\u0022true\u0022 allMemberName=\u0022All\u0022\u003E \u003CLevel name=\u0022Directory Path\u0022 visible=\u0022false\u0022 column=\u0022DIRECTORY\u0022 type=\u0022String\u0022 uniqueMembers=\u0022false\u0022 levelType=\u0022Regular\u0022 hideMemberIf=\u0022Never\u0022\u003E \u003C/Level\u003E \u003CLevel name=\u0022File\u0022 visible=\u0022true\u0022 column=\u0022FILE\u0022 type=\u0022String\u0022 uniqueMembers=\u0022false\u0022 levelType=\u0022Regular\u0022 hideMemberIf=\u0022Never\u0022\u003E \u003C/Level\u003E \u003C/Hierarchy\u003E \u003C/Dimension\u003E \u003CDimension type=\u0022StandardDimension\u0022 visible=\u0022true\u0022 highCardinality=\u0022false\u0022 name=\u0022Type\u0022\u003E \u003CHierarchy name=\u0022Type\u0022 visible=\u0022true\u0022 hasAll=\u0022true\u0022 allMemberName=\u0022All\u0022\u003E \u003CLevel name=\u0022Type\u0022 visible=\u0022true\u0022 column=\u0022TYPE\u0022 type=\u0022String\u0022 uniqueMembers=\u0022false\u0022 levelType=\u0022Regular\u0022 hideMemberIf=\u0022Never\u0022\u003E \u003C/Level\u003E \u003C/Hierarchy\u003E \u003C/Dimension\u003E \u003CDimension type=\u0022StandardDimension\u0022 visible=\u0022true\u0022 highCardinality=\u0022false\u0022 name=\u0022Role\u0022\u003E \u003CHierarchy name=\u0022Role\u0022 visible=\u0022true\u0022 hasAll=\u0022true\u0022 allMemberName=\u0022All\u0022\u003E \u003CLevel name=\u0022Role\u0022 visible=\u0022true\u0022 column=\u0022ROLE\u0022 type=\u0022String\u0022 uniqueMembers=\u0022false\u0022 levelType=\u0022Regular\u0022 hideMemberIf=\u0022Never\u0022\u003E \u003C/Level\u003E \u003C/Hierarchy\u003E \u003C/Dimension\u003E \u003CDimension type=\u0022StandardDimension\u0022 visible=\u0022false\u0022 highCardinality=\u0022false\u0022 name=\u0022Year\u0022\u003E \u003CHierarchy name=\u0022Year\u0022 visible=\u0022true\u0022 hasAll=\u0022true\u0022 allMemberName=\u0022All\u0022\u003E \u003CLevel name=\u0022Year\u0022 visible=\u0022true\u0022 column=\u0022YEAR\u0022 type=\u0022Integer\u0022 uniqueMembers=\u0022false\u0022 levelType=\u0022Regular\u0022 hideMemberIf=\u0022Never\u0022\u003E \u003C/Level\u003E \u003C/Hierarchy\u003E \u003C/Dimension\u003E \u003CMeasure name=\u0022Quantity\u0022 column=\u0022DATA\u0022 datatype=\u0022String\u0022 formatString=\u0022#,###\u0022 aggregator=\u0022distinct count\u0022 visible=\u0022true\u0022\u003E \u003C/Measure\u003E \u003CMeasure name=\u0022Duration\u0022 column=\u0022DURATION\u0022 datatype=\u0022Numeric\u0022 formatString=\u0022#,###\u0022 aggregator=\u0022sum\u0022 visible=\u0022true\u0022\u003E \u003C/Measure\u003E \u003CMeasure name=\u0022Duration Average\u0022 column=\u0022DURATION\u0022 datatype=\u0022Numeric\u0022 formatString=\u0022#,###\u0022 aggregator=\u0022avg\u0022 visible=\u0022true\u0022\u003E \u003C/Measure\u003E \u003C/Cube\u003E \u003C/Schema\u003E\u0027);\n    \n    $.ajax( {\n        url: \u0027/pentaho/plugin/data-access/api/mondrian/postAnalysis\u0027,\n        type: \u0027POST\u0027,\n        async: false,\n        data: fd,\n        processData: false,\n        contentType: false\n        ,success: function( publish ) {\n            if(publish==3){\n                var html_msg=\u0027\u003Cdiv class=\u0022alert alert-success\u0022 role=\u0022alert\u0022\u003E\u0027+\n                \u0027\u003Cb\u003EThe installation has been completed successfully!\u003C/b\u003E please restart your biserver.\u0027+\n                \u0027\u003C/div\u003E\u0027+\n                \u0027\u003Chr\u003E\u0027+\n                \u0027\u003Cdiv class=\u0022row\u0022\u003E\u0027+\n                    \u0027\u003Cp class=\u0022alert alert-danger\u0022\u003E\u0027+\n                        \u0027This plug-in applied automatically an Environment configuration, if you want to know more about it please visit the link\u0027+\n                        \u0027\u003Ca target=\u0022no_blank\u0022 href=\u0022http://infocenter.pentaho.com/help48/index.jsp?topic=%2Fadmin_guide%2Ftask_switching_to_file_based_logging.html\u0022\u003E\u0027+\n                            \u0027\u003Cspan class=\u0022glyphicon glyphicon-new-window\u0022 aria-hidden=\u0022true\u0022\u003E\u003C/span\u003E\u0027+\n                        \u0027\u003C/a\u003E\u0027+\n                    \u0027\u003C/p\u003E\u0027+\n                \u0027\u003C/div\u003E\u0027;\n                    \n                $(\u0022#modal-body\u0022).html(html_msg);     \n            }else if(publish==2){\n                html_msg=\u0027\u003Cdiv class=\u0022alert alert-danger\u0022 role=\u0022alert\u0022\u003EError publish the schema\u003C/div\u003E\u0027;\n                $(\u0022#modal-body\u0022).html(html_msg);\n            }else{\n                html_msg=\u0027\u003Cdiv class=\u0022alert alert-danger\u0022 role=\u0022alert\u0022\u003EError undefined\u003C/div\u003E\u0027;\n                $(\u0022#modal-body\u0022).html(html_msg);                   \n            }\n        }\n    });   \n} "
+            "value" : "$.ajax({\n    url: \u0022/pentaho/plugin/pentaho-ce-audit/api/job_verify_installation\u0022,\n    cache: false\n}).done(function( data ) {\n    if(!data.result){\n        $(\u0027#myModal\u0027).modal(\u0027show\u0027);\n    }else{        \n        \n        Dashboards.incrementRunningCalls();   \n        $.ajax({\n            url: \u0022/pentaho/plugin/pentaho-ce-audit/api/get_metadata\u0022,\n            cache: false\n        }).done(function( data ) {\n            Dashboards.decrementRunningCalls();\n            if(data.queryInfo.totalRows\u003E0)\n               Dashboards.update(\n                   [render_BarChartTop10UsersByExecution\n                   ,render_BarChartTop10UsersByLogin\n                   ,render_LineChartExecutionByHours\n                   ,render_BarChartExecutionsByDayOfWeek\n                   ,render_Table\n                   ,render_filterYearSelectorMobile\n                   ,render_filterYearSelectorDesktop\n                   ,render_BarChartTop10UsersByExecutionExport\n                   ,render_BarChartTop10UsersByLoginExport]);\n        });\n        \n    }\n}); \n "
           }
         ],
         "type" : "ComponentsFunction",
@@ -7010,18 +7010,18 @@
         "typeDesc" : "JavaScript function"
       },
       {
-        "id" : "36eda744-4c14-8e37-390d-6094b3fc3169",
+        "id" : "f059dafe-af41-abb0-0e8d-ce4c42da041f",
         "parent" : "SCRIPT",
         "properties" : [
           {
             "name" : "name",
             "type" : "Id",
-            "value" : "verifyInstallation"
+            "value" : "publishSchema"
           },
           {
             "name" : "javaScript",
             "type" : "JavaScript",
-            "value" : "$.ajax({\n    url: \u0022/pentaho/plugin/pentaho-ce-audit/api/job_verify_installation\u0022,\n    cache: false\n}).done(function( data ) {\n    if(!data.result){\n        $(\u0027#myModal\u0027).modal(\u0027show\u0027);\n    }else{        \n        \n        Dashboards.incrementRunningCalls();   \n        $.ajax({\n            url: \u0022/pentaho/plugin/pentaho-ce-audit/api/get_metadata\u0022,\n            cache: false\n        }).done(function( data ) {\n            Dashboards.decrementRunningCalls();\n            if(data.queryInfo.totalRows\u003E0)\n               Dashboards.update(\n                   [render_BarChartTop10UsersByExecution\n                   ,render_BarChartTop10UsersByLogin\n                   ,render_LineChartExecutionByHours\n                   ,render_BarChartExecutionsByDayOfWeek\n                   ,render_Table\n                   ,render_filterYearSelectorMobile\n                   ,render_filterYearSelectorDesktop\n                   ,render_BarChartTop10UsersByExecutionExport\n                   ,render_BarChartTop10UsersByLoginExport]);\n        });\n        \n    }\n}); \n "
+            "value" : "//https://github.com/Ibby-B : 02/July/2021\r\n//automatically installs the Mondrian Analysis schema\r\n\r\nfunction publishSchema(){\r\n    $.get(\r\n        \u0027/pentaho/api/repos/pentaho-ce-audit/schemas/pentahoCEAudit.mondrian.xml\u0027\r\n        ,function(data){publishSchemaXML(data);}\r\n    );\r\n}\r\nfunction publishSchemaXML(data){\r\n    var html_msg = \u0022\u0022;\r\n    var file = new File([data.documentElement.outerHTML], \u0027pentahoCEAudit.mondrian.xml\u0027);\r\n    var fd = new FormData();    \r\n    //fd.append( \u0027catalogName\u0027, \u0022Pentaho CE Audit\u0022 ); \r\n    fd.append( \u0027overwrite\u0027, \u0022true\u0022 );\r\n    fd.append( \u0027xmlaEnabledFlag\u0027, \u0022true\u0022 );\r\n    fd.append( \u0027parameters\u0027, \u0022DataSource=Hibernate\u0022 );\r\n    fd.append( \u0027uploadInput\u0027,file );\r\n    \r\n    $.ajax( {\r\n        url: \u0027/pentaho/plugin/data-access/api/datasource/analysis/catalog/Pentaho%20CE%20Audit\u0027,\r\n        method: \u0027PUT\u0027,\r\n        async: false,\r\n        data: fd,\r\n        processData: false,\r\n        contentType: false,\r\n        statusCode: {\r\n            200: function(data, textStatus, xhr) {\r\n                html_msg=\r\n                \u0027\u003Cdiv class = \u0022alert alert-success\u0022\u003E\u0027+\r\n                    \u0027\u003Cspan class=\u0022glyphicon\u0022\u003E\u0026#xe089;\u003C/span\u003E\u0027+\r\n                    \u0027\u003Cspan\u003E \u003Cb\u003EThe installation has been completed successfully!\u003C/b\u003E please restart your biserver.\u003C/span\u003E\u0027+\r\n                \u0027\u003C/div\u003E\u0027;   \r\n                $(\u0022#modal-body\u0022).html(html_msg);\r\n            },\r\n            201: function(data, textStatus, xhr) {\r\n                html_msg=\r\n                \u0027\u003Cdiv class = \u0022alert alert-success\u0022\u003E\u0027+\r\n                    \u0027\u003Cspan class=\u0022glyphicon\u0022\u003E\u0026#xe089;\u003C/span\u003E\u0027+\r\n                    \u0027\u003Cspan\u003E \u003Cb\u003EThe installation has been completed successfully!\u003C/b\u003E please restart your biserver.\u003C/span\u003E\u0027+\r\n                \u0027\u003C/div\u003E\u0027;   \r\n                $(\u0022#modal-body\u0022).html(html_msg);\r\n                setTimeout(function(){reloadDash();},5000);\r\n            },\r\n            401: function(xhr, textStatus, errorThrown) {\r\n                html_msg=\u0027\u003Cdiv class=\u0022alert alert-danger\u0022 role=\u0022alert\u0022\u003E\u0027+ xhr.responseText +\u0027\u003C/div\u003E\u0027;\r\n                $(\u0022#modal-body\u0022).html(html_msg); \r\n            },\r\n            403: function(xhr, textStatus, errorThrown) {\r\n                html_msg=\u0027\u003Cdiv class=\u0022alert alert-danger\u0022 role=\u0022alert\u0022\u003E\u0027+ xhr.responseText +\u0027\u003C/div\u003E\u0027;\r\n                $(\u0022#modal-body\u0022).html(html_msg); \r\n            },\r\n            409: function(xhr, textStatus, errorThrown) {\r\n                html_msg=\u0027\u003Cdiv class=\u0022alert alert-danger\u0022 role=\u0022alert\u0022\u003E\u0027+ xhr.responseText +\u0027\u003C/div\u003E\u0027;\r\n                $(\u0022#modal-body\u0022).html(html_msg); \r\n            },\r\n            412: function(xhr, textStatus, errorThrown) {\r\n                html_msg=\u0027\u003Cdiv class=\u0022alert alert-danger\u0022 role=\u0022alert\u0022\u003E\u0027+ xhr.responseText +\u0027\u003C/div\u003E\u0027;\r\n                $(\u0022#modal-body\u0022).html(html_msg); \r\n            },\r\n            500: function(xhr, textStatus, errorThrown) {\r\n                html_msg=\u0027\u003Cdiv class=\u0022alert alert-danger\u0022 role=\u0022alert\u0022\u003E\u0027+ xhr.responseText +\u0027\u003C/div\u003E\u0027;\r\n                $(\u0022#modal-body\u0022).html(html_msg); \r\n            },\r\n        }\r\n    });   \r\n} "
           }
         ],
         "type" : "ComponentsFunction",
@@ -7109,8 +7109,8 @@
           },
           {
             "name" : "cacheKeys",
-            "value" : "[]",
-            "type" : "CacheKeysValues"
+            "type" : "CacheKeysValues",
+            "value" : "[]"
           },
           {
             "name" : "cacheDuration",
@@ -7190,8 +7190,8 @@
           },
           {
             "name" : "cacheKeys",
-            "value" : "[]",
-            "type" : "CacheKeysValues"
+            "type" : "CacheKeysValues",
+            "value" : "[]"
           },
           {
             "name" : "cacheDuration",
@@ -7271,8 +7271,8 @@
           },
           {
             "name" : "cacheKeys",
-            "value" : "[]",
-            "type" : "CacheKeysValues"
+            "type" : "CacheKeysValues",
+            "value" : "[]"
           },
           {
             "name" : "cacheDuration",
@@ -7352,8 +7352,8 @@
           },
           {
             "name" : "cacheKeys",
-            "value" : "[]",
-            "type" : "CacheKeysValues"
+            "type" : "CacheKeysValues",
+            "value" : "[]"
           },
           {
             "name" : "cacheDuration",
@@ -7433,8 +7433,8 @@
           },
           {
             "name" : "cacheKeys",
-            "value" : "[]",
-            "type" : "CacheKeysValues"
+            "type" : "CacheKeysValues",
+            "value" : "[]"
           },
           {
             "name" : "cacheDuration",
@@ -7514,8 +7514,8 @@
           },
           {
             "name" : "cacheKeys",
-            "value" : "[]",
-            "type" : "CacheKeysValues"
+            "type" : "CacheKeysValues",
+            "value" : "[]"
           },
           {
             "name" : "cacheDuration",
@@ -7595,8 +7595,8 @@
           },
           {
             "name" : "cacheKeys",
-            "value" : "[]",
-            "type" : "CacheKeysValues"
+            "type" : "CacheKeysValues",
+            "value" : "[]"
           },
           {
             "name" : "cacheDuration",
@@ -7825,7 +7825,7 @@
           {
             "name" : "html",
             "type" : "Html",
-            "value" : "\u003Cdiv class=\u0022pull-right\u0022\u003E   \n    \u003Clabel\u003ELast Updated:\u003C/label\u003E \n    \u003Cspan class=\u0022badge\u0022\u003E\n        \u003Cdiv id=\u0022lastUpdatedValue\u0022\u003E\u003C/div\u003E\n    \u003C/span\u003E\n\u003C/div\u003E\n    \n\u003Cdiv class=\u0022pull-right\u0022 style=\u0022padding-right:5px;\u0022\u003E\n    \u003C!-- \u003Cspan class=\u0022glyphicon glyphicon-refresh\u0022 aria-hidden=\u0022true\u0022\u003E\u003C/span\u003E--\u003E\n    \u003Cdiv id=\u0022refreshButtonDiv\u0022\u003E\u003C/div\u003E\n\u003C/div\u003E\n\u003Cbr\u003E\n\n\u003Chr\u003E\n\n\u003Cdiv class=\u0022col-md-12\u0022 style=\u0022height: 30px\u0022\u003E\n\n    \u003Cdiv id=\u0022filterYear-div-mobile\u0022 class=\u0022col-md-12 col-sd-6\u0022\u003E \u003C/div\u003E \n    \n    \u003Cdiv id=\u0022filterYear-div-desktop\u0022 class=\u0022col-md-12 col-sd-6\u0022\u003E \u003C/div\u003E  \n   \n\u003C/div\u003E\n\n\u003Cdiv class=\u0022col-md-6\u0022\u003E\n   \u003Cdiv class=\u0022panel panel-default\u0022\u003E\n      \u003Cdiv class=\u0022panel-heading\u0022\u003ETop Users by # of Execution(s)\u003C/div\u003E\n      \u003Cdiv class=\u0022panel-body\u0022\u003E\n         \u003Cdiv class=\u0022pull-right\u0022 id=\u0022ExportButtonBarChartTop10UsersByExecutionExport\u0022\u003E\u003C/div\u003E\n         \u003Cdiv id=\u0022Chart01-div\u0022\u003E \u003C/div\u003E \n      \u003C/div\u003E\n\u003C/div\u003E\n\u003C/div\u003E\n\n\n\u003Cdiv class=\u0022col-md-6\u0022\u003E\n\u003Cdiv class=\u0022panel panel-default\u0022\u003E\n  \u003Cdiv class=\u0022panel-heading\u0022\u003ETop Users by # of Login(s)\u003C/div\u003E\n  \u003Cdiv class=\u0022panel-body\u0022\u003E\n  \u003Cdiv class=\u0022pull-right\u0022 id=\u0022ExportButtonBarChartTop10UsersByLoginExport\u0022\u003E\u003C/div\u003E\n    \u003Cdiv id=\u0022Chart02-div\u0022\u003E \u003C/div\u003E \n  \u003C/div\u003E\n\u003C/div\u003E\n\u003C/div\u003E    \n    \n\u003Cdiv class=\u0022col-md-6\u0022\u003E\n   \u003Cdiv class=\u0022panel panel-default\u0022\u003E\n      \u003Cdiv class=\u0022panel-heading\u0022\u003E# of Execution(s) by Day of the Week\u003C/div\u003E\n      \u003Cdiv class=\u0022panel-body\u0022\u003E\n         \u003Cdiv class=\u0022pull-right\u0022 id=\u0022ExportButtonExecutionsByDayOfWeekExport\u0022\u003E\u003C/div\u003E\n         \u003Cdiv id=\u0022Chart03-div\u0022\u003E \u003C/div\u003E \n      \u003C/div\u003E\n\u003C/div\u003E\n\u003C/div\u003E\n\n\n\u003Cdiv class=\u0022col-md-6\u0022\u003E\n\u003Cdiv class=\u0022panel panel-default\u0022\u003E\n  \u003Cdiv class=\u0022panel-heading\u0022\u003E# of Execution(s) by Hour\u003C/div\u003E\n  \u003Cdiv class=\u0022panel-body\u0022\u003E\n  \u003Cdiv class=\u0022pull-right\u0022 id=\u0022ExportButtonBarChartTop10UsersByLoginExport\u0022\u003E\u003C/div\u003E\n    \u003Cdiv id=\u0022Chart04-div\u0022\u003E \u003C/div\u003E \n  \u003C/div\u003E\n\u003C/div\u003E\n\u003C/div\u003E        \n    \n\n\u003Cdiv class=\u0022col-md-12\u0022\u003E\n\u003Cdiv class=\u0022panel panel-default\u0022\u003E\n  \u003Cdiv class=\u0022panel-heading\u0022\u003E# of Execution(s)\u003C/div\u003E\n  \u003Cdiv class=\u0022panel-body\u0022\u003E\n   \u003Cdiv id=\u0022table-div\u0022\u003E \u003C/div\u003E \n  \u003C/div\u003E  \n\u003C/div\u003E\n\u003C/div\u003E \n\n\u003Cdiv id=\u0022footer\u0022 class=\u0022col-sm-12\u0022\u003E\n    \u003Chr\u003E\n    \u003Cdiv class=\u0022container\u0022\u003E\n        \u003Cp class=\u0022text-muted credit\u0022\u003E\n            \u003Cdiv class=\u0022pull-right\u0022\u003E\n                Powered by\n                \u003Ca  href=\u0022http://it4biz.com.br\u0022 target=\u0022no_blank\u0022 title=\u0022IT4biz IT Solutions\u0022\u003E\n                    \u003Cimg                    \n                        src=\u0022../../../api/repos/pentaho-ce-audit/static/custom/img/logo.png\u0022\n                    \u003E\n                \u003C/a\u003E \n            \u003C/div\u003E\n            \u003Cdiv\u003E\n            \u003Clabel\u003EPlease help us do more, with just a \u0022Like\u0022 on our Facebook page\u003C/label\u003E\u003Cbr\u003E \n            \u003Cdiv\n                class=\u0022fb-like\u0022 \n                data-href=\u0022https://www.facebook.com/it4biz\u0022 \n                data-layout=\u0022button\u0022 \n                data-action=\u0022like\u0022 \n                data-show-faces=\u0022true\u0022 \n                data-share=\u0022true\u0022\u003E                \n            \u003C/div\u003E\u003Cbr\u003E\n            \u003Clabel\u003Eor follow us on twitter\u003C/label\u003E\u003Cbr\u003E\n            \u003Ca \n                class=\u0022twitter-hashtag-button\u0022\n                href=\u0022https://twitter.com/intent/tweet?button_hashtag=PentahoCEAudit\u0026text=I have installed Pentaho CE Audit from @it4bizbrazil. You should try it on @pentaho Marketplace.\u0022\n                data-related=\u0022twitter\u0022\u003E\n                Tweet #PentahoCEAudit\n            \u003C/a\u003E\n            \u003Ca \n                class=\u0022twitter-follow-button\u0022\n                href=\u0022https://twitter.com/it4bizbrazil\u0022\n                data-show-count=\u0022false\u0022\n                data-lang=\u0022en\u0022\u003E\n                Follow @it4bizbrazil\n            \u003C/a\u003E\n        \u003C/div\u003E\n        \u003C/p\u003E\n        \n    \u003C/div\u003E        \n\u003C/div\u003E "
+            "value" : "\u003Cbr\u003E\n\u003Cdiv class=\u0022pull-right\u0022 style=\u0022padding-top:5px;\u0022\u003E   \n    \u003Clabel\u003ELast Updated:\u003C/label\u003E \n    \u003Cspan class=\u0022badge\u0022\u003E\n        \u003Cdiv id=\u0022lastUpdatedValue\u0022\u003E\u003C/div\u003E\n    \u003C/span\u003E\n\u003C/div\u003E\n    \n\u003Cdiv class=\u0022pull-right\u0022 style=\u0022padding-right:5px;\u0022\u003E\n    \u003C!-- \u003Cspan class=\u0022glyphicon glyphicon-refresh\u0022 aria-hidden=\u0022true\u0022\u003E\u003C/span\u003E--\u003E\n    \u003Cdiv id=\u0022refreshButtonDiv\u0022\u003E\u003C/div\u003E\n\u003C/div\u003E\n\u003Cbr\u003E\n\n\u003Chr\u003E\n\n\u003Cdiv class=\u0022col-md-12\u0022 style=\u0022height: 30px\u0022\u003E\n\n    \u003Cdiv id=\u0022filterYear-div-mobile\u0022 class=\u0022col-md-12 col-sd-6\u0022\u003E \u003C/div\u003E \n    \n    \u003Cdiv id=\u0022filterYear-div-desktop\u0022 class=\u0022col-md-12 col-sd-6\u0022\u003E \u003C/div\u003E  \n   \n\u003C/div\u003E\n\n\u003Cdiv class=\u0022col-md-6\u0022\u003E\n   \u003Cdiv class=\u0022panel panel-default\u0022\u003E\n      \u003Cdiv class=\u0022panel-heading\u0022\u003ETop Users by # of Execution(s)\u003C/div\u003E\n      \u003Cdiv class=\u0022panel-body\u0022\u003E\n         \u003Cdiv class=\u0022pull-right\u0022 id=\u0022ExportButtonBarChartTop10UsersByExecutionExport\u0022\u003E\u003C/div\u003E\n         \u003Cdiv id=\u0022Chart01-div\u0022\u003E \u003C/div\u003E \n      \u003C/div\u003E\n\u003C/div\u003E\n\u003C/div\u003E\n\n\n\u003Cdiv class=\u0022col-md-6\u0022\u003E\n\u003Cdiv class=\u0022panel panel-default\u0022\u003E\n  \u003Cdiv class=\u0022panel-heading\u0022\u003ETop Users by # of Login(s)\u003C/div\u003E\n  \u003Cdiv class=\u0022panel-body\u0022\u003E\n  \u003Cdiv class=\u0022pull-right\u0022 id=\u0022ExportButtonBarChartTop10UsersByLoginExport\u0022\u003E\u003C/div\u003E\n    \u003Cdiv id=\u0022Chart02-div\u0022\u003E \u003C/div\u003E \n  \u003C/div\u003E\n\u003C/div\u003E\n\u003C/div\u003E    \n    \n\u003Cdiv class=\u0022col-md-6\u0022\u003E\n   \u003Cdiv class=\u0022panel panel-default\u0022\u003E\n      \u003Cdiv class=\u0022panel-heading\u0022\u003E# of Execution(s) by Day of the Week\u003C/div\u003E\n      \u003Cdiv class=\u0022panel-body\u0022\u003E\n         \u003Cdiv class=\u0022pull-right\u0022 id=\u0022ExportButtonExecutionsByDayOfWeekExport\u0022\u003E\u003C/div\u003E\n         \u003Cdiv id=\u0022Chart03-div\u0022\u003E \u003C/div\u003E \n      \u003C/div\u003E\n\u003C/div\u003E\n\u003C/div\u003E\n\n\n\u003Cdiv class=\u0022col-md-6\u0022\u003E\n\u003Cdiv class=\u0022panel panel-default\u0022\u003E\n  \u003Cdiv class=\u0022panel-heading\u0022\u003E# of Execution(s) by Hour\u003C/div\u003E\n  \u003Cdiv class=\u0022panel-body\u0022\u003E\n  \u003Cdiv class=\u0022pull-right\u0022 id=\u0022ExportButtonBarChartTop10UsersByLoginExport\u0022\u003E\u003C/div\u003E\n    \u003Cdiv id=\u0022Chart04-div\u0022\u003E \u003C/div\u003E \n  \u003C/div\u003E\n\u003C/div\u003E\n\u003C/div\u003E        \n    \n\n\u003Cdiv class=\u0022col-md-12\u0022\u003E\n\u003Cdiv class=\u0022panel panel-default\u0022\u003E\n  \u003Cdiv class=\u0022panel-heading\u0022\u003E# of Execution(s)\u003C/div\u003E\n  \u003Cdiv class=\u0022panel-body\u0022\u003E\n   \u003Cdiv id=\u0022table-div\u0022\u003E \u003C/div\u003E \n  \u003C/div\u003E  \n\u003C/div\u003E\n\u003C/div\u003E \n\n\u003Cdiv id=\u0022footer\u0022 class=\u0022col-sm-12\u0022\u003E\n    \u003Chr\u003E\n    \u003Cdiv class=\u0022container\u0022\u003E\n        \u003Cp class=\u0022text-muted credit\u0022\u003E\n            \u003Cdiv class=\u0022pull-right\u0022\u003E\n                Powered by\n                \u003Ca  href=\u0022http://it4biz.com.br\u0022 target=\u0022no_blank\u0022 title=\u0022IT4biz IT Solutions\u0022\u003E\n                    \u003Cimg                    \n                        src=\u0022../../../api/repos/pentaho-ce-audit/static/custom/img/logo.png\u0022\n                    \u003E\n                \u003C/a\u003E \n            \u003C/div\u003E\n            \u003Cdiv\u003E\n            \u003Clabel\u003EPlease help us do more, with just a \u0022Like\u0022 on our Facebook page\u003C/label\u003E\u003Cbr\u003E \n            \u003Cdiv\n                class=\u0022fb-like\u0022 \n                data-href=\u0022https://www.facebook.com/it4biz\u0022 \n                data-layout=\u0022button\u0022 \n                data-action=\u0022like\u0022 \n                data-show-faces=\u0022true\u0022 \n                data-share=\u0022true\u0022\u003E                \n            \u003C/div\u003E\u003Cbr\u003E\n            \u003Clabel\u003Eor follow us on twitter\u003C/label\u003E\u003Cbr\u003E\n            \u003Ca \n                class=\u0022twitter-hashtag-button\u0022\n                href=\u0022https://twitter.com/intent/tweet?button_hashtag=PentahoCEAudit\u0026text=I have installed Pentaho CE Audit from @it4bizbrazil. You should try it on @pentaho Marketplace.\u0022\n                data-related=\u0022twitter\u0022\u003E\n                Tweet #PentahoCEAudit\n            \u003C/a\u003E\n            \u003Ca \n                class=\u0022twitter-follow-button\u0022\n                href=\u0022https://twitter.com/it4bizbrazil\u0022\n                data-show-count=\u0022false\u0022\n                data-lang=\u0022en\u0022\u003E\n                Follow @it4bizbrazil\n            \u003C/a\u003E\n        \u003C/div\u003E\n        \u003C/p\u003E\n        \n    \u003C/div\u003E        \n\u003C/div\u003E "
           },
           {
             "name" : "fontSize",
