@@ -7,63 +7,424 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#x2f;</directory>
+    <directory>/</directory>
     <parameters>
-        <parameter>
-            <name>PENTAHO_HOST</name>
-            <default_value/>
-            <description/>
-        </parameter>
-        <parameter>
-            <name>PENTAHO_PASSWORD</name>
-            <default_value/>
-            <description/>
-        </parameter>
-        <parameter>
-            <name>PENTAHO_PORT</name>
-            <default_value/>
-            <description/>
-        </parameter>
-        <parameter>
-            <name>PENTAHO_ROLES</name>
-            <default_value/>
-            <description/>
-        </parameter>
-        <parameter>
-            <name>PENTAHO_USER</name>
-            <default_value/>
-            <description/>
-        </parameter>
+      <parameter>
+        <name>PENTAHO_HOST</name>
+        <default_value/>
+        <description/>
+      </parameter>
+      <parameter>
+        <name>PENTAHO_PASSWORD</name>
+        <default_value/>
+        <description/>
+      </parameter>
+      <parameter>
+        <name>PENTAHO_PORT</name>
+        <default_value/>
+        <description/>
+      </parameter>
+      <parameter>
+        <name>PENTAHO_ROLES</name>
+        <default_value/>
+        <description/>
+      </parameter>
+      <parameter>
+        <name>PENTAHO_USER</name>
+        <default_value/>
+        <description/>
+      </parameter>
     </parameters>
     <log>
-<trans-log-table><connection/>
-<schema/>
-<table/>
-<size_limit_lines/>
-<interval/>
-<timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
-<perf-log-table><connection/>
-<schema/>
-<table/>
-<interval/>
-<timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
-<channel-log-table><connection/>
-<schema/>
-<table/>
-<timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
-<step-log-table><connection/>
-<schema/>
-<table/>
-<timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
-<metrics-log-table><connection/>
-<schema/>
-<table/>
-<timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -91,16 +452,33 @@
     </slaveservers>
     <clusterschemas>
     </clusterschemas>
-  <created_user>-</created_user>
-  <created_date>2014&#x2f;11&#x2f;04 12&#x3a;19&#x3a;03.529</created_date>
-  <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;11&#x2f;04 12&#x3a;19&#x3a;03.529</modified_date>
+    <created_user>-</created_user>
+    <created_date>2014/11/04 12:19:03.529</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2014/11/04 12:19:03.529</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
   </info>
   <notepads>
     <notepad>
-      <note>&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#xd;&#xa;Input logins from pro_audit table									&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;</note>
-      <xloc>58</xloc>
-      <yloc>92</yloc>
+      <note>========================================================================================
+Input logins from PRO_AUDIT table									
+
+
+
+
+
+
+
+
+
+
+
+
+
+===========================================================================================</note>
+      <xloc>208</xloc>
+      <yloc>240</yloc>
       <width>739</width>
       <heigth>252</heigth>
       <fontname>Segoe UI</fontname>
@@ -119,11 +497,30 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#xd;&#xa;Capture logins from pro_audit table									&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;</note>
-      <xloc>77</xloc>
-      <yloc>376</yloc>
-      <width>707</width>
-      <heigth>297</heigth>
+      <note>===========================================================================================
+Capture logins from PRO_AUDIT table									
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==========================================================================================</note>
+      <xloc>208</xloc>
+      <yloc>528</yloc>
+      <width>739</width>
+      <heigth>312</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -140,10 +537,56 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#xd;&#xa;Transformation for table pentaho_ce_audit&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;</note>
-      <xloc>1096</xloc>
-      <yloc>84</yloc>
-      <width>531</width>
+      <note>===================================================================
+Transformation for table pentaho_ce_audit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</note>
+      <xloc>1248</xloc>
+      <yloc>224</yloc>
+      <width>547</width>
       <heigth>717</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
@@ -161,11 +604,48 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#xd;&#xa;Contribution by Brandon Jackson&#xd;&#xa;usbrandon&#x40;gmail.com&#xd;&#xa;November 15, 2014&#xd;&#xa;&#xd;&#xa;This part of ETL add more fields about Time.     &#xd;&#xa; &#x2a; TIME VARCHAR&#x28;8&#x29;   																&#xd;&#xa; &#x2a; HOURS24 INT																		&#xd;&#xa; &#x2a; HOURS12 INT																		&#xd;&#xa; &#x2a; AM_PM VARCHAR&#x28;2&#x29;															&#xd;&#xa;&#xd;&#xa;Example&#x3a;&#xd;&#xa;&#xd;&#xa;11&#x3a;59&#x3a;58	11	11	AM&#xd;&#xa;12&#x3a;00&#x3a;01	12	0		PM&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;</note>
-      <xloc>1649</xloc>
-      <yloc>262</yloc>
+      <note>============================================================================================================
+Contribution by Brandon Jackson
+usbrandon@gmail.com
+November 15, 2014
+============================================================================================================
+Optimisation by Ibrahim Bolarinwa
+https://github.com/Ibby-B
+June 29, 2021
+============================================================================================================
+This part of ETL add more fields about Time.     
+ * TIME VARCHAR(8)   																
+ * HOURS24 INT																		
+ * HOURS12 INT																		
+ * AM_PM VARCHAR(2)															
+
+Example:
+
+11:59:58	11	11	AM
+12:00:01	12	00	PM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</note>
+      <xloc>1824</xloc>
+      <yloc>416</yloc>
       <width>922</width>
-      <heigth>528</heigth>
+      <heigth>593</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -176,6 +656,48 @@
       <backgroundcolorred>255</backgroundcolorred>
       <backgroundcolorgreen>217</backgroundcolorgreen>
       <backgroundcolorblue>217</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>================================================================================
+Contribution by Ibrahim Bolarinwa
+https://github.com/Ibby-B
+June 29, 2021
+================================================================================
+This part of the ETL controls the construction of the PENTAHO_CE_AUDIT Table output SQL, there is no straight-forward
+ANSI version that would work with all DBs (at least not without changing the name of fields like USER and DATA
+================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+</note>
+      <xloc>2576</xloc>
+      <yloc>48</yloc>
+      <width>651</width>
+      <heigth>348</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>128</backgroundcolorgreen>
+      <backgroundcolorblue>255</backgroundcolorblue>
       <bordercolorred>100</bordercolorred>
       <bordercolorgreen>100</bordercolorgreen>
       <bordercolorblue>100</bordercolorblue>
@@ -195,62 +717,280 @@
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1521</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1521</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
     </attributes>
   </connection>
   <order>
-  <hop> <from>Extract Period</from><to>Value Mapper - Month</to><enabled>Y</enabled> </hop>
-  <hop> <from>Value Mapper - Month</from><to>Value Mapper - Day Week</to><enabled>Y</enabled> </hop>
-  <hop> <from>Value Mapper - Day Week</from><to>Value Mapper - plugin types</to><enabled>Y</enabled> </hop>
-  <hop> <from>Value Mapper - plugin types</from><to>Value Mapper - type</to><enabled>Y</enabled> </hop>
-  <hop> <from>Value Mapper - type</from><to>If field value is null</to><enabled>Y</enabled> </hop>
-  <hop> <from>Block this step until steps finish</from><to>Add constants</to><enabled>Y</enabled> </hop>
-  <hop> <from>Add constants</from><to>Get Variables</to><enabled>Y</enabled> </hop>
-  <hop> <from>TIN pro_audit Table 2</from><to>Add constants 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>DBLK session_end</from><to>Filter rows</to><enabled>Y</enabled> </hop>
-  <hop> <from>Add constants 2</from><to>DBLK session_end</to><enabled>Y</enabled> </hop>
-  <hop> <from>Filter rows</from><to>Clear records </to><enabled>Y</enabled> </hop>
-  <hop> <from>Filter rows</from><to>Rows discarted</to><enabled>Y</enabled> </hop>
-  <hop> <from>TIN pro_audit Table 2 2</from><to>Add constants 2 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>DBLK instance_end</from><to>Switch &#x2f; Case OBJ_TYPE</to><enabled>Y</enabled> </hop>
-  <hop> <from>Add constants 2 2</from><to>DBLK instance_end</to><enabled>Y</enabled> </hop>
-  <hop> <from>Clear records </from><to>input Login OKAY</to><enabled>Y</enabled> </hop>
-  <hop> <from>Switch &#x2f; Case JOB_ID</from><to>input instances OKAY 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>Switch &#x2f; Case JOB_ID</from><to>Rows discarted 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>Switch &#x2f; Case OBJ_TYPE</from><to>Switch &#x2f; Case JOB_ID</to><enabled>Y</enabled> </hop>
-  <hop> <from>Switch &#x2f; Case OBJ_TYPE</from><to>Rows discarted 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>input Login OKAY</from><to>BRIDGE</to><enabled>Y</enabled> </hop>
-  <hop> <from>input instances OKAY 2</from><to>BRIDGE</to><enabled>Y</enabled> </hop>
-  <hop> <from>BRIDGE</from><to>Block this step until steps finish</to><enabled>Y</enabled> </hop>
-  <hop> <from>BRIDGE</from><to>Truncate pentaho_ce_audit table</to><enabled>Y</enabled> </hop>
-  <hop> <from>Get Variables</from><to>User Defined Java Expression 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>User Defined Java Expression 2</from><to>Split field to rows</to><enabled>Y</enabled> </hop>
-  <hop> <from>Split field to rows</from><to>Extract Period</to><enabled>Y</enabled> </hop>
-  <hop> <from>If field value is null</from><to>Select rows for pentaho_ce_audit table</to><enabled>Y</enabled> </hop>
-  <hop> <from>Select rows for pentaho_ce_audit table</from><to>Not specified default values</to><enabled>Y</enabled> </hop>
-  <hop> <from>Caclulate Time</from><to>Rename and set types</to><enabled>Y</enabled> </hop>
-  <hop> <from>Calculate hours12</from><to>Cartesian Product</to><enabled>Y</enabled> </hop>
-  <hop> <from>Cartesian Product</from><to>Caclulate Time</to><enabled>Y</enabled> </hop>
-  <hop> <from>Generate Hours</from><to>Hours Sequence</to><enabled>Y</enabled> </hop>
-  <hop> <from>Generate Minutes</from><to>Minutes Sequence</to><enabled>Y</enabled> </hop>
-  <hop> <from>Generate Seconds</from><to>Seconds Sequence</to><enabled>Y</enabled> </hop>
-  <hop> <from>Hours Sequence</from><to>Calculate hours12</to><enabled>Y</enabled> </hop>
-  <hop> <from>Minutes Sequence</from><to>Cartesian Product</to><enabled>Y</enabled> </hop>
-  <hop> <from>Order Fields</from><to>Sort rows</to><enabled>Y</enabled> </hop>
-  <hop> <from>Remove Junk</from><to>Order Fields</to><enabled>Y</enabled> </hop>
-  <hop> <from>Rename and set types</from><to>Remove Junk</to><enabled>Y</enabled> </hop>
-  <hop> <from>Seconds Sequence</from><to>Cartesian Product</to><enabled>Y</enabled> </hop>
-  <hop> <from>Not specified default values</from><to>lookup with time fields</to><enabled>Y</enabled> </hop>
-  <hop> <from>Sort rows</from><to>lookup with time fields</to><enabled>Y</enabled> </hop>
-  <hop> <from>lookup with time fields</from><to>Table output PENTAHO_CE_AUDIT</to><enabled>Y</enabled> </hop>
+    <hop>
+      <from>Add constants</from>
+      <to>Get Variables</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Add constants 2</from>
+      <to>DBLK session_end</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Add constants 2 2</from>
+      <to>DBLK instance_end</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>BRIDGE</from>
+      <to>Block this step until steps finish</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>BRIDGE</from>
+      <to>Truncate pentaho_ce_audit table</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Block this step until steps finish</from>
+      <to>Add constants</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Caclulate Time</from>
+      <to>Rename|set types|Remove unneded</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Calculate hours12</from>
+      <to>Cartesian Product</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Cartesian Product</from>
+      <to>Caclulate Time</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Clear records </from>
+      <to>input Login OKAY</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>DB type check</from>
+      <to>Table output PENTAHO_CE_AUDIT</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>DB type check</from>
+      <to>Table output PENTAHO_CE_AUDIT (MySQL)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>DBLK instance_end</from>
+      <to>Switch / Case OBJ_TYPE</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>DBLK session_end</from>
+      <to>Filter rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Extract Period</from>
+      <to>Value Mapper - Month</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>Clear records </to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>Rows discarded</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Generate Hours</from>
+      <to>Hours Sequence</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Generate Minutes</from>
+      <to>Minutes Sequence</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Generate Seconds</from>
+      <to>Seconds Sequence</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get Variables</from>
+      <to>User Defined Java Expression 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get database type</from>
+      <to>Join rows (cartesian product)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Hours Sequence</from>
+      <to>Calculate hours12</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>If field value is null</from>
+      <to>Select rows for pentaho_ce_audit table</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Minutes Sequence</from>
+      <to>Cartesian Product</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Not specified default values</from>
+      <to>lookup with time fields</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Rename|set types|Remove unneded</from>
+      <to>Sort rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Seconds Sequence</from>
+      <to>Cartesian Product</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select rows for pentaho_ce_audit table</from>
+      <to>Not specified default values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>lookup with time fields</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Split field to rows</from>
+      <to>Extract Period</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Switch / Case JOB_ID</from>
+      <to>Rows discarded 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Switch / Case JOB_ID</from>
+      <to>input instances OKAY 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Switch / Case OBJ_TYPE</from>
+      <to>Rows discarded 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Switch / Case OBJ_TYPE</from>
+      <to>Switch / Case JOB_ID</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>TIN PRO_AUDIT Table 2</from>
+      <to>Add constants 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>TIN PRO_AUDIT Table 2 2</from>
+      <to>Add constants 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>User Defined Java Expression 2</from>
+      <to>Split field to rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Value Mapper - Day Week</from>
+      <to>Value Mapper - plugin types</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Value Mapper - Month</from>
+      <to>Value Mapper - Day Week</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Value Mapper - plugin types</from>
+      <to>Value Mapper - type</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Value Mapper - type</from>
+      <to>If field value is null</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>input Login OKAY</from>
+      <to>BRIDGE</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>input instances OKAY 2</from>
+      <to>BRIDGE</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup with time fields</from>
+      <to>Join rows (cartesian product)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>trigger</from>
+      <to>Get database type</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Join rows (cartesian product)</from>
+      <to>DB type check</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <step>
     <name>Add constants</name>
@@ -259,10 +999,10 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <fields>
       <field>
         <name>accept</name>
@@ -271,7 +1011,7 @@
         <currency/>
         <decimal/>
         <group/>
-        <nullif>application&#x2f;json</nullif>
+        <nullif>application/json</nullif>
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
@@ -283,7 +1023,7 @@
         <currency/>
         <decimal/>
         <group/>
-        <nullif>application&#x2f;json</nullif>
+        <nullif>application/json</nullif>
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
@@ -295,7 +1035,7 @@
         <currency/>
         <decimal/>
         <group/>
-        <nullif>&#x2f;pentaho&#x2f;api&#x2f;repo&#x2f;files</nullif>
+        <nullif>/pentaho/api/repo/files</nullif>
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
@@ -325,14 +1065,20 @@
         <set_empty_string>N</set_empty_string>
       </field>
     </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1284</xloc>
-      <yloc>259</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1392</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Add constants 2</name>
     <type>Constant</type>
@@ -340,10 +1086,10 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <fields>
       <field>
         <name>session_end</name>
@@ -358,14 +1104,20 @@
         <set_empty_string>N</set_empty_string>
       </field>
     </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>226</xloc>
-      <yloc>175</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Add constants 2 2</name>
     <type>Constant</type>
@@ -373,10 +1125,10 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <fields>
       <field>
         <name>instance_end</name>
@@ -391,14 +1143,20 @@
         <set_empty_string>N</set_empty_string>
       </field>
     </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>243</xloc>
-      <yloc>470</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>BRIDGE</name>
     <type>SelectValues</type>
@@ -406,47 +1164,54 @@
     <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>      <field>        <name>job_id</name>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>job_id</name>
         <rename>plugin</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>obj_id</name>
+      </field>
+      <field>
+        <name>obj_id</name>
         <rename>file</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>obj_id</name>
+      </field>
+      <field>
+        <name>obj_id</name>
         <rename>directory</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>actor</name>
+      </field>
+      <field>
+        <name>actor</name>
         <rename>user</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>message_type</name>
+      </field>
+      <field>
+        <name>message_type</name>
         <rename>type</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>audit_time</name>
+      </field>
+      <field>
+        <name>audit_time</name>
         <rename>data</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>duration</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>        <select_unspecified>N</select_unspecified>
-    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>951</xloc>
-      <yloc>351</yloc>
+      </field>
+      <field>
+        <name>duration</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1104</xloc>
+      <yloc>496</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Block this step until steps finish</name>
     <type>BlockUntilStepsFinish</type>
@@ -454,24 +1219,30 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <steps>
       <step>
         <name>Truncate pentaho_ce_audit table</name>
         <CopyNr>0</CopyNr>
-        </step>
-      </steps>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1284</xloc>
-      <yloc>183</yloc>
+      </step>
+    </steps>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1392</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Caclulate Time</name>
     <type>ScriptValueMod</type>
@@ -479,35 +1250,60 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <compatible>Y</compatible>
     <optimizationLevel>9</optimizationLevel>
-    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#x2f;&#x2f;Script here&#xa;var time &#x3d; &#x22;&#x22; &#xa;         &#x2b; &#x28;hours24.getInteger&#x28;&#x29;&#x3c;10&#x3f;&#x22;0&#x22;&#x3a;&#x22;&#x22;&#x29;&#xa;             &#x2b; hours24.getInteger&#x28;&#x29; &#x2b; &#x22;&#x3a;&#x22;&#xa;             &#x2b; &#x28;minutes.getInteger&#x28;&#x29;&#x3c;10&#x3f;&#x22;0&#x22;&#x3a;&#x22;&#x22;&#x29;&#xa;             &#x2b; minutes.getInteger&#x28;&#x29; &#x2b; &#x22;&#x3a;&#x22;&#xa;             &#x2b; &#x28;seconds.getInteger&#x28;&#x29;&#x3c;10&#x3f;&#x22;0&#x22;&#x3a;&#x22;&#x22;&#x29;&#xa;             &#x2b; seconds.getInteger&#x28;&#x29;&#xa;&#x3b;&#xa;var time_key &#x3d; &#x28;hours24.getInteger&#x28;&#x29;&#x3c;10&#x3f;&#x22;0&#x22;&#x3a;&#x22;&#x22;&#x29;&#xa;             &#x2b; hours24.getInteger&#x28;&#x29;&#xa;             &#x2b; &#x28;minutes.getInteger&#x28;&#x29;&#x3c;10&#x3f;&#x22;0&#x22;&#x3a;&#x22;&#x22;&#x29;&#xa;             &#x2b; minutes.getInteger&#x28;&#x29;&#xa;             &#x2b; &#x28;seconds.getInteger&#x28;&#x29;&#x3c;10&#x3f;&#x22;0&#x22;&#x3a;&#x22;&#x22;&#x29;&#xa;             &#x2b; seconds.getInteger&#x28;&#x29;&#xa;&#x3b;</jsScript_script>
-      </jsScript>    </jsScripts>    <fields>      <field>        <name>time</name>
+        <jsScript_script>//Script here
+var time = 
+				num2str(hours24.getInteger(),"00:") 
+             +  num2str(minutes.getInteger(),"00:") 
+             +  num2str(seconds.getInteger(),"00")
+;
+var time_key = 
+				num2str(hours24.getInteger(),"00") 
+             +  num2str(minutes.getInteger(),"00") 
+             +  num2str(seconds.getInteger(),"00")</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>time</name>
         <rename>time</rename>
         <type>String</type>
-        <length>10</length>
+        <length>8</length>
         <precision>-1</precision>
         <replace>N</replace>
-      </field>      <field>        <name>time_key</name>
+      </field>
+      <field>
+        <name>time_key</name>
         <rename>time_key</rename>
         <type>Integer</type>
-        <length>-1</length>
+        <length>6</length>
         <precision>-1</precision>
         <replace>N</replace>
-      </field>    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>2088</xloc>
-      <yloc>616</yloc>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2240</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Calculate hours12</name>
     <type>ScriptValueMod</type>
@@ -515,35 +1311,53 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <compatible>Y</compatible>
     <optimizationLevel>9</optimizationLevel>
-    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#x2f;&#x2f;Script here&#xa;var hours12 &#x3d; hours24.getInteger&#x28;&#x29; &#x25; 12&#x3b;&#xa;var am_pm &#x3d; &#x28;hours24 &#x3e;&#x3d; 12 &#x3f; &#x27;PM&#x27; &#x3a; &#x27;AM&#x27;&#x29;</jsScript_script>
-      </jsScript>    </jsScripts>    <fields>      <field>        <name>hours12</name>
+        <jsScript_script>//Script here
+var hours12 = hours24.getInteger() % 12;
+var am_pm = (hours24 >= 12 ? 'PM' : 'AM')</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>hours12</name>
         <rename>hours12</rename>
         <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
         <replace>N</replace>
-      </field>      <field>        <name>am_pm</name>
+      </field>
+      <field>
+        <name>am_pm</name>
         <rename>am_pm</rename>
         <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
         <replace>N</replace>
-      </field>    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1960</xloc>
-      <yloc>520</yloc>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2128</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Cartesian Product</name>
     <type>JoinRows</type>
@@ -551,30 +1365,36 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>out</prefix>
-      <cache_size>500</cache_size>
-      <main/>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <cache_size>500</cache_size>
+    <main>Minutes Sequence</main>
     <compare>
-<condition>
- <negated>N</negated>
- <leftvalue/>
- <function>&#x3d;</function>
- <rightvalue/>
- </condition>
+      <condition>
+        <negated>N</negated>
+        <leftvalue/>
+        <function>=</function>
+        <rightvalue/>
+      </condition>
     </compare>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1960</xloc>
-      <yloc>616</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2144</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Clear records </name>
     <type>SetValueConstant</type>
@@ -582,27 +1402,71 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-   <usevar>N</usevar>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
     <fields>
       <field>
         <name>obj_id</name>
         <value/>
         <mask/>
         <set_empty_string>Y</set_empty_string>
-        </field>
-      </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>502</xloc>
-      <yloc>178</yloc>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
+  <step>
+    <name>DB type check</name>
+    <type>SwitchCase</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fieldname>database_type</fieldname>
+    <use_contains>N</use_contains>
+    <case_value_type>String</case_value_type>
+    <case_value_format/>
+    <case_value_decimal/>
+    <case_value_group/>
+    <default_target_step>Table output PENTAHO_CE_AUDIT</default_target_step>
+    <cases>
+      <case>
+        <value>MySQL</value>
+        <target_step>Table output PENTAHO_CE_AUDIT (MySQL)</target_step>
+      </case>
+    </cases>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2928</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>DBLK instance_end</name>
     <type>DBLookup</type>
@@ -610,30 +1474,30 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <connection>Hibernate</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
     <lookup>
       <schema/>
-      <table>pro_audit</table>
+      <table>PRO_AUDIT</table>
       <orderby/>
       <fail_on_multiple>N</fail_on_multiple>
       <eat_row_on_failure>N</eat_row_on_failure>
       <key>
         <name>message_name</name>
         <field>MESSAGE_NAME</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <key>
         <name>instance_end</name>
         <field>MESSAGE_TYPE</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <value>
@@ -691,14 +1555,20 @@
         <type>BigNumber</type>
       </value>
     </lookup>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>346</xloc>
-      <yloc>469</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>DBLK session_end</name>
     <type>DBLookup</type>
@@ -706,30 +1576,30 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <connection>Hibernate</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
     <lookup>
       <schema/>
-      <table>pro_audit</table>
+      <table>PRO_AUDIT</table>
       <orderby/>
       <fail_on_multiple>N</fail_on_multiple>
       <eat_row_on_failure>N</eat_row_on_failure>
       <key>
         <name>inst_id</name>
         <field>INST_ID</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <key>
         <name>session_end</name>
         <field>MESSAGE_TYPE</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <value>
@@ -787,14 +1657,20 @@
         <type>BigNumber</type>
       </value>
     </lookup>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>327</xloc>
-      <yloc>176</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Extract Period</name>
     <type>Calculator</type>
@@ -802,116 +1678,130 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-       <calculation><field_name>year</field_name>
-<calc_type>YEAR_OF_DATE</calc_type>
-<field_a>data</field_a>
-<field_b/>
-<field_c/>
-<value_type>Integer</value_type>
-<value_length>-1</value_length>
-<value_precision>-1</value_precision>
-<remove>N</remove>
-<conversion_mask/>
-<decimal_symbol/>
-<grouping_symbol/>
-<currency_symbol/>
-</calculation>
-       <calculation><field_name>month</field_name>
-<calc_type>MONTH_OF_DATE</calc_type>
-<field_a>data</field_a>
-<field_b/>
-<field_c/>
-<value_type>Integer</value_type>
-<value_length>-1</value_length>
-<value_precision>-1</value_precision>
-<remove>N</remove>
-<conversion_mask/>
-<decimal_symbol/>
-<grouping_symbol/>
-<currency_symbol/>
-</calculation>
-       <calculation><field_name>day</field_name>
-<calc_type>DAY_OF_MONTH</calc_type>
-<field_a>data</field_a>
-<field_b/>
-<field_c/>
-<value_type>Integer</value_type>
-<value_length>-1</value_length>
-<value_precision>-1</value_precision>
-<remove>N</remove>
-<conversion_mask/>
-<decimal_symbol/>
-<grouping_symbol/>
-<currency_symbol/>
-</calculation>
-       <calculation><field_name>day_week</field_name>
-<calc_type>DAY_OF_WEEK</calc_type>
-<field_a>data</field_a>
-<field_b/>
-<field_c/>
-<value_type>Integer</value_type>
-<value_length>-1</value_length>
-<value_precision>-1</value_precision>
-<remove>N</remove>
-<conversion_mask/>
-<decimal_symbol/>
-<grouping_symbol/>
-<currency_symbol/>
-</calculation>
-       <calculation><field_name>hour</field_name>
-<calc_type>HOUR_OF_DAY</calc_type>
-<field_a>data</field_a>
-<field_b/>
-<field_c/>
-<value_type>Integer</value_type>
-<value_length>-1</value_length>
-<value_precision>-1</value_precision>
-<remove>N</remove>
-<conversion_mask/>
-<decimal_symbol/>
-<grouping_symbol/>
-<currency_symbol/>
-</calculation>
-       <calculation><field_name>minutes</field_name>
-<calc_type>MINUTE_OF_HOUR</calc_type>
-<field_a>data</field_a>
-<field_b/>
-<field_c/>
-<value_type>Integer</value_type>
-<value_length>-1</value_length>
-<value_precision>-1</value_precision>
-<remove>N</remove>
-<conversion_mask/>
-<decimal_symbol/>
-<grouping_symbol/>
-<currency_symbol/>
-</calculation>
-       <calculation><field_name>seconds</field_name>
-<calc_type>SECOND_OF_MINUTE</calc_type>
-<field_a>data</field_a>
-<field_b/>
-<field_c/>
-<value_type>Integer</value_type>
-<value_length>-1</value_length>
-<value_precision>-1</value_precision>
-<remove>N</remove>
-<conversion_mask/>
-<decimal_symbol/>
-<grouping_symbol/>
-<currency_symbol/>
-</calculation>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1279</xloc>
-      <yloc>668</yloc>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <failIfNoFile>N</failIfNoFile>
+    <calculation>
+      <field_name>year</field_name>
+      <calc_type>YEAR_OF_DATE</calc_type>
+      <field_a>data</field_a>
+      <field_b/>
+      <field_c/>
+      <value_type>Integer</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask/>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <currency_symbol/>
+    </calculation>
+    <calculation>
+      <field_name>month</field_name>
+      <calc_type>MONTH_OF_DATE</calc_type>
+      <field_a>data</field_a>
+      <field_b/>
+      <field_c/>
+      <value_type>Integer</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask/>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <currency_symbol/>
+    </calculation>
+    <calculation>
+      <field_name>day</field_name>
+      <calc_type>DAY_OF_MONTH</calc_type>
+      <field_a>data</field_a>
+      <field_b/>
+      <field_c/>
+      <value_type>Integer</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask/>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <currency_symbol/>
+    </calculation>
+    <calculation>
+      <field_name>day_week</field_name>
+      <calc_type>DAY_OF_WEEK</calc_type>
+      <field_a>data</field_a>
+      <field_b/>
+      <field_c/>
+      <value_type>Integer</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask/>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <currency_symbol/>
+    </calculation>
+    <calculation>
+      <field_name>hour</field_name>
+      <calc_type>HOUR_OF_DAY</calc_type>
+      <field_a>data</field_a>
+      <field_b/>
+      <field_c/>
+      <value_type>Integer</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask/>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <currency_symbol/>
+    </calculation>
+    <calculation>
+      <field_name>minutes</field_name>
+      <calc_type>MINUTE_OF_HOUR</calc_type>
+      <field_a>data</field_a>
+      <field_b/>
+      <field_c/>
+      <value_type>Integer</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask/>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <currency_symbol/>
+    </calculation>
+    <calculation>
+      <field_name>seconds</field_name>
+      <calc_type>SECOND_OF_MINUTE</calc_type>
+      <field_a>data</field_a>
+      <field_b/>
+      <field_c/>
+      <value_type>Integer</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask/>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <currency_symbol/>
+    </calculation>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1392</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Filter rows</name>
     <type>FilterRows</type>
@@ -919,28 +1809,43 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<send_true_to>Clear records </send_true_to>
-<send_false_to>Rows discarted</send_false_to>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Clear records </send_true_to>
+    <send_false_to>Rows discarded</send_false_to>
     <compare>
-<condition>
- <negated>N</negated>
- <leftvalue>obj_type</leftvalue>
- <function>IS NOT NULL</function>
- <rightvalue/>
- <value><name>constant</name><type>String</type><text>null</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>obj_type</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+        <value>
+          <name>constant</name>
+          <type>String</type>
+          <text>null</text>
+          <length>-1</length>
+          <precision>-1</precision>
+          <isnull>N</isnull>
+          <mask/>
+        </value>
+      </condition>
     </compare>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>411</xloc>
-      <yloc>179</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>576</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Generate Hours</name>
     <type>RowGenerator</type>
@@ -948,10 +1853,10 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <fields>
       <field>
         <name>hours24_row</name>
@@ -971,14 +1876,20 @@
     <interval_in_ms/>
     <row_time_field/>
     <last_time_field/>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1736</xloc>
-      <yloc>520</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1904</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Generate Minutes</name>
     <type>RowGenerator</type>
@@ -986,10 +1897,10 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <fields>
       <field>
         <name>minutes_row</name>
@@ -1009,14 +1920,20 @@
     <interval_in_ms/>
     <row_time_field/>
     <last_time_field/>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1736</xloc>
-      <yloc>616</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1904</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Generate Seconds</name>
     <type>RowGenerator</type>
@@ -1024,10 +1941,10 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <fields>
       <field>
         <name>seconds_row</name>
@@ -1047,14 +1964,20 @@
     <interval_in_ms/>
     <row_time_field/>
     <last_time_field/>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1736</xloc>
-      <yloc>712</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1904</xloc>
+      <yloc>944</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Get Variables</name>
     <type>GetVariable</type>
@@ -1062,14 +1985,14 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <fields>
       <field>
         <name>PENTAHO_ROLES</name>
-        <variable>&#x24;&#x7b;PENTAHO_ROLES&#x7d;</variable>
+        <variable>${PENTAHO_ROLES}</variable>
         <type>String</type>
         <format/>
         <currency/>
@@ -1080,14 +2003,139 @@
         <trim_type>none</trim_type>
       </field>
     </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1285</xloc>
-      <yloc>350</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1392</xloc>
+      <yloc>496</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
+    </GUI>
+  </step>
+  <step>
+    <name>Get database type</name>
+    <type>UserDefinedJavaClass</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <definitions>
+      <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+        <class_name>Processor</class_name>
+        <class_source>import java.sql.*;
+import org.pentaho.di.core.database.*;
 
+private DatabaseMeta databaseMeta;
+private Database database;
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException
+{
+	Object[] r = getRow();
+	if (r == null) {
+		setOutputDone();
+		return false;
+	}
+
+    if (first)
+    {
+        first = false;
+    }
+
+    try {
+      r = createOutputRow(r, data.outputRowMeta.size());	
+	  int index = getInputRowMeta().size();
+      r[index++] = database.getDatabaseMetaData().getDatabaseProductName();
+	  
+      putRow(data.outputRowMeta, r);
+
+   } catch(Exception e) {
+     throw new KettleException(e);
+   } 
+   
+   return true;
+}
+
+public boolean init(StepMetaInterface stepMetaInterface, StepDataInterface stepDataInterface)
+{
+    if (!parent.initImpl(stepMetaInterface, stepDataInterface)) {
+      return false;
+    }
+    String dbName = getParameter("DBNAME");
+    databaseMeta = getTransMeta().findDatabase(dbName);
+    if (databaseMeta==null) {
+         logError("A connection with name "+dbName+" could not be found!");
+         setErrors(1);
+         return false;
+    }
+
+    database = new Database(getTrans(), databaseMeta);
+
+    try  {
+      database.connect();
+    } catch(Exception e) {
+      logError("Connecting to database "+dbName+" failed.", e);
+      setErrors(1);
+      return false;
+    }
+
+    return true;
+}
+
+public void dispose(StepMetaInterface smi, StepDataInterface sdi)
+{
+    if (database!=null) {
+      database.disconnect();
+    }
+
+    parent.disposeImpl(smi, sdi);
+}
+
+
+</class_source>
+      </definition>
+    </definitions>
+    <fields>
+      <field>
+        <field_name>database_type</field_name>
+        <field_type>String</field_type>
+        <field_length>255</field_length>
+        <field_precision>-1</field_precision>
+      </field>
+    </fields>
+    <clear_result_fields>N</clear_result_fields>
+    <info_steps/>
+    <target_steps/>
+    <usage_parameters>
+      <usage_parameter>
+        <parameter_tag>DBNAME</parameter_tag>
+        <parameter_value>Hibernate</parameter_value>
+        <parameter_description>The name of the database</parameter_description>
+      </usage_parameter>
+    </usage_parameters>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2800</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>Hours Sequence</name>
     <type>Sequence</type>
@@ -1095,28 +2143,34 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <valuename>hours24</valuename>
-      <use_database>N</use_database>
-      <connection/>
-      <schema/>
-      <seqname>SEQ_</seqname>
-      <use_counter>Y</use_counter>
-      <counter_name>hours24</counter_name>
-      <start_at>0</start_at>
-      <increment_by>1</increment_by>
-      <max_value>999999999</max_value>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1864</xloc>
-      <yloc>520</yloc>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <valuename>hours24</valuename>
+    <use_database>N</use_database>
+    <connection/>
+    <schema/>
+    <seqname>SEQ_</seqname>
+    <use_counter>Y</use_counter>
+    <counter_name>hours24</counter_name>
+    <start_at>0</start_at>
+    <increment_by>1</increment_by>
+    <max_value>999999999</max_value>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2032</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>If field value is null</name>
     <type>IfNull</type>
@@ -1124,15 +2178,15 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <replaceAllByValue/>
-      <replaceAllMask/>
-      <selectFields>Y</selectFields>
-      <selectValuesType>N</selectValuesType>
-      <setEmptyStringAll>N</setEmptyStringAll>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <replaceAllByValue/>
+    <replaceAllMask/>
+    <selectFields>Y</selectFields>
+    <selectValuesType>N</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
     <valuetypes>
       </valuetypes>
     <fields>
@@ -1141,16 +2195,59 @@
         <value>Not specified</value>
         <mask/>
         <set_empty_string>N</set_empty_string>
-        </field>
-      </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1516</xloc>
-      <yloc>368</yloc>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1648</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
+  <step>
+    <name>Join rows (cartesian product)</name>
+    <type>JoinRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <cache_size>500</cache_size>
+    <main>lookup with time fields</main>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue/>
+        <function>=</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2800</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>Minutes Sequence</name>
     <type>Sequence</type>
@@ -1158,28 +2255,34 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <valuename>minutes</valuename>
-      <use_database>N</use_database>
-      <connection/>
-      <schema/>
-      <seqname>SEQ_</seqname>
-      <use_counter>Y</use_counter>
-      <counter_name>minutes</counter_name>
-      <start_at>0</start_at>
-      <increment_by>1</increment_by>
-      <max_value>999999999</max_value>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1864</xloc>
-      <yloc>616</yloc>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <valuename>minutes</valuename>
+    <use_database>N</use_database>
+    <connection/>
+    <schema/>
+    <seqname>SEQ_</seqname>
+    <use_counter>Y</use_counter>
+    <counter_name>minutes</counter_name>
+    <start_at>0</start_at>
+    <increment_by>1</increment_by>
+    <max_value>999999999</max_value>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2032</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Not specified default values</name>
     <type>IfNull</type>
@@ -1187,117 +2290,63 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <replaceAllByValue/>
-      <replaceAllMask/>
-      <selectFields>N</selectFields>
-      <selectValuesType>Y</selectValuesType>
-      <setEmptyStringAll>N</setEmptyStringAll>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <replaceAllByValue/>
+    <replaceAllMask/>
+    <selectFields>N</selectFields>
+    <selectValuesType>Y</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
     <valuetypes>
       <valuetype>
         <name>String</name>
         <value>Not specified</value>
         <mask/>
         <set_type_empty_string>N</set_type_empty_string>
-        </valuetype>
-      </valuetypes>
+      </valuetype>
+    </valuetypes>
     <fields>
       </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1512</xloc>
-      <yloc>190</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1648</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
-    <name>Order Fields</name>
+    <name>Rename|set types|Remove unneded</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>      <field>        <name>TIME_SK</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>TIME</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>HOURS24</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>HOURS12</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>AM_PM</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>MINUTES</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>SECONDS</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>        <select_unspecified>N</select_unspecified>
-    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>2376</xloc>
-      <yloc>616</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Remove Junk</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>        <select_unspecified>N</select_unspecified>
-      <remove>        <name>HOURS24_ROW</name>
-      </remove>      <remove>        <name>MINUTES_ROW</name>
-      </remove>      <remove>        <name>SECONDS_ROW</name>
-      </remove>    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>2280</xloc>
-      <yloc>616</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Rename and set types</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>        <select_unspecified>N</select_unspecified>
-      <meta>        <name>time_key</name>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <remove>
+        <name>hours24_row</name>
+      </remove>
+      <remove>
+        <name>minutes_row</name>
+      </remove>
+      <remove>
+        <name>seconds_row</name>
+      </remove>
+      <meta>
+        <name>time_key</name>
         <rename>TIME_SK</rename>
         <type>Integer</type>
         <length>-2</length>
@@ -1312,7 +2361,9 @@
         <grouping_symbol/>
         <currency_symbol/>
         <storage_type/>
-      </meta>      <meta>        <name>time</name>
+      </meta>
+      <meta>
+        <name>time</name>
         <rename>TIME</rename>
         <type>String</type>
         <length>8</length>
@@ -1327,22 +2378,9 @@
         <grouping_symbol/>
         <currency_symbol/>
         <storage_type/>
-      </meta>      <meta>        <name>seconds_row</name>
-        <rename>SECONDS_ROW</rename>
-        <type>Integer</type>
-        <length>-2</length>
-        <precision>0</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>      <meta>        <name>seconds</name>
+      </meta>
+      <meta>
+        <name>seconds</name>
         <rename>SECONDS</rename>
         <type>Integer</type>
         <length>-2</length>
@@ -1357,22 +2395,9 @@
         <grouping_symbol/>
         <currency_symbol/>
         <storage_type/>
-      </meta>      <meta>        <name>minutes_row</name>
-        <rename>MINUTES_ROW</rename>
-        <type>Integer</type>
-        <length>-2</length>
-        <precision>0</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>      <meta>        <name>minutes</name>
+      </meta>
+      <meta>
+        <name>minutes</name>
         <rename>MINUTES</rename>
         <type>Integer</type>
         <length>-2</length>
@@ -1387,22 +2412,9 @@
         <grouping_symbol/>
         <currency_symbol/>
         <storage_type/>
-      </meta>      <meta>        <name>hours24_row</name>
-        <rename>HOURS24_ROW</rename>
-        <type>Integer</type>
-        <length>-2</length>
-        <precision>0</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>      <meta>        <name>hours24</name>
+      </meta>
+      <meta>
+        <name>hours24</name>
         <rename>HOURS24</rename>
         <type>Integer</type>
         <length>-2</length>
@@ -1417,7 +2429,9 @@
         <grouping_symbol/>
         <currency_symbol/>
         <storage_type/>
-      </meta>      <meta>        <name>hours12</name>
+      </meta>
+      <meta>
+        <name>hours12</name>
         <rename>HOURS12</rename>
         <type>Integer</type>
         <length>-2</length>
@@ -1432,7 +2446,9 @@
         <grouping_symbol/>
         <currency_symbol/>
         <storage_type/>
-      </meta>      <meta>        <name>am_pm</name>
+      </meta>
+      <meta>
+        <name>am_pm</name>
         <rename>AM_PM</rename>
         <type>String</type>
         <length>2</length>
@@ -1447,52 +2463,72 @@
         <grouping_symbol/>
         <currency_symbol/>
         <storage_type/>
-      </meta>    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>2184</xloc>
-      <yloc>616</yloc>
+      </meta>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2432</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
-    <name>Rows discarted</name>
+    <name>Rows discarded</name>
     <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>469</xloc>
-      <yloc>259</yloc>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
-    <name>Rows discarted 2</name>
+    <name>Rows discarded 2</name>
     <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>543</xloc>
-      <yloc>606</yloc>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>688</xloc>
+      <yloc>736</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Seconds Sequence</name>
     <type>Sequence</type>
@@ -1500,28 +2536,34 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <valuename>seconds</valuename>
-      <use_database>N</use_database>
-      <connection/>
-      <schema/>
-      <seqname>SEQ_</seqname>
-      <use_counter>Y</use_counter>
-      <counter_name>seconds</counter_name>
-      <start_at>0</start_at>
-      <increment_by>1</increment_by>
-      <max_value>999999999</max_value>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1864</xloc>
-      <yloc>712</yloc>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <valuename>seconds</valuename>
+    <use_database>N</use_database>
+    <connection/>
+    <schema/>
+    <seqname>SEQ_</seqname>
+    <use_counter>Y</use_counter>
+    <counter_name>seconds</counter_name>
+    <start_at>0</start_at>
+    <increment_by>1</increment_by>
+    <max_value>999999999</max_value>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2032</xloc>
+      <yloc>944</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Select rows for pentaho_ce_audit table</name>
     <type>SelectValues</type>
@@ -1529,87 +2571,78 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>      <field>        <name>data</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>plugin</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>user</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>directory</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>duration</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>type</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>role</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>year</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>month</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>day</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>day_week</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>hour</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>minutes</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>seconds</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>month_desc</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>day_week_desc</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>file</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>        <select_unspecified>N</select_unspecified>
-    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1513</xloc>
-      <yloc>271</yloc>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>data</name>
+      </field>
+      <field>
+        <name>plugin</name>
+      </field>
+      <field>
+        <name>user</name>
+      </field>
+      <field>
+        <name>directory</name>
+      </field>
+      <field>
+        <name>duration</name>
+      </field>
+      <field>
+        <name>type</name>
+      </field>
+      <field>
+        <name>role</name>
+      </field>
+      <field>
+        <name>year</name>
+      </field>
+      <field>
+        <name>month</name>
+      </field>
+      <field>
+        <name>day</name>
+      </field>
+      <field>
+        <name>day_week</name>
+      </field>
+      <field>
+        <name>hour</name>
+      </field>
+      <field>
+        <name>minutes</name>
+      </field>
+      <field>
+        <name>seconds</name>
+      </field>
+      <field>
+        <name>month_desc</name>
+      </field>
+      <field>
+        <name>day_week_desc</name>
+      </field>
+      <field>
+        <name>file</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1648</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Sort rows</name>
     <type>SortRows</type>
@@ -1617,33 +2650,41 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>out</prefix>
-      <sort_size>1000000</sort_size>
-      <free_memory/>
-      <compress>N</compress>
-      <compress_variable/>
-      <unique_rows>N</unique_rows>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
         <name>TIME_SK</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
-        <presorted>N</presorted>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>2</collator_strength>
+        <presorted>Y</presorted>
       </field>
     </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>2468</xloc>
-      <yloc>612</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2640</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Split field to rows</name>
     <type>SplitFieldToRows3</type>
@@ -1651,147 +2692,210 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-   <splitfield>ROLES</splitfield>
-   <delimiter>,</delimiter>
-   <newfield>ROLE</newfield>
-   <rownum>N</rownum>
-   <rownum_field/>
-   <resetrownumber>Y</resetrownumber>
-   <delimiter_is_regex>N</delimiter_is_regex>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1280</xloc>
-      <yloc>525</yloc>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <splitfield>ROLES</splitfield>
+    <delimiter>,</delimiter>
+    <newfield>ROLE</newfield>
+    <rownum>N</rownum>
+    <rownum_field/>
+    <resetrownumber>Y</resetrownumber>
+    <delimiter_is_regex>N</delimiter_is_regex>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1392</xloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
-    <name>Switch &#x2f; Case JOB_ID</name>
+    <name>Switch / Case JOB_ID</name>
     <type>SwitchCase</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<fieldname>job_id</fieldname>
-<use_contains>N</use_contains>
-<case_value_type>String</case_value_type>
-<case_value_format/>
-<case_value_decimal/>
-<case_value_group/>
-<default_target_step>Rows discarted 2</default_target_step>
-<cases><case><value>cda</value>
-<target_step>input instances OKAY 2</target_step>
-</case><case><value>pentaho-cdf-dd</value>
-<target_step>input instances OKAY 2</target_step>
-</case><case><value>pentaho-cdf</value>
-<target_step>input instances OKAY 2</target_step>
-</case><case><value>org.pentaho.platform.web.http.api.resources.XactionUtil</value>
-<target_step>input instances OKAY 2</target_step>
-</case><case><value>org.pentaho.reporting.platform.plugin.ExecuteReportContentHandler</value>
-<target_step>input instances OKAY 2</target_step>
-</case></cases>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>590</xloc>
-      <yloc>470</yloc>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fieldname>job_id</fieldname>
+    <use_contains>N</use_contains>
+    <case_value_type>String</case_value_type>
+    <case_value_format/>
+    <case_value_decimal/>
+    <case_value_group/>
+    <default_target_step>Rows discarded 2</default_target_step>
+    <cases>
+      <case>
+        <value>cda</value>
+        <target_step>input instances OKAY 2</target_step>
+      </case>
+      <case>
+        <value>pentaho-cdf-dd</value>
+        <target_step>input instances OKAY 2</target_step>
+      </case>
+      <case>
+        <value>pentaho-cdf</value>
+        <target_step>input instances OKAY 2</target_step>
+      </case>
+      <case>
+        <value>org.pentaho.platform.web.http.api.resources.XactionUtil</value>
+        <target_step>input instances OKAY 2</target_step>
+      </case>
+      <case>
+        <value>org.pentaho.reporting.platform.plugin.ExecuteReportContentHandler</value>
+        <target_step>input instances OKAY 2</target_step>
+      </case>
+    </cases>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
-    <name>Switch &#x2f; Case OBJ_TYPE</name>
+    <name>Switch / Case OBJ_TYPE</name>
     <type>SwitchCase</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<fieldname>obj_type</fieldname>
-<use_contains>N</use_contains>
-<case_value_type>String</case_value_type>
-<case_value_format/>
-<case_value_decimal/>
-<case_value_group/>
-<default_target_step>Rows discarted 2</default_target_step>
-<cases><case><value>org.pentaho.platform.engine.services.solution.SolutionEngine</value>
-<target_step>Switch &#x2f; Case JOB_ID</target_step>
-</case><case><value>pt.webdetails.cdf.dd.api.RenderApi</value>
-<target_step>Switch &#x2f; Case JOB_ID</target_step>
-</case><case><value>org.pentaho.reporting.platform.plugin.ReportContentGenerator</value>
-<target_step>Switch &#x2f; Case JOB_ID</target_step>
-</case><case><value>org.pentaho.cdf.CdfContentGenerator</value>
-<target_step>Switch &#x2f; Case JOB_ID</target_step>
-</case></cases>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>468</xloc>
-      <yloc>470</yloc>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fieldname>obj_type</fieldname>
+    <use_contains>N</use_contains>
+    <case_value_type>String</case_value_type>
+    <case_value_format/>
+    <case_value_decimal/>
+    <case_value_group/>
+    <default_target_step>Rows discarded 2</default_target_step>
+    <cases>
+      <case>
+        <value>org.pentaho.platform.engine.services.solution.SolutionEngine</value>
+        <target_step>Switch / Case JOB_ID</target_step>
+      </case>
+      <case>
+        <value>pt.webdetails.cdf.dd.api.RenderApi</value>
+        <target_step>Switch / Case JOB_ID</target_step>
+      </case>
+      <case>
+        <value>org.pentaho.reporting.platform.plugin.ReportContentGenerator</value>
+        <target_step>Switch / Case JOB_ID</target_step>
+      </case>
+      <case>
+        <value>org.pentaho.cdf.CdfContentGenerator</value>
+        <target_step>Switch / Case JOB_ID</target_step>
+      </case>
+    </cases>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
-    <name>TIN pro_audit Table 2</name>
+    <name>TIN PRO_AUDIT Table 2</name>
     <type>TableInput</type>
     <description/>
     <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <connection>Hibernate</connection>
-    <sql>SELECT INST_ID as &#x22;inst_id&#x22; FROM pro_audit&#xd;&#xa;WHERE &#xd;&#xa;	MESSAGE_TYPE &#x3d; &#x27;session_start&#x27;&#xd;&#xa;	AND OBJ_TYPE&#x3d;&#x27;org.pentaho.platform.web.http.session.PentahoHttpSession&#x27;&#xd;&#xa;GROUP BY INST_ID</sql>
+    <sql>SELECT INST_ID as "inst_id" FROM PRO_AUDIT
+WHERE 
+	MESSAGE_TYPE = 'session_start'
+	AND OBJ_TYPE='org.pentaho.platform.web.http.session.PentahoHttpSession'
+GROUP BY INST_ID</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>105</xloc>
-      <yloc>175</yloc>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta/>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
-    <name>TIN pro_audit Table 2 2</name>
+    <name>TIN PRO_AUDIT Table 2 2</name>
     <type>TableInput</type>
     <description/>
     <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <connection>Hibernate</connection>
-    <sql>SELECT INST_ID as &#x22;inst_id&#x22;, MESSAGE_NAME as &#x22;message_name&#x22; &#xd;&#xa;FROM pro_audit&#xd;&#xa;WHERE MESSAGE_TYPE &#x3d; &#x27;instance_start&#x27;&#xd;&#xa;GROUP BY INST_ID, MESSAGE_NAME</sql>
+    <sql>SELECT INST_ID as "inst_id", MESSAGE_NAME as "message_name" 
+FROM PRO_AUDIT
+WHERE MESSAGE_TYPE = 'instance_start'
+GROUP BY INST_ID, MESSAGE_NAME</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>124</xloc>
-      <yloc>471</yloc>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta/>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>272</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Table output PENTAHO_CE_AUDIT</name>
     <type>TableOutput</type>
@@ -1799,13 +2903,13 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <connection>Hibernate</connection>
     <schema/>
-    <table>&#x22;PENTAHO_CE_AUDIT&#x22;</table>
+    <table>"PENTAHO_CE_AUDIT"</table>
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
@@ -1821,95 +2925,225 @@
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
-        <field>
-          <column_name>&#x22;DATA&#x22;</column_name>
-          <stream_name>data</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;PLUGIN&#x22;</column_name>
-          <stream_name>plugin</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;USER&#x22;</column_name>
-          <stream_name>user</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;DIRECTORY&#x22;</column_name>
-          <stream_name>directory</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;DURATION&#x22;</column_name>
-          <stream_name>duration</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;TYPE&#x22;</column_name>
-          <stream_name>type</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;ROLE&#x22;</column_name>
-          <stream_name>role</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;YEAR&#x22;</column_name>
-          <stream_name>year</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;MONTH&#x22;</column_name>
-          <stream_name>month</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;DAY&#x22;</column_name>
-          <stream_name>day</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;DAY_WEEK&#x22;</column_name>
-          <stream_name>day_week</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;AM_PM&#x22;</column_name>
-          <stream_name>AM_PM</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;HOURS24&#x22;</column_name>
-          <stream_name>HOURS24</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;HOURS12&#x22;</column_name>
-          <stream_name>HOURS12</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;MINUTES&#x22;</column_name>
-          <stream_name>minutes</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;SECONDS&#x22;</column_name>
-          <stream_name>seconds</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;TIME&#x22;</column_name>
-          <stream_name>TIME</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;MONTH_DESC&#x22;</column_name>
-          <stream_name>month_desc</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;DAY_WEEK_DESC&#x22;</column_name>
-          <stream_name>day_week_desc</stream_name>
-        </field>
-        <field>
-          <column_name>&#x22;FILE&#x22;</column_name>
-          <stream_name>file</stream_name>
-        </field>
+      <field>
+        <column_name>"DATA"</column_name>
+        <stream_name>data</stream_name>
+      </field>
+      <field>
+        <column_name>"PLUGIN"</column_name>
+        <stream_name>plugin</stream_name>
+      </field>
+      <field>
+        <column_name>"USER"</column_name>
+        <stream_name>user</stream_name>
+      </field>
+      <field>
+        <column_name>"DIRECTORY"</column_name>
+        <stream_name>directory</stream_name>
+      </field>
+      <field>
+        <column_name>"DURATION"</column_name>
+        <stream_name>duration</stream_name>
+      </field>
+      <field>
+        <column_name>"TYPE"</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>"ROLE"</column_name>
+        <stream_name>role</stream_name>
+      </field>
+      <field>
+        <column_name>"YEAR"</column_name>
+        <stream_name>year</stream_name>
+      </field>
+      <field>
+        <column_name>"MONTH"</column_name>
+        <stream_name>month</stream_name>
+      </field>
+      <field>
+        <column_name>"DAY"</column_name>
+        <stream_name>day</stream_name>
+      </field>
+      <field>
+        <column_name>"DAY_WEEK"</column_name>
+        <stream_name>day_week</stream_name>
+      </field>
+      <field>
+        <column_name>"AM_PM"</column_name>
+        <stream_name>AM_PM</stream_name>
+      </field>
+      <field>
+        <column_name>"HOURS24"</column_name>
+        <stream_name>HOURS24</stream_name>
+      </field>
+      <field>
+        <column_name>"HOURS12"</column_name>
+        <stream_name>HOURS12</stream_name>
+      </field>
+      <field>
+        <column_name>"MINUTES"</column_name>
+        <stream_name>minutes</stream_name>
+      </field>
+      <field>
+        <column_name>"SECONDS"</column_name>
+        <stream_name>seconds</stream_name>
+      </field>
+      <field>
+        <column_name>"TIME"</column_name>
+        <stream_name>TIME</stream_name>
+      </field>
+      <field>
+        <column_name>"MONTH_DESC"</column_name>
+        <stream_name>month_desc</stream_name>
+      </field>
+      <field>
+        <column_name>"DAY_WEEK_DESC"</column_name>
+        <stream_name>day_week_desc</stream_name>
+      </field>
+      <field>
+        <column_name>"FILE"</column_name>
+        <stream_name>file</stream_name>
+      </field>
     </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>2637</xloc>
-      <yloc>190</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>3088</xloc>
+      <yloc>464</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
+  <step>
+    <name>Table output PENTAHO_CE_AUDIT (MySQL)</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Hibernate</connection>
+    <schema/>
+    <table>`PENTAHO_CE_AUDIT`</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>`DATA`</column_name>
+        <stream_name>data</stream_name>
+      </field>
+      <field>
+        <column_name>`PLUGIN`</column_name>
+        <stream_name>plugin</stream_name>
+      </field>
+      <field>
+        <column_name>`USER`</column_name>
+        <stream_name>user</stream_name>
+      </field>
+      <field>
+        <column_name>`DIRECTORY`</column_name>
+        <stream_name>directory</stream_name>
+      </field>
+      <field>
+        <column_name>`DURATION`</column_name>
+        <stream_name>duration</stream_name>
+      </field>
+      <field>
+        <column_name>`TYPE`</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>`ROLE`</column_name>
+        <stream_name>role</stream_name>
+      </field>
+      <field>
+        <column_name>`YEAR`</column_name>
+        <stream_name>year</stream_name>
+      </field>
+      <field>
+        <column_name>`MONTH`</column_name>
+        <stream_name>month</stream_name>
+      </field>
+      <field>
+        <column_name>`DAY`</column_name>
+        <stream_name>day</stream_name>
+      </field>
+      <field>
+        <column_name>`DAY_WEEK`</column_name>
+        <stream_name>day_week</stream_name>
+      </field>
+      <field>
+        <column_name>`AM_PM`</column_name>
+        <stream_name>AM_PM</stream_name>
+      </field>
+      <field>
+        <column_name>`HOURS24`</column_name>
+        <stream_name>HOURS24</stream_name>
+      </field>
+      <field>
+        <column_name>`HOURS12`</column_name>
+        <stream_name>HOURS12</stream_name>
+      </field>
+      <field>
+        <column_name>`MINUTES`</column_name>
+        <stream_name>minutes</stream_name>
+      </field>
+      <field>
+        <column_name>`SECONDS`</column_name>
+        <stream_name>seconds</stream_name>
+      </field>
+      <field>
+        <column_name>`TIME`</column_name>
+        <stream_name>TIME</stream_name>
+      </field>
+      <field>
+        <column_name>`MONTH_DESC`</column_name>
+        <stream_name>month_desc</stream_name>
+      </field>
+      <field>
+        <column_name>`DAY_WEEK_DESC`</column_name>
+        <stream_name>day_week_desc</stream_name>
+      </field>
+      <field>
+        <column_name>`FILE`</column_name>
+        <stream_name>file</stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>3088</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>Truncate pentaho_ce_audit table</name>
     <type>ExecSQL</type>
@@ -1917,16 +3151,16 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <connection>Hibernate</connection>
     <execute_each_row>N</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
-    <sql>DELETE FROM &#x22;PENTAHO_CE_AUDIT&#x22;</sql>
+    <sql>DELETE FROM PENTAHO_CE_AUDIT</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1934,14 +3168,20 @@
     <read_field/>
     <arguments>
     </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>950</xloc>
-      <yloc>221</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1104</xloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>User Defined Java Expression 2</name>
     <type>Janino</type>
@@ -1949,25 +3189,32 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-       <formula><field_name>ROLES</field_name>
-<formula_string>PENTAHO_ROLES.replace&#x28;&#x22;&#x5b;&#x22;, &#x22;&#x22;&#x29;.replace&#x28;&#x22;&#x5d;&#x22;, &#x22;&#x22;&#x29;.replace&#x28;&#x22;&#x5c;&#x22;&#x22;, &#x22;&#x22;&#x29;</formula_string>
-<value_type>String</value_type>
-<value_length>-1</value_length>
-<value_precision>-1</value_precision>
-<replace_field/>
-</formula>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1284</xloc>
-      <yloc>437</yloc>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <formula>
+      <field_name>ROLES</field_name>
+      <formula_string>PENTAHO_ROLES.replace("[", "").replace("]", "").replace("\"", "")</formula_string>
+      <value_type>String</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <replace_field/>
+    </formula>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1392</xloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Value Mapper - Day Week</name>
     <type>ValueMapper</type>
@@ -1975,10 +3222,10 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <field_to_use>day_week</field_to_use>
     <target_field>day_week_desc</target_field>
     <non_match_default/>
@@ -2012,14 +3259,20 @@
         <target_value>Saturday</target_value>
       </field>
     </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1517</xloc>
-      <yloc>667</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1648</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Value Mapper - Month</name>
     <type>ValueMapper</type>
@@ -2027,10 +3280,10 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <field_to_use>month</field_to_use>
     <target_field>month_desc</target_field>
     <non_match_default/>
@@ -2084,14 +3337,20 @@
         <target_value>December</target_value>
       </field>
     </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1386</xloc>
-      <yloc>668</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1504</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Value Mapper - plugin types</name>
     <type>ValueMapper</type>
@@ -2099,10 +3358,10 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <field_to_use>plugin</field_to_use>
     <target_field/>
     <non_match_default/>
@@ -2128,14 +3387,20 @@
         <target_value>Reporter</target_value>
       </field>
     </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1517</xloc>
-      <yloc>569</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1648</xloc>
+      <yloc>720</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>Value Mapper - type</name>
     <type>ValueMapper</type>
@@ -2143,10 +3408,10 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <field_to_use>type</field_to_use>
     <target_field/>
     <non_match_default/>
@@ -2164,14 +3429,20 @@
         <target_value>xAction</target_value>
       </field>
     </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1515</xloc>
-      <yloc>459</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1648</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>input Login OKAY</name>
     <type>SelectValues</type>
@@ -2179,51 +3450,51 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>      <field>        <name>inst_id</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>job_id</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>obj_id</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>obj_type</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>actor</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>message_type</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>audit_time</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>duration</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>        <select_unspecified>N</select_unspecified>
-    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>593</xloc>
-      <yloc>178</yloc>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>inst_id</name>
+      </field>
+      <field>
+        <name>job_id</name>
+      </field>
+      <field>
+        <name>obj_id</name>
+      </field>
+      <field>
+        <name>obj_type</name>
+      </field>
+      <field>
+        <name>actor</name>
+      </field>
+      <field>
+        <name>message_type</name>
+      </field>
+      <field>
+        <name>audit_time</name>
+      </field>
+      <field>
+        <name>duration</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>input instances OKAY 2</name>
     <type>SelectValues</type>
@@ -2231,51 +3502,51 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>      <field>        <name>inst_id</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>job_id</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>obj_id</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>obj_type</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>actor</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>message_type</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>audit_time</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>duration</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>        <select_unspecified>N</select_unspecified>
-    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>716</xloc>
-      <yloc>469</yloc>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>inst_id</name>
+      </field>
+      <field>
+        <name>job_id</name>
+      </field>
+      <field>
+        <name>obj_id</name>
+      </field>
+      <field>
+        <name>obj_type</name>
+      </field>
+      <field>
+        <name>actor</name>
+      </field>
+      <field>
+        <name>message_type</name>
+      </field>
+      <field>
+        <name>audit_time</name>
+      </field>
+      <field>
+        <name>duration</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
   <step>
     <name>lookup with time fields</name>
     <type>StreamLookup</type>
@@ -2283,10 +3554,10 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <from>Sort rows</from>
     <input_sorted>N</input_sorted>
     <preserve_memory>Y</preserve_memory>
@@ -2330,18 +3601,56 @@
         <type>String</type>
       </value>
     </lookup>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>2468</xloc>
-      <yloc>190</yloc>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2640</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
+    </GUI>
+  </step>
+  <step>
+    <name>trigger</name>
+    <type>RowGenerator</type>
+    <description>an empty row to trigger the java class</description>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+    </fields>
+    <limit>1</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms>5000</interval_in_ms>
+    <row_time_field>now</row_time_field>
+    <last_time_field>FiveSecondsAgo</last_time_field>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2640</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step_error_handling>
   </step_error_handling>
-   <slave-step-copy-partition-distribution>
-</slave-step-copy-partition-distribution>
-   <slave_transformation>N</slave_transformation>
-
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+  <attributes/>
 </transformation>

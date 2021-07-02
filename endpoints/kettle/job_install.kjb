@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
   <name>job_install</name>
-    <description/>
-    <extended_description/>
-    <job_version/>
-    <job_status>0</job_status>
-  <directory>&#x2f;</directory>
+  <description/>
+  <extended_description/>
+  <job_version/>
+  <job_status>0</job_status>
+  <directory>/</directory>
   <created_user>-</created_user>
-  <created_date>2014&#x2f;11&#x2f;04 12&#x3a;05&#x3a;15.765</created_date>
+  <created_date>2014/11/04 12:05:15.765</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;11&#x2f;04 12&#x3a;05&#x3a;15.765</modified_date>
-    <parameters>
+  <modified_date>2014/11/04 12:05:15.765</modified_date>
+  <parameters>
     </parameters>
   <connection>
     <name>Hibernate</name>
@@ -25,43 +25,324 @@
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1521</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1521</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
     </attributes>
   </connection>
-    <slaveservers>
+  <slaveservers>
     </slaveservers>
-<job-log-table><connection/>
-<schema/>
-<table/>
-<size_limit_lines/>
-<interval/>
-<timeout_days/>
-<field><id>ID_JOB</id><enabled>Y</enabled><name>ID_JOB</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>JOBNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>START_JOB_ENTRY</id><enabled>N</enabled><name>START_JOB_ENTRY</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></job-log-table>
-<jobentry-log-table><connection/>
-<schema/>
-<table/>
-<timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>JOBENTRYNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>RESULT</id><enabled>Y</enabled><name>RESULT</name></field><field><id>NR_RESULT_ROWS</id><enabled>Y</enabled><name>NR_RESULT_ROWS</name></field><field><id>NR_RESULT_FILES</id><enabled>Y</enabled><name>NR_RESULT_FILES</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field><field><id>COPY_NR</id><enabled>N</enabled><name>COPY_NR</name></field></jobentry-log-table>
-<channel-log-table><connection/>
-<schema/>
-<table/>
-<timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
-   <pass_batchid>N</pass_batchid>
-   <shared_objects_file/>
+  <job-log-table>
+    <connection/>
+    <schema/>
+    <table/>
+    <size_limit_lines/>
+    <interval/>
+    <timeout_days/>
+    <field>
+      <id>ID_JOB</id>
+      <enabled>Y</enabled>
+      <name>ID_JOB</name>
+    </field>
+    <field>
+      <id>CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>CHANNEL_ID</name>
+    </field>
+    <field>
+      <id>JOBNAME</id>
+      <enabled>Y</enabled>
+      <name>JOBNAME</name>
+    </field>
+    <field>
+      <id>STATUS</id>
+      <enabled>Y</enabled>
+      <name>STATUS</name>
+    </field>
+    <field>
+      <id>LINES_READ</id>
+      <enabled>Y</enabled>
+      <name>LINES_READ</name>
+    </field>
+    <field>
+      <id>LINES_WRITTEN</id>
+      <enabled>Y</enabled>
+      <name>LINES_WRITTEN</name>
+    </field>
+    <field>
+      <id>LINES_UPDATED</id>
+      <enabled>Y</enabled>
+      <name>LINES_UPDATED</name>
+    </field>
+    <field>
+      <id>LINES_INPUT</id>
+      <enabled>Y</enabled>
+      <name>LINES_INPUT</name>
+    </field>
+    <field>
+      <id>LINES_OUTPUT</id>
+      <enabled>Y</enabled>
+      <name>LINES_OUTPUT</name>
+    </field>
+    <field>
+      <id>LINES_REJECTED</id>
+      <enabled>Y</enabled>
+      <name>LINES_REJECTED</name>
+    </field>
+    <field>
+      <id>ERRORS</id>
+      <enabled>Y</enabled>
+      <name>ERRORS</name>
+    </field>
+    <field>
+      <id>STARTDATE</id>
+      <enabled>Y</enabled>
+      <name>STARTDATE</name>
+    </field>
+    <field>
+      <id>ENDDATE</id>
+      <enabled>Y</enabled>
+      <name>ENDDATE</name>
+    </field>
+    <field>
+      <id>LOGDATE</id>
+      <enabled>Y</enabled>
+      <name>LOGDATE</name>
+    </field>
+    <field>
+      <id>DEPDATE</id>
+      <enabled>Y</enabled>
+      <name>DEPDATE</name>
+    </field>
+    <field>
+      <id>REPLAYDATE</id>
+      <enabled>Y</enabled>
+      <name>REPLAYDATE</name>
+    </field>
+    <field>
+      <id>LOG_FIELD</id>
+      <enabled>Y</enabled>
+      <name>LOG_FIELD</name>
+    </field>
+    <field>
+      <id>EXECUTING_SERVER</id>
+      <enabled>N</enabled>
+      <name>EXECUTING_SERVER</name>
+    </field>
+    <field>
+      <id>EXECUTING_USER</id>
+      <enabled>N</enabled>
+      <name>EXECUTING_USER</name>
+    </field>
+    <field>
+      <id>START_JOB_ENTRY</id>
+      <enabled>N</enabled>
+      <name>START_JOB_ENTRY</name>
+    </field>
+    <field>
+      <id>CLIENT</id>
+      <enabled>N</enabled>
+      <name>CLIENT</name>
+    </field>
+  </job-log-table>
+  <jobentry-log-table>
+    <connection/>
+    <schema/>
+    <table/>
+    <timeout_days/>
+    <field>
+      <id>ID_BATCH</id>
+      <enabled>Y</enabled>
+      <name>ID_BATCH</name>
+    </field>
+    <field>
+      <id>CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>CHANNEL_ID</name>
+    </field>
+    <field>
+      <id>LOG_DATE</id>
+      <enabled>Y</enabled>
+      <name>LOG_DATE</name>
+    </field>
+    <field>
+      <id>JOBNAME</id>
+      <enabled>Y</enabled>
+      <name>TRANSNAME</name>
+    </field>
+    <field>
+      <id>JOBENTRYNAME</id>
+      <enabled>Y</enabled>
+      <name>STEPNAME</name>
+    </field>
+    <field>
+      <id>LINES_READ</id>
+      <enabled>Y</enabled>
+      <name>LINES_READ</name>
+    </field>
+    <field>
+      <id>LINES_WRITTEN</id>
+      <enabled>Y</enabled>
+      <name>LINES_WRITTEN</name>
+    </field>
+    <field>
+      <id>LINES_UPDATED</id>
+      <enabled>Y</enabled>
+      <name>LINES_UPDATED</name>
+    </field>
+    <field>
+      <id>LINES_INPUT</id>
+      <enabled>Y</enabled>
+      <name>LINES_INPUT</name>
+    </field>
+    <field>
+      <id>LINES_OUTPUT</id>
+      <enabled>Y</enabled>
+      <name>LINES_OUTPUT</name>
+    </field>
+    <field>
+      <id>LINES_REJECTED</id>
+      <enabled>Y</enabled>
+      <name>LINES_REJECTED</name>
+    </field>
+    <field>
+      <id>ERRORS</id>
+      <enabled>Y</enabled>
+      <name>ERRORS</name>
+    </field>
+    <field>
+      <id>RESULT</id>
+      <enabled>Y</enabled>
+      <name>RESULT</name>
+    </field>
+    <field>
+      <id>NR_RESULT_ROWS</id>
+      <enabled>Y</enabled>
+      <name>NR_RESULT_ROWS</name>
+    </field>
+    <field>
+      <id>NR_RESULT_FILES</id>
+      <enabled>Y</enabled>
+      <name>NR_RESULT_FILES</name>
+    </field>
+    <field>
+      <id>LOG_FIELD</id>
+      <enabled>N</enabled>
+      <name>LOG_FIELD</name>
+    </field>
+    <field>
+      <id>COPY_NR</id>
+      <enabled>N</enabled>
+      <name>COPY_NR</name>
+    </field>
+  </jobentry-log-table>
+  <channel-log-table>
+    <connection/>
+    <schema/>
+    <table/>
+    <timeout_days/>
+    <field>
+      <id>ID_BATCH</id>
+      <enabled>Y</enabled>
+      <name>ID_BATCH</name>
+    </field>
+    <field>
+      <id>CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>CHANNEL_ID</name>
+    </field>
+    <field>
+      <id>LOG_DATE</id>
+      <enabled>Y</enabled>
+      <name>LOG_DATE</name>
+    </field>
+    <field>
+      <id>LOGGING_OBJECT_TYPE</id>
+      <enabled>Y</enabled>
+      <name>LOGGING_OBJECT_TYPE</name>
+    </field>
+    <field>
+      <id>OBJECT_NAME</id>
+      <enabled>Y</enabled>
+      <name>OBJECT_NAME</name>
+    </field>
+    <field>
+      <id>OBJECT_COPY</id>
+      <enabled>Y</enabled>
+      <name>OBJECT_COPY</name>
+    </field>
+    <field>
+      <id>REPOSITORY_DIRECTORY</id>
+      <enabled>Y</enabled>
+      <name>REPOSITORY_DIRECTORY</name>
+    </field>
+    <field>
+      <id>FILENAME</id>
+      <enabled>Y</enabled>
+      <name>FILENAME</name>
+    </field>
+    <field>
+      <id>OBJECT_ID</id>
+      <enabled>Y</enabled>
+      <name>OBJECT_ID</name>
+    </field>
+    <field>
+      <id>OBJECT_REVISION</id>
+      <enabled>Y</enabled>
+      <name>OBJECT_REVISION</name>
+    </field>
+    <field>
+      <id>PARENT_CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>PARENT_CHANNEL_ID</name>
+    </field>
+    <field>
+      <id>ROOT_CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>ROOT_CHANNEL_ID</name>
+    </field>
+  </channel-log-table>
+  <pass_batchid>N</pass_batchid>
+  <shared_objects_file/>
   <entries>
     <entry>
       <name>Copy File pentahoObjects.spring.xml to old_pentahoObjects.spring.xml</name>
       <description/>
       <type>COPY_FILES</type>
+      <attributes/>
       <copy_empty_folders>Y</copy_empty_folders>
       <arg_from_previous>N</arg_from_previous>
       <overwrite_files>N</overwrite_files>
@@ -72,8 +353,10 @@
       <create_destination_folder>N</create_destination_folder>
       <fields>
         <field>
-          <source_filefolder>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;..&#x2f;..&#x2f;..&#x2f;pentahoObjects.spring.xml</source_filefolder>
-          <destination_filefolder>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;..&#x2f;..&#x2f;..&#x2f;old_pentahoObjects.spring.xml</destination_filefolder>
+          <source_filefolder>${Internal.Job.Filename.Directory}/../../../pentahoObjects.spring.xml</source_filefolder>
+          <source_configuration_name/>
+          <destination_filefolder>${Internal.Job.Filename.Directory}/../../../old_pentahoObjects.spring.xml</destination_filefolder>
+          <destination_configuration_name/>
           <wildcard/>
         </field>
       </fields>
@@ -82,11 +365,13 @@
       <nr>0</nr>
       <xloc>379</xloc>
       <yloc>188</yloc>
-      </entry>
+      <attributes_kjc/>
+    </entry>
     <entry>
       <name>START</name>
       <description/>
       <type>SPECIAL</type>
+      <attributes/>
       <start>Y</start>
       <dummy>N</dummy>
       <repeat>N</repeat>
@@ -102,11 +387,13 @@
       <nr>0</nr>
       <xloc>23</xloc>
       <yloc>57</yloc>
-      </entry>
+      <attributes_kjc/>
+    </entry>
     <entry>
       <name>DUMMY</name>
       <description/>
       <type>SPECIAL</type>
+      <attributes/>
       <start>N</start>
       <dummy>Y</dummy>
       <repeat>N</repeat>
@@ -122,14 +409,16 @@
       <nr>0</nr>
       <xloc>1596</xloc>
       <yloc>58</yloc>
-      </entry>
+      <attributes_kjc/>
+    </entry>
     <entry>
       <name>Execute replace bean</name>
       <description/>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;install&#x2f;replaceBean.ktr</filename>
+      <filename>${Internal.Job.Filename.Directory}/install/replaceBean.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -149,21 +438,27 @@
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
       <logging_remote_work>N</logging_remote_work>
-      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <parallel>N</parallel>
+      <run_configuration/>
+      <suppress_result_data>N</suppress_result_data>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>535</xloc>
       <yloc>60</yloc>
-      </entry>
+      <attributes_kjc/>
+    </entry>
     <entry>
       <name>Checks if file old_pentahoObjects.spring.xml already exist</name>
       <description/>
       <type>FILES_EXIST</type>
+      <attributes/>
       <filename/>
       <fields>
         <field>
-          <name>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;..&#x2f;..&#x2f;..&#x2f;old_pentahoObjects.spring.xml</name>
+          <name>${Internal.Job.Filename.Directory}/../../../old_pentahoObjects.spring.xml</name>
         </field>
       </fields>
       <parallel>N</parallel>
@@ -171,11 +466,13 @@
       <nr>0</nr>
       <xloc>284</xloc>
       <yloc>60</yloc>
-      </entry>
+      <attributes_kjc/>
+    </entry>
     <entry>
-      <name>Table pro_audit exists&#x3f;</name>
+      <name>Table pro_audit exists?</name>
       <description/>
       <type>TABLE_EXISTS</type>
+      <attributes/>
       <tablename>PRO_AUDIT</tablename>
       <schemaname/>
       <connection>Hibernate</connection>
@@ -184,14 +481,16 @@
       <nr>0</nr>
       <xloc>666</xloc>
       <yloc>59</yloc>
-      </entry>
+      <attributes_kjc/>
+    </entry>
     <entry>
-      <name>Execute createProAudirTable</name>
+      <name>Execute createProAuditTable</name>
       <description/>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;install&#x2f;createProAuditTable.ktr</filename>
+      <filename>${Internal.Job.Filename.Directory}/install/createProAuditTable.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -211,18 +510,24 @@
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
       <logging_remote_work>N</logging_remote_work>
-      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <parallel>N</parallel>
+      <run_configuration>Pentaho local</run_configuration>
+      <suppress_result_data>N</suppress_result_data>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>789</xloc>
       <yloc>190</yloc>
-      </entry>
+      <attributes_kjc/>
+    </entry>
     <entry>
-      <name>Table pentaho_ce_audit exists&#x3f;</name>
+      <name>Table pentaho_ce_audit exists?</name>
       <description/>
       <type>TABLE_EXISTS</type>
-      <tablename>&#x22;PENTAHO_CE_AUDIT&#x22;</tablename>
+      <attributes/>
+      <tablename>PENTAHO_CE_AUDIT</tablename>
       <schemaname/>
       <connection>Hibernate</connection>
       <parallel>N</parallel>
@@ -230,14 +535,16 @@
       <nr>0</nr>
       <xloc>899</xloc>
       <yloc>59</yloc>
-      </entry>
+      <attributes_kjc/>
+    </entry>
     <entry>
       <name>Execute createPentahoCEAuditTable</name>
       <description/>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;install&#x2f;createPentahoCEAuditTable.ktr</filename>
+      <filename>${Internal.Job.Filename.Directory}/install/createPentahoCEAuditTable.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -257,27 +564,35 @@
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
       <logging_remote_work>N</logging_remote_work>
-      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <parallel>N</parallel>
+      <run_configuration/>
+      <suppress_result_data>N</suppress_result_data>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>1107</xloc>
       <yloc>198</yloc>
-      </entry>
+      <attributes_kjc/>
+    </entry>
     <entry>
       <name>OUTPUT</name>
       <description/>
       <type>SUCCESS</type>
+      <attributes/>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>1720</xloc>
       <yloc>57</yloc>
-      </entry>
+      <attributes_kjc/>
+    </entry>
     <entry>
       <name>Wait for</name>
       <description/>
       <type>DELAY</type>
+      <attributes/>
       <maximumTimeout>1</maximumTimeout>
       <scaletime>0</scaletime>
       <parallel>N</parallel>
@@ -285,12 +600,14 @@
       <nr>0</nr>
       <xloc>96</xloc>
       <yloc>60</yloc>
-      </entry>
+      <attributes_kjc/>
+    </entry>
     <entry>
       <name>Table pentaho_ce_audit_metadata</name>
       <description/>
       <type>TABLE_EXISTS</type>
-      <tablename>&#x22;PENTAHO_CE_AUDIT_METADATA&#x22;</tablename>
+      <attributes/>
+      <tablename>PENTAHO_CE_AUDIT_METADATA</tablename>
       <schemaname/>
       <connection>Hibernate</connection>
       <parallel>N</parallel>
@@ -298,14 +615,16 @@
       <nr>0</nr>
       <xloc>1277</xloc>
       <yloc>58</yloc>
-      </entry>
+      <attributes_kjc/>
+    </entry>
     <entry>
       <name>Execute createPentahoCEAuditMetadataTable</name>
       <description/>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;install&#x2f;createPentahoCEAuditMetadataTable.ktr</filename>
+      <filename>${Internal.Job.Filename.Directory}/install/createPentahoCEAuditMetadataTable.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -325,18 +644,24 @@
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
       <logging_remote_work>N</logging_remote_work>
-      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <parallel>N</parallel>
+      <run_configuration/>
+      <suppress_result_data>N</suppress_result_data>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>1430</xloc>
       <yloc>189</yloc>
-      </entry>
+      <attributes_kjc/>
+    </entry>
     <entry>
       <name>Drop table pentaho_ce_audit</name>
       <description/>
       <type>SQL</type>
-      <sql>DROP TABLE &#x22;PENTAHO_CE_AUDIT&#x22;&#x3b;</sql>
+      <attributes/>
+      <sql>DROP TABLE PENTAHO_CE_AUDIT;</sql>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename/>
@@ -347,12 +672,14 @@
       <nr>0</nr>
       <xloc>1100</xloc>
       <yloc>59</yloc>
-      </entry>
+      <attributes_kjc/>
+    </entry>
     <entry>
       <name>Drop table metadata</name>
       <description/>
       <type>SQL</type>
-      <sql>DROP TABLE &#x22;PENTAHO_CE_AUDIT_METADATA&#x22;&#x3b;</sql>
+      <attributes/>
+      <sql>DROP TABLE PENTAHO_CE_AUDIT_METADATA;</sql>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename/>
@@ -363,7 +690,8 @@
       <nr>0</nr>
       <xloc>1431</xloc>
       <yloc>59</yloc>
-      </entry>
+      <attributes_kjc/>
+    </entry>
   </entries>
   <hops>
     <hop>
@@ -395,7 +723,7 @@
     </hop>
     <hop>
       <from>Execute replace bean</from>
-      <to>Table pro_audit exists&#x3f;</to>
+      <to>Table pro_audit exists?</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -403,8 +731,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Table pro_audit exists&#x3f;</from>
-      <to>Execute createProAudirTable</to>
+      <from>Table pro_audit exists?</from>
+      <to>Execute createProAuditTable</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -412,8 +740,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Table pro_audit exists&#x3f;</from>
-      <to>Table pentaho_ce_audit exists&#x3f;</to>
+      <from>Table pro_audit exists?</from>
+      <to>Table pentaho_ce_audit exists?</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -421,8 +749,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Execute createProAudirTable</from>
-      <to>Table pentaho_ce_audit exists&#x3f;</to>
+      <from>Execute createProAuditTable</from>
+      <to>Table pentaho_ce_audit exists?</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -430,7 +758,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Table pentaho_ce_audit exists&#x3f;</from>
+      <from>Table pentaho_ce_audit exists?</from>
       <to>Execute createPentahoCEAuditTable</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -493,7 +821,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Table pentaho_ce_audit exists&#x3f;</from>
+      <from>Table pentaho_ce_audit exists?</from>
       <to>Drop table pentaho_ce_audit</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -530,6 +858,32 @@
     </hop>
   </hops>
   <notepads>
+    <notepad>
+      <note>===========================================
+Update: 30 June 2021
+Ibrahim Bolarinwa
+https://github.com/Ibby-B
+Fixed Pro Audit table existence check
+===========================================</note>
+      <xloc>0</xloc>
+      <yloc>272</yloc>
+      <width>355</width>
+      <heigth>106</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
-
+  <attributes/>
 </job>
